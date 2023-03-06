@@ -1,1 +1,25 @@
 /*---------- Three Column ---------- */
+.three_column_section{
+  width:100%;
+}
+.three_column_wrapper{
+  width:100%;
+}
+.three_column_heading{
+  width:100%;
+}
+.three_column_heading h2{
+  margin:0;
+}
+.three_column_heading p{
+  margin:0;
+}
+.three_column_list{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.three_column{
+  width:32%;
+}
