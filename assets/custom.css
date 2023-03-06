@@ -23,3 +23,31 @@
 .three_column{
   width:32%;
 }
+
+/*---------- Featured Logo ---------- */
+.featured_logo_section{
+    width:100%;
+  }
+  .featured_logo{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+  }
+  .featured_logo_title{
+    width:24%;
+  }
+  .featured_logo_slider{
+    width:74%;
+    margin:0;
+    padding:0;
+  }
+  .featured_logo_slider li{
+    margin:0;
+    padding:0;
+  }
+
+
+
+
+
