@@ -1,3 +1,24 @@
+<div class="three_column_section">
+  <div class="page-width">
+    <div class="three_column_wrapper">
+      {%- if section.settings.title != blank or section.settings.desc != blank -%}
+      <div class="three_column_heading">
+        {%- if section.settings.title != blank -%}
+        <h2>{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.desc != blank -%}
+        <p>{{ section.settings.desc }}</p>
+        {%- endif -%}
+      </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+
+
+
+
 {% schema %}
   {
     "name": "Three Column",
