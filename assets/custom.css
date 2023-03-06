@@ -1,6 +1,7 @@
 /*---------- Three Column ---------- */
 .three_column_section{
   width:100%;
+  text-align:center;
 }
 .three_column_wrapper{
   width:100%;
