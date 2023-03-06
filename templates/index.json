@@ -319,6 +319,41 @@
         "title": "From smoothies to soups",
         "desc": "The Benefits of Millets and Plant-Based Milk: Better for You, Better for the Environment!"
       }
+    },
+    "e613ad79-2d51-47e8-968b-aad640e83297": {
+      "type": "featured-logo",
+      "blocks": {
+        "ed58f301-3be7-4a76-8430-de01b90cf92d": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png",
+            "link": ""
+          }
+        },
+        "28900588-0ef8-48e1-bff5-c6ce903dbdd8": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png",
+            "link": ""
+          }
+        },
+        "28a60d7e-92ef-4223-9e1a-b0de1d4b4c18": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "ed58f301-3be7-4a76-8430-de01b90cf92d",
+        "28900588-0ef8-48e1-bff5-c6ce903dbdd8",
+        "28a60d7e-92ef-4223-9e1a-b0de1d4b4c18"
+      ],
+      "settings": {
+        "enabled_featured_logo": false,
+        "title": "Featured At:"
+      }
     }
   },
   "order": [
@@ -329,6 +364,7 @@
     "timeline",
     "blog-posts",
     "shop-the-look",
-    "76a1a166-4902-4af7-8503-cef5395c3a12"
+    "76a1a166-4902-4af7-8503-cef5395c3a12",
+    "e613ad79-2d51-47e8-968b-aad640e83297"
   ]
 }
