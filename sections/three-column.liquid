@@ -11,6 +11,21 @@
         {%- endif -%}
       </div>
       {%- endif -%}
+      <div class="three_column_list">
+        {%- for block in section.blocks -%}
+        <div class="three_column">
+          {%- if block.settings.image != blank -%}
+          <figure><img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}" title="{{ block.settings.title }}" /></figure>
+          {%- endif -%}
+          {%- if block.settings.title != blank -%}
+          <h3>{{ block.settings.title }}</h3>
+          {%- endif -%}
+          {%- if block.settings.desc != blank -%}
+          <p>{{ block.settings.desc }}</p>
+          {%- endif -%}
+        </div>
+        {%- endfor -%}
+      </div>
     </div>
   </div>
 </div>
