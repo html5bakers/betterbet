@@ -1,7 +1,28 @@
 {% schema %}
   {
     "name": "Three Column",
-    "settings": [],
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "left_image",
+        "label": "Left Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image",
+        "label": "Right Image"
+      }
+    ],
     "blocks": [
       {
         "type": "Text",
