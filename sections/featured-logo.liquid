@@ -1,7 +1,64 @@
+<div class="featured_logo_section">
+  <div class="container">
+    <div class="featured_logo">
+     {% if section.settings.title != blank %}
+      <div class="featured_logo_title">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+      {% endif %}
+      <ul class="featured_logo_slider">
+        {% for block in section.blocks %}
+          {% if block.settings.logo != blank %}
+        <li><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
+          <img src="{{ block.settings.logo | img_url: 'master' }}" />{% if block.settings.link != blank %}</a>{% endif %}</figure></li>
+            {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Featured Logo",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enabled_featured_logo",
+        "label": "Show Featured Logo"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Logo",
+        "category": "Image"
+      }
+    ]
   }
 {% endschema %}
 
