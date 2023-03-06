@@ -296,15 +296,17 @@
         "d104ebc2-b69a-4186-a7d7-8e2eff9efd24": {
           "type": "Text",
           "settings": {
-            "title": "",
-            "desc": ""
+            "image": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png",
+            "title": "Nutritional Value",
+            "desc": "Millet milk is a good source of vitamins, minerals, and antioxidants, and is naturally gluten-free, making it a great alternative for people with gluten intolerance"
           }
         },
         "ff049133-68b3-4042-ab4d-772736aaad71": {
           "type": "Text",
           "settings": {
-            "title": "",
-            "desc": ""
+            "image": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png",
+            "title": "Nutritional Value",
+            "desc": "Millet milk is a good source of vitamins, minerals, and antioxidants, and is naturally gluten-free, making it a great alternative for people with gluten intolerance"
           }
         }
       },
