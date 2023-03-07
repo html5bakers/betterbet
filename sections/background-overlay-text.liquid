@@ -1,13 +1,13 @@
 {% style %}
   .bg_overlay_text_section{background:{{ section.settings.bg_color }};}
 {% endstyle %}
-
-<div class="bg_overlay_text_section">
+<section class="Section Section--spacingNormal text_with_overlay bg_overlay_text_section" id="section-{{ section.id }}">
   <div class="Container">
-    <div class="bg_overlay_text">
+    <div class="text_block content_wrapper">
+  <div class="left_block"></div>
     </div>
   </div>
-</div>
+</section>
 
 {% schema %}
   {
