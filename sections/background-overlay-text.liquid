@@ -3,6 +3,9 @@
 {% endstyle %}
 <section class="Section Section--spacingNormal text_with_overlay bg_overlay_text_section" id="section-{{ section.id }}">
   <div class="Container">
+    {%- if section.settings.best_image != blank -%}
+  <figure class="best-seller-img"><img src="{{ section.settings.best_image | img_url: 'master' }}"</figure>
+      {%- endif -%}
     <div class="text_block content_wrapper">
       <div class="left_block">
         <div class="left_block_desc">
@@ -80,6 +83,11 @@
       {
         "type": "header",
         "content": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "best_image",
+        "label": "Best Image"
       },
       {
         "type": "image_picker",
