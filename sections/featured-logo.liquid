@@ -10,7 +10,7 @@
   "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
 }
 {%- endcapture -%}
-<section class="Section Section--spacingNormal featured_logo_section" id="section-{{ section.id }}">
+<section class="Section Section--spacingNormal featured_logo_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
   <div class="Container">
     <div class="featured_logo">
      {% if section.settings.title != blank %}
@@ -30,13 +30,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  $('.Slideshow__Carousel').flickity({
-  contain: true,
-  pageDots: false
-});
-</script>
 
 
 
