@@ -1,3 +1,15 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "setGallerySize": {% if section.settings.show_fullscreen %}false{% else %}true{% endif %},
+  "adaptiveHeight": {% if section.settings.show_fullscreen %}false{% else %}true{% endif %},
+  "wrapAround": true,
+  "dragThreshold": 15,
+  "pauseAutoPlayOnHover": false,
+  "autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %},
+  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
 <section class="Section Section--spacingNormal featured_logo_section" id="section-{{ section.id }}">
   <div class="Container">
     <div class="featured_logo">
