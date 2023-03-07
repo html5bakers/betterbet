@@ -4,7 +4,48 @@
 <section class="Section Section--spacingNormal text_with_overlay bg_overlay_text_section" id="section-{{ section.id }}">
   <div class="Container">
     <div class="text_block content_wrapper">
-      <div class="left_block"></div>
+      <div class="left_block">
+        <div class="left_block_desc">
+          {%- if section.settings.content_title_01 != blank -%}
+          <h2>{{ section.settings.content_title_01 }}</h2>
+          {%- endif -%}
+          {%- if section.settings.content_desc_01 != blank -%}
+          <p>{{ section.settings.content_desc_01 }}</p>
+          {%- endif -%}
+          {%- if section.settings.content_list_1_title_01 != blank -%}
+          <h3>{{ section.settings.content_list_1_title_01 }}</h3>
+          {%- endif -%}
+          {%- if section.settings.content_list_1_desc_01 != blank -%}
+          <ul>{{ section.settings.content_list_1_desc_01 }}</ul>
+          {%- endif -%}
+          {%- if section.settings.content_list_1_title_02 != blank -%}
+          <h3>{{ section.settings.content_list_1_title_02 }}</h3>
+          {%- endif -%}
+          {%- if section.settings.content_list_1_desc_02 != blank -%}
+          <ul>{{ section.settings.content_list_1_desc_02 }}</ul>
+          {%- endif -%}
+        </div>
+        <div class="left_block_desc">
+          {%- if section.settings.content_title_02 != blank -%}
+          <h2>{{ section.settings.content_title_02 }}</h2>
+          {%- endif -%}
+          {%- if section.settings.content_desc_02 != blank -%}
+          <p>{{ section.settings.content_desc_02 }}</p>
+          {%- endif -%}
+          {%- if section.settings.content_list_2_title_01 != blank -%}
+          <h3>{{ section.settings.content_list_2_title_01 }}</h3>
+          {%- endif -%}
+          {%- if section.settings.content_list_2_desc_01 != blank -%}
+          <ul>{{ section.settings.content_list_2_desc_01 }}</ul>
+          {%- endif -%}
+          {%- if section.settings.content_list_2_title_02 != blank -%}
+          <h3>{{ section.settings.content_list_2_title_02 }}</h3>
+          {%- endif -%}
+          {%- if section.settings.content_list_2_desc_02 != blank -%}
+          <ul>{{ section.settings.content_list_2_desc_02 }}</ul>
+          {%- endif -%}
+        </div>
+      </div>
       <div class="center_block"></div>
       <div class="right_block"></div>
     </div>
