@@ -51,7 +51,13 @@
         <figure><img src="{{ section.settings.image | img_url: 'master' }}" /></figure>
       </div>
       {%- endif -%}
-      <div class="right_block"></div>
+      <div class="right_block">
+        <ul>
+          {%- for block in section.blocks -%}
+          <li>{{ block.settings.image }}<span>{{ block.settings.title }}</span></li>
+          {%- endfor -%}
+        </ul>
+      </div>
     </div>
   </div>
 </section>
