@@ -46,7 +46,11 @@
           {%- endif -%}
         </div>
       </div>
-      <div class="center_block"></div>
+      {%- if section.settings.image != blank -%}
+      <div class="center_block">
+        <figure><img src="{{ section.settings.image | img_url: 'master' }}" /></figure>
+      </div>
+      {%- endif -%}
       <div class="right_block"></div>
     </div>
   </div>
@@ -149,7 +153,7 @@
         "type": "no-ingradiants",
         "settings": [
           {
-            "type": "image_picker",
+            "type": "textarea",
             "id": "image",
             "label": "Image"
           },
