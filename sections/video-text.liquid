@@ -1,7 +1,44 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Video Text",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enabled_video_text",
+        "label": "Show Video Text",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "video_link",
+        "label": "Video Link"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "btn_title",
+        "label": "Button Heading"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      }
+    ]
   }
 {% endschema %}
 
