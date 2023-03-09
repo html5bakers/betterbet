@@ -48,6 +48,20 @@
     padding:0;
   }
 
+/*---------- Video Text ---------- */
+.video_text_section{
+  width:100%;
+}
+.video_text_wrapper{
+  width:100%;
+}
+.video_text_left{
+  width:54%;
+}
+.video_text_right{
+  width:42%;
+}
+
 
 
 
