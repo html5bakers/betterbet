@@ -75,11 +75,8 @@
   flex-wrap:wrap;
   justify-content:space-between;
 }
-.background_text_left{
-  width:50%;
-}
-.background_text_right{
-  width:50%;
+.background_text_left,.background_text_right{
+  width:49%;
 }
 
 
