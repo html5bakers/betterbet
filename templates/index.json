@@ -423,7 +423,7 @@
       "settings": {
         "enabled_video_text": true,
         "image": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png",
-        "video_link": "",
+        "video_link": "https:\/\/www.w3schools.com\/html\/mov_bbb.mp4",
         "desc": "<p>Lorem Ipsum<strong> <\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<\/p><p>Lorem Ipsum<strong> <\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<\/p><p>Lorem Ipsum<strong> <\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<\/p>",
         "btn_title": "Learn More",
         "btn_link": "#"
