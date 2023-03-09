@@ -10,6 +10,9 @@
       </div>
       {%- endif -%}
       <div class="background_text_right">
+        {%- if section.settings.right_desc != blank -%}
+        <p>{{ section.settings.right_desc }}</p>
+        {%- endif -%}
         <div class="background_text_btn">
           {% if section.settings.btn_link_01 != blank and section.settings.btn_title_01 != blank %}
           <a href="{{ section.settings.btn_link_01 }}" class="btn">{{ section.settings.btn_title_01 }}</a>
