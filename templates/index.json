@@ -428,6 +428,18 @@
         "btn_title": "Learn More",
         "btn_link": "#"
       }
+    },
+    "0470e822-cf7e-441d-9dcd-8a3351add97c": {
+      "type": "background-text",
+      "settings": {
+        "enabled_bg_text": true,
+        "left_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+        "right_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "btn_title_01": "Reviews",
+        "btn_link_01": "#",
+        "btn_title_02": "FAQs",
+        "btn_link_02": "#"
+      }
     }
   },
   "order": [
@@ -441,6 +453,7 @@
     "76a1a166-4902-4af7-8503-cef5395c3a12",
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
-    "cd274d7e-592a-4051-8a59-0eb2dd34ee7f"
+    "cd274d7e-592a-4051-8a59-0eb2dd34ee7f",
+    "0470e822-cf7e-441d-9dcd-8a3351add97c"
   ]
 }
