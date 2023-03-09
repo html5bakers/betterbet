@@ -18,6 +18,10 @@
     {%- endif -%}
       </div>
       <div class="video_text_right">
+        {{ section.settings.desc }}
+  {%- if section.settings.btn_link != blank and section.settings.btn_title != blank -%}
+  <a href="{{ section.settings.btn_link }}" class="btn">{{ section.settings.btn_title }}</a>
+    {%- endif -%}
       </div>
     </div>
   </div>
@@ -44,11 +48,6 @@
         "type": "text",
         "id": "video_link",
         "label": "Video Link"
-      },
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Heading"
       },
       {
         "type": "richtext",
