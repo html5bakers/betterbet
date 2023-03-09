@@ -1,13 +1,28 @@
+{%- if section.settings.enabled_video_text -%}
 <section class="Section Section--spacingNormal video_text_section" id="section-{{ section.id }}">
   <div class="Container">
     <div class="video_text_wrapper">
       <div class="video_text_left">
+  {%- if section.settings.video_link != blank or section.settings.image != blank -%}
+    {% if section.settings.video_link != blank %}
+    <video width="100%" controls>
+  <source src="{{ section.settings.video_link }}" type="video/mp4">
+  <source src="{{ section.settings.video_link }}" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+      {%- endif -%}
+    {%- else -%}
+    {%- if section.settings.image != blank -%}
+        <figure><img src="{{ section.settings.image | img_url: 'master' }}" alt="" title="" /></figure>
+    {%- endif -%}
+    {%- endif -%}
       </div>
       <div class="video_text_right">
       </div>
     </div>
   </div>
 </section>
+{%- endif -%}
 
 
 {% schema %}
