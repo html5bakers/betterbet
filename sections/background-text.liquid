@@ -4,6 +4,21 @@
 <section class="Section Section--spacingNormal background_text_section" id="section-{{ section.id }}">
   <div class="Container">
     <div class="background_text_wrapper">
+      {%- if section.settings.left_desc != blank -%}
+      <div class="background_text_left">
+        <h2>{{ section.settings.left_desc }}</h2>
+      </div>
+      {%- endif -%}
+      <div class="background_text_right">
+        <div class="background_text_btn">
+          {% if section.settings.btn_link_01 != blank and section.settings.btn_title_01 != blank %}
+          <a href="{{ section.settings.btn_link_01 }}" class="btn">{{ section.settings.btn_title_01 }}</a>
+          {% endif %}
+          {% if section.settings.btn_link_02 != blank and section.settings.btn_title_02 != blank %}
+          <a href="{{ section.settings.btn_link_02 }}" class="btn">{{ section.settings.btn_title_02 }}</a>
+          {% endif %}
+        </div>
+      </div>
     </div>
   </div>
 </section>
