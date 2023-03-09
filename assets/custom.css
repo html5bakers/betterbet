@@ -54,6 +54,9 @@
 }
 .video_text_wrapper{
   width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
 }
 .video_text_left{
   width:54%;
