@@ -73,6 +73,7 @@
   width:100%;
   display:flex;
   flex-wrap:wrap;
+  justify-content:space-between;
 }
 .background_text_left{
   width:50%;
