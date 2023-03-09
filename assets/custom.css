@@ -71,6 +71,14 @@
 }
 .background_text_wrapper{
   width:100%;
+  display:flex;
+  flex-wrap:wrap;
+}
+.background_text_left{
+  width:50%;
+}
+.background_text_right{
+  width:50%;
 }
 
 
