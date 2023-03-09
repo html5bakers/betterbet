@@ -10,9 +10,7 @@
   <source src="{{ section.settings.video_link }}" type="video/ogg">
   Your browser does not support the video tag.
 </video>
-      {%- endif -%}
     {%- else -%}
-    {%- if section.settings.image != blank -%}
         <figure><img src="{{ section.settings.image | img_url: 'master' }}" alt="" title="" /></figure>
     {%- endif -%}
     {%- endif -%}
