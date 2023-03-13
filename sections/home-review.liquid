@@ -1,3 +1,29 @@
+<section class="Section Section--spacingNormal home_review_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
+  <div class="Container">
+    {% if section.settings.title != blank %}
+    <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    <ul class="home_review Slideshow__Carousel {% if section.settings.show_arrow %}Slideshow__Carousel--withScrollButton{% endif %} Carousel Carousel--fadeIn {% if section.settings.show_fullscreen %}Carousel--fixed{% endif %} Carousel--insideDots"
+         data-flickity-config='{{ flickity_options }}'>
+      {% for block in section.blocks %}
+      <li>
+        <h4>
+          {%- if block.settings.star == '1' -%}
+          {%- elsif block.settings.star == '2' -%}
+          {%- elsif block.settings.star == '3' -%}
+          {%- elsif block.settings.star == '4' -%}
+          {%- elsif block.settings.star == '5' -%}
+          {%- endif -%}
+        </h4>
+        <h3></h3>
+        <p></p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+
 {% schema %}
   {
     "name": "Home Review",
