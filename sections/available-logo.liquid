@@ -12,26 +12,34 @@
   <div class="Container">
     <div class="available_logo">
       <div class="available_logo_left">
-        <h2></h2>
+        {% if section.settings.left_title != blank %}
+        <h2>{{ section.settings.left_title }}</h2>
+          {% endif %}
         <ul class="available_logo_slider Slideshow__Carousel {% if section.settings.show_arrow %}Slideshow__Carousel--withScrollButton{% endif %} Carousel Carousel--fadeIn {% if section.settings.show_fullscreen %}Carousel--fixed{% endif %} Carousel--insideDots"
          data-flickity-config='{{ flickity_options }}'>
         {% for block in section.blocks %}
+          {% if block.type == 'left-column' %}
           {% if block.settings.logo != blank %}
         <li><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
           <img src="{{ block.settings.logo | img_url: 'master' }}" />{% if block.settings.link != blank %}</a>{% endif %}</figure></li>
+            {% endif %}
             {% endif %}
         {% endfor %}
       </ul>
       </div>
       <div class="available_logo_right">
-        <h2></h2>
+        {% if section.settings.right_title != blank %}
+        <h2>{{ section.settings.right_title }}</h2>
+          {% endif %}
         <ul class="available_logo_slider Slideshow__Carousel {% if section.settings.show_arrow %}Slideshow__Carousel--withScrollButton{% endif %} Carousel Carousel--fadeIn {% if section.settings.show_fullscreen %}Carousel--fixed{% endif %} Carousel--insideDots"
          data-flickity-config='{{ flickity_options }}'>
         {% for block in section.blocks %}
+          {% if block.type == 'right-column' %}
           {% if block.settings.logo != blank %}
         <li><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
           <img src="{{ block.settings.logo | img_url: 'master' }}" />{% if block.settings.link != blank %}</a>{% endif %}</figure></li>
             {% endif %}
+          {% endif %}
         {% endfor %}
       </ul>
       </div>
