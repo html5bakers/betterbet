@@ -511,6 +511,53 @@
         "left_title": "Hotels where available",
         "right_title": "Also available"
       }
+    },
+    "513ba4db-5ea0-45de-baae-0ebc339a4c5c": {
+      "type": "home-review",
+      "blocks": {
+        "eaa60b28-d387-4b9e-8fff-c844aad4c1d7": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "Name",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "9bd3f7e1-ffd8-475e-b28b-4f7c26acb582": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "Name",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "2149d07d-f3df-4226-8360-19d13320aaf7": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "Name",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "4ac55776-4e37-418b-90d0-c59cf193462c": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "Name",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        }
+      },
+      "block_order": [
+        "eaa60b28-d387-4b9e-8fff-c844aad4c1d7",
+        "9bd3f7e1-ffd8-475e-b28b-4f7c26acb582",
+        "2149d07d-f3df-4226-8360-19d13320aaf7",
+        "4ac55776-4e37-418b-90d0-c59cf193462c"
+      ],
+      "settings": {
+        "enabled_home_review": true,
+        "title": "Reviews"
+      }
     }
   },
   "order": [
@@ -526,6 +573,7 @@
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
     "cd274d7e-592a-4051-8a59-0eb2dd34ee7f",
     "0470e822-cf7e-441d-9dcd-8a3351add97c",
-    "30d50290-b09a-4b70-a61c-1041883d308e"
+    "30d50290-b09a-4b70-a61c-1041883d308e",
+    "513ba4db-5ea0-45de-baae-0ebc339a4c5c"
   ]
 }
