@@ -352,7 +352,10 @@
       ],
       "settings": {
         "enabled_featured_logo": true,
-        "title": ""
+        "title": "",
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 5
       }
     },
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f": {
@@ -440,6 +443,74 @@
         "btn_title_02": "FAQs",
         "btn_link_02": "#"
       }
+    },
+    "30d50290-b09a-4b70-a61c-1041883d308e": {
+      "type": "available-logo",
+      "blocks": {
+        "0d16606f-5237-49e1-947d-b4ac6001f255": {
+          "type": "left-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png"
+          }
+        },
+        "3522c7f1-b8b3-4a6e-adf1-f82e992c2f3f": {
+          "type": "left-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png"
+          }
+        },
+        "7a272f73-4f1d-4f22-ae2e-c8e9d011c65f": {
+          "type": "left-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png"
+          }
+        },
+        "43c131aa-d872-43ed-a7db-f4e232e29672": {
+          "type": "left-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png"
+          }
+        },
+        "25421479-3613-4f8c-b230-e51c4d55de34": {
+          "type": "right-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png"
+          }
+        },
+        "9d0d60bf-ec56-4bc8-8b0e-73900d0cdaae": {
+          "type": "right-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png"
+          }
+        },
+        "b31d736b-d540-4ccc-b241-6dd9ef87aafe": {
+          "type": "right-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png"
+          }
+        },
+        "7d6e1d6c-8ab6-485a-a059-58c2ae389009": {
+          "type": "right-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "0d16606f-5237-49e1-947d-b4ac6001f255",
+        "3522c7f1-b8b3-4a6e-adf1-f82e992c2f3f",
+        "7a272f73-4f1d-4f22-ae2e-c8e9d011c65f",
+        "43c131aa-d872-43ed-a7db-f4e232e29672",
+        "25421479-3613-4f8c-b230-e51c4d55de34",
+        "9d0d60bf-ec56-4bc8-8b0e-73900d0cdaae",
+        "b31d736b-d540-4ccc-b241-6dd9ef87aafe",
+        "7d6e1d6c-8ab6-485a-a059-58c2ae389009"
+      ],
+      "settings": {
+        "enabled_available_logo": true,
+        "left_title": "Hotels where available",
+        "right_title": "Also available"
+      }
     }
   },
   "order": [
@@ -454,6 +525,7 @@
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
     "cd274d7e-592a-4051-8a59-0eb2dd34ee7f",
-    "0470e822-cf7e-441d-9dcd-8a3351add97c"
+    "0470e822-cf7e-441d-9dcd-8a3351add97c",
+    "30d50290-b09a-4b70-a61c-1041883d308e"
   ]
 }
