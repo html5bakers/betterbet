@@ -79,6 +79,39 @@
   width:49%;
 }
 
+/*----------Available Logo ---------- */
+.available_logo_section{
+  width:100%;
+}
+.available_logo{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.available_logo_left{
+  width:49%;
+}
+.available_logo_right{
+  width:49%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
