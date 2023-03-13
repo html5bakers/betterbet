@@ -8,6 +8,16 @@
   "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
 }
 {%- endcapture -%}
+{%- capture flickity_options1 -%}
+{
+  "prevNextButtons": false,
+  "wrapAround": true,
+  "dragThreshold": 15,
+  "pauseAutoPlayOnHover": false,
+  "autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %},
+  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
 <section class="Section Section--spacingNormal available_logo_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
   <div class="Container">
     <div class="available_logo">
@@ -32,7 +42,7 @@
         <h2>{{ section.settings.right_title }}</h2>
           {% endif %}
         <ul class="available_logo_slider Slideshow__Carousel {% if section.settings.show_arrow %}Slideshow__Carousel--withScrollButton{% endif %} Carousel Carousel--fadeIn {% if section.settings.show_fullscreen %}Carousel--fixed{% endif %} Carousel--insideDots"
-         data-flickity-config='{{ flickity_options }}'>
+         data-flickity-config='{{ flickity_options1 }}'>
         {% for block in section.blocks %}
           {% if block.type == 'right-column' %}
           {% if block.settings.logo != blank %}
