@@ -79,7 +79,7 @@
   width:49%;
 }
 
-/*----------Available Logo ---------- */
+/*---------- Available Logo ---------- */
 .available_logo_section{
   width:100%;
 }
@@ -94,6 +94,14 @@
 }
 .available_logo_right{
   width:49%;
+}
+
+/*---------- Home Review ---------- */
+.home_review_section{
+  width:100%;
+}
+.home_review{
+  width:100%;
 }
 
 
