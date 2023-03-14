@@ -16,8 +16,13 @@
       </div>
       {% endfor %}
       <div class="home_blog_right">
+        {% for article in blog.articles offset:1 limit:2 %}
         <div class="home_blog_right_list">
+          <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
+          {{ article.content }}
+        <div class="blog-tag-list">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>
