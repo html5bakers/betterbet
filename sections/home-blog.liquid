@@ -1,7 +1,19 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Home Blog",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enabled_home_blog",
+        "label": "Show Home Blog",
+        "default": true
+      },
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Blog"
+      }
+    ]
   }
 {% endschema %}
 
