@@ -588,7 +588,7 @@
       ],
       "settings": {
         "title": "Featured collection",
-        "layout_mode": "carousel",
+        "layout_mode": "grid",
         "show_product_info": true,
         "show_vendor": false,
         "show_color_swatch": true,
