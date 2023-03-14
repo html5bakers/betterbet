@@ -104,6 +104,10 @@
   width:100%;
 }
 
+.js .features--show-element-staggering .ProductList--grid .ProductItem{
+  visibility:visible;
+}
+
 
 
 
