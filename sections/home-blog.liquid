@@ -4,7 +4,18 @@
     <h2>{{ section.settings.title }}</h2>
     {% endif %}
     <div class="home_blog">
-      
+      {% assign blog = blogs[section.settings.blog] %}
+      {% for article in blog.articles %}
+      <div class="home_blog_left">
+        <figure><img src="{{ article.image | img_url: 'master' }}" /></figure>
+        <div class="home_blog_left_desc">
+          <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
+          {{ article.content }}
+        </div>
+      </div>
+      {% endfor %}
+      <div class="home_blog_right">
+      </div>
     </div>
   </div>
 </section>
