@@ -5,7 +5,7 @@
     {% endif %}
     <div class="home_blog">
       {% assign blog = blogs[section.settings.blog] %}
-      {% for article in blog.articles %}
+      {% for article in blog.articles limit:1 %}
       <div class="home_blog_left">
         <figure><img src="{{ article.image | img_url: 'master' }}" /></figure>
         <div class="home_blog_left_desc">
@@ -15,6 +15,8 @@
       </div>
       {% endfor %}
       <div class="home_blog_right">
+        <div class="home_blog_right_list">
+        </div>
       </div>
     </div>
   </div>
