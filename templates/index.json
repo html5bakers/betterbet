@@ -423,6 +423,7 @@
     },
     "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7": {
       "type": "featured-collections",
+      "disabled": true,
       "blocks": {
         "template--18199026630957__13d9bce3-eb87-4eb2-a222-2ffea4bbeee7-167877575318bd5217-0": {
           "type": "collection",
