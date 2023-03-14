@@ -284,7 +284,6 @@
     },
     "76a1a166-4902-4af7-8503-cef5395c3a12": {
       "type": "three-column",
-      "disabled": true,
       "blocks": {
         "1e7bb111-96b7-4707-813c-a96e94fdaf61": {
           "type": "Text",
@@ -323,7 +322,6 @@
     },
     "e613ad79-2d51-47e8-968b-aad640e83297": {
       "type": "featured-logo",
-      "disabled": true,
       "blocks": {
         "ed58f301-3be7-4a76-8430-de01b90cf92d": {
           "type": "Logo",
@@ -362,7 +360,6 @@
     },
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f": {
       "type": "background-overlay-text",
-      "disabled": true,
       "blocks": {
         "e220cee3-82c8-4c91-a6e2-742e936c2139": {
           "type": "no-ingradiants",
@@ -424,36 +421,8 @@
         "content_list_2_desc_02": ""
       }
     },
-    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7": {
-      "type": "featured-collections",
-      "disabled": true,
-      "blocks": {
-        "template--18199026630957__13d9bce3-eb87-4eb2-a222-2ffea4bbeee7-167877575318bd5217-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "frontpage",
-            "title": "Test",
-            "grid_items_count": 8,
-            "button_text": "View all products"
-          }
-        }
-      },
-      "block_order": [
-        "template--18199026630957__13d9bce3-eb87-4eb2-a222-2ffea4bbeee7-167877575318bd5217-0"
-      ],
-      "settings": {
-        "title": "Featured collection",
-        "layout_mode": "grid",
-        "show_product_info": true,
-        "show_vendor": false,
-        "show_color_swatch": false,
-        "grid_mobile_items_per_row": "2",
-        "grid_desktop_items_per_row": 4
-      }
-    },
     "cd274d7e-592a-4051-8a59-0eb2dd34ee7f": {
       "type": "video-text",
-      "disabled": true,
       "settings": {
         "enabled_video_text": true,
         "image": "shopify:\/\/shop_images\/logo_d8ce3ec3-3b36-45ca-a19b-457ab508d256_1.png",
@@ -465,7 +434,6 @@
     },
     "0470e822-cf7e-441d-9dcd-8a3351add97c": {
       "type": "background-text",
-      "disabled": true,
       "settings": {
         "enabled_bg_text": true,
         "left_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
@@ -478,7 +446,6 @@
     },
     "30d50290-b09a-4b70-a61c-1041883d308e": {
       "type": "available-logo",
-      "disabled": true,
       "blocks": {
         "0d16606f-5237-49e1-947d-b4ac6001f255": {
           "type": "left-column",
@@ -550,7 +517,6 @@
     },
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c": {
       "type": "home-review",
-      "disabled": true,
       "blocks": {
         "eaa60b28-d387-4b9e-8fff-c844aad4c1d7": {
           "type": "Review",
@@ -603,6 +569,32 @@
         "enabled_home_blog": true,
         "blog": "news"
       }
+    },
+    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--18199026630957__13d9bce3-eb87-4eb2-a222-2ffea4bbeee7-167877575318bd5217-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "title": "Test",
+            "grid_items_count": 8,
+            "button_text": "View all products"
+          }
+        }
+      },
+      "block_order": [
+        "template--18199026630957__13d9bce3-eb87-4eb2-a222-2ffea4bbeee7-167877575318bd5217-0"
+      ],
+      "settings": {
+        "title": "Featured collection",
+        "layout_mode": "grid",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
     }
   },
   "order": [
@@ -616,11 +608,11 @@
     "76a1a166-4902-4af7-8503-cef5395c3a12",
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
-    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7",
     "cd274d7e-592a-4051-8a59-0eb2dd34ee7f",
     "0470e822-cf7e-441d-9dcd-8a3351add97c",
     "30d50290-b09a-4b70-a61c-1041883d308e",
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
-    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185"
+    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185",
+    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7"
   ]
 }
