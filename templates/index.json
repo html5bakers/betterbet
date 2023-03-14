@@ -421,6 +421,32 @@
         "content_list_2_desc_02": ""
       }
     },
+    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--18199026630957__13d9bce3-eb87-4eb2-a222-2ffea4bbeee7-167877575318bd5217-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "title": "Test",
+            "grid_items_count": 8,
+            "button_text": "View all products"
+          }
+        }
+      },
+      "block_order": [
+        "template--18199026630957__13d9bce3-eb87-4eb2-a222-2ffea4bbeee7-167877575318bd5217-0"
+      ],
+      "settings": {
+        "title": "Featured collection",
+        "layout_mode": "grid",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
     "cd274d7e-592a-4051-8a59-0eb2dd34ee7f": {
       "type": "video-text",
       "settings": {
@@ -569,32 +595,6 @@
         "enabled_home_blog": true,
         "blog": "news"
       }
-    },
-    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7": {
-      "type": "featured-collections",
-      "blocks": {
-        "template--18199026630957__13d9bce3-eb87-4eb2-a222-2ffea4bbeee7-167877575318bd5217-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "frontpage",
-            "title": "Test",
-            "grid_items_count": 8,
-            "button_text": "View all products"
-          }
-        }
-      },
-      "block_order": [
-        "template--18199026630957__13d9bce3-eb87-4eb2-a222-2ffea4bbeee7-167877575318bd5217-0"
-      ],
-      "settings": {
-        "title": "Featured collection",
-        "layout_mode": "grid",
-        "show_product_info": true,
-        "show_vendor": false,
-        "show_color_swatch": false,
-        "grid_mobile_items_per_row": "2",
-        "grid_desktop_items_per_row": 4
-      }
     }
   },
   "order": [
@@ -608,11 +608,11 @@
     "76a1a166-4902-4af7-8503-cef5395c3a12",
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
+    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7",
     "cd274d7e-592a-4051-8a59-0eb2dd34ee7f",
     "0470e822-cf7e-441d-9dcd-8a3351add97c",
     "30d50290-b09a-4b70-a61c-1041883d308e",
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
-    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185",
-    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7"
+    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185"
   ]
 }
