@@ -7,7 +7,7 @@
       {% assign blog = blogs[section.settings.blog] %}
       {% for article in blog.articles limit:1 %}
       <div class="home_blog_left">
-        <figure><img src="{{ article.image | img_url: 'master' }}" /></figure>
+        <figure><a href="{{ article.url }}"><img src="{{ article.image | img_url: 'master' }}" /></a></figure>
         <div class="home_blog_left_desc">
           <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
           {{ article.content }}
