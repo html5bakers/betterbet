@@ -508,6 +508,9 @@
       ],
       "settings": {
         "enabled_available_logo": true,
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 5,
         "left_title": "Hotels where available",
         "right_title": "Also available"
       }
@@ -556,7 +559,15 @@
       ],
       "settings": {
         "enabled_home_review": true,
+        "bg_color": "",
         "title": "Reviews"
+      }
+    },
+    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185": {
+      "type": "home-blog",
+      "settings": {
+        "enabled_home_blog": true,
+        "blog": "news"
       }
     }
   },
@@ -574,6 +585,7 @@
     "cd274d7e-592a-4051-8a59-0eb2dd34ee7f",
     "0470e822-cf7e-441d-9dcd-8a3351add97c",
     "30d50290-b09a-4b70-a61c-1041883d308e",
-    "513ba4db-5ea0-45de-baae-0ebc339a4c5c"
+    "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
+    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185"
   ]
 }
