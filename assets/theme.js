@@ -6,8 +6,35 @@ $('.prod-grid-swatch li').click(function(e){
   e.preventDefault();
   $(this).parents('.prod-grid-swatch').find('li').removeClass('active');
   $(this).addClass('active');
-  console.log('testt');
-})
+});
+
+   $('.prod-grid-cart-btn').on('click', function(e){
+     e.preventDefault();
+     var variant_id = $(this).parents('.ProductItem__Wrapper').find('.prod-grid-cart-btn li.active').data('id');
+     setTimeout(function(){
+   Shopify.addItem = function(variant_id, quantity, callback) {
+  var quantity = quantity || 1;
+  var params = {
+    type: 'POST',
+    url: '/cart/add.js',
+    data: 'quantity=' + quantity + '&id=' + variant_id,
+    dataType: 'json',
+    success: function(line_item) { 
+      if ((typeof callback) === 'function') {
+        callback(line_item);
+      }
+      else {
+        Shopify.onItemAdded(line_item);
+      }
+    },
+    error: function(XMLHttpRequest, textStatus) {
+      Shopify.onError(XMLHttpRequest, textStatus);
+    }
+  };
+  jQuery.ajax(params);
+};
+       }, 2000);
+  }) 
 })
 
 (function (factory) {
