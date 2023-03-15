@@ -567,6 +567,7 @@
       "type": "home-blog",
       "settings": {
         "enabled_home_blog": true,
+        "title": "",
         "blog": "news"
       }
     },
@@ -595,6 +596,49 @@
         "grid_mobile_items_per_row": "2",
         "grid_desktop_items_per_row": 4
       }
+    },
+    "26011ebf-8e9b-45e8-89b4-4f214f4361c7": {
+      "type": "text-logo",
+      "blocks": {
+        "54ee8a35-39c8-43d6-a63c-40acc978f43e": {
+          "type": "Text",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/photo-1588421357574-87938a86fa28.jpg",
+            "title": "ALWAYS 100% PLANT BASED"
+          }
+        },
+        "cfb2a792-aeea-4c89-88b8-f99728a54a60": {
+          "type": "Text",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/photo-1588421357574-87938a86fa28.jpg",
+            "title": "HIGH QUALITY INGREDIENTS"
+          }
+        },
+        "c2e38b7d-3f26-499c-8cd9-ee843d5e57ef": {
+          "type": "Text",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/photo-1588421357574-87938a86fa28.jpg",
+            "title": "LOREM LOREM IPSUM"
+          }
+        },
+        "694018ed-50af-43c6-bb31-8b434e861341": {
+          "type": "Text",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/photo-1588421357574-87938a86fa28.jpg",
+            "title": "LOREM LOREM IPSUM"
+          }
+        }
+      },
+      "block_order": [
+        "54ee8a35-39c8-43d6-a63c-40acc978f43e",
+        "cfb2a792-aeea-4c89-88b8-f99728a54a60",
+        "c2e38b7d-3f26-499c-8cd9-ee843d5e57ef",
+        "694018ed-50af-43c6-bb31-8b434e861341"
+      ],
+      "settings": {
+        "enabled_text_logo": true,
+        "desc": ""
+      }
     }
   },
   "order": [
@@ -613,6 +657,7 @@
     "30d50290-b09a-4b70-a61c-1041883d308e",
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
     "2b2ccd8b-5780-4ec3-ba5f-a089e0914185",
-    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7"
+    "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7",
+    "26011ebf-8e9b-45e8-89b4-4f214f4361c7"
   ]
 }
