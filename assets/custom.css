@@ -127,6 +127,7 @@
 .text_logo ul li{
   width:24%;
   position:relative;
+  display:block;
 }
 .text_logo ul li figure{
   margin:0;
