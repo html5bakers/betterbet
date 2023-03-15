@@ -153,9 +153,9 @@
           {%- assign show_price_on_hover = settings.product_show_price_on_hover -%}
         {%- endif -%}
 
-        {%- if show_price_on_hover and color_swatch_list != blank -%}
+        {% comment %}{%- if show_price_on_hover and color_swatch_list != blank -%}
           {{- color_swatch_list -}}
-        {%- endif -%}
+        {%- endif -%}{% endcomment %}
 
         {%- if product.template_suffix != 'coming-soon' -%}
           <div class="ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading">
