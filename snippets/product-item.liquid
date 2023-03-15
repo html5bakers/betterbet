@@ -102,7 +102,7 @@
           <li data-id="{{ variant.id }}">{{ variant.title }}</li>
             {% endfor %}
           </ul>
-<!--           {%- assign color_swatch_list = '' -%}
+{% comment %}          {%- assign color_swatch_list = '' -%}
 
           {%- capture color_swatch -%}
             {%- assign color_label = 'color,colour,couleur,colore,farbe,색,色,färg,farve' | split: ',' -%}
@@ -146,7 +146,7 @@
                 {{- color_swatch -}}
               </div>
             {%- endcapture -%}
-          {%- endif -%} -->
+          {%- endif -%} {% endcomment %}
         {%- endif -%}
 
         {%- if show_price_on_hover == nil -%}
