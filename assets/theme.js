@@ -7108,3 +7108,16 @@
   })();
 
 })));
+
+$('.prod-grid-swatch li').on('click', function(e){
+  e.preventDefault();
+  $(this).parents('.prod-grid-swatch').find('li').removeClass('active');
+  $(this).addClass('active');
+  
+})
+
+
+
+
+
+
