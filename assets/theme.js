@@ -7116,7 +7116,7 @@ $('.prod-grid-swatch li').click(function(e){
   e.preventDefault();
   $(this).parents('.prod-grid-swatch').find('li').removeClass('active');
   $(this).addClass('active');
-  
+  console.log('testt');
 })
 })
 
