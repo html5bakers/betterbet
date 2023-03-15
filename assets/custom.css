@@ -108,8 +108,11 @@
   visibility:visible;
 }
 
+
+/*---------- Text Logo ---------- */
 .text_logo_section{
   width:100%;
+  padding:36px 0;
 }
 .text_logo{
   width:100%;
