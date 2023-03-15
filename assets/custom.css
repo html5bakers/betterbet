@@ -121,6 +121,8 @@
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
+  max-width:900px;
+  margin:0 auto;
 }
 .text_logo ul li{
   width:24%;
