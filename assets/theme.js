@@ -11,6 +11,7 @@ $('.prod-grid-swatch li').click(function(e){
    $('.prod-grid-cart-btn').on('click', function(e){
      e.preventDefault();
      var variant_id = $(this).parents('.ProductItem__Wrapper').find('.prod-grid-cart-btn li.active').data('id');
+     console.log('variant_id',variant_id)
      setTimeout(function(){
    Shopify.addItem = function(variant_id, quantity, callback) {
   var quantity = quantity || 1;
