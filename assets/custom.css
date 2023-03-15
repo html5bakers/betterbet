@@ -108,6 +108,36 @@
   visibility:visible;
 }
 
+.text_logo_section{
+  width:100%;
+}
+.text_logo{
+  width:100%;
+}
+.text_logo ul{
+  width:100%;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.text_logo ul li{
+  width:24%;
+  position:relative;
+}
+.text_logo ul li figure{
+  margin:0;
+}
+.text_logo ul li figure img{
+  width:100%;
+}
+.text_logo ul li h4{
+  position:absolute;
+  top:0;
+  left:0;
+}
+
 
 
 
