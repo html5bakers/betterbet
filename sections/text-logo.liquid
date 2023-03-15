@@ -4,6 +4,12 @@
     <p>{{ section.settings.desc }}</p>
     {% endif %}
     <div class="text_logo">
+      <ul>
+        <li>
+          <figure><img src=""></figure>
+          <h4></h4>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
@@ -22,6 +28,30 @@
         "type": "textarea",
         "id": "desc",
         "label": "Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Logo",
+        "category": "Logo"
       }
     ]
   }
