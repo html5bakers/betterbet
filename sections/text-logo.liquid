@@ -5,10 +5,12 @@
     {% endif %}
     <div class="text_logo">
       <ul>
+        {% for block in section.blocks %}
         <li>
           <figure><img src="{{ block.settings.bg_image | img_url: 'master' }}"></figure>
           <h4>{{ block.settings.title }}</h4>
         </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
