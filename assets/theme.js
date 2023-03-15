@@ -20,12 +20,7 @@ $('.prod-grid-swatch li').click(function(e){
     data: 'quantity=' + quantity + '&id=' + variant_id,
     dataType: 'json',
     success: function(line_item) { 
-      if ((typeof callback) === 'function') {
-        callback(line_item);
-      }
-      else {
-        Shopify.onItemAdded(line_item);
-      }
+      window.location.href = '/cart';
     },
     error: function(XMLHttpRequest, textStatus) {
       Shopify.onError(XMLHttpRequest, textStatus);
