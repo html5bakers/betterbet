@@ -13,22 +13,19 @@ $('.prod-grid-swatch li').click(function(e){
      var variant_id = $(this).parents('.ProductItem__Info').find('.prod-grid-swatch li.active').data('id');
      console.log('variant_id',variant_id)
      setTimeout(function(){
-   Shopify.addItem = function(variant_id, quantity, callback) {
-  var quantity = quantity || 1;
-  var params = {
-    type: 'POST',
-    url: '/cart/add.js',
-    data: 'quantity=' + quantity + '&id=' + variant_id,
-    dataType: 'json',
-    success: function(line_item) { 
-      window.location.href = '/cart';
-    },
-    error: function(XMLHttpRequest, textStatus) {
-      Shopify.onError(XMLHttpRequest, textStatus);
-    }
-  };
-  jQuery.ajax(params);
-};
+$.ajax({
+type: 'POST',
+url: '/cart/add.js',
+data: {
+  quantity: 1,
+  id: variant_id
+},
+  dataType: 'json', 
+ success: function (data) { 
+  window.location.href = '/cart';
+ } 
+ });
+   
        }, 2000);
   }) 
 })
