@@ -6,10 +6,14 @@
     <div class="text_logo">
       <ul>
         {% for block in section.blocks %}
-        <li>
+        <li class="color-{{ block.id }}">
           <figure><img src="{{ block.settings.bg_image | img_url: 'master' }}"></figure>
           <h4>{{ block.settings.title }}</h4>
         </li>
+        {% style %}
+          .color-{{ block.id }} h4{color:{{block.settings.text_color}};}
+          {% endstyle %}
+          
         {% endfor %}
       </ul>
     </div>
@@ -41,6 +45,11 @@
             "type": "image_picker",
             "id": "bg_image",
             "label": "Background Image"
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color"
           },
           {
             "type": "text",
