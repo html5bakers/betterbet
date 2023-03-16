@@ -1,4 +1,7 @@
 {%- if section.settings.enabled_review_topbar -%}
+  {% style %}
+    #section-{{ section.id }}{background:{{ section.settings.bg_color }};}
+  {% endstyle %}
 <section class="Section Section--spacingNormal review_topbar_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
   <div class="Container">
     <div class="review_topbar">
@@ -31,6 +34,11 @@
         "id": "enabled_review_topbar",
         "label": "Show Review Topbar",
         "default": true
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
       },
       {
         "type": "text",
