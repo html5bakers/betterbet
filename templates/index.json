@@ -643,6 +643,14 @@
         "enabled_text_logo": true,
         "desc": "Sleepy Owl is a homegrown Indian coffee brand. We spend inordinately long making coffee that is as good as it can be in every single cup."
       }
+    },
+    "ed45d5a0-769f-4a11-accf-dd481f43e81b": {
+      "type": "review-topbar",
+      "settings": {
+        "enabled_review_topbar": true,
+        "left_title": "Rated 4.6\/5",
+        "right_title": "\"Super creamy and delicious..."
+      }
     }
   },
   "order": [
@@ -662,6 +670,7 @@
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
     "2b2ccd8b-5780-4ec3-ba5f-a089e0914185",
     "13d9bce3-eb87-4eb2-a222-2ffea4bbeee7",
-    "26011ebf-8e9b-45e8-89b4-4f214f4361c7"
+    "26011ebf-8e9b-45e8-89b4-4f214f4361c7",
+    "ed45d5a0-769f-4a11-accf-dd481f43e81b"
   ]
 }
