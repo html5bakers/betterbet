@@ -7,12 +7,12 @@
         <h2>{{ section.settings.left_title }}</h2>
       </div>
       {%- endif -%}
-  {%- if section.settings.left_title != blank or section.settings.right_title_image != blank -%}
+  {%- if section.settings.right_title != blank or section.settings.right_title_image != blank -%}
       <div class="review_topbar_right">
         {% if section.settings.right_title_image != blank %}
-        <figure><img src="{{ section.settings.right_title_image | img_url: 'master' }}" alt="{{ section.settings.left_title }}" title="{{ section.settings.left_title }}" /></figure>
+        <figure><img src="{{ section.settings.right_title_image | img_url: 'master' }}" alt="{{ section.settings.right_title }}" title="{{ section.settings.right_title }}" /></figure>
         {% else %}
-        <h2>{{ section.settings.left_title }}</h2>
+        <h2>{{ section.settings.right_title }}</h2>
         {% endif %}
       </div>
   {%- endif -%}
