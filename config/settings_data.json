@@ -69,8 +69,9 @@
         "type": "header",
         "settings": {
           "use_sticky_header": false,
-          "logo_max_width": 140,
-          "mobile_logo_max_width": 90,
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo_max_width": 200,
+          "mobile_logo_max_width": 70,
           "show_country_selector": false,
           "show_locale_selector": false,
           "navigation_menu": "main-menu",
