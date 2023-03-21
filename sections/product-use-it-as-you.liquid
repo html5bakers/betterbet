@@ -4,11 +4,13 @@
       {% if product.metafields.custom.use_as_you_heading != blank %}
       <h2>{{ product.metafields.custom.use_as_you_heading }}</h2>
       {% endif %}
+      {% for image in product.metafields.custom.use_as_you_image.value %}
       <div class="product_use_it_wrapper">
-        <figure><img src="" /></figure>
-        <h3></h3>
-        <p></p>
+        <figure><img src="{{ image | img_url: 'master' }}" /></figure>
+        <h3>{{ product.metafields.custom.use_as_you_text.value[i] }}</h3>
+        <p>{{ product.metafields.custom.use_as_you_desc.value[i] }}</p>
       </div>
+        {% endfor %}
     </div>
   </div>
 </section>
