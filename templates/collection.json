@@ -54,8 +54,8 @@
       ],
       "settings": {
         "enabled_security_badges": true,
-        "bg_color": "",
-        "text_color": ""
+        "bg_color": "#496427",
+        "text_color": "#ffffff"
       }
     },
     "recently-viewed-products": {
