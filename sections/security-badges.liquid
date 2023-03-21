@@ -2,6 +2,12 @@
 <section class="Section Section--spacingNormal security_badges_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
   <div class="Container">
     <div class="security_badges">
+      <div class="security_badges_wrapper">
+        {{ block.settings.icon }}
+        {%- if block.settings.title != blank -%}
+        <h4>{{ block.settings.title }}</h4>
+        {%- endif -%}
+      </div>
     </div>
   </div>
 </section>
