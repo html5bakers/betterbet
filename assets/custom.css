@@ -163,10 +163,13 @@ opacity: 1;
 
 /*---------- Security Badges ---------- */
 .security_badges_section{
-   width:100%
+   width:100%;
 }
 .security_badges{
-    width:100%
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
 }
 
 
