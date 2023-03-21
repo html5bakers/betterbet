@@ -1,7 +1,7 @@
 {%- if section.settings.enabled_security_badges -%}
   {%- style -%}
     #section-{{ section.id }}{background:{{ section.settings.bg_color }};}
-    #section-{{ section.id }} h4{color:{{ section.settings.text_color }};}
+    #section-{{ section.id }} p{color:{{ section.settings.text_color }};}
   {%- endstyle -%}
 <section class="Section Section--spacingNormal security_badges_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
   <div class="Container">
@@ -10,7 +10,7 @@
       <div class="security_badges_wrapper">
         {{ block.settings.icon }}
         {%- if block.settings.title != blank -%}
-        <h2>{{ block.settings.title }}</h2>
+        <p>{{ block.settings.title }}</p>
         {%- endif -%}
       </div>
       {%- endfor -%}
