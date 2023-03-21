@@ -171,9 +171,13 @@ opacity: 1;
   flex-wrap:wrap;
   justify-content:space-between;
   text-align:center;
+  padding:100px 0;
 }
 .security_badges_wrapper{
   width:32%;
+}
+.security_badges_wrapper p{
+  margin:0;
 }
 
 
