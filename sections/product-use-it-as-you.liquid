@@ -4,7 +4,9 @@
       {% if product.metafields.custom.use_as_you_heading != blank %}
       <h2>{{ product.metafields.custom.use_as_you_heading }}</h2>
       {% endif %}
+      {% assign i = -1 %}
       {% for image in product.metafields.custom.use_as_you_image.value %}
+        {% assign i = i | plus:1 %}
       <div class="product_use_it_wrapper">
         <figure><img src="{{ image | img_url: 'master' }}" /></figure>
         <h3>{{ product.metafields.custom.use_as_you_text.value[i] }}</h3>
