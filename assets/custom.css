@@ -171,7 +171,9 @@ opacity: 1;
   flex-wrap:wrap;
   justify-content:space-between;
 }
-
+.security_badges_wrapper{
+  width:32%;
+}
 
 
 
