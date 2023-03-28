@@ -351,50 +351,6 @@
         "product": ""
       }
     },
-    "timeline": {
-      "type": "timeline",
-      "disabled": true,
-      "blocks": {
-        "item-0": {
-          "type": "item",
-          "settings": {
-            "apply_overlay": true,
-            "title": "2000",
-            "subheading": "Sub-heading",
-            "heading": "Heading",
-            "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
-          }
-        },
-        "item-1": {
-          "type": "item",
-          "settings": {
-            "apply_overlay": true,
-            "title": "2001",
-            "subheading": "Sub-heading",
-            "heading": "Heading",
-            "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "apply_overlay": true,
-            "title": "2002",
-            "subheading": "Sub-heading",
-            "heading": "Heading",
-            "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "item-0",
-        "item-1",
-        "item-2"
-      ],
-      "settings": {
-        "text_color": "#ffffff"
-      }
-    },
     "e613ad79-2d51-47e8-968b-aad640e83297": {
       "type": "featured-logo",
       "disabled": true,
@@ -496,8 +452,18 @@
         "right_title": "Also available"
       }
     },
+    "3fb44d42-18db-41cd-bddd-16dec9baff38": {
+      "type": "collection-review",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "bg_color": "",
+        "title": ""
+      }
+    },
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c": {
       "type": "home-review",
+      "disabled": true,
       "blocks": {
         "eaa60b28-d387-4b9e-8fff-c844aad4c1d7": {
           "type": "Review",
@@ -564,9 +530,9 @@
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
     "bdbc06b7-a0fb-4a00-8c63-9fe0f9e30083",
     "featured-product",
-    "timeline",
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "30d50290-b09a-4b70-a61c-1041883d308e",
+    "3fb44d42-18db-41cd-bddd-16dec9baff38",
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
     "2b2ccd8b-5780-4ec3-ba5f-a089e0914185"
   ]
