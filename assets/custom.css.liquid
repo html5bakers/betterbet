@@ -100,10 +100,12 @@ figure{ margin: 0; }
 .Header__FlexItem--fill{
   justify-content: center !important;
 }*/
-.Header__FlexItem.Header__FlexItem--logo .Header__Logo .Header__LogoLink{
-  position: absolute;
-  top: -80px;
-  left: 0;
+@media screen and (min-width: 1139px){
+  .Header__FlexItem.Header__FlexItem--logo .Header__Logo .Header__LogoLink{
+    position: absolute;
+    top: -80px;
+    left: 0;
+  }
 }
 @media screen and (min-width: 1139px) and (max-width: 1300px){
   .Header__Wrapper .Header__FlexItem--logo{
