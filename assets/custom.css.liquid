@@ -85,9 +85,10 @@ figure{ margin: 0; }
 .Header__MainNav{
   margin:0;
 }
+/*
 .Header__MainNav .HorizontalList__Item{
   margin: 19px 18.5px;
-}
+}*/
 .Header__MainNav .HorizontalList__Item .Heading{
   font-family: 'paralucent-demiboldregular';
   font-size: 1.5rem;
@@ -95,15 +96,20 @@ figure{ margin: 0; }
   letter-spacing: 0.14px;
   text-transform:uppercase;
 }
+/*
 .Header__FlexItem--fill{
   justify-content: center !important;
-}
+}*/
 .Header__FlexItem.Header__FlexItem--logo .Header__Logo .Header__LogoLink{
   position: absolute;
   top: -80px;
   left: 0;
 }
-
+@media screen and (min-width: 1008px) and (max-width: 1300px){
+  .Header__Wrapper .Header__FlexItem--logo{
+    order: -1;
+  }
+}
 /*---------- Topbar Review ---------- */
 .review_topbar{
   display: flex;
