@@ -284,12 +284,23 @@ figure{ margin: 0; }
   .three_column_wrapper .column{ width: 49%; }
 }
 @media screen and (min-width:992px){
-  .three_column_wrapper .SectionHeader h2{ font-size: 5rem; }
+  .three_column_wrapper .SectionHeader h2{ font-size: 4.5rem; }
   .three_column_wrapper .SectionHeader p{ font-size: 2rem; }
+  .three_column_wrapper .list .bg_left{ left: -2%; }
   .three_column_wrapper .column{ width: 32%; }
 }
-
-
+@media screen and (min-width:1441px){
+  .three_column_wrapper .list .bg_left{
+    left: -2%;
+    width: 100%;
+  }
+  .three_column_wrapper .list .bg_right{
+    top: 10%;
+    bottom: auto;
+    right: -2%;
+    width: 100%;
+  }
+}
 
 /*---------- Featured Logo ---------- */
   .featured_logo{
