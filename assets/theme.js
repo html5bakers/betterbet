@@ -28,6 +28,13 @@ data: {
    
        }, 2000);
   }) 
+    var elem = document.querySelector('.collection_review');
+var flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  contain: true,
+  pageDots: false
+});
 })
 
 (function (factory) {

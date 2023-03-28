@@ -1,27 +1,43 @@
+{% style %}
+   #section-{{ section.id }}{
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  
+{% endstyle %}
 <section class="Section Section--spacingNormal three_column_section" id="section-{{ section.id }}">
   <div class="Container">
     <div class="three_column_wrapper">
-      {%- if section.settings.title != blank or section.settings.desc != blank -%}
-      <div class="three_column_heading">
+      {%- if section.settings.desc != blank or section.settings.title != blank -%}
+      <header class="SectionHeader SectionHeader--center text_center">
         {%- if section.settings.title != blank -%}
-        <h2>{{ section.settings.title }}</h2>
+          <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title }}
+          {% if section.settings.heading_image != blank %}
+            <figure class="heading_img"><img src="{{ section.settings.heading_image | img_url: '40x40'  }}" alt="" /></figure>
+          {% endif %}
+          </h2>
         {%- endif -%}
         {%- if section.settings.desc != blank -%}
-        <p>{{ section.settings.desc }}</p>
+          <p>{{ section.settings.desc }}</p>
         {%- endif -%}
-      </div>
-      {%- endif -%}
-      <div class="three_column_list">
+      </header>
+    {%- endif -%}
+      <div class="list">
+        <figure class="bg_left"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
+        <figure class="bg_right"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
+        
         {%- for block in section.blocks -%}
-        <div class="three_column">
+        <div class="column text_center">
           {%- if block.settings.image != blank -%}
-          <figure><img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}" title="{{ block.settings.title }}" /></figure>
+            <div class="icon">
+              {{ block.settings.image}}
+            </div>
           {%- endif -%}
           {%- if block.settings.title != blank -%}
-          <h3>{{ block.settings.title }}</h3>
+            <h3>{{ block.settings.title }}</h3>
           {%- endif -%}
           {%- if block.settings.desc != blank -%}
-          <p>{{ block.settings.desc }}</p>
+            <p>{{ block.settings.desc }}</p>
           {%- endif -%}
         </div>
         {%- endfor -%}
@@ -39,6 +55,26 @@
     "name": "Three Column",
     "settings": [
       {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      }, 
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
         "type": "text",
         "id": "title",
         "label": "Heading"
@@ -47,6 +83,11 @@
         "type": "textarea",
         "id": "desc",
         "label": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "heading_image",
+        "label": "Heading Image"
       },
       {
         "type": "image_picker",
@@ -65,9 +106,9 @@
         "name": "Text",
         "settings": [
           {
-            "type": "image_picker",
+            "type": "textarea",
             "id": "image",
-            "label": "Image"
+            "label": "Icon"
           },
           {
             "type": "text",

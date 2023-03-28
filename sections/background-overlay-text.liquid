@@ -1,51 +1,61 @@
 {% style %}
-  .bg_overlay_text_section{background:{{ section.settings.bg_color }};}
+    #section-{{ section.id }}{
+      background:{{ section.settings.bg_color }};
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+  @media(min-width:992px){
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
 {% endstyle %}
-<section class="Section Section--spacingNormal text_with_overlay bg_overlay_text_section" id="section-{{ section.id }}">
+<section class="Section Section--spacingNormal text_with_overlay" id="section-{{ section.id }}">
   <div class="Container">
     {%- if section.settings.best_image != blank -%}
-  <figure class="best-seller-img"><img src="{{ section.settings.best_image | img_url: 'master' }}"</figure>
-      {%- endif -%}
+        <figure class="best-seller-img"><img src="{{ section.settings.best_image | img_url: 'master' }}" /></figure>
+    {%- endif -%}
     <div class="text_block content_wrapper">
       <div class="left_block">
         <div class="left_block_desc">
           {%- if section.settings.content_title_01 != blank -%}
-          <h2>{{ section.settings.content_title_01 }}</h2>
+            <h2>{{ section.settings.content_title_01 }}</h2>
           {%- endif -%}
           {%- if section.settings.content_desc_01 != blank -%}
-          <p>{{ section.settings.content_desc_01 }}</p>
+            <p>{{ section.settings.content_desc_01 }}</p>
           {%- endif -%}
           {%- if section.settings.content_list_1_title_01 != blank -%}
-          <h3>{{ section.settings.content_list_1_title_01 }}</h3>
+            <h3>{{ section.settings.content_list_1_title_01 }}</h3>
           {%- endif -%}
           {%- if section.settings.content_list_1_desc_01 != blank -%}
-          <ul>{{ section.settings.content_list_1_desc_01 }}</ul>
+            <ul class="flex">{{ section.settings.content_list_1_desc_01 }}</ul>
           {%- endif -%}
           {%- if section.settings.content_list_1_title_02 != blank -%}
-          <h3>{{ section.settings.content_list_1_title_02 }}</h3>
+            <h3>{{ section.settings.content_list_1_title_02 }}</h3>
           {%- endif -%}
           {%- if section.settings.content_list_1_desc_02 != blank -%}
-          <ul>{{ section.settings.content_list_1_desc_02 }}</ul>
+            <ul class="flex">{{ section.settings.content_list_1_desc_02 }}</ul>
           {%- endif -%}
         </div>
-        <div class="left_block_desc">
+        <div class="left_block_desc block_2">
           {%- if section.settings.content_title_02 != blank -%}
-          <h2>{{ section.settings.content_title_02 }}</h2>
+            <h2>{{ section.settings.content_title_02 }}</h2>
           {%- endif -%}
           {%- if section.settings.content_desc_02 != blank -%}
-          <p>{{ section.settings.content_desc_02 }}</p>
+            <p>{{ section.settings.content_desc_02 }}</p>
           {%- endif -%}
           {%- if section.settings.content_list_2_title_01 != blank -%}
-          <h3>{{ section.settings.content_list_2_title_01 }}</h3>
+            <h3>{{ section.settings.content_list_2_title_01 }}</h3>
           {%- endif -%}
           {%- if section.settings.content_list_2_desc_01 != blank -%}
-          <ul>{{ section.settings.content_list_2_desc_01 }}</ul>
+            <ul class="flex">{{ section.settings.content_list_2_desc_01 }}</ul>
           {%- endif -%}
           {%- if section.settings.content_list_2_title_02 != blank -%}
-          <h3>{{ section.settings.content_list_2_title_02 }}</h3>
+            <h3>{{ section.settings.content_list_2_title_02 }}</h3>
           {%- endif -%}
           {%- if section.settings.content_list_2_desc_02 != blank -%}
-          <ul>{{ section.settings.content_list_2_desc_02 }}</ul>
+            <ul class="flex">{{ section.settings.content_list_2_desc_02 }}</ul>
           {%- endif -%}
         </div>
       </div>
@@ -58,8 +68,8 @@
         <ul>
           {%- for block in section.blocks -%}
             {%- if block.settings.image != blank and block.settings.title != blank -%}
-          <li>{{ block.settings.image }}<span>{{ block.settings.title }}</span></li>
-          {%- endif -%}
+              <li class="flex">{{ block.settings.image }}<span>{{ block.settings.title }}</span></li>
+            {%- endif -%}
           {%- endfor -%}
         </ul>
       </div>
@@ -71,6 +81,26 @@
   {
     "name": "Background Overlay Text",
     "settings": [      
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 40
+      }, 
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 40
+      },
       {
         "type": "header",
         "content": "Background"
@@ -87,7 +117,7 @@
       {
         "type": "image_picker",
         "id": "best_image",
-        "label": "Best Image"
+        "label": "Badge Image"
       },
       {
         "type": "image_picker",
@@ -189,9 +219,3 @@
     ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

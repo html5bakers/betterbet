@@ -4834,7 +4834,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   display: flex;
   margin: 0;
   width: 100%;
-  min-height: 450px;
+  min-height: 250px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -5000,8 +5000,8 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
   @supports (--css: variables) {
     .PageHeader--small.PageHeader--withBackground {
-      min-height: calc(550px + var(--header-height) * 0);
-      min-height: calc(550px + var(--header-height) * var(--header-is-transparent, 0));
+      min-height: calc(320px + var(--header-height) * 0);
+      min-height: calc(320px + var(--header-height) * var(--header-is-transparent, 0));
     }
   }
 
@@ -5675,7 +5675,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 @media screen and (min-width: 1008px) {
   .Section--spacingNormal {
-    margin: 80px 0;
+    margin: 50px 0;
   }
 
   .Section--spacingLarge {
@@ -5687,7 +5687,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
 
   .shopify-section--bordered > .Section--spacingNormal {
-    padding: 80px 0;
+    padding: 50px 0;
   }
 
   .shopify-section--bordered > .Section--spacingLarge {
@@ -5699,7 +5699,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
 
   .SectionHeader:not(:only-child) {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   .SectionHeader__Description {
@@ -7404,7 +7404,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 
   .ProductList--grid[data-desktop-count="4"] > .Grid__Cell,
   .ProductList--grid[data-desktop-count="3"] > .Grid__Cell {
-    padding-left: var(--horizontal-spacing-four-products-per-row);
+    padding-left: calc(10px + var(--horizontal-spacing-four-products-per-row));
     margin-bottom: var(--vertical-spacing-four-products-per-row);
   }
 
@@ -8196,7 +8196,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
 
   .Header:not(.Header--sidebar) .Header__Wrapper {
-    padding: 18px 50px;
+    padding: 0 50px;
   }
 
   .Header__Localization {
@@ -11380,3 +11380,33 @@ shopify-payment-terms {
     margin-top: 65px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

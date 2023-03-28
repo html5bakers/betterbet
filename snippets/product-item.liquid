@@ -97,11 +97,6 @@
         {%- endif -%}
 
         {%- if show_color_swatch -%}
-          <ul class="prod-grid-swatch">
-          {% for variant in product.variants %}
-          <li data-id="{{ variant.id }}">{{ variant.title }}</li>
-            {% endfor %}
-          </ul>
 {% comment %}          {%- assign color_swatch_list = '' -%}
 
           {%- capture color_swatch -%}
@@ -156,36 +151,55 @@
         {% comment %}{%- if show_price_on_hover and color_swatch_list != blank -%}
           {{- color_swatch_list -}}
         {%- endif -%}{% endcomment %}
-      <a href="#" class="prod-grid-cart-btn">Add to Cart</a>
+       
 
         {%- if product.template_suffix != 'coming-soon' -%}
           <div class="ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading">
             {%- if product.compare_at_price > product.price -%}
               {%- if settings.currency_code_enabled -%}
-                <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.price | money_with_currency }}</span>
-                <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.compare_at_price | money_with_currency }}</span>
+                <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.price | money_with_currency | remove: '.00' }}</span>
+                <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.compare_at_price | money_with_currency | remove: '.00' }}</span>
+                <span class="discount-price">Save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
               {%- else -%}
-                <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.price | money }}</span>
-                <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.compare_at_price | money }}</span>
+                <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.price | money | remove: '.00' }}</span>
+                <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.compare_at_price | money | remove: '.00' }}</span>
+                <span class="discount-price">Save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
               {%- endif -%}
             {%- elsif product.price_varies -%}
               {%- if settings.currency_code_enabled -%}
-                {%- capture formatted_min_price -%}{{ product.price_min | money_with_currency }}{%- endcapture -%}
-                {%- capture formatted_max_price -%}{{ product.price_max | money_with_currency }}{%- endcapture -%}
+                {%- capture formatted_min_price -%}{{ product.price_min | money_with_currency | remove: '.00' }}{%- endcapture -%}
+                {%- capture formatted_max_price -%}{{ product.price_max | money_with_currency | remove: '.00' }}{%- endcapture -%}
               {%- else -%}
-                {%- capture formatted_min_price -%}{{ product.price_min | money }}{%- endcapture -%}
-                {%- capture formatted_max_price -%}{{ product.price_max | money }}{%- endcapture -%}
+                {%- capture formatted_min_price -%}{{ product.price_min | money | remove: '.00' }}{%- endcapture -%}
+                {%- capture formatted_max_price -%}{{ product.price_max | money | remove: '.00' }}{%- endcapture -%}
               {%- endif -%}
 
               <span class="ProductItem__Price Price Text--subdued">{{ 'collection.product.from_price_html' | t: min_price: formatted_min_price, max_price: formatted_max_price }}</span>
             {%- else -%}
               {%- if settings.currency_code_enabled -%}
-                <span class="ProductItem__Price Price Text--subdued">{{ product.price | money_with_currency }}</span>
+                <span class="ProductItem__Price Price Text--subdued">{{ product.price | money_with_currency | remove: '.00' }}</span>
               {%- else -%}
-                <span class="ProductItem__Price Price Text--subdued">{{ product.price | money }}</span>
+                <span class="ProductItem__Price Price Text--subdued">{{ product.price | money | remove: '.00' }}</span>
               {%- endif -%}
             {%- endif -%}
           </div>
+
+        {%- if show_color_swatch -%}
+          {% if product.variants.size > 1 %}
+          <ul class="prod-grid-swatch">
+          {% for variant in product.variants %}
+          <li data-id="{{ variant.id }}"{% if forloop.index == 1 %} class="active"{% endif %}>{{ variant.title }}</li>
+            {% endfor %}
+          </ul>
+            {% else %}
+            <ul class="prod-grid-swatch">
+            {% for variant in product.variants %}
+              <li data-id="{{ variant.id }}" style="display:none;" class="active"></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+      <a href="#" class="prod-grid-cart-btn">Add to Cart</a>
+         {% endif %}
 
           {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
             <div class="ProductItem__UnitPriceMeasurement">

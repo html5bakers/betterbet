@@ -1,22 +1,26 @@
 <section class="Section Section--spacingNormal text_logo_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
   <div class="Container">
-    {% if section.settings.desc != blank %}
-    <p>{{ section.settings.desc }}</p>
-    {% endif %}
-    <div class="text_logo">
-      <ul>
+    <header class="SectionHeader SectionHeader--center">
+        {%- if section.settings.title != blank -%}
+          <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+
+        {% if section.settings.desc != blank %}
+          <p>{{ section.settings.desc }}</p>
+        {% endif %}
+      </header>
+    
+      <ul class="list">
         {% for block in section.blocks %}
-        <li class="color-{{ block.id }}">
-          <figure><img src="{{ block.settings.bg_image | img_url: 'master' }}"></figure>
-          <h4>{{ block.settings.title }}</h4>
-        </li>
-        {% style %}
-          .color-{{ block.id }} h4{color:{{block.settings.text_color}};}
-          {% endstyle %}
-          
+        <li class="color-{{ block.id }}" style="color:{{block.settings.text_color}};">
+          <span class="bg_image"><svg xmlns="http://www.w3.org/2000/svg" width="186.922" height="109.362" viewBox="0 0 186.922 109.362">
+            <path id="Path_425" data-name="Path 425" d="M160.547,55.41V53.769c14.75-3.463,22.731-11.3,22.731-25.882C183.278,8.748,170.959,0,142.326,0H0V109.362H147.185c28.631,0,39.737-11.848,39.737-30.075,0-15.675-6.421-22.056-26.375-23.878" fill="{{ block.settings.bg_color }}"/>
+          </svg></span>
+          <span>{{ block.settings.title }}</span>
+        </li>          
         {% endfor %}
       </ul>
-    </div>
+    
   </div>
 </section>
 
@@ -31,6 +35,11 @@
         "default": true
       },
       {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
         "type": "textarea",
         "id": "desc",
         "label": "Description"
@@ -42,9 +51,10 @@
         "name": "Text",
         "settings": [
           {
-            "type": "image_picker",
-            "id": "bg_image",
-            "label": "Background Image"
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#496427"
           },
           {
             "type": "color",

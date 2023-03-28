@@ -2,23 +2,23 @@
 
 @font-face {
     font-family: 'paralucentw00-mediumregular';
-    src: url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent-medium.eot?v=16814968025479791870');
-    src: url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent-medium.eot?v=16814968025479791870?#iefix') format('embedded-opentype'),
-         url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent-medium.woff2?v=2487305946606322329') format('woff2'),
-         url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent-medium.woff?v=1832488748545509135') format('woff'),
-         url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent-medium.ttf?v=14296629469823300036') format('truetype'),
-         url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent-medium.svg?v=17049618530554838813#paralucentw00-mediumregular') format('svg');
+    src: url('{{ "paralucent-medium.eot" | file_url }}');
+    src: url('{{ "paralucent-medium.eot" | file_url }}?#iefix') format('embedded-opentype'),
+         url('{{ "paralucent-medium.woff2" | file_url }}') format('woff2'),
+         url('{{ "paralucent-medium.woff" | file_url }}') format('woff'),
+         url('{{ "paralucent-medium.ttf" | file_url }}') format('truetype'),
+         url('{{ "paralucent-medium.svg" | file_url }}#paralucentw00-mediumregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'paralucent-demiboldregular';
-    src: url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent_demi_bold.eot?v=3281586762861138169');
-    src: url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent_demi_bold.eot?v=3281586762861138169?#iefix') format('embedded-opentype'),
-         url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent_demi_bold.woff2?v=5300245128761732662') format('woff2'),
-         url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent_demi_bold.woff?v=15562643316964047977') format('woff'),
-         url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent_demi_bold.ttf?v=11087925882241928946') format('truetype'),
-         url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/paralucent_demi_bold.svg?v=13184058297431220968#paralucentw00-demiboldregular') format('svg');
+    src: url('{{ "paralucent_demi_bold.eot" | file_url }}');
+    src: url('{{ "paralucent_demi_bold.eot" | file_url }}?#iefix') format('embedded-opentype'),
+         url('{{ "paralucent_demi_bold.woff2" | file_url }}') format('woff2'),
+         url('{{ "paralucent_demi_bold.woff" | file_url }}') format('woff'),
+         url('{{ "paralucent_demi_bold.ttf" | file_url }}') format('truetype'),
+         url('{{ "paralucent_demi_bold.svg" | file_url }}#paralucentw00-demiboldregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -258,7 +258,7 @@ figure{ margin: 0; }
   position: absolute;
   top: 0;
   left: 0;
-  background: url('//cdn.shopify.com/s/files/1/0553/4859/2693/files/blue-textured-circle.svg?v=5504121797167302015') no-repeat;
+  background: url('{{ "blue-textured-circle.svg" | file_url }}') no-repeat;
   z-index: 1;
 }
 .three_column_wrapper .icon svg{

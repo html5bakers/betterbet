@@ -1,0 +1,135 @@
+{%- if section.settings.enabled_video_text -%}
+  {% style %}
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  {% endstyle %}
+<section class="Section Section--spacingNormal video_with_text" id="section-{{ section.id }}">
+  <div class="Container">
+    
+    <div class="video_text_wrapper">
+      <div class="col_left">
+          {%- if section.settings.video_link != blank or section.settings.image != blank -%}
+            {% if section.settings.video_link != blank %}
+              <video width="100%" controls>
+                <source src="{{ section.settings.video_link }}" type="video/mp4">
+                <source src="{{ section.settings.video_link }}" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
+            {%- else -%}
+                <figure><img src="{{ section.settings.image | img_url: 'master' }}" alt="" title="" /></figure>
+            {%- endif -%}
+          {%- endif -%}
+      </div>
+      
+      <div class="col_right">
+        {% for block in section.blocks %}
+          <div class="col_right_desc">
+            {% if block.settings.title != blank %}
+              <h3>{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.desc != blank %}
+              <p>{{ block.settings.desc }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+        {%- if section.settings.btn_link != blank and section.settings.btn_title != blank -%}
+          <div class="button_wrapper"><a href="{{ section.settings.btn_link }}" class="btn">{{ section.settings.btn_title }}</a></div>
+        {%- endif -%}
+      </div>
+    </div>
+    
+  </div>
+</section>
+{%- endif -%}
+
+
+{% schema %}
+  {
+    "name": "Video With Text",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enabled_video_text",
+        "label": "Show Video Text",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 40
+      }, 
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 40
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "video_link",
+        "label": "Video Link"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "btn_title",
+        "label": "Button Heading"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "desc",
+            "label": "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Video With Text",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
