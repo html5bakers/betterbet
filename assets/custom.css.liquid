@@ -130,10 +130,8 @@ figure{ margin: 0; }
 }
 /*---------- Topbar Review ---------- */
 .review_topbar{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-between;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 15px 0;
 }
@@ -153,7 +151,11 @@ figure{ margin: 0; }
   width: 55%;
   text-align: right;
 }
-
+@media screen and (min-width: 640px){
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
 
 /* Homepage */
 /* SlideShow Badge */
