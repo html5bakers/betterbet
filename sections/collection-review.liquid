@@ -29,7 +29,7 @@
          data-flickity-config='{{ flickity_options }}'>
       {% for block in section.blocks %}
       <li>
-        <h3>
+        <div class="review_rating">
           {%- if block.settings.star == '1' -%}
             {% include 'star' %}
           {%- elsif block.settings.star == '2' -%}
@@ -41,7 +41,7 @@
           {%- elsif block.settings.star == '5' -%}
             {% include 'star' %}{% include 'star' %}{% include 'star' %}{% include 'star' %}{% include 'star' %}
           {%- endif -%}
-        </h3>
+        </div>
         {%- if block.settings.desc != blank -%}
         <p>{{ block.settings.desc }}</p>
         {%- endif -%}
@@ -53,10 +53,10 @@
         </div>
         <div class="col_right">
         {%- if block.settings.title != blank -%}
-        <h4>{{ block.settings.title }}</h4>
+        <span class="author_name">{{ block.settings.title }}</span>
           {%- endif -%}
           {%- if block.settings.designation != blank -%}
-          <h5>{{ block.settings.designation }}</h5>
+          <span class="designation">{{ block.settings.designation }}</span>
           {%- endif -%}
         </div>
         </div>
@@ -141,7 +141,7 @@
           {
             "type": "text",
             "id": "title",
-            "label": "Heading"
+            "label": "Author Name"
           },
           {
             "type": "text",
