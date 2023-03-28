@@ -218,14 +218,12 @@ figure{ margin: 0; }
   position: absolute;
   top: -4%;
   left: -5%;
-  width: 100px;
 }
 .three_column_wrapper .list .bg_right{
   position: absolute;
   top: auto;
   bottom: 20%;
   right: -7%;
-  width: 100px;
 }
 
 .three_column_wrapper .column{
@@ -301,7 +299,10 @@ figure{ margin: 0; }
     width: 100%;
   }
 }
-
+@media screen and (max-width:640px){
+  .three_column_wrapper .list .bg_left,
+  .three_column_wrapper .list .bg_right{ width: 100px; }
+}
 /*---------- Featured Logo ---------- */
   .featured_logo{
     display:flex;
