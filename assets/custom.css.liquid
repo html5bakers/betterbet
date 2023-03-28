@@ -826,10 +826,10 @@ background-size:contain;
 }
 
 /*---------- Collection Review ---------- */
-.collection_review_section{
+.custom_reviews{
   position:relative;
 }
-.collection_review_section:after{
+.custom_reviews:after{
   content:'';
   width:110%;
   height:40px;
@@ -856,7 +856,7 @@ background-size:contain;
   left:-30px !important;
   right:auto !important;
 }
-.collection_review_section h2{
+.custom_reviews h2{
   font-size:2.5rem;
   line-height:1.2;
   color:#fff;
@@ -865,53 +865,53 @@ background-size:contain;
   text-align:center;
   font-weight:700;
 }
-.collection_review{
+.custom_reviews .reviews{
   text-align:center;
 }
-.collection_review li{
+.custom_reviews .reviews li{
   width:100%;
   background:#ffdfbe;
    padding:20px 15px;
   display:block;
   margin:0;
 }
-.collection_review_text{
+.custom_reviews .review_text{
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
   align-items:center;
   text-align:left;
 }
-.collection_review_text .col_left{
+.custom_reviews .review_text .col_left{
   width:55px;
 }
-.collection_review_text .col_left figure{
+.custom_reviews .review_text .col_left figure{
   margin:0;
 }
-.collection_review_text .col_left img{
+.custom_reviews .review_text .col_left img{
   width:40px;
   height:40px;
   border-radius:50%;
 }
-.collection_review_text .col_right{
+.custom_reviews .review_text .col_right{
   width:calc(100% - 55px);
 }
-.collection_review h3{
+.custom_reviews .reviews h3{
   margin:0 0 15px;
   line-height:0;
 }
-.collection_review h3 svg{
+.custom_reviews .reviews h3 svg{
   height:18px;
   width:18px;
   margin:0 6px;
 }
-.collection_review p{
+.custom_reviews .reviews p{
   font-size:1.125rem;
   line-height:1.4;
   margin:0 0 15px;
   font-family: 'paralucentw00-mediumregular';
 }
-.collection_review h4{
+.custom_reviews .reviews h4{
   font-size:1.5rem;
   color:#162516;
   line-height:1;
@@ -919,84 +919,84 @@ background-size:contain;
   text-transform:uppercase;
   font-weight:700;
 }
-.collection_review h5{
+.custom_reviews .reviews h5{
   font-size:1.125rem;
   line-height:1.35;
   margin:0;
   font-family: 'paralucentw00-mediumregular';
 }
 @media screen and (min-width: 640px){
- .collection_review li{
+ .custom_reviews .reviews li{
     width:calc(50% - 20px);
     margin:0 10px;
     padding:20px 15px;
   }
-  .collection_review_text .col_left{
+  .custom_reviews .review_text .col_left{
   width:65px;
 }
-.collection_review_text .col_left img{
+.custom_reviews .review_text .col_left img{
   width:50px;
   height:50px;
 }
-.collection_review_text .col_right{
+.custom_reviews .review_text .col_right{
   width:calc(100% - 65px);
 }
-   .collection_review h3 svg{
+   .custom_reviews .reviews h3 svg{
   height:20px;
   width:20px;
      margin:0 3px;
 }
-    .collection_review h3{
+    .custom_reviews .reviews h3{
   margin:0 0 20px;
 }
-.collection_review p{
+.custom_reviews .reviews p{
   font-size:1rem;
 }
-.collection_review h4{
+.custom_reviews .reviews h4{
   font-size:1.25rem;
 }
-.collection_review h5{
+.custom_reviews .reviews h5{
   font-size:1rem;
 }
-  .Carousel--insideDots .flickity-prev-next-button{
+.Carousel--insideDots .flickity-prev-next-button{
   right:0 !important;
 }
 .Carousel--insideDots .flickity-prev-next-button.previous{
   left:-25px !important;
   right:auto !important;
 }
-  .collection_review_section:after{
+.custom_reviews:after{
   height:70px;
   top:-35px;
 }
-  .collection_review_section h2{
+.custom_reviews h2{
     margin:0 0 36px;
   }
 }
 @media screen and (min-width: 1025px){
- .collection_review li{
+ .custom_reviews .reviews li{
     width:calc(33.3333% - 20px);
     margin:0 10px;
     padding:20px 15px;
   }
 }
 @media screen and (min-width: 1440px){
-  .collection_review li{
+  .custom_reviews .reviews li{
     width:calc(33.3333% - 60px);
     margin:0 30px;
     padding:62px 45px 48px;
   }
-    .collection_review_text .col_left{
+    .custom_reviews .review_text .col_left{
     width:115px;
   }
-  .collection_review_text .col_left img{
+  .custom_reviews .review_text .col_left img{
     width:100px;
     height:100px;
   }
-  .collection_review_text .col_right{
+  .custom_reviews .review_text .col_right{
     width:calc(100% - 115px);
   }
-  .collection_review h3 svg{
+  .custom_reviews .reviews h3 svg{
     height:33px;
     width:33px;
   }
@@ -1006,19 +1006,19 @@ background-size:contain;
   .Carousel--insideDots .flickity-prev-next-button.previous{
     left:-60px !important;
   }
-  .collection_review h3{
+  .custom_reviews .reviews h3{
     margin:0 0 38px;
   }
-  .collection_review p{
+  .custom_reviews .reviews p{
     font-size:1.125rem;
   }
-  .collection_review h4{
+  .custom_reviews .reviews h4{
     font-size:1.5rem;
   }
-  .collection_review h5{
+  .custom_reviews .reviews h5{
     font-size:1.125rem;
   }
-  .collection_review p{
+  .custom_reviews .reviews p{
     margin:0 0 27px;
   }
 }
