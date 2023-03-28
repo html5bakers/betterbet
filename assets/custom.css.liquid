@@ -135,9 +135,6 @@ figure{ margin: 0; }
   margin: 0 auto;
   padding: 15px 0;
 }
-.review_topbar_left{
-  width: 45%;
-}
 .review_topbar_left h2{
   font-family: 'paralucent-demiboldregular';
   font-size: 2.3rem;
@@ -147,14 +144,18 @@ figure{ margin: 0; }
 }
 .review_topbar_left .reviews_star svg{ margin-right: 5px; }
 .review_topbar_left .reviews_star svg path{ fill: #9AB926; }
-.review_topbar_right{
-  width: 55%;
-  text-align: right;
-}
+
 @media screen and (min-width: 640px){
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-between;
+  .review_topbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+  }
+  .review_topbar_left{ width: 45%; }
+  .review_topbar_right{
+    width: 55%;
+    text-align: right;
+  }
 }
 
 /* Homepage */
