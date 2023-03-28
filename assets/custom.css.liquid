@@ -325,7 +325,12 @@ figure{ margin: 0; }
 @media screen and (min-width:992px){
   .three_column_wrapper .SectionHeader h2{ font-size: 4.5rem; }
   .three_column_wrapper .SectionHeader p{ font-size: 2rem; }
-  .three_column_wrapper .list .bg_left{ left: -2%; }
+  .three_column_wrapper .list .bg_left{ left: -2%; top: -20%; }
+  .three_column_wrapper .list .bg_right{
+    top: 3%;
+    bottom: auto;
+    right: -5%;
+  }
   .three_column_wrapper .column{ width: 32%; }
 }
 @media screen and (min-width:992px) and (max-width: 1440px){
@@ -335,13 +340,8 @@ figure{ margin: 0; }
   }
   .three_column_wrapper .list .bg_left{
     left: -5%;
-    top: -20%;
   }
-  .three_column_wrapper .list .bg_right{
-    top: 3%;
-    bottom: auto;
-    right: -5%;
-  }
+  
   .three_column_wrapper .icon{ margin-top: -60px; }
 }
 @media screen and (min-width:1441px){
