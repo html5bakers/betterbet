@@ -71,7 +71,7 @@
           "use_sticky_header": false,
           "logo": "shopify:\/\/shop_images\/better-bet.png",
           "logo_max_width": 200,
-          "mobile_logo_max_width": 70,
+          "mobile_logo_max_width": 80,
           "show_country_selector": false,
           "show_locale_selector": false,
           "navigation_menu": "main-menu",
