@@ -10,7 +10,7 @@
         <figure><a href="{{ article.url }}"><img src="{{ article.image | img_url: 'master' }}" /></a></figure>
         <div class="home_blog_left_desc">
           <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <p>{{ article.content | strip_html | truncatewords: 75 }}</p>
+          <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
         <div class="blog-tag-list"><div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
         <div class="blog-tag-right">{{ article.date }}</div></div>
         </div>
@@ -20,8 +20,9 @@
         {% for article in blog.articles offset:1 limit:2 %}
         <div class="home_blog_right_list">
           <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <p>{{ article.content | strip_html | truncatewords: 75 }}</p>
-        <div class="blog-tag-list">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+          <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
+        <div class="blog-tag-list"><div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+        <div class="blog-tag-right">{{ article.date }}</div></div>
         </div>
         {% endfor %}
       </div>
