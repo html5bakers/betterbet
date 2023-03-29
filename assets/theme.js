@@ -369,10 +369,10 @@
     }, {
       key: "_attachListeners",
       value: function _attachListeners() {
-        if (this.initialConfig['breakpoints'] !== undefined) {
-          this._onBreakpointChangedListener = this._onBreakpointChanged.bind(this);
-          document.addEventListener('breakpoint:changed', this._onBreakpointChangedListener);
-        }
+        // if (this.initialConfig['breakpoints'] !== undefined) {
+        //   this._onBreakpointChangedListener = this._onBreakpointChanged.bind(this);
+        //   document.addEventListener('breakpoint:changed', this._onBreakpointChangedListener);
+        // }
       }
       /**
        * Create the carousel instance
