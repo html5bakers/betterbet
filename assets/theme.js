@@ -297,7 +297,7 @@
       _classCallCheck(this, Carousel);
 
       this.element = element;
-      this.initialConfig = Object.assign(JSON.parse(element.getAttribute('data-flickity-config')), overrideSettings);
+     // this.initialConfig = Object.assign(JSON.parse(element.getAttribute('data-flickity-config')), overrideSettings);
       this.options = options;
 
       this._attachListeners();
