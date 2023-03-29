@@ -366,81 +366,75 @@
         "btn_link": "#"
       }
     },
-    "featured-product": {
-      "type": "featured-product",
-      "disabled": true,
-      "blocks": {
-        "product-meta": {
-          "type": "product_meta",
-          "settings": {
-            "show_vendor": true,
-            "show_sku": false,
-            "show_product_rating": false,
-            "show_taxes_included": false
-          }
-        },
-        "share-buttons": {
-          "type": "share_buttons",
-          "settings": {
-          }
-        },
-        "variant-selector": {
-          "type": "variant_selector",
-          "settings": {
-            "selector_mode": "dropdown",
-            "show_color_swatch": false,
-            "show_color_carousel": false,
-            "size_chart": ""
-          }
-        },
-        "buy-buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_price_in_button": false,
-            "show_payment_button": true
-          }
-        }
-      },
-      "block_order": [
-        "product-meta",
-        "share-buttons",
-        "variant-selector",
-        "buy-buttons"
-      ],
-      "settings": {
-        "subheading": "",
-        "title": "Featured product",
-        "show_headings_on_mobile": true,
-        "product": ""
-      }
-    },
     "e613ad79-2d51-47e8-968b-aad640e83297": {
       "type": "featured-logo",
-      "disabled": true,
       "blocks": {
         "ed58f301-3be7-4a76-8430-de01b90cf92d": {
           "type": "Logo",
           "settings": {
-            "link": ""
+            "logo": "shopify:\/\/shop_images\/reporter_5b7a31b2-73cc-4ba5-941e-9c3c20fd0e54.png",
+            "link": "#"
           }
         },
-        "28900588-0ef8-48e1-bff5-c6ce903dbdd8": {
+        "1afd6dab-c917-4ca6-b94b-4b9bea67f55d": {
           "type": "Logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/Logo_3_310x_ac7d6b3f-8f84-43f0-acd9-941613514b48.png",
             "link": ""
           }
         },
         "28a60d7e-92ef-4223-9e1a-b0de1d4b4c18": {
           "type": "Logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/edible_dfa09fa7-500f-45a1-b0be-8475498978b7.png",
+            "link": ""
+          }
+        },
+        "28900588-0ef8-48e1-bff5-c6ce903dbdd8": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/nuf-foods.png",
+            "link": ""
+          }
+        },
+        "8c7ac1d9-c4d8-4196-93f5-e35748b705b7": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/food-matters.png",
+            "link": ""
+          }
+        },
+        "e2bb2b98-66cf-4133-b11c-9243c46c3ab9": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/gq.png",
+            "link": ""
+          }
+        },
+        "da6d4efe-426b-4c89-afed-c99fa85a35fd": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/pbn.png",
+            "link": ""
+          }
+        },
+        "ac9f333c-ac28-4d79-a922-ad9eb541fa1d": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/proveg.png",
             "link": ""
           }
         }
       },
       "block_order": [
         "ed58f301-3be7-4a76-8430-de01b90cf92d",
+        "1afd6dab-c917-4ca6-b94b-4b9bea67f55d",
+        "28a60d7e-92ef-4223-9e1a-b0de1d4b4c18",
         "28900588-0ef8-48e1-bff5-c6ce903dbdd8",
-        "28a60d7e-92ef-4223-9e1a-b0de1d4b4c18"
+        "8c7ac1d9-c4d8-4196-93f5-e35748b705b7",
+        "e2bb2b98-66cf-4133-b11c-9243c46c3ab9",
+        "da6d4efe-426b-4c89-afed-c99fa85a35fd",
+        "ac9f333c-ac28-4d79-a922-ad9eb541fa1d"
       ],
       "settings": {
         "enabled_featured_logo": true,
@@ -604,7 +598,6 @@
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
     "3fb44d42-18db-41cd-bddd-16dec9baff38",
     "bdbc06b7-a0fb-4a00-8c63-9fe0f9e30083",
-    "featured-product",
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "30d50290-b09a-4b70-a61c-1041883d308e",
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
