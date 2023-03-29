@@ -117,7 +117,7 @@
         "featured-collection-0": {
           "type": "collection",
           "settings": {
-            "collection": "combos",
+            "collection": "test-collection",
             "title": "",
             "grid_items_count": 19,
             "button_text": ""
