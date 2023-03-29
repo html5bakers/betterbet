@@ -454,11 +454,65 @@
     },
     "3fb44d42-18db-41cd-bddd-16dec9baff38": {
       "type": "collection-review",
+      "blocks": {
+        "3cd4aadd-9d95-45bc-8eb9-597c473fdfab": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "911031a4-7ac8-4f82-90e2-f405e437193a": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "c94d3ddd-f5ff-4a8b-8e1e-9465fb04183e": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "eb966d7e-8225-45c2-af65-0cfb7df4931a": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "37bdf352-ba60-4ada-97ef-b8aee849e14f": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        }
+      },
+      "block_order": [
+        "3cd4aadd-9d95-45bc-8eb9-597c473fdfab",
+        "911031a4-7ac8-4f82-90e2-f405e437193a",
+        "c94d3ddd-f5ff-4a8b-8e1e-9465fb04183e",
+        "eb966d7e-8225-45c2-af65-0cfb7df4931a",
+        "37bdf352-ba60-4ada-97ef-b8aee849e14f"
+      ],
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "bg_color": "",
-        "title": ""
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "bg_color": "#eb513d",
+        "title": "REVIEWS"
       }
     },
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c": {
