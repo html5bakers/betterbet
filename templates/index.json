@@ -263,67 +263,77 @@
         "content_list_2_desc_02": ""
       }
     },
-    "3fb44d42-18db-41cd-bddd-16dec9baff38": {
-      "type": "collection-review",
+    "25c08605-b1ed-4598-8d81-62d12f1c81b5": {
+      "type": "custom-review",
       "blocks": {
-        "3cd4aadd-9d95-45bc-8eb9-597c473fdfab": {
+        "0c860616-6561-485f-a25f-6ea8d8c2864a": {
           "type": "Review",
           "settings": {
             "star": "5",
-            "title": "LOREM IPSUM",
+            "title": "Lorem Ipsum",
             "designation": "Lorem Ipsum - Designation",
             "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
           }
         },
-        "911031a4-7ac8-4f82-90e2-f405e437193a": {
+        "7cc6199f-5084-4299-93c1-93cd07f54ff4": {
           "type": "Review",
           "settings": {
             "star": "5",
-            "title": "LOREM IPSUM",
+            "title": "Lorem Ipsum",
             "designation": "Lorem Ipsum - Designation",
             "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
           }
         },
-        "c94d3ddd-f5ff-4a8b-8e1e-9465fb04183e": {
+        "f8f88c19-d839-483e-b300-66803b4726a3": {
           "type": "Review",
           "settings": {
             "star": "5",
-            "title": "LOREM IPSUM",
+            "title": "Lorem Ipsum",
             "designation": "Lorem Ipsum - Designation",
             "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
           }
         },
-        "eb966d7e-8225-45c2-af65-0cfb7df4931a": {
+        "c8189ac4-495e-4cb8-bc2e-a447fca3530f": {
           "type": "Review",
           "settings": {
             "star": "5",
-            "title": "LOREM IPSUM",
+            "title": "Lorem Ipsum",
             "designation": "Lorem Ipsum - Designation",
             "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
           }
         },
-        "37bdf352-ba60-4ada-97ef-b8aee849e14f": {
+        "2b7b26cb-f118-42e2-80be-a7ec00e06ba4": {
           "type": "Review",
           "settings": {
             "star": "5",
-            "title": "LOREM IPSUM",
+            "title": "Lorem Ipsum",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "e34cc2bd-37dc-4c5a-93e1-8caf53055e88": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "Lorem Ipsum",
             "designation": "Lorem Ipsum - Designation",
             "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
           }
         }
       },
       "block_order": [
-        "3cd4aadd-9d95-45bc-8eb9-597c473fdfab",
-        "911031a4-7ac8-4f82-90e2-f405e437193a",
-        "c94d3ddd-f5ff-4a8b-8e1e-9465fb04183e",
-        "eb966d7e-8225-45c2-af65-0cfb7df4931a",
-        "37bdf352-ba60-4ada-97ef-b8aee849e14f"
+        "0c860616-6561-485f-a25f-6ea8d8c2864a",
+        "7cc6199f-5084-4299-93c1-93cd07f54ff4",
+        "f8f88c19-d839-483e-b300-66803b4726a3",
+        "c8189ac4-495e-4cb8-bc2e-a447fca3530f",
+        "2b7b26cb-f118-42e2-80be-a7ec00e06ba4",
+        "e34cc2bd-37dc-4c5a-93e1-8caf53055e88"
       ],
       "settings": {
-        "padding_top": 90,
-        "padding_bottom": 90,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "bg_color": "#eb513d",
-        "title": "REVIEWS"
+        "title": "Reviews"
       }
     },
     "bdbc06b7-a0fb-4a00-8c63-9fe0f9e30083": {
@@ -595,7 +605,7 @@
     "ede4b2fc-27b9-437b-a123-f6c7958bb965",
     "76a1a166-4902-4af7-8503-cef5395c3a12",
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
-    "3fb44d42-18db-41cd-bddd-16dec9baff38",
+    "25c08605-b1ed-4598-8d81-62d12f1c81b5",
     "bdbc06b7-a0fb-4a00-8c63-9fe0f9e30083",
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "2b2ccd8b-5780-4ec3-ba5f-a089e0914185",
