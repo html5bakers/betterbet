@@ -63,6 +63,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "recommendations_count": 4,
@@ -79,11 +80,21 @@
         "show_vendor": false,
         "show_color_swatch": false
       }
+    },
+    "795c0758-5a61-4d21-aeaf-10c0c972af15": {
+      "type": "three-column",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "title": "From smoothies to soups",
+        "desc": "The Benefits of Millets and Plant-Based Milk: Better for You, Better for the Environment!"
+      }
     }
   },
   "order": [
     "main",
     "product-recommendations",
-    "recently-viewed-products"
+    "recently-viewed-products",
+    "795c0758-5a61-4d21-aeaf-10c0c972af15"
   ]
 }
