@@ -446,6 +446,14 @@
         "cycle_speed": 5
       }
     },
+    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185": {
+      "type": "home-blog",
+      "settings": {
+        "enabled_home_blog": true,
+        "title": "Blogs",
+        "blog": "news"
+      }
+    },
     "30d50290-b09a-4b70-a61c-1041883d308e": {
       "type": "available-logo",
       "blocks": {
@@ -577,15 +585,6 @@
         "bg_color": "",
         "title": "Reviews"
       }
-    },
-    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185": {
-      "type": "home-blog",
-      "disabled": true,
-      "settings": {
-        "enabled_home_blog": true,
-        "title": "",
-        "blog": "news"
-      }
     }
   },
   "order": [
@@ -599,8 +598,8 @@
     "3fb44d42-18db-41cd-bddd-16dec9baff38",
     "bdbc06b7-a0fb-4a00-8c63-9fe0f9e30083",
     "e613ad79-2d51-47e8-968b-aad640e83297",
+    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185",
     "30d50290-b09a-4b70-a61c-1041883d308e",
-    "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
-    "2b2ccd8b-5780-4ec3-ba5f-a089e0914185"
+    "513ba4db-5ea0-45de-baae-0ebc339a4c5c"
   ]
 }
