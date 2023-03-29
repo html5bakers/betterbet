@@ -59,7 +59,10 @@
                     <button type="submit" class="Form__Submit Button Button--primary">{{ 'footer.newsletter.submit' | t }}</button>
                   {%- endif -%}
                 {%- endform -%}
-              dddd
+                
+                {%- if block.settings.show_social_media -%}
+                  {% render 'social-media', class: 'Footer__Social', spacing: 'loose' %}
+                {%- endif -%}
             {%- endcase -%}
           </div>
         {%- endfor -%}
