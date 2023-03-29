@@ -28,7 +28,7 @@ data: {
    
        }, 2000);
   }) 
-    var elem = document.querySelector('.collection_review');
+    var elem = document.querySelector('.reviews.Slideshow__Carousel');
 var flkty = new Flickity( elem, {
   // options
   cellAlign: 'left',
