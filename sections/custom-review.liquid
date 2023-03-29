@@ -25,10 +25,9 @@
     {% if section.settings.title != blank %}
     <h2>{{ section.settings.title }}</h2>
     {% endif %}
-    <ul class="reviews Slideshow__Carousel Carousel--insideDots"
-         data-flickity-config='{{ flickity_options }}'>
+    <ul class="reviews Carousel" data-flickity-config='{{ flickity_options }}'> <!-- Carousel--insideDots-->
       {% for block in section.blocks %}
-      <li>
+      <li class="Carousel__Cell">
         <div class="review_rating">
           {%- if block.settings.star == '1' -%}
             {% include 'star' %}
