@@ -46,10 +46,6 @@
                   </div>
                 {%- endif -%}
 
-                {%- if block.settings.show_social_media -%}
-                  {% render 'social-media', class: 'Footer__Social', spacing: 'loose' %}
-                {%- endif -%}
-
                 {%- form 'customer', id: 'footer-newsletter', class: 'Footer__Newsletter Form' -%}
                   {%- if form.posted_successfully? -%}
                     <p class="Form__Alert Alert Alert--success">{{ 'footer.newsletter.success' | t }}</p>
@@ -63,6 +59,7 @@
                     <button type="submit" class="Form__Submit Button Button--primary">{{ 'footer.newsletter.submit' | t }}</button>
                   {%- endif -%}
                 {%- endform -%}
+              dddd
             {%- endcase -%}
           </div>
         {%- endfor -%}
