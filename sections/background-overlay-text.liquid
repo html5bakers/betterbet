@@ -72,7 +72,7 @@
         <ul>
           {%- for block in section.blocks -%}
             {%- if block.settings.image != blank and block.settings.title != blank -%}
-              <li class="flex">{{ block.settings.image }}<span>{{ block.settings.title }}</span></li>
+              <li class="flex_always">{{ block.settings.image }}<span>{{ block.settings.title }}</span></li>
             {%- endif -%}
           {%- endfor -%}
         </ul>
