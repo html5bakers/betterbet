@@ -310,9 +310,9 @@
       value: function destroy() {
         this.flickityInstance.destroy();
 
-        if (this.initialConfig['breakpoints'] !== undefined) {
-          document.removeEventListener('breakpoint:changed', this._onBreakpointChangedListener);
-        }
+        // if (this.initialConfig['breakpoints'] !== undefined) {
+        //   document.removeEventListener('breakpoint:changed', this._onBreakpointChangedListener);
+        // }
       }
     }, {
       key: "getFlickityInstance",
