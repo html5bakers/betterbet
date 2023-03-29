@@ -18,13 +18,13 @@
   "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
 }
 {%- endcapture -%}
-<section class="Section Section--spacingNormal available_logo_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
+<section class="Section Section--spacingNormal availability_at_stores" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
   <div class="Container">
     <div class="available_logo">
-      <div class="available_logo_left">
+      <div class="available_logo_left text_center">
         {% if section.settings.left_title != blank %}
-        <h2>{{ section.settings.left_title }}</h2>
-          {% endif %}
+          <h2>{{ section.settings.left_title }}</h2>
+        {% endif %}
         <ul class="available_logo_slider Slideshow__Carousel {% if section.settings.show_arrow %}Slideshow__Carousel--withScrollButton{% endif %} Carousel Carousel--fadeIn {% if section.settings.show_fullscreen %}Carousel--fixed{% endif %} Carousel--insideDots"
          data-flickity-config='{{ flickity_options }}'>
         {% for block in section.blocks %}
@@ -37,10 +37,10 @@
         {% endfor %}
       </ul>
       </div>
-      <div class="available_logo_right">
+      <div class="available_logo_right text_center">
         {% if section.settings.right_title != blank %}
-        <h2>{{ section.settings.right_title }}</h2>
-          {% endif %}
+          <h2>{{ section.settings.right_title }}</h2>
+        {% endif %}
         <ul class="available_logo_slider Slideshow__Carousel {% if section.settings.show_arrow %}Slideshow__Carousel--withScrollButton{% endif %} Carousel Carousel--fadeIn {% if section.settings.show_fullscreen %}Carousel--fixed{% endif %} Carousel--insideDots"
          data-flickity-config='{{ flickity_options1 }}'>
         {% for block in section.blocks %}
