@@ -20,12 +20,12 @@
 }
 {%- endcapture -%}
 
-<section class="Section Section--spacingNormal custom_reviews collection_review_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
+<section class="Section Section--spacingNormal custom_reviews" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     {% if section.settings.title != blank %}
     <h2>{{ section.settings.title }}</h2>
     {% endif %}
-    <ul class="collection_review reviews Slideshow__Carousel Carousel--insideDots"
+    <ul class="reviews Slideshow__Carousel Carousel--insideDots"
          data-flickity-config='{{ flickity_options }}'>
       {% for block in section.blocks %}
       <li>
@@ -45,7 +45,7 @@
         {%- if block.settings.desc != blank -%}
         <p>{{ block.settings.desc }}</p>
         {%- endif -%}
-        <div class="collection_review_text review_text">
+        <div class="review_text">
         <div class="col_left">
         {%- if block.settings.image != blank -%}
         <figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure></h3>
