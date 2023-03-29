@@ -91,8 +91,8 @@
           "footer-0": {
             "type": "text",
             "settings": {
-              "title": "About the shop",
-              "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+              "title": "",
+              "content": "<p><a href=\"mailto:hello@altfoods.in\" title=\"mailto:hello@altfoods.in\">hello@altfoods.in<\/a><\/p><p><a href=\"tel:+917866800020\" title=\"tel:+917866800020\">+91 78668 00020<\/a><\/p>",
               "show_social_media": false
             }
           },
