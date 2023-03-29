@@ -12,10 +12,10 @@
         <figure><img src="{{ image | img_url: 'master' }}" /></figure>
         {% endif %}
         {% if product.metafields.custom.use_as_you_text.value[i] != blank %}
-        <h3>{{ product.metafields.custom.use_as_you_text.value[i] }}</h3>
+          <h3>{{ product.metafields.custom.use_as_you_text.value[i] }}</h3>
         {% endif %}
         {% if product.metafields.custom.use_as_you_desc.value[i] != blank %}
-        <p>{{ product.metafields.custom.use_as_you_desc.value[i] }}</p>
+          <p>{{ product.metafields.custom.use_as_you_desc.value[i] }}</p>
         {% endif %}
       </div>
         {% endfor %}
@@ -30,9 +30,3 @@
     "settings": []
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
