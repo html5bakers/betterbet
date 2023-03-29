@@ -6,6 +6,9 @@
           <div class="Footer__Block Footer__Block--{{ block.type }}" {{ block.shopify_attributes }}>
             {%- case block.type -%}
               {%- when 'text' -%}
+                {% if block.settings.footer_logo != blank  %}
+                  <figure><a href="{{ shop.url }}" style="width: {{ block.settings.footer_logo.width }}px; max-width: 200px; "><img src="{{ block.settings.footer_logo | img_url: 'master' }}" /></a></figure>
+                {% endif %}
                 {%- if block.settings.title != blank -%}
                   <h2 class="Footer__Title Heading u-h6">{{ block.settings.title | escape }}</h2>
                 {%- endif -%}
@@ -212,6 +215,16 @@
       "type": "text",
       "name": "Text / social media",
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "footer_logo",
+          "label": "Footer Logo"
+        },
+        {
+          "type": "text",
+          "id": "footer_logo_width",
+          "label": "Footer Logo Width"
+        },
         {
           "type": "text",
           "id": "title",
