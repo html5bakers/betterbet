@@ -86,9 +86,9 @@
         "93286c32-18be-44f0-b80f-8437f756fdca"
       ],
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "bg_color": "",
+        "padding_top": 90,
+        "padding_bottom": 50,
+        "bg_color": "#f94c43",
         "title": ""
       }
     },
