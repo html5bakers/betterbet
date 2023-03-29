@@ -458,19 +458,27 @@
         "0d16606f-5237-49e1-947d-b4ac6001f255": {
           "type": "left-column",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/greener.png"
           }
         },
         "3522c7f1-b8b3-4a6e-adf1-f82e992c2f3f": {
           "type": "left-column",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/colocal.png"
           }
         },
         "7a272f73-4f1d-4f22-ae2e-c8e9d011c65f": {
           "type": "left-column",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/blue-tokai.png"
           }
         },
         "43c131aa-d872-43ed-a7db-f4e232e29672": {
+          "type": "left-column",
+          "settings": {
+          }
+        },
+        "1992d7b4-5ff3-4c8f-8c98-9836f0ab30b0": {
           "type": "left-column",
           "settings": {
           }
@@ -501,6 +509,7 @@
         "3522c7f1-b8b3-4a6e-adf1-f82e992c2f3f",
         "7a272f73-4f1d-4f22-ae2e-c8e9d011c65f",
         "43c131aa-d872-43ed-a7db-f4e232e29672",
+        "1992d7b4-5ff3-4c8f-8c98-9836f0ab30b0",
         "25421479-3613-4f8c-b230-e51c4d55de34",
         "9d0d60bf-ec56-4bc8-8b0e-73900d0cdaae",
         "b31d736b-d540-4ccc-b241-6dd9ef87aafe",
