@@ -12,7 +12,7 @@
           <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
           <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
         <div class="blog-tag-list"><div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
-        <div class="blog-tag-right">{{ article.published_at | date: "%a, %b %d, %y" }}</div></div>
+        <div class="blog-tag-right">{{ article.published_at | date: "%d/%m/%Y" }}</div></div>
         </div>
       </div>
       {% endfor %}
@@ -22,7 +22,7 @@
           <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
           <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
         <div class="blog-tag-list"><div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
-        <div class="blog-tag-right">{{ article.published_at | date: "%a, %b %d, %y" }}</div></div>
+        <div class="blog-tag-right">{{ article.published_at | date: "%d/%m/%Y" }}</div></div>
         </div>
         {% endfor %}
       </div>
