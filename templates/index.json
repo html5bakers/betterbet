@@ -595,27 +595,6 @@
         "bg_color": "",
         "title": "Reviews"
       }
-    },
-    "b65a704e-2376-4f98-8fc4-0c4932ceab05": {
-      "type": "blog-posts",
-      "blocks": {
-        "template--15477110407221__b65a704e-2376-4f98-8fc4-0c4932ceab05-1680120333692bcd83-0": {
-          "type": "blog",
-          "settings": {
-            "blog": "news"
-          }
-        }
-      },
-      "block_order": [
-        "template--15477110407221__b65a704e-2376-4f98-8fc4-0c4932ceab05-1680120333692bcd83-0"
-      ],
-      "settings": {
-        "subheading": "",
-        "title": "Blog posts",
-        "show_category": true,
-        "button_link": "",
-        "button_text": "View all articles"
-      }
     }
   },
   "order": [
@@ -631,7 +610,6 @@
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "2b2ccd8b-5780-4ec3-ba5f-a089e0914185",
     "30d50290-b09a-4b70-a61c-1041883d308e",
-    "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
-    "b65a704e-2376-4f98-8fc4-0c4932ceab05"
+    "513ba4db-5ea0-45de-baae-0ebc339a4c5c"
   ]
 }
