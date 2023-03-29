@@ -263,6 +263,69 @@
         "content_list_2_desc_02": ""
       }
     },
+    "3fb44d42-18db-41cd-bddd-16dec9baff38": {
+      "type": "collection-review",
+      "blocks": {
+        "3cd4aadd-9d95-45bc-8eb9-597c473fdfab": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "911031a4-7ac8-4f82-90e2-f405e437193a": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "c94d3ddd-f5ff-4a8b-8e1e-9465fb04183e": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "eb966d7e-8225-45c2-af65-0cfb7df4931a": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "37bdf352-ba60-4ada-97ef-b8aee849e14f": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "title": "LOREM IPSUM",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        }
+      },
+      "block_order": [
+        "3cd4aadd-9d95-45bc-8eb9-597c473fdfab",
+        "911031a4-7ac8-4f82-90e2-f405e437193a",
+        "c94d3ddd-f5ff-4a8b-8e1e-9465fb04183e",
+        "eb966d7e-8225-45c2-af65-0cfb7df4931a",
+        "37bdf352-ba60-4ada-97ef-b8aee849e14f"
+      ],
+      "settings": {
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "bg_color": "#eb513d",
+        "title": "REVIEWS"
+      }
+    },
     "bdbc06b7-a0fb-4a00-8c63-9fe0f9e30083": {
       "type": "video-with-text",
       "blocks": {
@@ -448,71 +511,8 @@
         "show_arrow": false,
         "autoplay": true,
         "cycle_speed": 5,
-        "left_title": "Hotels where available",
-        "right_title": "Also available"
-      }
-    },
-    "3fb44d42-18db-41cd-bddd-16dec9baff38": {
-      "type": "collection-review",
-      "blocks": {
-        "3cd4aadd-9d95-45bc-8eb9-597c473fdfab": {
-          "type": "Review",
-          "settings": {
-            "star": "5",
-            "title": "LOREM IPSUM",
-            "designation": "Lorem Ipsum - Designation",
-            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
-          }
-        },
-        "911031a4-7ac8-4f82-90e2-f405e437193a": {
-          "type": "Review",
-          "settings": {
-            "star": "5",
-            "title": "LOREM IPSUM",
-            "designation": "Lorem Ipsum - Designation",
-            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
-          }
-        },
-        "c94d3ddd-f5ff-4a8b-8e1e-9465fb04183e": {
-          "type": "Review",
-          "settings": {
-            "star": "5",
-            "title": "LOREM IPSUM",
-            "designation": "Lorem Ipsum - Designation",
-            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
-          }
-        },
-        "eb966d7e-8225-45c2-af65-0cfb7df4931a": {
-          "type": "Review",
-          "settings": {
-            "star": "5",
-            "title": "LOREM IPSUM",
-            "designation": "Lorem Ipsum - Designation",
-            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
-          }
-        },
-        "37bdf352-ba60-4ada-97ef-b8aee849e14f": {
-          "type": "Review",
-          "settings": {
-            "star": "5",
-            "title": "LOREM IPSUM",
-            "designation": "Lorem Ipsum - Designation",
-            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
-          }
-        }
-      },
-      "block_order": [
-        "3cd4aadd-9d95-45bc-8eb9-597c473fdfab",
-        "911031a4-7ac8-4f82-90e2-f405e437193a",
-        "c94d3ddd-f5ff-4a8b-8e1e-9465fb04183e",
-        "eb966d7e-8225-45c2-af65-0cfb7df4931a",
-        "37bdf352-ba60-4ada-97ef-b8aee849e14f"
-      ],
-      "settings": {
-        "padding_top": 90,
-        "padding_bottom": 90,
-        "bg_color": "#eb513d",
-        "title": "REVIEWS"
+        "left_title": "RESTAURANTS AND CAFE PARTNERS",
+        "right_title": "Also available at"
       }
     },
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c": {
@@ -582,11 +582,11 @@
     "ede4b2fc-27b9-437b-a123-f6c7958bb965",
     "76a1a166-4902-4af7-8503-cef5395c3a12",
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
+    "3fb44d42-18db-41cd-bddd-16dec9baff38",
     "bdbc06b7-a0fb-4a00-8c63-9fe0f9e30083",
     "featured-product",
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "30d50290-b09a-4b70-a61c-1041883d308e",
-    "3fb44d42-18db-41cd-bddd-16dec9baff38",
     "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
     "2b2ccd8b-5780-4ec3-ba5f-a089e0914185"
   ]
