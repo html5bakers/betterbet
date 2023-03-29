@@ -448,6 +448,7 @@
     },
     "2b2ccd8b-5780-4ec3-ba5f-a089e0914185": {
       "type": "home-blog",
+      "disabled": true,
       "settings": {
         "enabled_home_blog": true,
         "title": "Blogs",
