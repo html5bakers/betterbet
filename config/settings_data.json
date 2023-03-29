@@ -38,6 +38,8 @@
     "cart_enable_notes": true,
     "cart_show_free_shipping_threshold": false,
     "cart_free_shipping_threshold": "50",
+    "social_facebook": "https:\/\/www.facebook.com\/altfoodsworld",
+    "social_instagram": "https:\/\/www.instagram.com\/altfoodsworld\/",
     "checkout_logo_position": "center",
     "checkout_logo_size": "small",
     "checkout_body_background_color": "#fff",
@@ -88,6 +90,7 @@
         "blocks": {
           "footer-0": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "title": "About the shop",
               "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
