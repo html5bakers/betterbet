@@ -111,8 +111,8 @@
           "footer-2": {
             "type": "newsletter",
             "settings": {
-              "title": "Newsletter",
-              "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              "title": "Connect with us",
+              "content": ""
             }
           }
         },
