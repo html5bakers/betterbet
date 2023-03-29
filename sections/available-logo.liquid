@@ -29,11 +29,12 @@
          data-flickity-config='{{ flickity_options }}'>
         {% for block in section.blocks %}
           {% if block.type == 'left-column' %}
-          {% if block.settings.logo != blank %}
-        <li><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
-          <img src="{{ block.settings.logo | img_url: 'master' }}" />{% if block.settings.link != blank %}</a>{% endif %}</figure></li>
+            {% if block.settings.logo != blank %}
+              <li><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
+                <img src="{{ block.settings.logo | img_url: 'master' }}" />{% if block.settings.link != blank %}</a>{% endif %}</figure>
+              </li>
             {% endif %}
-            {% endif %}
+          {% endif %}
         {% endfor %}
       </ul>
       </div>
@@ -45,9 +46,10 @@
          data-flickity-config='{{ flickity_options1 }}'>
         {% for block in section.blocks %}
           {% if block.type == 'right-column' %}
-          {% if block.settings.logo != blank %}
-        <li><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
-          <img src="{{ block.settings.logo | img_url: 'master' }}" />{% if block.settings.link != blank %}</a>{% endif %}</figure></li>
+            {% if block.settings.logo != blank %}
+              <li><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
+                <img src="{{ block.settings.logo | img_url: 'master' }}" />{% if block.settings.link != blank %}</a>{% endif %}</figure>
+              </li>
             {% endif %}
           {% endif %}
         {% endfor %}
