@@ -93,7 +93,7 @@
             "settings": {
               "title": "About the shop",
               "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
-              "show_social_media": true
+              "show_social_media": false
             }
           },
           "9cc9049c-53f2-472c-a1c0-d054490b1517": {
