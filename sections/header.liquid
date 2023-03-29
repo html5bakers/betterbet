@@ -388,7 +388,7 @@ HEADER CONTENT
       {%- if template == 'index' -%}
         <h1 class="Header__Logo" style="width: {{ section.settings.logo.width }}px; max-width: 200px; ">{{ header_logo }}</h1>
       {%- else -%}
-        <div class="Header__Logo">{{ header_logo }}</div>
+        <div class="Header__Logo"  style="width: {{ section.settings.logo.width }}px; max-width: 200px; ">{{ header_logo }}</div>
       {%- endif -%}
     </div>
 
