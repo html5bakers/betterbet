@@ -1,3 +1,23 @@
+{% style %}
+    #section-{{ section.id }}{
+      background:{{ section.settings.bg_color }};
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+  @media(min-width:992px){
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+<section class="Section Section--spacingNormal content_strip_section" id="section-{{ section.id }}">
+  <div class="Container">
+    <div class="content_strip">
+    </div>
+  </div>
+</section>
+
 {% schema %}
   {
     "name": "Content Strip",
