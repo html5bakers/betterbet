@@ -28,13 +28,13 @@ data: {
    
        }, 2000);
   }) 
-    var elem = document.querySelector('.reviews.Slideshow__Carousel');
-var flkty = new Flickity( elem, {
-  // options
-  cellAlign: 'left',
-  contain: true,
-  pageDots: false
-});
+//     var elem = document.querySelector('.reviews.Slideshow__Carousel');
+// var flkty = new Flickity( elem, {
+//   // options
+//   cellAlign: 'left',
+//   contain: true,
+//   pageDots: false
+// });
 })
 
 (function (factory) {
