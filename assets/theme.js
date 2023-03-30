@@ -12,6 +12,7 @@ $('.prod-grid-swatch li').click(function(e){
      e.preventDefault();
      var variant_id = $(this).parents('.ProductItem__Info').find('.prod-grid-swatch li.active').data('id');
      console.log('variant_id',variant_id)
+     var formElement = this.element.querySelector('form[action*="/cart/add"]');
      setTimeout(function(){
 // $.ajax({
 // type: 'POST',
@@ -28,7 +29,7 @@ $('.prod-grid-swatch li').click(function(e){
 
 
 
-var formElement = this.element.querySelector('form[action*="/cart/add"]');
+
         fetch("".concat(window.routes.cartAddUrl, ".js"), {
           body: JSON.stringify(Form.serialize(formElement)),
           credentials: 'same-origin',
