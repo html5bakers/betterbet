@@ -30,7 +30,7 @@ $('.prod-grid-swatch li').click(function(e){
 
 
         fetch("".concat(window.routes.cartAddUrl, ".js"), {
-         
+          body: JSON.stringify(Form.serialize(formElement)),
           credentials: 'same-origin',
           method: 'POST',
           headers: {
@@ -54,11 +54,11 @@ $('.prod-grid-swatch li').click(function(e){
             console.log('response',response)
           } else {
             response.json().then(function (content) {
-              var errorMessageElement = document.createElement('span');
-              errorMessageElement.className = 'ProductForm__Error Alert Alert--error';
-              errorMessageElement.innerHTML = content['description'];
-              addToCartButton.removeAttribute('disabled');
-              addToCartButton.insertAdjacentElement('afterend', errorMessageElement);
+              // var errorMessageElement = document.createElement('span');
+              // errorMessageElement.className = 'ProductForm__Error Alert Alert--error';
+              // errorMessageElement.innerHTML = content['description'];
+              // addToCartButton.removeAttribute('disabled');
+              // addToCartButton.insertAdjacentElement('afterend', errorMessageElement);
               setTimeout(function () {
                 errorMessageElement.remove();
               }, 2500);
