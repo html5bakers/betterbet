@@ -28,7 +28,7 @@ $('.prod-grid-swatch li').click(function(e){
 
 
 
-
+var formElement = this.element.querySelector('form[action*="/cart/add"]');
         fetch("".concat(window.routes.cartAddUrl, ".js"), {
           body: JSON.stringify(Form.serialize(formElement)),
           credentials: 'same-origin',
