@@ -39,7 +39,10 @@
     "cart_show_free_shipping_threshold": false,
     "cart_free_shipping_threshold": "50",
     "social_facebook": "https:\/\/www.facebook.com\/altfoodsworld",
+    "social_twitter": "https:\/\/twitter.com\/shopify",
     "social_instagram": "https:\/\/www.instagram.com\/altfoodsworld\/",
+    "social_youtube": "https:\/\/www.youtube.com\/user\/shopify",
+    "social_linkedin": "https:\/\/linkedin.com\/in\/shopify",
     "checkout_logo_position": "center",
     "checkout_logo_size": "small",
     "checkout_body_background_color": "#fff",
@@ -114,7 +117,8 @@
             "type": "newsletter",
             "settings": {
               "title": "Connect with us",
-              "content": ""
+              "content": "",
+              "social_media_heading": "Follow Us"
             }
           }
         },
