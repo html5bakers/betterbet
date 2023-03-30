@@ -1125,11 +1125,13 @@ prod-grid-swatch::scroll_bar{ display:none; }
 }
 .custom_reviews .reviews{
   text-align:center;
+  display: flex;
+  flex-wrap: wrap;
 }
 .custom_reviews .reviews li{
   width:100%;
   background:#ffdfbe;
-   padding:20px 15px;
+  padding:20px 15px;
   display:block;
   margin:0;
 }
@@ -1188,7 +1190,7 @@ prod-grid-swatch::scroll_bar{ display:none; }
 @media screen and (min-width: 640px){
  .custom_reviews .reviews li{
     width:calc(50% - 20px);
-    margin:0 10px;
+    margin:0 10px 20px;
     padding:20px 15px;
   }
   .custom_reviews .review_text .col_left{
@@ -1236,15 +1238,15 @@ prod-grid-swatch::scroll_bar{ display:none; }
 @media screen and (min-width: 1025px){
  .custom_reviews .reviews li{
     width:calc(33.3333% - 20px);
-    margin:0 10px;
+    margin:0 10px 20px;
     padding:20px 15px;
   }
 }
 @media screen and (min-width: 1440px){
   .custom_reviews .reviews li{
     width:calc(33.3333% - 60px);
-    margin:0 30px;
-    padding:62px 45px 48px;
+    margin: 0 30px 60px;
+    padding: 62px 45px 48px;
   }
     .custom_reviews .review_text .col_left{
     width:115px;
