@@ -32,7 +32,7 @@ $('.Header__CartDot.is-visible').text(cart.item_count);
  } 
  });
    
-       }, 2000);
+       }, 1000);
   }) 
 //     var elem = document.querySelector('.reviews.Slideshow__Carousel');
 // var flkty = new Flickity( elem, {
