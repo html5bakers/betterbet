@@ -67,7 +67,7 @@
                 
                 <div class="social_media">
                   {% if block.settings.social_media_heading != blank %} <h2 class="Footer__Title Heading u-h6">{{ block.settings.social_media_heading | escape }}</h2> {% endif %}
-                  {% render 'social-media', class: 'Footer__Social', spacing: 'loose' %}
+                  {% render 'social-media', class: 'Footer__Social', spacing: 'tight' %}
                 </div>
             {%- endcase -%}
           </div>
