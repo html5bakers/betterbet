@@ -23,7 +23,7 @@ data: {
 },
   dataType: 'json', 
  success: function (data) { 
-   $('.Drawer').load(' .Drawer', function(){
+   $('#sidebar-cart').load(' #sidebar-cart', function(){
    });
   document.dispatchEvent(new CustomEvent('theme:loading:end'));
    document.dispatchEvent(new CustomEvent('product:added'));
