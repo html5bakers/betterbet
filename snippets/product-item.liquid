@@ -185,6 +185,8 @@
           </div>
 
         {%- if show_color_swatch -%}
+          <form method="post" action="/cart/add" accept-charset="UTF-8" class="product-form" enctype="multipart/form-data">
+            <input type="hidden" name="form_type" value="product">
           {% if product.variants.size > 1 %}
           <ul class="prod-grid-swatch">
           {% for variant in product.variants %}
@@ -199,6 +201,7 @@
             </ul>
           {% endif %}
       <a href="#" class="prod-grid-cart-btn">Add to Cart</a>
+          </form>
          {% endif %}
 
           {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
