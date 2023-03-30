@@ -25,6 +25,10 @@ data: {
  success: function (data) { 
    $('.cart_drawer_refresh').load(' .cart_drawer_refresh', function(){
    });
+   jQuery.getJSON('/cart.js', function(cart) {
+$('.Header__CartDot.is-visible').text(cart.item_count);
+});
+   
   document.dispatchEvent(new CustomEvent('theme:loading:end'));
    document.dispatchEvent(new CustomEvent('product:added'));
    
