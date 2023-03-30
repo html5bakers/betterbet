@@ -11,7 +11,7 @@ $('.prod-grid-swatch li').click(function(e){
    $('.prod-grid-cart-btn').on('click', function(e){
      e.preventDefault();
      var variant_id = $(this).parents('.ProductItem__Info').find('.prod-grid-swatch li.active').data('id');
-     console.log('variant_id',variant_id)
+     console.log('variant_id',variant_id,this)
      var formElement = this.element.querySelector('form[action*="/cart/add"]');
      setTimeout(function(){
 // $.ajax({
