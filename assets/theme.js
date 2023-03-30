@@ -42,7 +42,7 @@ $('.prod-grid-swatch li').click(function(e){
           document.dispatchEvent(new CustomEvent('theme:loading:end'));
          
           if (response.ok) {
-            addToCartButton.removeAttribute('disabled'); // We simply trigger an event so the mini-cart can re-render
+           // addToCartButton.removeAttribute('disabled'); // We simply trigger an event so the mini-cart can re-render
 
             _this4.element.dispatchEvent(new CustomEvent('product:added', {
               bubbles: true,
