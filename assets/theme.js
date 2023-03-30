@@ -40,8 +40,7 @@ $('.prod-grid-swatch li').click(function(e){
           }
         }).then(function (response) {
           document.dispatchEvent(new CustomEvent('theme:loading:end'));
-          var quantityElement = formElement.querySelector('[name="quantity"]');
-
+         
           if (response.ok) {
             addToCartButton.removeAttribute('disabled'); // We simply trigger an event so the mini-cart can re-render
 
