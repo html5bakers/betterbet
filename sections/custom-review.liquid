@@ -25,7 +25,7 @@
     {% if section.settings.title != blank %}
     <h2>{{ section.settings.title }}</h2>
     {% endif %}
-    <ul class="reviews slick" > <!-- Carousel--insideDots data-flickity-config='{{ flickity_options }}'-->
+    <ul class="reviews slick" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "dots": false, "arrows": true}'> <!-- Carousel--insideDots data-flickity-config='{{ flickity_options }}'-->
       {% for block in section.blocks %}
       <li class="Carousel__Cell">
         <div class="review_rating">
