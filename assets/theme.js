@@ -29,9 +29,6 @@ data: {
 $('.Header__CartDot.is-visible').text(cart.item_count);
 });
    $('.Header__CartDot.is-visible').trigger('click');
-  document.dispatchEvent(new CustomEvent('theme:loading:end'));
-   document.dispatchEvent(new CustomEvent('product:added'));
-   
  } 
  });
    
