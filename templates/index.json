@@ -263,6 +263,39 @@
         "content_list_2_desc_02": ""
       }
     },
+    "93d2c66d-9e5a-4131-9b3a-e73cbdd6ad6c": {
+      "type": "content-strip",
+      "blocks": {
+        "380c2592-bfe5-4e44-a441-cff710628d47": {
+          "type": "Text",
+          "settings": {
+            "title": "Lorem Ipsum"
+          }
+        },
+        "338907a1-4aec-43b7-87d8-59a7de7264da": {
+          "type": "Text",
+          "settings": {
+            "title": "Lorem Ipsum"
+          }
+        },
+        "4c32a536-419c-4593-85fb-fd8b622bb66e": {
+          "type": "Text",
+          "settings": {
+            "title": "Lorem Ipsum"
+          }
+        }
+      },
+      "block_order": [
+        "380c2592-bfe5-4e44-a441-cff710628d47",
+        "338907a1-4aec-43b7-87d8-59a7de7264da",
+        "4c32a536-419c-4593-85fb-fd8b622bb66e"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "bg_color": ""
+      }
+    },
     "25c08605-b1ed-4598-8d81-62d12f1c81b5": {
       "type": "custom-review",
       "blocks": {
@@ -396,7 +429,6 @@
         "28a60d7e-92ef-4223-9e1a-b0de1d4b4c18": {
           "type": "Logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/edible_dfa09fa7-500f-45a1-b0be-8475498978b7.png",
             "link": ""
           }
         },
@@ -605,6 +637,7 @@
     "ede4b2fc-27b9-437b-a123-f6c7958bb965",
     "76a1a166-4902-4af7-8503-cef5395c3a12",
     "6150a18b-d8d7-49f1-bd60-dcc4303d2a8f",
+    "93d2c66d-9e5a-4131-9b3a-e73cbdd6ad6c",
     "25c08605-b1ed-4598-8d81-62d12f1c81b5",
     "bdbc06b7-a0fb-4a00-8c63-9fe0f9e30083",
     "e613ad79-2d51-47e8-968b-aad640e83297",
