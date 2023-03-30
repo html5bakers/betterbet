@@ -34,47 +34,6 @@ $('.Header__CartDot.is-visible').text(cart.item_count);
    
  } 
  });
-
-
-
-
-        // fetch("".concat(window.routes.cartAddUrl, ".js"), {
-        //   body: JSON.stringify(Form.serialize(formElement)),
-        //   credentials: 'same-origin',
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/json',
-        //     'X-Requested-With': 'XMLHttpRequest' // This is needed as currently there is a bug in Shopify that assumes this header
-
-        //   }
-        // }).then(function (response) {
-        //   document.dispatchEvent(new CustomEvent('theme:loading:end'));
-         
-        //   if (response.ok) {
-        //    // addToCartButton.removeAttribute('disabled'); // We simply trigger an event so the mini-cart can re-render
-
-        //     _this4.element.dispatchEvent(new CustomEvent('product:added', {
-        //       bubbles: true,
-        //       detail: {
-        //         variant: variant_id,
-        //         quantity: 1
-        //       }
-        //     }));
-        //     console.log('response',response)
-        //   } else {
-        //     response.json().then(function (content) {
-        //       // var errorMessageElement = document.createElement('span');
-        //       // errorMessageElement.className = 'ProductForm__Error Alert Alert--error';
-        //       // errorMessageElement.innerHTML = content['description'];
-        //       // addToCartButton.removeAttribute('disabled');
-        //       // addToCartButton.insertAdjacentElement('afterend', errorMessageElement);
-        //       setTimeout(function () {
-        //         errorMessageElement.remove();
-        //       }, 2500);
-        //     });
-        //   }
-        // });
-       
    
        }, 2000);
   }) 
