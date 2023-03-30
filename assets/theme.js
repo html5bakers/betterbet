@@ -51,6 +51,7 @@ $('.prod-grid-swatch li').click(function(e){
                 quantity: 1
               }
             }));
+            console.log('response',response)
           } else {
             response.json().then(function (content) {
               var errorMessageElement = document.createElement('span');
