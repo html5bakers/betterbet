@@ -30,7 +30,6 @@ $('.prod-grid-swatch li').click(function(e){
 
 
         fetch("".concat(window.routes.cartAddUrl, ".js"), {
-          body: JSON.stringify(Form.serialize(formElement)),
           credentials: 'same-origin',
           method: 'POST',
           headers: {
