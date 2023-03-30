@@ -8,68 +8,70 @@ $('.prod-grid-swatch li').click(function(e){
   $(this).addClass('active');
 });
 
-   $('.prod-grid-cart-btn').on('click', function(e){
-     e.preventDefault();
-     var variant_id = $(this).parents('.ProductItem__Info').find('.prod-grid-swatch li.active').data('id');
-     console.log('variant_id',variant_id,this)
-     var formElement = $(this).parents('.ProductItem__Info').find('form[action*="/cart/add"]');
-     setTimeout(function(){
-$.ajax({
-type: 'POST',
-url: '/cart/add.js',
-data: {
-  quantity: 1,
-  id: variant_id
-},
-  dataType: 'json', 
- success: function (data) { 
-  document.dispatchEvent(new CustomEvent('theme:loading:end'));
- } 
- });
+//    $('.prod-grid-cart-btn').on('click', function(e){
+//      e.preventDefault();
+//      var variant_id = $(this).parents('.ProductItem__Info').find('.prod-grid-swatch li.active').data('id');
+//      console.log('variant_id',variant_id,this)
+//      var formElement = $(this).parents('.ProductItem__Info').find('form[action*="/cart/add"]');
+//      setTimeout(function(){
+// $.ajax({
+// type: 'POST',
+// url: '/cart/add.js',
+// data: {
+//   quantity: 1,
+//   id: variant_id
+// },
+//   dataType: 'json', 
+//  success: function (data) { 
+//   document.dispatchEvent(new CustomEvent('theme:loading:end'));
+//    document.dispatchEvent(new CustomEvent('product:added'));
+   
+//  } 
+//  });
 
 
 
 
-        // fetch("".concat(window.routes.cartAddUrl, ".js"), {
-        //   body: JSON.stringify(Form.serialize(formElement)),
-        //   credentials: 'same-origin',
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/json',
-        //     'X-Requested-With': 'XMLHttpRequest' // This is needed as currently there is a bug in Shopify that assumes this header
+//         // fetch("".concat(window.routes.cartAddUrl, ".js"), {
+//         //   body: JSON.stringify(Form.serialize(formElement)),
+//         //   credentials: 'same-origin',
+//         //   method: 'POST',
+//         //   headers: {
+//         //     'Content-Type': 'application/json',
+//         //     'X-Requested-With': 'XMLHttpRequest' // This is needed as currently there is a bug in Shopify that assumes this header
 
-        //   }
-        // }).then(function (response) {
-        //   document.dispatchEvent(new CustomEvent('theme:loading:end'));
+//         //   }
+//         // }).then(function (response) {
+//         //   document.dispatchEvent(new CustomEvent('theme:loading:end'));
          
-        //   if (response.ok) {
-        //    // addToCartButton.removeAttribute('disabled'); // We simply trigger an event so the mini-cart can re-render
+//         //   if (response.ok) {
+//         //    // addToCartButton.removeAttribute('disabled'); // We simply trigger an event so the mini-cart can re-render
 
-        //     _this4.element.dispatchEvent(new CustomEvent('product:added', {
-        //       bubbles: true,
-        //       detail: {
-        //         variant: variant_id,
-        //         quantity: 1
-        //       }
-        //     }));
-        //     console.log('response',response)
-        //   } else {
-        //     response.json().then(function (content) {
-        //       // var errorMessageElement = document.createElement('span');
-        //       // errorMessageElement.className = 'ProductForm__Error Alert Alert--error';
-        //       // errorMessageElement.innerHTML = content['description'];
-        //       // addToCartButton.removeAttribute('disabled');
-        //       // addToCartButton.insertAdjacentElement('afterend', errorMessageElement);
-        //       setTimeout(function () {
-        //         errorMessageElement.remove();
-        //       }, 2500);
-        //     });
-        //   }
-        // });
+//         //     _this4.element.dispatchEvent(new CustomEvent('product:added', {
+//         //       bubbles: true,
+//         //       detail: {
+//         //         variant: variant_id,
+//         //         quantity: 1
+//         //       }
+//         //     }));
+//         //     console.log('response',response)
+//         //   } else {
+//         //     response.json().then(function (content) {
+//         //       // var errorMessageElement = document.createElement('span');
+//         //       // errorMessageElement.className = 'ProductForm__Error Alert Alert--error';
+//         //       // errorMessageElement.innerHTML = content['description'];
+//         //       // addToCartButton.removeAttribute('disabled');
+//         //       // addToCartButton.insertAdjacentElement('afterend', errorMessageElement);
+//         //       setTimeout(function () {
+//         //         errorMessageElement.remove();
+//         //       }, 2500);
+//         //     });
+//         //   }
+//         // });
        
    
-       }, 2000);
-  }) 
+//        }, 2000);
+//   }) 
 //     var elem = document.querySelector('.reviews.Slideshow__Carousel');
 // var flkty = new Flickity( elem, {
 //   // options
