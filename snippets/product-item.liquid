@@ -185,9 +185,6 @@
           </div>
 
         {%- if show_color_swatch -%}
-          <form method="post" action="/cart/add" id="product_form_{{ product.id }}" accept-charset="UTF-8" class="ProductForm" enctype="multipart/form-data">
-            <input type="hidden" name="form_type" value="product">
-            <input type="hidden" name="utf8" value="✓">
           {% if product.variants.size > 1 %}
           <ul class="prod-grid-swatch">
           {% for variant in product.variants %}
@@ -201,9 +198,7 @@
               {% endfor %}
             </ul>
           {% endif %}
-          <button type="submit" data-use-primary-button="true" class="ProductForm__AddToCart prod-grid-cart-btn" data-action="add-to-cart" fdprocessedid="owl9x"><span>Add to cart</span></button>
-<!--       <a href="#" class="prod-grid-cart-btn">Add to Cart</a> --> 
-          </form>
+      <a href="#" class="prod-grid-cart-btn">Add to Cart</a>
          {% endif %}
 
           {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
