@@ -12,10 +12,11 @@
   }
 {% endstyle %}
 <section class="Section Section--spacingNormal content_strip_section" id="section-{{ section.id }}">
-  <div class="Container">
-    <div class="content_strip">
-    </div>
-  </div>
+    <ul class="content_strip">
+      {%- if block.settings.title != blank -%}
+      <li>{{ block.settings.title }}</li>
+      {%- endif -%}
+    </ul>
 </section>
 
 {% schema %}
