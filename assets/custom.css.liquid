@@ -733,6 +733,7 @@ figure{ margin: 0; }
 }
 
 /*---------- Available Logo ---------- */
+
 .available_logo_left{ border-bottom: 1px solid #e7e9e7;}
 .available_logo_right{ padding-top: 30px; }
 .available_logo h2{
@@ -742,8 +743,16 @@ figure{ margin: 0; }
   margin-bottom: 30px;
   text-transform: uppercase;
 }
-
-
+.available_logo_slider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.available_logo_slider li{
+  width: 30%;
+  margin: 10px;
+}
 @media screen and (min-width: 768px){
   .available_logo{
     display:flex;
