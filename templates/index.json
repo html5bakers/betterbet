@@ -627,6 +627,155 @@
         "bg_color": "",
         "title": "Reviews"
       }
+    },
+    "c11789d9-45f9-41f2-8371-1a934559410d": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15477110407221__c11789d9-45f9-41f2-8371-1a934559410d-16801950550d0e5505-0": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": true,
+            "content_position": "bottomLeft",
+            "subheading": "Slide title",
+            "title": "Tell your story",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        },
+        "template--15477110407221__c11789d9-45f9-41f2-8371-1a934559410d-16801950550d0e5505-1": {
+          "type": "image",
+          "settings": {
+            "apply_overlay": true,
+            "content_position": "bottomLeft",
+            "subheading": "Slide title",
+            "title": "Tell your story",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15477110407221__c11789d9-45f9-41f2-8371-1a934559410d-16801950550d0e5505-0",
+        "template--15477110407221__c11789d9-45f9-41f2-8371-1a934559410d-16801950550d0e5505-1"
+      ],
+      "settings": {
+        "show_fullscreen": false,
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 5,
+        "text_color": "#ffffff",
+        "button_color": "#363636",
+        "button_background": "#ffffff"
+      }
+    },
+    "d51f3203-3ccb-478b-b0f1-cfec564b43f1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "template--15477110407221__d51f3203-3ccb-478b-b0f1-cfec564b43f1-1680195086d1be411a-0": {
+          "type": "look",
+          "settings": {
+            "dot_style": "light",
+            "product_1": "",
+            "product_1_horizontal_position": 30,
+            "product_1_vertical_position": 40,
+            "product_2": "",
+            "product_2_horizontal_position": 45,
+            "product_2_vertical_position": 65,
+            "product_3": "",
+            "product_3_horizontal_position": 70,
+            "product_3_vertical_position": 50
+          }
+        }
+      },
+      "block_order": [
+        "template--15477110407221__d51f3203-3ccb-478b-b0f1-cfec564b43f1-1680195086d1be411a-0"
+      ],
+      "settings": {
+        "subheading": "Shop",
+        "title": "Our looks",
+        "show_mobile_product_info": false
+      }
+    },
+    "4801232a-da03-4a2d-8a1d-0be07d23c39d": {
+      "type": "testimonials",
+      "blocks": {
+        "template--15477110407221__4801232a-da03-4a2d-8a1d-0be07d23c39d-168019509659b2d196-0": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>Share what your customers are saying about your products, your company...<\/p>"
+          }
+        },
+        "template--15477110407221__4801232a-da03-4a2d-8a1d-0be07d23c39d-168019509659b2d196-1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>Share what your customers are saying about your products, your company...<\/p>"
+          }
+        },
+        "template--15477110407221__4801232a-da03-4a2d-8a1d-0be07d23c39d-168019509659b2d196-2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>Share what your customers are saying about your products, your company...<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15477110407221__4801232a-da03-4a2d-8a1d-0be07d23c39d-168019509659b2d196-0",
+        "template--15477110407221__4801232a-da03-4a2d-8a1d-0be07d23c39d-168019509659b2d196-1",
+        "template--15477110407221__4801232a-da03-4a2d-8a1d-0be07d23c39d-168019509659b2d196-2"
+      ],
+      "settings": {
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "#eaeaea",
+        "text_color": "#1c1b1b"
+      }
+    },
+    "c751da59-37f9-470a-960d-024ddb416b72": {
+      "type": "timeline",
+      "blocks": {
+        "template--15477110407221__c751da59-37f9-470a-960d-024ddb416b72-1680195111ffbdf9ba-0": {
+          "type": "item",
+          "settings": {
+            "apply_overlay": true,
+            "title": "2000",
+            "subheading": "Sub-heading",
+            "heading": "Heading",
+            "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+          }
+        },
+        "template--15477110407221__c751da59-37f9-470a-960d-024ddb416b72-1680195111ffbdf9ba-1": {
+          "type": "item",
+          "settings": {
+            "apply_overlay": true,
+            "title": "2001",
+            "subheading": "Sub-heading",
+            "heading": "Heading",
+            "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+          }
+        },
+        "template--15477110407221__c751da59-37f9-470a-960d-024ddb416b72-1680195111ffbdf9ba-2": {
+          "type": "item",
+          "settings": {
+            "apply_overlay": true,
+            "title": "2002",
+            "subheading": "Sub-heading",
+            "heading": "Heading",
+            "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15477110407221__c751da59-37f9-470a-960d-024ddb416b72-1680195111ffbdf9ba-0",
+        "template--15477110407221__c751da59-37f9-470a-960d-024ddb416b72-1680195111ffbdf9ba-1",
+        "template--15477110407221__c751da59-37f9-470a-960d-024ddb416b72-1680195111ffbdf9ba-2"
+      ],
+      "settings": {
+        "text_color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -643,6 +792,10 @@
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "2b2ccd8b-5780-4ec3-ba5f-a089e0914185",
     "30d50290-b09a-4b70-a61c-1041883d308e",
-    "513ba4db-5ea0-45de-baae-0ebc339a4c5c"
+    "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
+    "c11789d9-45f9-41f2-8371-1a934559410d",
+    "d51f3203-3ccb-478b-b0f1-cfec564b43f1",
+    "4801232a-da03-4a2d-8a1d-0be07d23c39d",
+    "c751da59-37f9-470a-960d-024ddb416b72"
   ]
 }
