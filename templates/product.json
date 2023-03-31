@@ -132,6 +132,14 @@
         "show_vendor": false,
         "show_color_swatch": false
       }
+    },
+    "fda7a7ef-e6c2-422b-b5df-334f0d9ffec9": {
+      "type": "product-image-text",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "bg_color": ""
+      }
     }
   },
   "order": [
@@ -139,6 +147,7 @@
     "b0010fc1-288d-411b-8b32-06b7ad094266",
     "795c0758-5a61-4d21-aeaf-10c0c972af15",
     "product-recommendations",
-    "recently-viewed-products"
+    "recently-viewed-products",
+    "fda7a7ef-e6c2-422b-b5df-334f0d9ffec9"
   ]
 }
