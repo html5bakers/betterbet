@@ -72,6 +72,24 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "b6919479-51e9-40d3-86dc-d6a170b65863": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "Products",
+              "push_1_image": "shopify:\/\/shop_images\/DSC_0104_copy_e4e425b8-e130-44d8-bbbf-432f85364d94.jpg",
+              "push_1_heading": "Example heading",
+              "push_1_subheading": "Example sub-heading",
+              "push_1_url": "",
+              "push_2_heading": "Example heading",
+              "push_2_subheading": "Example sub-heading",
+              "push_2_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "b6919479-51e9-40d3-86dc-d6a170b65863"
+        ],
         "settings": {
           "use_sticky_header": false,
           "logo": "shopify:\/\/shop_images\/better-bet.png",
