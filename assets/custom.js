@@ -31,13 +31,13 @@ $('.slick').slick({
   prevArrow: [
     '<button type="button" class="slick-prev" aria-label="',
     '">',
-    '<span class="custom-arrow"><svg style="transform: rotate(180deg);" xmlns="http://www.w3.org/2000/svg" width="12.264" height="21.699" viewBox="0 0 12.264 21.699"><defs><style>.a{fill:none;stroke:#162516;stroke-width:2px;}</style></defs><path class="a" d="M-74,254.8l10.142,10.142L-74,275.084" transform="translate(74.707 -254.092)"/></svg></span>',
+    '<span class="custom-arrow"><svg style="transform: rotate(180deg);" xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 12.264 21.699"><defs><style>.a{fill:none;stroke:#162516;stroke-width:2px;}</style></defs><path class="a" d="M-74,254.8l10.142,10.142L-74,275.084" transform="translate(74.707 -254.092)"/></svg></span>',
     "</button>",
   ].join(""),
   nextArrow: [
     '<button type="button" class="slick-next" aria-label="',
     '">',
-    '<span class="custom-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12.264" height="21.699" viewBox="0 0 12.264 21.699"><defs><style>.a{fill:none;stroke:#162516;stroke-width:2px;}</style></defs><path class="a" d="M-74,254.8l10.142,10.142L-74,275.084" transform="translate(74.707 -254.092)"/></svg></span>',
+    '<span class="custom-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 12.264 21.699"><defs><style>.a{fill:none;stroke:#162516;stroke-width:2px;}</style></defs><path class="a" d="M-74,254.8l10.142,10.142L-74,275.084" transform="translate(74.707 -254.092)"/></svg></span>',
     "</button>",
   ].join(""),
 });
