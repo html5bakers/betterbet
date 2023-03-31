@@ -206,6 +206,7 @@
           "type": "no-ingradiants",
           "settings": {
             "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-lactose.png",
             "title": "100% No lactose"
           }
         },
@@ -220,6 +221,7 @@
           "type": "no-ingradiants",
           "settings": {
             "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-sugar.png",
             "title": "100% NO SUGAR"
           }
         },
@@ -227,6 +229,7 @@
           "type": "no-ingradiants",
           "settings": {
             "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-preservations.png",
             "title": "100% NO ARTIFICIAL PRESERVATIVES"
           }
         },
@@ -234,6 +237,7 @@
           "type": "no-ingradiants",
           "settings": {
             "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-soy.png",
             "title": "100% NO NUTS OR SOY"
           }
         }
