@@ -24,7 +24,10 @@
      "autoplaySpeed": 2000,
      "speed": 8000,
      "pauseOnHover": false,
-     "cssEase": "linear"
+     "cssEase": "linear",
+     "responsive": [{"breakpoint":992,"settings":{"slidesToShow": 2,
+     "slidesToScroll": 1,"dots": false}},{"breakpoint":600,"settings":{"slidesToShow": 1,
+     "slidesToScroll": 1, "dots": false}}]
      }'>
       {%- for block in section.blocks -%}
         {%- if block.settings.title != blank -%}
