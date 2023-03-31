@@ -1,4 +1,4 @@
-{%- if product.metafields.custom.product_use_image != blank and product.metafields.custom.use_as_you_text != blank and product.metafields.custom.use_as_you_desc != blank -%}
+{%- if product.metafields.custom.product_use_image != blank and product.metafields.custom.use_heading != blank and product.metafields.custom.use_as_you_desc != blank -%}
   {% style %}
     #section-{{ section.id }}{
       background:{{ section.settings.bg_color }};
@@ -25,8 +25,8 @@
         {% if image != blank %}
         <figure><img src="{{ image | img_url: 'master' }}" /></figure>
         {% endif %}
-        {% if product.metafields.custom.use_as_you_text.value[i] != blank %}
-          <h3>{{ product.metafields.custom.use_as_you_text.value[i] }}</h3>
+        {% if product.metafields.custom.use_heading.value[i] != blank %}
+          <h3>{{ product.metafields.custom.use_heading.value[i] }}</h3>
         {% endif %}
         {% if product.metafields.custom.use_as_you_desc.value[i] != blank %}
           <p>{{ product.metafields.custom.use_as_you_desc.value[i] }}</p>
