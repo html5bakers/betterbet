@@ -13,7 +13,7 @@
       <ul class="list">
         {% for block in section.blocks %}
         <li class="color-{{ block.id }}" style="color:{{block.settings.text_color}};">
-          <span class="bg_image"><svg xmlns="http://www.w3.org/2000/svg" width="186.922" height="109.362" viewBox="0 0 186.922 109.362">
+          <span class="bg_image"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 186.922 109.362">
             <path id="Path_425" data-name="Path 425" d="M160.547,55.41V53.769c14.75-3.463,22.731-11.3,22.731-25.882C183.278,8.748,170.959,0,142.326,0H0V109.362H147.185c28.631,0,39.737-11.848,39.737-30.075,0-15.675-6.421-22.056-26.375-23.878" fill="{{ block.settings.bg_color }}"/>
           </svg></span>
           <span class="text">{{ block.settings.title }}</span>
