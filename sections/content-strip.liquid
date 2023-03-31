@@ -13,12 +13,16 @@
 {% endstyle %}
 <section class="Section Section--spacingNormal content_strip_section" id="section-{{ section.id }}">
     <ul class="content_strip slick" data-slick='{
-    
+     "dots": false,
+     "arrows": true,
+     
      "slidesToShow": 3,
      "slidesToScroll": 1,
      "autoplay": true,
-     "autoplaySpeed": 8000
-    
+     "autoplaySpeed": 0,
+     "speed": 8000,
+     "pauseOnHover": false,
+     "cssEase": 'linear'
      }'>
       {%- for block in section.blocks -%}
         {%- if block.settings.title != blank -%}
