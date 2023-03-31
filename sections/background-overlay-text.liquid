@@ -65,14 +65,22 @@
       </div>
       {%- if section.settings.image != blank -%}
       <div class="center_block">
-        <figure class="sec_image"><img src="{{ section.settings.image | img_url: 'master' }}" /></figure>
+        <span class="image_back"><img src="" alt=""/></span>
+        <figure><img src="{{ section.settings.image | img_url: 'master' }}" /></figure>
+        <span class="image_back"><img src="" alt=""/></span>
       </div>
       {%- endif -%}
       <div class="right_block">
         <ul>
           {%- for block in section.blocks -%}
             {%- if block.settings.image != blank and block.settings.title != blank -%}
-              <li class="flex_always">{{ block.settings.image }}<span>{{ block.settings.title }}</span></li>
+              <li class="flex_always">
+              {% if block.settings.image_png != blank %}
+                <figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+              {% else %}
+              {{ block.settings.image }}
+              {% endif %}
+              <span>{{ block.settings.title }}</span></li>
             {%- endif -%}
           {%- endfor -%}
         </ul>
@@ -205,6 +213,11 @@
           {
             "type": "textarea",
             "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_png",
             "label": "Image"
           },
           {
