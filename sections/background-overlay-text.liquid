@@ -73,10 +73,10 @@
       <div class="right_block">
         <ul>
           {%- for block in section.blocks -%}
-            {%- if block.settings.image != blank and block.settings.title != blank -%}
+            {%- if block.settings.image != blank or block.settings.image_png != blank and block.settings.title != blank -%}
               <li class="flex_always">
               {% if block.settings.image_png != blank %}
-                <figure><img src="{{ block.settings.image | img_url: 'master' }}" /></figure>
+                <figure><img src="{{ block.settings.image_png | img_url: 'master' }}" /></figure>
               {% else %}
               {{ block.settings.image }}
               {% endif %}
