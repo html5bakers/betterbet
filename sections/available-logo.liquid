@@ -18,19 +18,20 @@
   "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
 }
 {%- endcapture -%}
-<section class="Section Section--spacingNormal availability_at_stores" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home">
+<section class="Section Section--spacingNormal availability_at_stores" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="available_logo">
       <div class="available_logo_left text_center">
         {% if section.settings.left_title != blank %}
           <h2>{{ section.settings.left_title }}</h2>
-        {% endif %} <!-- data-slick='{
+        {% endif %}
+        <ul class="available_logo_slider slick" data-flickity-config='{{ flickity_options }}' > <!-- data-slick='{
          "dots": true,
          "arrows": false,
          "draggable": true,
          "slidesToShow": 3,
          "slidesToScroll": 1
-         }' -->
+         }'-->
         {% for block in section.blocks %}
           {% if block.type == 'left-column' %}
             {% if block.settings.logo != blank %}
