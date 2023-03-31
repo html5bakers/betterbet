@@ -43,12 +43,12 @@
 }
 @font-face {
     font-family: 'obviously_CnMd';
-    src: url('obviously-condensedmedium.eot');
-    src: url('obviously-condensedmedium.eot?#iefix') format('embedded-opentype'),
-         url('obviously-condensedmedium.woff2') format('woff2'),
-         url('obviously-condensedmedium.woff') format('woff'),
-         url('obviously-condensedmedium.ttf') format('truetype'),
-         url('obviously-condensedmedium.svg#obviously_CnMd') format('svg');
+    src: url('{{ "obviously-condensedmedium.eot" | file_url }}');
+    src: url('{{ "obviously-condensedmedium.eot" | file_url }}?#iefix') format('embedded-opentype'),
+         url('{{ "obviously-condensedmedium.woff2" | file_url }}') format('woff2'),
+         url('{{ "obviously-condensedmedium.woff" | file_url }}') format('woff'),
+         url('{{ "obviously-condensedmedium.ttf" | file_url }}') format('truetype'),
+         url('{{ "obviously-condensedmedium.svg" | file_url }}#obviously_CnMd') format('svg');
     font-weight: normal;
     font-style: normal;
 
