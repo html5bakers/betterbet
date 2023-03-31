@@ -64,6 +64,9 @@
     "b0010fc1-288d-411b-8b32-06b7ad094266": {
       "type": "product-use-it-as-you",
       "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "bg_color": "#a5c423"
       }
     },
     "795c0758-5a61-4d21-aeaf-10c0c972af15": {
