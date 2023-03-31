@@ -6962,7 +6962,7 @@ $('.Header__CartDot.is-visible').text(cart.item_count);
 
     sections.register('recently-viewed-products', RecentlyViewedProductsSection);
     sections.register('shop-now', ShopNowSection);
-    sections.register('logo', LogoSection);
+    sections.register('available-logo', AvailableLogoSection);
     /**
      * ----------------------------------------------------------------------------
      * FLICKITY
