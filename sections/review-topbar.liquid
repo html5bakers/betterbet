@@ -21,9 +21,17 @@
           </div>
         {%- endif -%}
         
-        <ul class="review_topbar_right">
+        <ul class="review_topbar_right  slick" data-slick='{
+         "dots": false,
+         "arrows": false,
+         "infinite": true,
+         "slidesToShow": 1,
+         "slidesToScroll": 1,
+         "autoplay": true,
+         "autoplaySpeed": 2000
+         }'>
           {%- for block in section.blocks -%}
-            <li>
+            <li class="slide">
                 <figure><img src="{{ block.settings.review_image | img_url: 'master' }}" alt="{{ block.settings.review_image.title }}" title="{{ block.settings.review_image.title }}" /></figure>
             </li>
           {%- endfor -%}
