@@ -1,3 +1,4 @@
+{%- if product.metafields.custom.product_use_image != bla%}
 <section class="Section Section--spacingNormal product_use_it_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="product_use_it">
@@ -22,6 +23,7 @@
     </div>
   </div>
 </section>
+{%- endif -%}
 
 
 {% schema %}
