@@ -283,12 +283,19 @@
           "settings": {
             "title": "World's first millet milk"
           }
+        },
+        "2e150ac4-75f4-4cb1-9e59-a88cb80bfe38": {
+          "type": "Text",
+          "settings": {
+            "title": "World's first millet milk"
+          }
         }
       },
       "block_order": [
         "380c2592-bfe5-4e44-a441-cff710628d47",
         "338907a1-4aec-43b7-87d8-59a7de7264da",
-        "4c32a536-419c-4593-85fb-fd8b622bb66e"
+        "4c32a536-419c-4593-85fb-fd8b622bb66e",
+        "2e150ac4-75f4-4cb1-9e59-a88cb80bfe38"
       ],
       "settings": {
         "padding_top": 0,
@@ -303,6 +310,7 @@
           "type": "Review",
           "settings": {
             "star": "5",
+            "image": "shopify:\/\/shop_images\/Ellipse_1.png",
             "title": "Lorem Ipsum",
             "designation": "Lorem Ipsum - Designation",
             "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
