@@ -320,6 +320,7 @@
           "type": "Review",
           "settings": {
             "star": "5",
+            "image": "shopify:\/\/shop_images\/vegan-dukan.png",
             "title": "Lorem Ipsum",
             "designation": "Lorem Ipsum - Designation",
             "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
