@@ -45,7 +45,11 @@
       {%- assign collection = collections[section.blocks.first.settings.collection] -%}
 
       {%- if collection != empty -%}
-        <h2 class="SectionHeader__Heading Heading u-h1">{{ section.blocks.first.settings.title | default: collection.title }}</h2>
+        {% if section.setting.heading != blank %}
+          <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.heading }}</h2>  
+        {% else %}
+          <h2 class="SectionHeader__Heading Heading u-h1">{{ section.blocks.first.settings.title | default: collection.title }}</h2>
+        {% endif %}
       {%- else -%}
         <h2 class="SectionHeader__Heading Heading u-h1">{{ 'home_page.onboarding.collection_title' | t }}</h2>
       {%- endif -%}
