@@ -5603,7 +5603,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 .shopify-section--bordered > .Section--spacingNormal {
-  padding: 50px 0;
+ /* padding: 50px 0;*/
   margin-top: 0;
   margin-bottom: 0;
 }
