@@ -139,7 +139,7 @@ figure{ margin: 0; }
 }*/
 .Header__MainNav .HorizontalList__Item .Heading{
   font-family: 'paralucent-demiboldregular';
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.4;
   letter-spacing: 0.14px;
   text-transform:uppercase;
@@ -165,6 +165,9 @@ figure{ margin: 0; }
   background: var(--secondary-color);
   font-family: 'paralucent-demiboldregular';
 }
+@media screen and (min-width: 1442px){
+  .Header__MainNav .HorizontalList__Item .Heading{ font-size: 1.5rem;}
+}
 @media screen and (min-width: 1139px){
   .Header__FlexItem.Header__FlexItem--logo .Header__Logo .Header__LogoLink{
     position: absolute;
@@ -177,7 +180,6 @@ figure{ margin: 0; }
     order: -1;
   }
   .Header--center .Header__MainNav{ position: relative; }
-  .Header__MainNav .HorizontalList__Item .Heading{ font-size: 1.3rem;}
   .HorizontalList--spacingExtraLoose .HorizontalList__Item {
     margin-right: 11px;
     margin-left: 11px;
