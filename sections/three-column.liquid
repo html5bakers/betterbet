@@ -22,7 +22,14 @@
         {%- endif -%}
       </header>
     {%- endif -%}
-      <div class="list slick" data-slick='{
+      <div class="list">
+        {% if section.settings.left_image != blank %}
+        <figure class="bg_left"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
+        {% endif %}
+        {% if section.settings.right_image != blank %}
+        <figure class="bg_right"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
+        {% endif %}
+        <div class="slick" data-slick='{
        "dots": false,
        "arrows": false,
        "draggable": true,
@@ -31,12 +38,6 @@
        "responsive": [{"breakpoint":600,"settings":{"slidesToShow": 1,
        "slidesToScroll": 1, "dots": ture}}]
        }'>
-        {% if section.settings.left_image != blank %}
-        <figure class="bg_left"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
-        {% endif %}
-        {% if section.settings.right_image != blank %}
-        <figure class="bg_right"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
-        {% endif %}
         {%- for block in section.blocks -%}
         <div class="column text_center slide">
           {%- if block.settings.image != blank -%}
@@ -52,6 +53,7 @@
           {%- endif -%}
         </div>
         {%- endfor -%}
+        </div>
       </div>
     </div>
   </div>
