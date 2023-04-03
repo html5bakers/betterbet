@@ -38,7 +38,7 @@
         <figure class="bg_right"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
         {% endif %}
         {%- for block in section.blocks -%}
-        <div class="column text_center">
+        <div class="column text_center slide">
           {%- if block.settings.image != blank -%}
             <div class="icon">
               {{ block.settings.image}}
