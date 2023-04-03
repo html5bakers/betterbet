@@ -141,8 +141,8 @@
     "ede4b2fc-27b9-437b-a123-f6c7958bb965": {
       "type": "text-with-background",
       "settings": {
-        "padding_top": 130,
-        "padding_bottom": 130,
+        "padding_top": 120,
+        "padding_bottom": 100,
         "enabled_bg_text": true,
         "bg_color": "#e6d93f",
         "bg_image": "shopify:\/\/shop_images\/dots-pattern.png",
