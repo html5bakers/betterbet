@@ -19,11 +19,11 @@
       <figure><img src="{{ product.metafields.custom.use_main_heading_badge_icon | img_url: 'master' }}" /></figure>  
       </h2>
       {% endif %}
-    <div class="product_use_it">      
+    <div class="product_use_it flex_always">      
       {% assign i = -1 %}
       {% for image in product.metafields.custom.product_use_image.value %}
         {% assign i = i | plus:1 %}
-      <div class="product_use_it_wrapper flex_always">
+      <div class="product_use_it_wrapper">
         {% if image != blank %}
         <figure><img src="{{ image | img_url: 'master' }}" /></figure>
         {% endif %}
