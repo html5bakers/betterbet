@@ -113,14 +113,16 @@ figure{ margin: 0; }
 /*---------- Announcement Bar ---------- */
 .AnnouncementBar__Content.Heading{
   font-family: 'paralucent-demiboldregular';
-  font-size: 1.2rem; 
+  font-size: 1rem; 
 }
 .AnnouncementBar__Wrapper{
   padding: 15px;
 }
+@media screen and (min-width: 1442px){
+  .AnnouncementBar__Content.Heading{ font-size: 1.2rem; }
+}
 @media screen and (max-width: 640px){
   .AnnouncementBar__Wrapper{ padding: 8px; }
-  .AnnouncementBar__Content.Heading{ font-size: 1rem; }
 }
 /*---------- Header ---------- */
 .Header:not(.Header--sidebar) .Header__Wrapper{
