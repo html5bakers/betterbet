@@ -1,7 +1,76 @@
+{%- if product.metafields.custom.image_with_text_image != blank and product.metafields.custom.image_with_text_description != blank -%}
+  {% style %}
+    #section-{{ section.id }}{
+      background:{{ section.settings.bg_color }};
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+  @media(min-width:992px){
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+<section class="Section Section--spacingNormal product_ingrediants_image_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
+  <div class="Container">
+    <div class="product_ingrediants_image">
+      <div class="col-left">
+      </div>
+      <div class="col-right">
+      </div>
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Product Ingrediants Image",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Content In Metafield"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Background"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Ingrediants With Image",
+        "category": "Text"
+      }
+    ]
   }
 {% endschema %}
 
