@@ -14,12 +14,12 @@
 {% endstyle %}
 <section class="Section Section--spacingNormal product_use_it_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
-    <div class="product_use_it">
-      {% if product.metafields.custom.product_use_main_heading != blank %}
+    {% if product.metafields.custom.product_use_main_heading != blank %}
       <h2>{{ product.metafields.custom.product_use_main_heading }}
       <figure><img src="{{ product.metafields.custom.use_main_heading_badge_icon | img_url: 'master' }}" /></figure>  
       </h2>
       {% endif %}
+    <div class="product_use_it">      
       {% assign i = -1 %}
       {% for image in product.metafields.custom.product_use_image.value %}
         {% assign i = i | plus:1 %}
