@@ -140,6 +140,14 @@
         "padding_bottom": 65,
         "bg_color": "#fff2cc"
       }
+    },
+    "9c97a378-39f6-4e61-84a1-7c7b4d9fa5e6": {
+      "type": "product-ingrediants-with-image",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "bg_color": ""
+      }
     }
   },
   "order": [
@@ -148,6 +156,7 @@
     "795c0758-5a61-4d21-aeaf-10c0c972af15",
     "product-recommendations",
     "recently-viewed-products",
-    "fda7a7ef-e6c2-422b-b5df-334f0d9ffec9"
+    "fda7a7ef-e6c2-422b-b5df-334f0d9ffec9",
+    "9c97a378-39f6-4e61-84a1-7c7b4d9fa5e6"
   ]
 }
