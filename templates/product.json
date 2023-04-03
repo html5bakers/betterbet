@@ -136,7 +136,7 @@
     "fda7a7ef-e6c2-422b-b5df-334f0d9ffec9": {
       "type": "product-image-text",
       "settings": {
-        "padding_top": 30,
+        "padding_top": 60,
         "padding_bottom": 30,
         "bg_color": "#fff2cc"
       }
