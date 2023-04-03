@@ -186,19 +186,35 @@
 
         {%- if show_color_swatch -%}
           {% if product.variants.size > 1 %}
-          <ul class="prod-grid-swatch">
-          {% for variant in product.variants %}
-          <li data-id="{{ variant.id }}"{% if forloop.index == 1 %} class="active"{% endif %}>{{ variant.title }}</li>
-            {% endfor %}
-          </ul>
-            {% else %}
             <ul class="prod-grid-swatch">
             {% for variant in product.variants %}
-              <li data-id="{{ variant.id }}" style="display:none;" class="active"></li>
+              <li data-id="{{ variant.id }}"{% if forloop.index == 1 %} class="active"{% endif %}>{{ variant.title }}</li>
+            {% endfor %}
+            </ul>
+          {% else %}
+            <ul class="prod-grid-swatch">
+              {% for variant in product.variants %}
+                <li data-id="{{ variant.id }}" style="display:none;" class="active"></li>
               {% endfor %}
             </ul>
           {% endif %}
-      <a href="#" class="prod-grid-cart-btn">Add to Cart</a>
+          
+          <!--<a href="#" class="prod-grid-cart-btn">Add to Cart</a> -->
+
+
+        <button type="submit" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if product.selected_or_first_available_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
+          {%- if product.selected_or_first_available_variant.available -%}
+            <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
+
+            {%- if block.settings.show_price_in_button -%}
+              <span class="Button__SeparatorDot"></span>
+              <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+            {%- endif -%}
+          {%- else -%}
+            {{- 'product.form.sold_out' | t -}}
+          {%- endif -%}
+        </button>
+        
          {% endif %}
 
           {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
