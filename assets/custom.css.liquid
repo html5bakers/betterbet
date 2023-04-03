@@ -1035,10 +1035,10 @@ figure{ margin: 0; }
 }
 .ProductItem__PriceList.Heading{
   line-height:1.2;
-      display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   
 }
 .ProductItem .ProductItem__Image{
@@ -1091,6 +1091,11 @@ figure{ margin: 0; }
     margin-left: 15px;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1368px){
+  .ProductItem__Title.Heading{
+    min-height: 38px;
+  }
+}
 @media screen and (min-width: 1440px){
   .collection_heading h1.SectionHeader__Heading.Heading{
     font-size: 5.625rem;
@@ -1099,7 +1104,7 @@ figure{ margin: 0; }
     font-size: 2.25rem; 
   }
   /*
-    .ProductItem__Title.Heading{
+  .ProductItem__Title.Heading{
     min-height:58px;
   }*/
   .ProductItem__Price.Price{
