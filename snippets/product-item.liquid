@@ -202,7 +202,7 @@
           {%- if product.selected_or_first_available_variant.available -%}
             <a href="#" class="prod-grid-cart-btn"><span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span></a>
           {%- else -%}
-            <span>{{- 'product.form.sold_out' | t -}}</span>
+            <a href="#" class="prod-grid-cart-btn"><span>{{- 'product.form.sold_out' | t -}}</span></a>
           {%- endif -%}
         
          {% endif %}
