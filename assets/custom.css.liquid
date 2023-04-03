@@ -533,16 +533,16 @@ figure{ margin: 0; }
 .text_with_background_section .bg-shape{
   position:absolute;
   bottom: 0px;
-  right: -15%;
+  right: -13%;
   line-height:0;
   width: 50%;
   text-align:right;
 }
 .text_with_background_section .bg-shape svg{
-  max-width:80%;
-  width:850px;
-  right:0;
-  position:relative;
+  max-width: 80%;
+  width: 850px;
+  right: 0;
+  position: relative;
 }
 .text_with_background_wrapper{
   display:flex;
@@ -572,23 +572,22 @@ figure{ margin: 0; }
 .text_with_background_wrapper .content_left h2{
   font-size: 5rem;
   color:var(--text-color);
-  font-weight:600;
-  margin:0 0 15px;
+  margin: 0 0 15px;
   line-height: 1.2;
   font-family: 'obviously_CnMd';
 }
 
-@media(min-width:992px){
+@media screen and (min-width:992px){
  .text_with_background_wrapper .content_left{ width: 35%; }
  .text_with_background_wrapper.content_right{
     width:49%;
   }
  .text_with_background_wrapper .content_right{
-    max-width:550px;
+    max-width: 550px;
   }
   .text_with_background_wrapper .content_right p{
-    font-size:2rem;
-    margin:0 0 175px;
+    font-size: 2rem;
+    margin: 0 0 175px;
   }
   .text_with_background_wrapper .content_left span{
     font-size: 2.75rem;
@@ -601,20 +600,25 @@ figure{ margin: 0; }
     line-height:1.2;
     margin:0 18px 0 0;
   }
+  .text_with_background_section .bg-shape{ width: 100%; }
+  .text_with_background_section .bg-shape svg{
+    max-width: 100%;
+    width: 659px;
+  }
 }
-@media(min-width:1366px){
+@media screen and (min-width:1366px){
  .text_with_background_wrapper .content_right p{
-    font-size:2.25rem;
-    margin:0 0 175px;
+    font-size: 2.25rem;
+    margin: 0 0 175px;
   }
   .text_with_background_wrapper .content_left span{
     font-size: 3.75rem;
   }
   .text_with_background_wrapper .content_left h2{
-    font-size:11.25rem;
+    font-size: 11.25rem;
   }
   .text_with_background_wrapper .button_wrapper a{
-    font-size:2.2rem;
+    font-size: 2.2rem;
   }
 }
 @media screen and (max-width: 600px){
