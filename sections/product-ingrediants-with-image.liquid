@@ -15,9 +15,11 @@
 <section class="Section Section--spacingNormal product_ingrediants_image_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="product_ingrediants_image">
+      {% if product.metafields.custom.ingrediant_with_image_main_heading != blank %}
       <div class="col-left">
-        <h2></h2>
+        <h2>{{ product.metafields.custom.ingrediant_with_image_main_heading }}</h2>
       </div>
+        {% endif %}
       <div class="col-right">
         <div class="product_ingrediants_image_wrap">
           <h3></h3>
