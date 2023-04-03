@@ -27,7 +27,7 @@
     {{ content_for_header }}
 
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
-  <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
 
     <script>
       {%- if request.page_type == 'policy' -%}
@@ -182,6 +182,8 @@
       {% render 'cart-drawer' %}
     {%- endif -%}
 
+    {% include 'recurpay' %}
+    
     <div class="PageContainer">
       {% section 'announcement' %}
       {% section 'header' %}
