@@ -1841,7 +1841,15 @@ figure{ margin: 0; }
 
 /*---------- Product Iingrediants With Image ---------- */
 .product_ingrediants_image_section{
-  
+  position:relative;
+}
+.product_ingrediants_image_section:after{
+  content:'';
+  width:100%;
+  height:40px;
+  position:absolute;
+  top:0;
+  right:0;
 }
 .product_ingrediants_image{
   align-items: flex-end;
