@@ -588,6 +588,8 @@
       ],
       "settings": {
         "enabled_available_logo": true,
+        "padding_top": 55,
+        "padding_bottom": 0,
         "show_arrow": false,
         "autoplay": true,
         "cycle_speed": 5,
