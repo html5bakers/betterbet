@@ -728,7 +728,13 @@ figure{ margin: 0; }
 
 @media screen and (min-width: 992px){
   .text_with_overlay .Container{ max-width: 90%; padding: 0 !important; }
- 
+  .text_with_overlay .text_block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+   .text_with_overlay .left_block,
+   .text_with_overlay .right_block{ width: 49%; }
   .text_with_overlay .left_block .left_block_desc h2{ font-size: 2rem ; }
   .text_with_overlay .left_block_desc > div{ margin-bottom: 30px; }
   .text_with_overlay .left_block_desc li{ width: 40px; }
@@ -744,11 +750,7 @@ figure{ margin: 0; }
   }
 }
 @media screen and (min-width: 1250px){
-   .text_with_overlay .text_block{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+   
   .text_with_overlay .left_block{
     width: 30%;
   }
