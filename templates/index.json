@@ -253,7 +253,7 @@
       ],
       "settings": {
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 80,
         "bg_color": "#50a6ff",
         "image": "shopify:\/\/shop_images\/product-mock.png",
         "content_title_01": "Lorem ipsum dolor sit amet, consectetuer adipi",
