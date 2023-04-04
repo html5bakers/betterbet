@@ -255,6 +255,7 @@
         "padding_top": 40,
         "padding_bottom": 80,
         "bg_color": "#50a6ff",
+        "best_image": "shopify:\/\/shop_images\/best-startup.svg",
         "image": "shopify:\/\/shop_images\/product-mock.png",
         "content_title_01": "Lorem ipsum dolor sit amet, consectetuer adipi",
         "content_desc_01": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
