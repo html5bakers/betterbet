@@ -99,6 +99,14 @@ figure{ margin: 0; }
   opacity: 1;
 }
 .slick-prev:before, .slick-next:before{ display: none; }
+.SectionHeader h2 {
+  margin: 0 auto;
+  text-transform: uppercase;
+  max-width: max-content;
+  width: 100%;
+  font-size: 4rem;
+  font-family: obviously_CnMd;
+}
 
 @media screen and (max-width: 600px){
   html{ font-size: 11px; }
@@ -111,7 +119,9 @@ figure{ margin: 0; }
     flex-wrap: wrap;
     }
 }
-
+@media screen and (min-width: 992px){
+  .SectionHeader h2{ font-size: 4.5rem; }
+}
 @media screen and (min-width: 1025px){
   .Container{ padding: 0 50px !important; }
 }
