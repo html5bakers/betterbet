@@ -466,10 +466,13 @@ figure{ margin: 0; }
 @media screen and (min-width: 992px){
   .featured_logo_slider li.slide{ margin: 5px; }
 }
+
+
 /*---------- Video With Text ---------- */
 .video_text_wrapper{
   display:flex;
   flex-wrap:wrap;
+  align-items: center;
   justify-content:space-between;
 }
 .video_text_wrapper .col_left,
@@ -487,7 +490,13 @@ figure{ margin: 0; }
   line-height: 1.4;
 }
 .video_text_wrapper  .col_right .button_wrapper{ padding-top: 40px; }
-@media screen and (min-width: 640px){
+
+@media screen and (min-width: 992px){
+  .video_text_wrapper .col_left{ width: 55%; }
+  .video_text_wrapper .col_right{ width: 40%; }
+  .video_text_wrapper{ padding-top: 0; }
+}
+@media screen and (min-width: 1250px){
   .video_text_wrapper .col_left{ width: 60%; }
   .video_text_wrapper .col_right{ width: 30%; }
   .video_text_wrapper{ padding-top: 0; }
