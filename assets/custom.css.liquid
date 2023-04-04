@@ -739,11 +739,13 @@ figure{ margin: 0; }
 }
 .text_with_overlay .center_block .image_back{
   position: absolute;
+  bottom: 0;
+  left: -2%;
 }
 .text_with_overlay .center_block .image_front{
   position: absolute;
-  bottom: 40px;
-  left: 0;
+  bottom: 10px;
+  left: -2%;
   z-index: 3;
 }
 .text_with_overlay .right_block li{
@@ -787,15 +789,14 @@ figure{ margin: 0; }
     margin-right: 15px;
   }
   .text_with_overlay .center_block{ width: 80%; }
-   .text_with_overlay .center_block .image_back{
-    bottom: 0;
+  .text_with_overlay .center_block .image_back{
+   
     width: 110%;
     left: -9%;
   }
   .text_with_overlay .center_block .image_front{
     left: -6%;
     width: 110%;
-    bottom: 10px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1366px){
