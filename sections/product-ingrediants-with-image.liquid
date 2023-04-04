@@ -20,7 +20,7 @@
         <h2>{{ product.metafields.custom.ingrediant_with_image_main_heading }}</h2>
       </div>
         {% endif %}
-      <div class="col-right">
+      <div class="col-right flex_always">
         {% assign i = -1 %}
         {% for image in product.metafields.custom.ingrediant_with_image_image.value %}
           {% assign i = i | plus:1 %}
