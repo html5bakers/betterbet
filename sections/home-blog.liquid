@@ -1,7 +1,9 @@
 <section class="Section Section--spacingNormal home_blog_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     {% if section.settings.title != blank %}
-    <h2>{{ section.settings.title }}</h2>
+      <header class="SectionHeader SectionHeader--center text_center">
+        <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title }}</h2>
+      </header>
     {% endif %}
     <div class="home_blog">
       {% assign blog = blogs[section.settings.blog] %}
