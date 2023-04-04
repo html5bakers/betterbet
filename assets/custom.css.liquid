@@ -902,7 +902,7 @@ figure{ margin: 0; }
 }
 .text_logo_section .list li{
   width: calc(50% - 50px);
-  max-width: 185px;
+  max-width: 135px;
   margin: 10px;
   position:relative;
   display:block;
@@ -922,19 +922,17 @@ figure{ margin: 0; }
 .text_logo_section .list li .bg_image{
   position: absolute;
   top: 0;
-  max-width: 100%;
+  max-width: 135px;
   overflow: hidden;
   z-index: 1;
 }
 .text_logo_section .list li .bg_image svg{ width: 100%; }
-/*
-@media screen and (min-width: 640px){
-  .text_logo_section .list li{
-    width: 20%;
-    margin: 0 20px;
-  }
+
+@media screen and (min-width: 600px){
+  .text_logo_section .list li{ max-width: 185px; }
+  .text_logo_section .list li .bg_image{ max-width: 135px; }
 }
-*/
+
 @media screen and (min-width: 1025px){
   .text_logo_section .list li{
     width: 185px;
