@@ -733,12 +733,6 @@ figure{ margin: 0; }
     flex-wrap: wrap;
     justify-content: space-between;
   }
-   .text_with_overlay .left_block,
-   .text_with_overlay .right_block{ width: 48%; }
-   .text_with_overlay .center_block{
-     width: 100%;
-     order: 2;
-   }
   .text_with_overlay .left_block .left_block_desc h2{ font-size: 2rem ; }
   .text_with_overlay .left_block_desc > div{ margin-bottom: 30px; }
   .text_with_overlay .left_block_desc li{ width: 40px; }
@@ -753,8 +747,15 @@ figure{ margin: 0; }
     margin-right: 15px;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1249px){
+  .text_with_overlay .left_block,
+  .text_with_overlay .right_block{ width: 48%; }
+  .text_with_overlay .center_block{
+     width: 100%;
+     order: 2;
+  }
+}
 @media screen and (min-width: 1250px){
-   
   .text_with_overlay .left_block{
     width: 30%;
   }
