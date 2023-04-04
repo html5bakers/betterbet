@@ -42,4 +42,16 @@ $('.slick').slick({
   ].join(""),
 });
 
+ function isScrolledIntoView(elem){
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+  var elemTop = $(elem).offset().top + 100;
+  var elemBottom = elemTop + $(elem).height();
+  return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
+}
+$('.animateR').each(function(){
+    if(isScrolledIntoView(this)){
+        $(this).addClass('animatedR');
+    }
+});
 
