@@ -21,7 +21,6 @@
       <div class="product_img_text_wrapper flex_always {{ product.metafields.custom.image_with_text_image_position.value[i] | handle }}">
         {% if image != blank %}
         <figure><img src="{{ image | img_url: 'master' }}" />
-          {{ product.metafields.custom.image_with_text_badges | img_url: 'master' }}
           {% if product.metafields.custom.image_with_text_badges.value[i] != blank %}
         <img src="{{ product.metafields.custom.image_with_text_badges.value[i] | img_url: 'master' }}" class="prod_img_txt_badge" />
             {% endif %}
