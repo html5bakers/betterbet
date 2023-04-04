@@ -11,7 +11,7 @@
       {%- if section.settings.desc != blank or section.settings.title != blank -%}
       <header class="SectionHeader SectionHeader--center text_center">
         {%- if section.settings.title != blank -%}
-          <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title }}
+          <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}
           {% if section.settings.heading_image != blank %}
             <figure class="heading_img"><img src="{{ section.settings.heading_image | img_url: '40x40'  }}" alt="" /></figure>
           {% endif %}
