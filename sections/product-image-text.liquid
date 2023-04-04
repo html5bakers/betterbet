@@ -27,9 +27,12 @@
         </figure>
         {% endif %}
         <div class="product_img_text_desc">
-        {% if product.metafields.custom.image_with_text_description.value[i] != blank %}
+        {%- if product.metafields.custom.image_with_text_heading.value[i] != blank -%}
+          <h3>{{ product.metafields.custom.image_with_text_heading.value[i] }}</h3>
+        {%- endif -%}
+        {%- if product.metafields.custom.image_with_text_description.value[i] != blank -%}
           <p>{{ product.metafields.custom.image_with_text_description.value[i] }}</p>
-        {% endif %}
+        {%- endif -%}
        </div>
       </div>
         {% endfor %}
