@@ -25,6 +25,7 @@
         "slide-0": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/desktop-banner.png",
             "apply_overlay": true,
             "content_position": "bottomLeft",
             "subheading": "Slide title",
