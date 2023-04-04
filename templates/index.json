@@ -497,7 +497,7 @@
       "settings": {
         "enabled_featured_logo": true,
         "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 30,
         "title": "",
         "show_arrow": false,
         "autoplay": true,
