@@ -144,8 +144,8 @@
     "9c97a378-39f6-4e61-84a1-7c7b4d9fa5e6": {
       "type": "product-ingrediants-with-image",
       "settings": {
-        "padding_top": 55,
-        "padding_bottom": 50,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "bg_color": "#152315"
       }
     }
