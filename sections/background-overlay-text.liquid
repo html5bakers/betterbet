@@ -35,7 +35,7 @@
 <section class="Section Section--spacingNormal text_with_overlay" id="section-{{ section.id }}">
   <div class="Container">
     {%- if section.settings.best_image != blank -%}
-        <figure class="best-startup-img">{{ section.settings.best_image }} <!--<img src="{{ section.settings.best_image | img_url: 'master' }}" />--></figure>
+        <figure class="best-startup-img"><img src="{{ section.settings.best_image | img_url: 'master' }}" /></figure>
     {%- endif -%}
     <div class="text_block content_wrapper">
       <div class="left_block">
@@ -148,7 +148,7 @@
         "content": "Image"
       },
       {
-        "type": "textarea",
+        "type": "image_picker",
         "id": "best_image",
         "label": "Badge Image"
       },
