@@ -24,9 +24,9 @@
         {% assign i = -1 %}
         {% for image in product.metafields.custom.ingrediant_with_image_image.value %}
           {% assign i = i | plus:1 %}
-          {% if image != blank and product.metafields.custom.image_with_text_description.value[i] != blank %}
+          {% if image != blank and product.metafields.custom.ingrediant_with_image_heading.value[i] != blank %}
         <div class="product_ingrediants_image_wrap">
-          <h3>{{ product.metafields.custom.image_with_text_description.value[i] }}</h3>
+          <h3>{{ product.metafields.custom.ingrediant_with_image_heading.value[i] }}</h3>
           <figure><img src="{{ image | img_url: 'master' }}" /></figure>
         </div>
             {% endif %}
