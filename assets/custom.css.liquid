@@ -708,18 +708,6 @@ figure{ margin: 0; }
   /*width: 80%;*/
   margin: 0 auto; 
 }
-/*
-.text_with_overlay .center_block:after{
-  content: "";
-  width: 116%;
-  height: 70px;
-  position: absolute;
-  bottom: -20px;
-  left: -25px;
-  background: url(//cdn.shopify.com/s/files/1/0553/4859/2693/files/milk-splash-base.png?v=8400273324186960883) no-repeat;
-  background-size: contain;
-  z-index: 2;
-}*/
 .text_with_overlay .center_block:after{
   content: "";
   width: 120%;
@@ -766,6 +754,9 @@ figure{ margin: 0; }
 @media screen and (max-width: 480px){
   .text_with_overlay .center_block:after{
     background-position: top center;
+    background-size: contain;
+    height: 60px;
+    bottom: -5px;
   }
 }
 @media screen and (min-width: 768px){
