@@ -23,7 +23,9 @@
   <div class="content_wrapper" style="background:{{ section.settings.bg_color }};">
     <div class="Container">
       {% if section.settings.title != blank %}
-      <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title }}</h2>
+      <header class="SectionHeader SectionHeader--center text_center">
+        <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title }}</h2>
+      </header>
       {% endif %}
       <ul class="reviews slick" data-slick='{
        "dots": false,
