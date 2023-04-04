@@ -7,7 +7,7 @@
             {%- case block.type -%}
               {%- when 'text' -%}
                 {% if block.settings.footer_logo != blank  %}
-                  <figure><a href="{{ shop.url }}" style="width: {{ block.settings.footer_logo.width }}px; max-width: 200px; "><img src="{{ block.settings.footer_logo | img_url: 'master' }}" /></a></figure>
+                  <figure class="footer_logo"><a href="{{ shop.url }}" style="width: {{ block.settings.footer_logo.width }}px; max-width: 200px; "><img src="{{ block.settings.footer_logo | img_url: 'master' }}" /></a></figure>
                 {% endif %}
                 {%- if block.settings.title != blank -%}
                   <h2 class="Footer__Title Heading u-h6">{{ block.settings.title | escape }}</h2>
