@@ -380,7 +380,7 @@
       ],
       "settings": {
         "padding_top": 80,
-        "padding_bottom": 0,
+        "padding_bottom": 50,
         "bg_color": "#eb513d",
         "title": "Reviews"
       }
