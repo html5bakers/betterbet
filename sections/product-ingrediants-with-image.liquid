@@ -26,7 +26,7 @@
           {% assign i = i | plus:1 %}
           {% if image != blank and product.metafields.custom.image_with_text_description.value[i] != blank %}
         <div class="product_ingrediants_image_wrap">
-          <h3></h3>
+          <h3>{{ product.metafields.custom.image_with_text_description.value[i] }}</h3>
           <figure><img src="{{ image | img_url: 'master' }}" /></figure>
         </div>
             {% endif %}
