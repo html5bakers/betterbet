@@ -145,7 +145,7 @@
       "type": "product-ingrediants-with-image",
       "settings": {
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 50,
         "bg_color": "#152315"
       }
     }
