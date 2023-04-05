@@ -64,7 +64,7 @@
       ],
       "settings": {
         "image_size": "large",
-        "stack_images": false,
+        "stack_images": true,
         "show_thumbnails": true,
         "enable_image_zoom": true,
         "enable_video_looping": false
