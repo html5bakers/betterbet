@@ -9,7 +9,13 @@
       {% assign blog = blogs[section.settings.blog] %}
       {% for article in blog.articles limit:1 %}
       <div class="col_left">
-        <figure><a href="{{ article.url }}"><img src="{{ article.image | img_url: 'master' }}" /></a></figure>
+        <figure><a href="{{ article.url }}">
+         {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: article.image -%}{%- endcapture -%}
+
+          {%- assign image_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ article.image.alt | escape }}" data-media-id="{{ article.image.id }}" />
+              
+        </a></figure>
         <div class="home_blog_left_desc">
           <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
           <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
