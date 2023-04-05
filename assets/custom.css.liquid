@@ -712,7 +712,8 @@ figure{ margin: 0; }
 .best_startup_img{
   position: absolute;
   top: -120px;
-  left: 30%;
+  left: auto;
+  right: 0;
   width: 200px;
   height: 200px;
 }
@@ -881,6 +882,10 @@ figure{ margin: 0; }
   }
 }
 @media screen and (min-width: 1367px){
+  .best_startup_img{
+    right: auto;
+    left: 30%;
+  }
   .text_with_overlay .left_block{
     width: 30%;
   }
