@@ -56,7 +56,7 @@
         "slide-1"
       ],
       "settings": {
-        "show_fullscreen": true,
+        "show_fullscreen": false,
         "show_arrow": false,
         "autoplay": true,
         "cycle_speed": 5,
