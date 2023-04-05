@@ -43,6 +43,14 @@
             "show_price_in_button": false,
             "show_payment_button": false
           }
+        },
+        "81d4d288-3cf8-4dba-aed5-7c2fab9c67cb": {
+          "type": "content",
+          "settings": {
+            "title": "",
+            "content": "<p>oioi;po;o;<\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -51,7 +59,8 @@
         "share_buttons",
         "variant_selector",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "81d4d288-3cf8-4dba-aed5-7c2fab9c67cb"
       ],
       "settings": {
         "image_size": "large",
