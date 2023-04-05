@@ -41,10 +41,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/New_Project_2.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Mobile-banner.png",
-            "apply_overlay": false,
+            "apply_overlay": true,
             "content_position": "bottomLeft",
             "subheading": "",
-            "title": "",
+            "title": "Creamy, nutritious, and sustainable - discover our revolutionary sprouted millet milk today!",
             "button_1_text": "",
             "button_1_link": "",
             "button_2_text": "",
