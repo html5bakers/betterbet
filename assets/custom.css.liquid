@@ -716,15 +716,20 @@ figure{ margin: 0; }
   width: 200px;
   height: 200px;
 }
-.best_startup_img span{ display: block; }
+/*.best_startup_img { display: block; }*/
 .best_startup_img span svg{
   width: 100%;
   height: 100%;
 }
-.best_startup_img figure{
+.best_startup_img span{
   position: absolute;
   top: 0;
   left: 10px;
+}
+.best_startup_img figure{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .text_with_overlay .left_block{
   position: relative;
