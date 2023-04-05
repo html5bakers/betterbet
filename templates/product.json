@@ -19,6 +19,7 @@
         },
         "share_buttons": {
           "type": "share_buttons",
+          "disabled": true,
           "settings": {
           }
         },
@@ -43,14 +44,6 @@
             "show_price_in_button": false,
             "show_payment_button": false
           }
-        },
-        "81d4d288-3cf8-4dba-aed5-7c2fab9c67cb": {
-          "type": "content",
-          "settings": {
-            "title": "hello",
-            "content": "<p>oioi;po;o;<\/p>",
-            "page": "about"
-          }
         }
       },
       "block_order": [
@@ -59,8 +52,7 @@
         "share_buttons",
         "variant_selector",
         "quantity_selector",
-        "buy_buttons",
-        "81d4d288-3cf8-4dba-aed5-7c2fab9c67cb"
+        "buy_buttons"
       ],
       "settings": {
         "image_size": "large",
