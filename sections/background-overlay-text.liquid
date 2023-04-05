@@ -89,9 +89,15 @@
       </div>
       {%- if section.settings.image != blank -%}
       <div class="center_block">
-        <span class="image_back"><img src="{{ 'milk-back.png' | file_url }}" alt=""/></span>
-        <figure class="sec_image"><img src="{{ section.settings.image | img_url: 'master' }}" /></figure>
-        <span class="image_front"><img src="{{ 'milk-front.png' | file_url }}" alt=""/></span>
+
+        
+        <span class="image_back"><img class="Image--lazyLoad" src="{{ 'milk-back.png' | file_url }}" /></span>
+        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: product.media[1] -%}{%- endcapture -%}
+
+          {%- assign image_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <figure class="sec_image"><img class="Image--lazyLoad" src="{{ section.settings.image | img_url: 'master' }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ product.media[1].alt | escape }}" data-media-id="{{ product.media[1].id }}" /></figure>
+       
+        <span class="image_front"><img class="Image--lazyLoad" src="{{ 'milk-front.png' | file_url }}" /></span>
       </div>
       {%- endif -%}
       <div class="right_block">
