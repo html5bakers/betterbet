@@ -39,7 +39,7 @@
   })();
 </script>
 
-<section class="Product Product--{{ section.settings.image_size }}" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
+<section class="Product Product--{{ section.settings.image_size }} Container" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
   <div class="Product__Wrapper">
     {%- capture action_list_items -%}
       {%- if section.settings.enable_image_zoom -%}
@@ -308,8 +308,11 @@
                       </div>
                     </div>
                   {%- endif -%}
+                
                 {% comment %} Subscription Button {% endcomment %}
+                
                   <div id="recurpay-pdp-widget"></div>
+                
                 {%- when 'share_buttons' -%}
                   <div class="ProductMeta__ShareButtons hidden-pocket" {{ block.shopify_attributes }}>
                     <span class="ProductMeta__ShareTitle Heading Text--subdued u-h7">{{ 'product.form.share' | t }}</span>
