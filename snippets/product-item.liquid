@@ -198,7 +198,7 @@
               {% endfor %}
             </ul>
           {% endif %}
-
+{% comment %}
            <button type="button" class="ProductForm__AddToCart {% if product.selected_or_first_available_variant.available == false %}soldout{% endif %}" {% if product.selected_or_first_available_variant.available == false %}disabled {% endif %} data-action="add-to-cart">
             <span>{% if product.selected_or_first_available_variant.available == false %}Sold out{% else %}
               {% if product.tags contains 'Preorder' %}{{ 'PREORDER' }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}
@@ -206,14 +206,14 @@
             </span>
           </button>
           
-        
-          {% comment %}
+   {% endcomment %}        
+          
           {%- if product.selected_or_first_available_variant.available -%}
             <a href="#" class="prod-grid-cart-btn"><span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span></a>
           {%- else -%}
             <a href="#" class="prod-grid-cart-btn"><span>{{- 'product.form.sold_out' | t -}}</span></a>
           {%- endif -%}
-         {% endcomment %}
+      
           
          {% endif %}
 
