@@ -25,7 +25,13 @@
         {% assign i = i | plus:1 %}
       <div class="product_use_it_wrapper">
         {% if image != blank %}
-        <figure><img src="{{ image | img_url: 'master' }}" /></figure>
+        <figure>
+        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: image -%}{%- endcapture -%}
+
+          {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}" data-media-id="{{ image.id }}" />
+                
+        </figure>
         {% endif %}
         {% if product.metafields.custom.use_heading.value[i] != blank %}
           <h3>{{ product.metafields.custom.use_heading.value[i] }}</h3>
