@@ -1683,7 +1683,88 @@ figure{ margin: 0; }
     font-size:1.5rem;
   }
 }
+/* Footer */
+.Footer__Block {
+    margin-top: 30px;
+}
+.Footer__Title.Heading{
+  font-family: 'paralucent-demiboldregular';
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.Footer__Content.Rte{
+  padding-top: 20px;
+  font-size: 1.2rem;
+  font-family: 'paralucentw00-mediumregular';
+}
+.Footer__Content.Rte p{ margin-bottom: 10px; }
+.Footer__Content.Rte a{
+  font-family: 'paralucentw00-mediumregular';
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
 
+.Footer__Inner .Linklist__Item a{ font-size: 1.2rem; }
+.Footer__Content.Rte a:hover,
+.Footer__Inner .Linklist__Item a:hover{ color: var(--button-background); }
+.Footer__Newsletter.Form{ max-width: 200px;}
+.Footer__Block.Footer__Block--newsletter .newsletter_field{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:  var(--button-background);
+  border-radius: 15px;
+  padding: 5px 20px; 
+}
+.Footer__Block.Footer__Block--newsletter .newsletter_field input{
+  border: none;
+  padding: 0;
+  font-size: 1.2rem;
+  width: calc(100% - 50px);
+}
+.Footer__Block.Footer__Block--newsletter .newsletter_field .Form__Submit{
+  font-family: 'paralucent-demiboldregular';
+  font-size: 1.5rem;
+  color: var(--footer-background);
+  margin-top: 0;
+}
+.Footer__Block.Footer__Block--newsletter .social_media{
+  margin: 30px 0 0;
+}
+.Footer__Block.Footer__Block--newsletter .social_media .Heading{ margin-bottom: 0; }
+.Footer__Block.Footer__Block--newsletter .social_media li svg.Icon{
+  width: 30px;
+  height: 30px;
+}
+@media screen and (min-width: 641px){
+  .Footer__Inner{
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+  .Footer__Title.Heading{ margin-bottom: 25px; }
+  .Footer__Content.Rte{
+    padding-top: 30px;
+  }
+  .Footer__Inner .Linklist__Item{ margin-bottom: 22px; }
+  .Footer__Newsletter.Form{ max-width: 100%;}
+}
+@media screen and (min-width: 1140px){
+ .Footer__Block.Footer__Block--newsletter{ text-align: right; }
+}
+@media screen and (min-width: 1440px){
+ .Footer__Title.Heading{ font-size: 1.8rem; }
+ .Footer__Inner .Linklist__Item a{ font-size: 1.5rem; } 
+}
+@media screen and (max-width: 640px){
+  .Footer__Block .footer_logo{
+    dispay: block;
+    width: 150px;
+    max-width: 150px;
+  }
+}
   
 /*---------- Use It As ---------- */
 .product_use_it_section{
