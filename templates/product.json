@@ -220,6 +220,11 @@
         "c4f5846c-a33b-438d-9262-56d62d2d31f4"
       ],
       "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "bg_color": "#eb513d",
         "title": "FAQs"
       }
     }
