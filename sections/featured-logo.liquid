@@ -45,7 +45,13 @@
         {% for block in section.blocks %}
           {% if block.settings.logo != blank %}
         <li class="slide"><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
-          <img src="{{ block.settings.logo | img_url: 'master' }}" />{% if block.settings.link != blank %}</a>{% endif %}</figure></li>
+        
+      {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.logo -%}{%- endcapture -%}
+
+          {%- assign image_url = block.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.logo.alt | escape }}" data-media-id="{{ block.settings.logo.id }}" />
+            
+            {% if block.settings.link != blank %}</a>{% endif %}</figure></li>
             {% endif %}
         {% endfor %}
       </ul>
