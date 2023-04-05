@@ -92,7 +92,7 @@
 
         
         <span class="image_back"><img class="Image--lazyLoad" src="{{ 'milk-back.png' | file_url }}" /></span>
-        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: product.media[1] -%}{%- endcapture -%}
+        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
 
           {%- assign image_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
         <figure class="sec_image"><img class="Image--lazyLoad" src="{{ section.settings.image | img_url: 'master' }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image.alt | escape }}" data-media-id="{{ section.settings.image.id }}" /></figure>
@@ -106,7 +106,10 @@
             {%- if block.settings.image != blank or block.settings.image_png != blank and block.settings.title != blank -%}
               <li class="flex_always">
               {% if block.settings.image_png != blank %}
-                <figure><img src="{{ block.settings.image_png | img_url: 'master' }}" /></figure>
+                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.image_png -%}{%- endcapture -%}
+
+          {%- assign image_url = block.settings.image_png | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <figure><img src="{{ block.settings.image_png | img_url: 'master' }}"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.image_png.alt | escape }}" data-media-id="{{ block.settings.image_png.id }}" /></figure>
               {% else %}
               {{ block.settings.image }}
               {% endif %}
