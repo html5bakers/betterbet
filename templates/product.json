@@ -148,6 +148,80 @@
         "padding_bottom": 50,
         "bg_color": "#152315"
       }
+    },
+    "523ec960-c9a2-4183-96f6-80e56126ec33": {
+      "type": "product-faq",
+      "blocks": {
+        "32fea18e-bb29-44cf-bf7e-8e9acf3bd78e": {
+          "type": "FAQ",
+          "settings": {
+            "title": "What is plant-based milk?",
+            "answer": "<p>Plant-based milk is free from lactose, a sugar found in dairy milk that can be difﬁcult to digest for some people.<\/p>"
+          }
+        },
+        "de64ee51-f5dd-457d-b446-49993a0209fe": {
+          "type": "FAQ",
+          "settings": {
+            "title": "What are some common types of plant-based milk?",
+            "answer": "<p>Plant-based milk is free from lactose, a sugar found in dairy milk that can be difﬁcult to digest for some people.<\/p>"
+          }
+        },
+        "50ca394a-ad6d-4189-bd09-66a30d6a4acc": {
+          "type": "FAQ",
+          "settings": {
+            "title": "Are plant-based milks nutritionally equivalent to dairy milk?",
+            "answer": "<p>Plant-based milk is free from lactose, a sugar found in dairy milk that can be difﬁcult to digest for some people.<\/p>"
+          }
+        },
+        "99fe31f7-e2f2-4c4c-b58f-7f03df482e1d": {
+          "type": "FAQ",
+          "settings": {
+            "title": "How are plant-based milks made?",
+            "answer": "<p>Plant-based milk is free from lactose, a sugar found in dairy milk that can be difﬁcult to digest for some people.<\/p>"
+          }
+        },
+        "30ee2c04-819b-4cb8-bd72-491b1815a89d": {
+          "type": "FAQ",
+          "settings": {
+            "title": "Are plant-based milks environmentally sustainable?",
+            "answer": "<p>Plant-based milk is free from lactose, a sugar found in dairy milk that can be difﬁcult to digest for some people.<\/p>"
+          }
+        },
+        "f3c0e19a-f944-4faa-8e60-f5bdde8c7e96": {
+          "type": "FAQ",
+          "settings": {
+            "title": "Can plant-based milks be used in cooking and baking?",
+            "answer": "<p>Plant-based milk is free from lactose, a sugar found in dairy milk that can be difﬁcult to digest for some people.<\/p>"
+          }
+        },
+        "29042cce-417b-452f-960f-305ca2dbdd3f": {
+          "type": "FAQ",
+          "settings": {
+            "title": "How long do plant-based milks last?",
+            "answer": "<p>Plant-based milk is free from lactose, a sugar found in dairy milk that can be difﬁcult to digest for some people.<\/p>"
+          }
+        },
+        "c4f5846c-a33b-438d-9262-56d62d2d31f4": {
+          "type": "FAQ",
+          "settings": {
+            "title": "Lorem Ipsum etr di?",
+            "answer": "<p>Plant-based milk is free from lactose, a sugar found in dairy milk that can be difﬁcult to digest for some people.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "32fea18e-bb29-44cf-bf7e-8e9acf3bd78e",
+        "de64ee51-f5dd-457d-b446-49993a0209fe",
+        "50ca394a-ad6d-4189-bd09-66a30d6a4acc",
+        "99fe31f7-e2f2-4c4c-b58f-7f03df482e1d",
+        "30ee2c04-819b-4cb8-bd72-491b1815a89d",
+        "f3c0e19a-f944-4faa-8e60-f5bdde8c7e96",
+        "29042cce-417b-452f-960f-305ca2dbdd3f",
+        "c4f5846c-a33b-438d-9262-56d62d2d31f4"
+      ],
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
@@ -157,6 +231,7 @@
     "product-recommendations",
     "recently-viewed-products",
     "fda7a7ef-e6c2-422b-b5df-334f0d9ffec9",
-    "9c97a378-39f6-4e61-84a1-7c7b4d9fa5e6"
+    "9c97a378-39f6-4e61-84a1-7c7b4d9fa5e6",
+    "523ec960-c9a2-4183-96f6-80e56126ec33"
   ]
 }
