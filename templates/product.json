@@ -157,6 +157,46 @@
         "bg_color": "#152315"
       }
     },
+    "1c8ca6d4-aa18-462d-9317-61730f0d50de": {
+      "type": "video-with-text",
+      "blocks": {
+        "70aa6e35-b710-4698-80db-6fc7a3119972": {
+          "type": "Text",
+          "settings": {
+            "title": "Your ultimate chai milk",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+          }
+        },
+        "0d71d68e-e1d5-493d-9879-9d4b64462954": {
+          "type": "Text",
+          "settings": {
+            "title": "Casual user feedback driven USP",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+          }
+        },
+        "caefd5d9-78d0-4750-8b74-6eaa0d926604": {
+          "type": "Text",
+          "settings": {
+            "title": "Casual user feedback driven USP",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+          }
+        }
+      },
+      "block_order": [
+        "70aa6e35-b710-4698-80db-6fc7a3119972",
+        "0d71d68e-e1d5-493d-9879-9d4b64462954",
+        "caefd5d9-78d0-4750-8b74-6eaa0d926604"
+      ],
+      "settings": {
+        "enabled_video_text": true,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "video_link": "",
+        "desc": "",
+        "btn_title": "Learn More",
+        "btn_link": "#"
+      }
+    },
     "523ec960-c9a2-4183-96f6-80e56126ec33": {
       "type": "product-faq",
       "blocks": {
@@ -249,6 +289,7 @@
     "recently-viewed-products",
     "fda7a7ef-e6c2-422b-b5df-334f0d9ffec9",
     "9c97a378-39f6-4e61-84a1-7c7b4d9fa5e6",
+    "1c8ca6d4-aa18-462d-9317-61730f0d50de",
     "523ec960-c9a2-4183-96f6-80e56126ec33"
   ]
 }
