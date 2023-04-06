@@ -98,8 +98,7 @@ $(window).on('load', function(){
              detail: cartData
         })); 
    });
-   }, 400); 
-}
+   }, 0); 
   });
   
 //     var elem = document.querySelector('.reviews.Slideshow__Carousel');
