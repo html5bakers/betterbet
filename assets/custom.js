@@ -158,29 +158,31 @@ if(getCookie('pincode_entered')){
 $('.pincode_button').click(function(){
   var entered_value = parseInt($(this).parents('.pincode_checker_form').find('input[name=pincode]').val());
   //$(this).parents('.pincode_checker_form_wrapper').addClass('hide');
-  if(entered_value != "" || entered_value != nanvalue){
-    $('.pincode_availability_msg').removeClass('hide');
-    console.log('entered value' + entered_value);
-  
-    setCookie('pincode_entered', entered_value, 30);
+  if(entered_value == "" || entered_value == nanvalue){
     
-    if(jQuery.inArray(entered_value, pincodes) > -1){
-      //alert('1');
-      //setCookie('serviceable_category', 'A', 30);
-      setCookie('serviceable', '1', 30);
-      $('.serviceable_msg').removeClass('hide');
-      $('.unserviceable_msg').addClass('hide');
-      $('.pincode_availability_msg').addClass('serviceable');
-    }else{
-      alert('3');
-      deleteCookie('serviceable_category');
-      setCookie('serviceable', '0', 30);
-      $('.pincode_availability_msg').addClass('unserviceable');
-      $('.unserviceable_msg').removeClass('hide');
-      $('.serviceable_msg').addClass('hide');
-    }
+  }else{
+    $('.pincode_availability_msg').removeClass('hide');
+  console.log('entered value' + entered_value);
+
+  setCookie('pincode_entered', entered_value, 30);
+  
+  if(jQuery.inArray(entered_value, pincodes) > -1){
+    //alert('1');
+    //setCookie('serviceable_category', 'A', 30);
+    setCookie('serviceable', '1', 30);
+    $('.serviceable_msg').removeClass('hide');
+    $('.unserviceable_msg').addClass('hide');
+    $('.pincode_availability_msg').addClass('serviceable');
+  }else{
+    alert('3');
+    deleteCookie('serviceable_category');
+    setCookie('serviceable', '0', 30);
+    $('.pincode_availability_msg').addClass('unserviceable');
+    $('.unserviceable_msg').removeClass('hide');
+    $('.serviceable_msg').addClass('hide');
+  } 
   }
-   
+  
 });
 /*
 if(getCookie('pincode_entered') == nanvalue){
