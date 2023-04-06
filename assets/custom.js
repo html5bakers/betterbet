@@ -145,9 +145,15 @@ if(getCookie('pincode_entered')){
   if(getCookie('serviceable_category')){
     $('.serviceable_msg').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
+    $('.atc_custom').removeClass('opacity-80');
+    $('.delivery_time_wrap').removeClass('hide');
+    $('.ProductForm__QuantitySelector').removeClass('hide');
   }else{
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
+    $('.atc_custom').addClass('opacity-80');
+    $('.delivery_time_wrap').addClass('hide');
+    $('.ProductForm__QuantitySelector').addClass('hide');
   }
 }
 
