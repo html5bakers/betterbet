@@ -143,7 +143,7 @@ if(getCookie('pincode_entered')){
   $('.pincode_availability_msg').removeClass('hide');
   //$('.pincode_checker_form_wrapper').addClass('hide');
   $('.pincode').val(getCookie('pincode_entered'));
-  console.log($('.pincode').val());
+  console.log('inupt value: '+ $('.pincode').val());
   if(getCookie('serviceable') == 1){
     $('.serviceable_msg').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
