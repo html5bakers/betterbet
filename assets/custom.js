@@ -173,7 +173,7 @@ $('.pincode_button').click(function(){
       $('.atc_custom').removeClass('opacity-80');
       $('.delivery_time_wrap').removeClass('hide');
       $('.ProductForm__QuantitySelector').removeClass('hide');
-    }else if(jQuery.inArray(entered_value, pincode_cat_b) > -1){
+    }/*else if(jQuery.inArray(entered_value, pincode_cat_b) > -1){
       // alert('2');
       setCookie('serviceable_category', 'B', 30);
       setCookie('serviceable', '1', 30);
@@ -183,7 +183,8 @@ $('.pincode_button').click(function(){
       $('.atc_custom').removeClass('opacity-80');
       $('.delivery_time_wrap').removeClass('hide');
       $('.ProductForm__QuantitySelector').removeClass('hide');
-    }else{
+    }
+  */else{
       // alert('3');
       deleteCookie('serviceable_category');
       setCookie('serviceable', '0', 30);
