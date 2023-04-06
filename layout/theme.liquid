@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
 
+    {{ 'jquery.js' | asset_url | script_tag }}
+    {{ 'lity.js' | asset_url | script_tag }}
+
     <script>
       {%- if request.page_type == 'policy' -%}
         document.addEventListener('DOMContentLoaded', function() {
