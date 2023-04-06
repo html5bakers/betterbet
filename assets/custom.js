@@ -172,7 +172,7 @@ $(document).ready(function(){
     setCookie('pincode_entered', entered_value, 30);
     
     if(jQuery.inArray(entered_value, pincode_cat_a) > -1){
-      // alert('1');
+       alert('1');
       setCookie('serviceable_category', 'A', 30);
       setCookie('serviceable', '1', 30);
       $('.serviceable_msg').removeClass('hide');
@@ -192,7 +192,7 @@ $(document).ready(function(){
       $('.delivery_time_wrap').removeClass('hide');
       $('.ProductForm__QuantitySelector').removeClass('hide');
     }else{
-      // alert('3');
+       alert('3');
       deleteCookie('serviceable_category');
       setCookie('serviceable', '0', 30);
       $('.pincode_availability_msg').addClass('unserviceable');
