@@ -17,6 +17,12 @@
           "settings": {
           }
         },
+        "e1215868-1e78-432e-bd32-6aa71e122ada": {
+          "type": "price",
+          "settings": {
+            "show_taxes_included": false
+          }
+        },
         "share_buttons": {
           "type": "share_buttons",
           "disabled": true,
@@ -49,6 +55,7 @@
       "block_order": [
         "product_meta",
         "description",
+        "e1215868-1e78-432e-bd32-6aa71e122ada",
         "share_buttons",
         "variant_selector",
         "quantity_selector",
