@@ -99,6 +99,28 @@ $(window).on('load', function(){
    
 });
 
+// Cart
+
+$('.ProductItem__Wrapper .ProductForm__AddToCart').click(function(e){
+    e.preventDefault();
+
+    data = { "id": $(this).parents('form').find('input[name="id"]').val(), "quantity": 1 }
+    jQuery.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      data: data,
+      dataType: 'json',
+      success: function() {
+        document.documentElement.dispatchEvent(new CustomEvent('product:added', {
+          bubbles: true,
+          detail: {
+            variant: $(this).parents('form').find('input[name="id"]').val(),
+            quantity: 1
+          }
+        }));
+      }   
+    });
+  });
 
 // Slider
 $('.slick').slick({
