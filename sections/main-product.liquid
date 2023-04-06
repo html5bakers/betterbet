@@ -363,8 +363,9 @@
                   {%- endif -%}
                 
                 {% comment %} Subscription Button {% endcomment %}
+                {% if product.template_suffix == 'product-free-shipping' %}
                   <div id="recurpay-pdp-widget"></div>
-                
+                {% endif %}
                 {%- when 'share_buttons' -%}
                   <div class="ProductMeta__ShareButtons hidden-pocket" {{ block.shopify_attributes }}>
                     <span class="ProductMeta__ShareTitle Heading Text--subdued u-h7">{{ 'product.form.share' | t }}</span>
