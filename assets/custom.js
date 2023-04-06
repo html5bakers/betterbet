@@ -160,7 +160,7 @@ $('.pincode_button').click(function(){
   console.log(entered_value);
   if(isNaN(entered_value)){
     //alert('NAN');
-    $('.nan_value_msg').removeClass('hide');
+    $('.nan_value_msg').toggleClass('hide');
   }else{
     $('.pincode_availability_msg').removeClass('hide');
     setCookie('pincode_entered', entered_value, 30);
@@ -172,7 +172,7 @@ $('.pincode_button').click(function(){
       $('.unserviceable_msg').addClass('hide');
       $('.pincode_availability_msg').addClass('serviceable');
     }else{
-      alert('3');
+      //alert('3');
       deleteCookie('serviceable_category');
       setCookie('serviceable', '0', 30);
       $('.pincode_availability_msg').addClass('unserviceable');
