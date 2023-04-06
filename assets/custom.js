@@ -160,7 +160,10 @@ $('.pincode_button').click(function(){
   console.log(entered_value);
   if(isNaN(entered_value)){
     //alert('NAN');
-    $('.nan_value_msg').toggleClass('hide');
+    $('.nan_value_msg').removeClass('hide');
+    setTimeout(function(){
+      $('.nan_value_msg').addClass('hide');
+    }, 1000);
   }else{
     $('.pincode_availability_msg').removeClass('hide');
     setCookie('pincode_entered', entered_value, 30);
