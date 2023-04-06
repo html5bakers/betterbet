@@ -193,6 +193,7 @@ $(document).ready(function(){
       $('.ProductForm__QuantitySelector').removeClass('hide');
     }else{
        alert('3');
+      alert(entered_value);
       deleteCookie('serviceable_category');
       setCookie('serviceable', '0', 30);
       $('.pincode_availability_msg').addClass('unserviceable');
