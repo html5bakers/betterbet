@@ -20,11 +20,7 @@
     {%- endif -%}
   </h1>
 
-  {%- if block.settings.show_product_rating -%}
-    <div class="ProductMeta__Rating Heading Text--subdued u-h7">
-      {%- render 'product-rating', product: product -%}
-    </div>
-  {%- endif -%}
+  
 
   {%- if block.settings.show_sku and product.selected_or_first_available_variant.sku != blank -%}
     <p class="ProductMeta__Sku Heading Text--subdued u-h6">{{ 'product.form.sku' | t }}: <span class="ProductMeta__SkuNumber">{{ product.selected_or_first_available_variant.sku }}</span></p>
