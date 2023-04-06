@@ -161,6 +161,7 @@ $('.pincode_button').click(function(){
   console.log(entered_value);
   if(isNaN(entered_value)){
     alert('NAN');
+    $('.nan_value_msg').removeClass('hide');
   }else{
     $('.pincode_availability_msg').removeClass('hide');
   console.log('entered value' + entered_value);
