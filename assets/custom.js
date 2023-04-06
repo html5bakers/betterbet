@@ -160,9 +160,9 @@ $('.pincode_button').click(function(){
   console.log(entered_value);
   if(isNaN(entered_value)){
     //alert('NAN');
-    $('.nan_value_msg').removeClass('hide');
+    $('.nan_value_msg').show();
     setTimeout(function(){
-      $('.nan_value_msg').fadeOut(10000).addClass('hide');
+      $('.nan_value_msg').hide();
     }, 15000);
   }else{
     $('.pincode_availability_msg').removeClass('hide');
