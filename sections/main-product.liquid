@@ -347,15 +347,17 @@
                     <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
                       <div class="Rte">
                         {{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}
+                    
                         {% comment %} Nutrition Information {% endcomment %}
-                    {% if product.metafields.custom.nutrition_information_image != blank %}
-                        <a href="#nutrition_information" data-lity>Nutrition Information</a>
-                    <div id="nutrition_information" class="lity-hide lity_popup_wrapper" style="background:#fff">
-  <div class="lity_popup">
-                      <figure><img src="{{ product.metafields.custom.nutrition_information_image | img_url: 'master' }}" /></figure>
-  </div>
-                    </div>
-                      {% endif %}
+                        {% if product.metafields.custom.nutrition_information_image != blank %}
+                          <a href="#nutrition_information" data-lity>Nutrition Information</a>
+                          <div id="nutrition_information" class="lity-hide lity_popup_wrapper" style="background:#fff">
+                            <div class="lity_popup">
+                                <figure><img src="{{ product.metafields.custom.nutrition_information_image | img_url: 'master' }}" /></figure>
+                            </div>
+                          </div>
+                        {% endif %}
+                    
                       </div>
                     </div>
                   {%- endif -%}
