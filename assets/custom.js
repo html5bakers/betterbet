@@ -124,46 +124,54 @@ $('.animateR').each(function(){
 });
 
 // Delivery Check
-var pincode_cat_a = [400001, 400002, 400004, 400005];
-var nanvalue = NaN;
-
-//Pincode Validation
-$('input[name=pincode]').keyup(function(){
-  var entered_value = $(this).val();
-  if(entered_value.replace(/ /g, '').length < 6){
-    $('.pincode_validate_msg').text('Please enter a 6 digit value.');
-  }else if(entered_value.replace(/ /g, '').length > 6){
-   $('.pincode_validate_msg').text('Please enter a valid 6 digit value.');
-  }else{
-    $('.pincode_validate_msg').text('');
-  }
-});
-
-if(getCookie('pincode_entered')){
-  $('.pincode_availability_msg').removeClass('hide');
-  //$('.pincode_checker_form_wrapper').addClass('hide');
-  $('.pincode').val(getCookie('pincode_entered'));
-  console.log('inupt value: '+ $('.pincode').val());
-  if(getCookie('serviceable') == 1){
-    $('.serviceable_msg').removeClass('hide');
-    $('.pincode_availability_msg').addClass('serviceable');
-  }else if(getCookie('serviceable') == 0){
-    $('.pincode_availability_msg').addClass('unserviceable');
-    $('.unserviceable_msg').removeClass('hide');
-  }
-}else{
-    $('.pincode_availability_msg').addClass('hide');
-  }
-
-$('.pincode_button').click(function(){
-  var entered_value = parseInt($(this).parents('.pincode_checker_form').find('input[name=pincode]').val());
-  //$(this).parents('.pincode_checker_form_wrapper').addClass('hide');
-  $('.pincode_availability_msg').removeClass('hide');
-  console.log('entered value' + entered_value);
-
-  setCookie('pincode_entered', entered_value, 30);
+$(document).ready(function(){
+  var pincode_cat_a = [400001, 400002, 400004, 400005];
+  var pincode_cat_b = [400003, 400008, 400009, 400010];
+  // var pincode_input_val =   $('.pincode_checker_form input[name=pincode]').val();
   
-  if(jQuery.inArray(entered_value, pincode_cat_a) > -1){
+  //Pincode Validation
+  $('input[name=pincode]').keyup(function(){
+    var entered_value = $(this).val();
+    if(entered_value.replace(/ /g, '').length < 6){
+      $('.pincode_validate_msg').text('Please enter a 6 digit value.');
+    }else if(entered_value.replace(/ /g, '').length > 6){
+     $('.pincode_validate_msg').text('Please enter a valid 6 digit value.');
+    }else{
+      $('.pincode_validate_msg').text('');
+    }
+  });
+
+  
+  // $('.pincode_availability_msg').hide();
+  if(getCookie('pincode_entered')){
+    $('.pincode_availability_msg').removeClass('hide');
+    $('.pincode_checker_form_wrapper').addClass('hide');
+    $('.pincode').val(getCookie('pincode_entered'));
+    if(getCookie('serviceable_category')){
+      $('.serviceable_msg').removeClass('hide');
+      $('.pincode_availability_msg').addClass('serviceable');
+      $('.atc_custom').removeClass('opacity-80');
+      $('.delivery_time_wrap').removeClass('hide');
+      $('.ProductForm__QuantitySelector').removeClass('hide');
+    }else{
+      $('.pincode_availability_msg').addClass('unserviceable');
+      $('.unserviceable_msg').removeClass('hide');
+      $('.atc_custom').addClass('opacity-80');
+      $('.delivery_time_wrap').addClass('hide');
+      $('.ProductForm__QuantitySelector').addClass('hide');
+    }
+  }else{
+    $('.ProductForm__QuantitySelector').addClass('hide');
+  }
+  
+  $('.pincode_button').click(function(){
+    var entered_value = parseInt($(this).parents('.pincode_checker_form').find('input[name=pincode]').val());
+    $(this).parents('.pincode_checker_form_wrapper').addClass('hide');
+    $('.pincode_availability_msg').removeClass('hide');
+
+    setCookie('pincode_entered', entered_value, 30);
+    
+    if(jQuery.inArray(entered_value, pincode_cat_a) > -1){
       // alert('1');
       setCookie('serviceable_category', 'A', 30);
       setCookie('serviceable', '1', 30);
@@ -173,7 +181,7 @@ $('.pincode_button').click(function(){
       $('.atc_custom').removeClass('opacity-80');
       $('.delivery_time_wrap').removeClass('hide');
       $('.ProductForm__QuantitySelector').removeClass('hide');
-    }/*else if(jQuery.inArray(entered_value, pincode_cat_b) > -1){
+    }else if(jQuery.inArray(entered_value, pincode_cat_b) > -1){
       // alert('2');
       setCookie('serviceable_category', 'B', 30);
       setCookie('serviceable', '1', 30);
@@ -183,8 +191,7 @@ $('.pincode_button').click(function(){
       $('.atc_custom').removeClass('opacity-80');
       $('.delivery_time_wrap').removeClass('hide');
       $('.ProductForm__QuantitySelector').removeClass('hide');
-    }
-  */else{
+    }else{
       // alert('3');
       deleteCookie('serviceable_category');
       setCookie('serviceable', '0', 30);
@@ -194,10 +201,27 @@ $('.pincode_button').click(function(){
       $('.atc_custom').addClass('opacity-80');
       $('.delivery_time_wrap').addClass('hide');
       $('.ProductForm__QuantitySelector').addClass('hide');
-    } 
+    }
+    
+  });
+
+  $('.change_pincode').click(function(){
+    $('.pincode_checker_form_wrapper').removeClass('hide');
+    $('.pincode_availability_msg').addClass('hide');
+    $('.pincode_availability_msg').removeClass('unserviceable serviceable');
+  });
+  
+  $('.atc_custom').click(function(){
+    var date = new Date();
+    var chosen_time = Math.floor(date.getTime() / 1000);
+    
+   if($(this).parents('.Product__Info').find('.pincode_checker').find('input[name=pincode]').val().length <= 0){
+     $('.pincode_validate_msg').text('Please enter pincode and select time for delivery to enable Add to cart button.');
+   }else if($(this).parents('.Product__Info').find('.pincode_checker').find('input[name=pincode]').val().length == 6 && getCookie('serviceable') == 1 && $('.delivery_date').val()!= '' ){
+     console.log($('.delivery_date').val()); 
+     $('.ProductForm__AddToCart').trigger('click');
+   }
+
+  });
+ 
 });
-/*
-if(getCookie('pincode_entered') == nanvalue){
-   $('.pincode_availability_msg').addClass('hide');
-}
-*/
