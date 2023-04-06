@@ -125,7 +125,7 @@ $('.animateR').each(function(){
 
 // Delivery Check
 var pincode = [400001, 400002, 400004, 400005];
-
+var nanvalue = NaN;
 //Pincode Validation
 $('input[name=pincode]').keyup(function(){
   var entered_value = $(this).val();
@@ -149,7 +149,7 @@ if(getCookie('pincode_entered')){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
   }
-}else if(getCookie('pincode_entered') == 'NaN'){
+}else if(getCookie('pincode_entered') == nanvalue){
    $('.pincode_availability_msg').addClass('hide');
 }
 
