@@ -125,7 +125,6 @@ $('.animateR').each(function(){
 
 // Delivery Check
 var pincodes = [400001, 400002, 400004, 400005];
-var nanvalue = NaN;
 
 //Pincode Validation
 $('input[name=pincode]').keyup(function(){
@@ -160,34 +159,25 @@ $('.pincode_button').click(function(){
   //$(this).parents('.pincode_checker_form_wrapper').addClass('hide');
   console.log(entered_value);
   if(isNaN(entered_value)){
-    alert('NAN');
+    //alert('NAN');
     $('.nan_value_msg').removeClass('hide');
   }else{
     $('.pincode_availability_msg').removeClass('hide');
-  console.log('entered value' + entered_value);
-
-  setCookie('pincode_entered', entered_value, 30);
-  
-  if(jQuery.inArray(entered_value, pincodes) > -1){
-    //alert('1');
-    //setCookie('serviceable_category', 'A', 30);
-    setCookie('serviceable', '1', 30);
-    $('.serviceable_msg').removeClass('hide');
-    $('.unserviceable_msg').addClass('hide');
-    $('.pincode_availability_msg').addClass('serviceable');
-  }else{
-    alert('3');
-    deleteCookie('serviceable_category');
-    setCookie('serviceable', '0', 30);
-    $('.pincode_availability_msg').addClass('unserviceable');
-    $('.unserviceable_msg').removeClass('hide');
-    $('.serviceable_msg').addClass('hide');
-  } 
+    setCookie('pincode_entered', entered_value, 30);
+    if(jQuery.inArray(entered_value, pincodes) > -1){
+      //alert('1');
+      //setCookie('serviceable_category', 'A', 30);
+      setCookie('serviceable', '1', 30);
+      $('.serviceable_msg').removeClass('hide');
+      $('.unserviceable_msg').addClass('hide');
+      $('.pincode_availability_msg').addClass('serviceable');
+    }else{
+      alert('3');
+      deleteCookie('serviceable_category');
+      setCookie('serviceable', '0', 30);
+      $('.pincode_availability_msg').addClass('unserviceable');
+      $('.unserviceable_msg').removeClass('hide');
+      $('.serviceable_msg').addClass('hide');
+    } 
   }
-  
 });
-/*
-if(getCookie('pincode_entered') == nanvalue){
-   $('.pincode_availability_msg').addClass('hide');
-}
-*/
