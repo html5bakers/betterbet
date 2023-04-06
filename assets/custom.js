@@ -124,7 +124,7 @@ $('.ProductItem__Wrapper .ProductForm__AddToCart').click(function(e){
     });
   });
 var cart_change = $('.CartItem__QuantitySelector .QuantitySelector__CurrentQuantity').val();
-console.log( $('.CartItem__QuantitySelector .QuantitySelector__CurrentQuantity').val(););
+console.log( $('.CartItem__QuantitySelector .QuantitySelector__CurrentQuantity').val());
 $(cart_change).on('change', function(){
   alert('hi');
   jQuery.ajax({
