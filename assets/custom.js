@@ -157,10 +157,13 @@ if(getCookie('pincode_entered')){
 
 $('.pincode_button').click(function(){
   var entered_value = parseInt($(this).parents('.pincode_checker_form').find('input[name=pincode]').val());
-  $(this).parents('.pincode_checker_form_wrapper').addClass('hide');
+  //$(this).parents('.pincode_checker_form_wrapper').addClass('hide');
   $('.pincode_availability_msg').removeClass('hide');
   console.log('entered value' + entered_value);
-  setCookie('pincode_entered', entered_value, 30);
+  if(entered_value != ''){
+    setCookie('pincode_entered', entered_value, 30); 
+  }
+  //setCookie('pincode_entered', entered_value, 30);
   
   if(jQuery.inArray(entered_value, pincodes) > -1){
     //alert('1');
