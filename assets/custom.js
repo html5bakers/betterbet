@@ -159,7 +159,7 @@ $('.pincode_button').click(function(){
   var entered_value = parseInt($(this).parents('.pincode_checker_form').find('input[name=pincode]').val());
   //$(this).parents('.pincode_checker_form_wrapper').addClass('hide');
   console.log(entered_value);
-  if(!isNaN(entered_value)){
+  if(isNaN(entered_value)){
     alert('NAN');
   }else{
     $('.pincode_availability_msg').removeClass('hide');
