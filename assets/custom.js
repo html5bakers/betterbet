@@ -174,7 +174,8 @@ $('.pincode_button').click(function(){
     $('.serviceable_msg').addClass('hide');
   } 
 });
-
+/*
 if(getCookie('pincode_entered') == nanvalue){
    $('.pincode_availability_msg').addClass('hide');
 }
+*/
