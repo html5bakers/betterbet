@@ -480,7 +480,21 @@
             {%- endunless -%}
           {%- endform -%}
 
-          Free shipping
+          {% comment %} Free Shipping {% endcomment %}
+          <div>
+            <div>
+              <div>Free shipping</div>
+              <div><a href="#delivery_check">Check same day delivery</a></div>
+            </div>
+            <div id="delivery_check" class="lity-hide lity_popup_wrapper" style="background:#fff">
+              <div class="lity_popup">
+                  <figure><img src="{{ product.metafields.custom.nutrition_information_image | img_url: 'master' }}" /></figure>
+              </div>
+            </div>
+            <ul class="product_specifications">
+              <li></li>
+            </ul>
+          </div>
           
           {%- if section.settings.stack_images and product_aside != blank and media_count > 0 -%}
             <div class="Product__QuickNav hidden-pocket">
