@@ -125,7 +125,7 @@ $('.animateR').each(function(){
 
 // Delivery Check
 var pincodes = [400001, 400002, 400004, 400005];
-var nanvalue = NaN;
+var nanvalue = 'NaN';
 
 //Pincode Validation
 $('input[name=pincode]').keyup(function(){
