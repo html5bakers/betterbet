@@ -132,6 +132,7 @@ $(document).ready(function(){
   //Pincode Validation
   $('input[name=pincode]').keyup(function(){
     var entered_value = $(this).val();
+    console.log(entered_value);
     if(entered_value.replace(/ /g, '').length < 6){
       $('.pincode_validate_msg').text('Please enter a 6 digit value.');
     }else if(entered_value.replace(/ /g, '').length > 6){
@@ -141,70 +142,6 @@ $(document).ready(function(){
     }
   });
 
-  
-  // $('.pincode_availability_msg').hide();
-  if(getCookie('pincode_entered')){
-    $('.pincode_availability_msg').removeClass('hide');
-    $('.pincode_checker_form_wrapper').addClass('hide');
-    $('.pincode').val(getCookie('pincode_entered'));
-    if(getCookie('serviceable_category')){
-      $('.serviceable_msg').removeClass('hide');
-      $('.pincode_availability_msg').addClass('serviceable');
-      $('.atc_custom').removeClass('opacity-80');
-      $('.delivery_time_wrap').removeClass('hide');
-      $('.ProductForm__QuantitySelector').removeClass('hide');
-    }else{
-      $('.pincode_availability_msg').addClass('unserviceable');
-      $('.unserviceable_msg').removeClass('hide');
-      $('.atc_custom').addClass('opacity-80');
-      $('.delivery_time_wrap').addClass('hide');
-      $('.ProductForm__QuantitySelector').addClass('hide');
-    }
-  }else{
-    $('.ProductForm__QuantitySelector').addClass('hide');
-  }
-  
-  $('.pincode_button').click(function(){
-    var entered_value = parseInt($(this).parents('.pincode_checker_form').find('input[name=pincode]').val());
-    $(this).parents('.pincode_checker_form_wrapper').addClass('hide');
-    $('.pincode_availability_msg').removeClass('hide');
-
-    setCookie('pincode_entered', entered_value, 30);
-    
-    if(jQuery.inArray(entered_value, pincode_cat_a) > -1){
-       alert('1');
-      setCookie('serviceable_category', 'A', 30);
-      setCookie('serviceable', '1', 30);
-      $('.serviceable_msg').removeClass('hide');
-      $('.unserviceable_msg').addClass('hide');
-      $('.pincode_availability_msg').addClass('serviceable');
-      $('.atc_custom').removeClass('opacity-80');
-      $('.delivery_time_wrap').removeClass('hide');
-      $('.ProductForm__QuantitySelector').removeClass('hide');
-    }else if(jQuery.inArray(entered_value, pincode_cat_b) > -1){
-      // alert('2');
-      setCookie('serviceable_category', 'B', 30);
-      setCookie('serviceable', '1', 30);
-      $('.serviceable_msg').removeClass('hide');
-      $('.unserviceable_msg').addClass('hide');
-      $('.pincode_availability_msg').addClass('serviceable');
-      $('.atc_custom').removeClass('opacity-80');
-      $('.delivery_time_wrap').removeClass('hide');
-      $('.ProductForm__QuantitySelector').removeClass('hide');
-    }else{
-       alert('3');
-      alert(entered_value);
-      deleteCookie('serviceable_category');
-      setCookie('serviceable', '0', 30);
-      $('.pincode_availability_msg').addClass('unserviceable');
-      $('.unserviceable_msg').removeClass('hide');
-      $('.serviceable_msg').addClass('hide');
-      $('.atc_custom').addClass('opacity-80');
-      $('.delivery_time_wrap').addClass('hide');
-      $('.ProductForm__QuantitySelector').addClass('hide');
-    }
-    
-  });
-
+ 
  
 });
