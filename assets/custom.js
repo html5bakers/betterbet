@@ -181,16 +181,6 @@ $(document).ready(function(){
       $('.atc_custom').removeClass('opacity-80');
       $('.delivery_time_wrap').removeClass('hide');
       $('.ProductForm__QuantitySelector').removeClass('hide');
-    }else if(jQuery.inArray(entered_value, pincode_cat_b) > -1){
-      // alert('2');
-      setCookie('serviceable_category', 'B', 30);
-      setCookie('serviceable', '1', 30);
-      $('.serviceable_msg').removeClass('hide');
-      $('.unserviceable_msg').addClass('hide');
-      $('.pincode_availability_msg').addClass('serviceable');
-      $('.atc_custom').removeClass('opacity-80');
-      $('.delivery_time_wrap').removeClass('hide');
-      $('.ProductForm__QuantitySelector').removeClass('hide');
     }else{
       // alert('3');
       deleteCookie('serviceable_category');
@@ -205,22 +195,6 @@ $(document).ready(function(){
     
   });
 
-  $('.change_pincode').click(function(){
-    $('.pincode_checker_form_wrapper').removeClass('hide');
-    $('.pincode_availability_msg').addClass('hide');
-    $('.pincode_availability_msg').removeClass('unserviceable serviceable');
-  });
-  
-  $('.atc_custom').click(function(){
-    var date = new Date();
-    var chosen_time = Math.floor(date.getTime() / 1000);
-    
-   if($(this).parents('.Product__Info').find('.pincode_checker').find('input[name=pincode]').val().length <= 0){
-     $('.pincode_validate_msg').text('Please enter pincode and select time for delivery to enable Add to cart button.');
-   }else if($(this).parents('.Product__Info').find('.pincode_checker').find('input[name=pincode]').val().length == 6 && getCookie('serviceable') == 1 && $('.delivery_date').val()!= '' ){
-     console.log($('.delivery_date').val()); 
-     $('.ProductForm__AddToCart').trigger('click');
-   }
 
   });
  
