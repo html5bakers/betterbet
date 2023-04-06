@@ -198,15 +198,18 @@
               {% endfor %}
             </ul>
           {% endif %}
-{% comment %}
-           <button type="button" class="ProductForm__AddToCart {% if product.selected_or_first_available_variant.available == false %}soldout{% endif %}" {% if product.selected_or_first_available_variant.available == false %}disabled {% endif %} data-action="add-to-cart">
-            <span>{% if product.selected_or_first_available_variant.available == false %}Sold out{% else %}
-              {% if product.tags contains 'Preorder' %}{{ 'PREORDER' }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}
-              {% endif %}
-            </span>
-          </button>
-          
-   {% endcomment %}        
+
+
+          {%- form 'product', product, class: 'ProductForm' -%}
+            <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="Quantity">
+            <input type="hidden" name="id" data-sku="{{product.sku}}" value="{{product.selected_or_first_available_variant.id}}">
+            <button type="button" class="ProductForm__AddToCart {% if product.selected_or_first_available_variant.available == false or product.tags contains 'out-of-stock' %}soldout{% endif %}" {% if product.selected_or_first_available_variant.available == false or product.tags contains 'out-of-stock' %}disabled {% endif %} data-action="add-to-cart">
+              <span>{% if product.selected_or_first_available_variant.available == false or product.tags contains 'out-of-stock' %}Sold out{% else %}
+                {% if product.tags contains 'Preorder' %}{{ 'PREORDER' }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}
+                {% endif %}
+              </span>
+            </button>
+          {% endform %}
           
           {%- if product.selected_or_first_available_variant.available -%}
             <a href="#" class="prod-grid-cart-btn"><span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span></a>
