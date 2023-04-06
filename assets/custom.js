@@ -123,6 +123,11 @@ $('.ProductItem__Wrapper .ProductForm__AddToCart').click(function(e){
       }   
     });
   });
+$('.CartItem__QuantitySelector .QuantitySelector__CurrentQuantity').on('change', function(){
+  document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+    bubbles: true
+   }));
+});
 
 // Slider
 $('.slick').slick({
