@@ -147,9 +147,11 @@ if(getCookie('pincode_entered')){
   if(getCookie('serviceable') == 1){
     $('.serviceable_msg').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
+  }else if(getCookie('serviceable') == 0){
+    $('.pincode_availability_msg').addClass('unserviceable');
+    $('.unserviceable_msg').removeClass('hide');
   }else{
-    //$('.pincode_availability_msg').addClass('unserviceable');
-    //$('.unserviceable_msg').removeClass('hide');
+    $('.pincode_availability_msg').addClass('hide');
   }
 }
 
