@@ -124,7 +124,7 @@ $('.animateR').each(function(){
 });
 
 // Delivery Check
-var pincodes = [400001, 400002, 400004, 400005];
+var pincode_cat_a = [400001, 400002, 400004, 400005];
 var nanvalue = NaN;
 
 //Pincode Validation
@@ -163,21 +163,37 @@ $('.pincode_button').click(function(){
 
   setCookie('pincode_entered', entered_value, 30);
   
-  if(jQuery.inArray(entered_value, pincodes) < -1){
-    //alert('1');
-    //setCookie('serviceable_category', 'A', 30);
-    setCookie('serviceable', '1', 30);
-    $('.serviceable_msg').removeClass('hide');
-    $('.unserviceable_msg').addClass('hide');
-    $('.pincode_availability_msg').addClass('serviceable');
-  }else{
-    alert('3');
-    deleteCookie('serviceable_category');
-    setCookie('serviceable', '0', 30);
-    $('.pincode_availability_msg').addClass('unserviceable');
-    $('.unserviceable_msg').removeClass('hide');
-    $('.serviceable_msg').addClass('hide');
-  } 
+  if(jQuery.inArray(entered_value, pincode_cat_a) > -1){
+      // alert('1');
+      setCookie('serviceable_category', 'A', 30);
+      setCookie('serviceable', '1', 30);
+      $('.serviceable_msg').removeClass('hide');
+      $('.unserviceable_msg').addClass('hide');
+      $('.pincode_availability_msg').addClass('serviceable');
+      $('.atc_custom').removeClass('opacity-80');
+      $('.delivery_time_wrap').removeClass('hide');
+      $('.ProductForm__QuantitySelector').removeClass('hide');
+    }else if(jQuery.inArray(entered_value, pincode_cat_b) > -1){
+      // alert('2');
+      setCookie('serviceable_category', 'B', 30);
+      setCookie('serviceable', '1', 30);
+      $('.serviceable_msg').removeClass('hide');
+      $('.unserviceable_msg').addClass('hide');
+      $('.pincode_availability_msg').addClass('serviceable');
+      $('.atc_custom').removeClass('opacity-80');
+      $('.delivery_time_wrap').removeClass('hide');
+      $('.ProductForm__QuantitySelector').removeClass('hide');
+    }else{
+      // alert('3');
+      deleteCookie('serviceable_category');
+      setCookie('serviceable', '0', 30);
+      $('.pincode_availability_msg').addClass('unserviceable');
+      $('.unserviceable_msg').removeClass('hide');
+      $('.serviceable_msg').addClass('hide');
+      $('.atc_custom').addClass('opacity-80');
+      $('.delivery_time_wrap').addClass('hide');
+      $('.ProductForm__QuantitySelector').addClass('hide');
+    } 
 });
 /*
 if(getCookie('pincode_entered') == nanvalue){
