@@ -163,7 +163,7 @@ $('.pincode_button').click(function(){
     $('.nan_value_msg').removeClass('hide');
     setTimeout(function(){
       $('.nan_value_msg').addClass('hide');
-    }, 1000);
+    }, 1500);
   }else{
     $('.pincode_availability_msg').removeClass('hide');
     setCookie('pincode_entered', entered_value, 30);
