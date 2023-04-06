@@ -199,7 +199,7 @@
             </ul>
           {% endif %}
 
-
+{% comment %}
           {%- form 'product', product, class: 'ProductForm' -%}
           <div class="ProductForm__Variants">
             {%- unless product.has_only_default_variant -%}
@@ -429,7 +429,7 @@
               </span>
             </button>
           {% endform %}
-
+{% endcomment %}
           
           {%- if product.selected_or_first_available_variant.available -%}
             <a href="#" class="prod-grid-cart-btn">
