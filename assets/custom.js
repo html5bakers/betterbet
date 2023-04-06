@@ -142,10 +142,9 @@ if(getCookie('pincode_entered')){
   $('.pincode_availability_msg').removeClass('hide');
   //$('.pincode_checker_form_wrapper').addClass('hide');
   $('.pincode').val(getCookie('pincode_entered'));
-  if(getCookie('serviceable_category')){
+  if(getCookie('serviceable')){
     $('.serviceable_msg').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
-
   }else{
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
@@ -160,7 +159,7 @@ $('.pincode_button').click(function(){
   setCookie('pincode_entered', entered_value, 30);
   
   if(jQuery.inArray(entered_value, pincode) > -1){
-    alert('1');
+    //alert('1');
     //setCookie('serviceable_category', 'A', 30);
     setCookie('serviceable', '1', 30);
     $('.serviceable_msg').removeClass('hide');
@@ -173,9 +172,6 @@ $('.pincode_button').click(function(){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
     $('.serviceable_msg').addClass('hide');
-    $('.atc_custom').addClass('opacity-80');
-    $('.delivery_time_wrap').addClass('hide');
-    $('.ProductForm__QuantitySelector').addClass('hide');
   }
   
 });
