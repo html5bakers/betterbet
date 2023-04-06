@@ -124,9 +124,16 @@ $('.ProductItem__Wrapper .ProductForm__AddToCart').click(function(e){
     });
   });
 $('.CartItem__QuantitySelector .QuantitySelector__CurrentQuantity').on('change', function(){
-  document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
-    bubbles: true
-   }));
+  jQuery.ajax({
+    type: 'POST',
+    url: '/cart/add.js',
+    data: { items: items },
+    dataType: 'json',
+    success: function() {
+      document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+        bubbles: true
+      }));
+      }));
 });
 
 // Slider
