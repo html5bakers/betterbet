@@ -488,7 +488,10 @@
             </div>
             <div id="delivery_check" class="lity-hide lity_popup_wrapper" style="background:#fff">
               <div class="lity_popup">
-                  <figure><img src="{{ product.metafields.custom.nutrition_information_image | img_url: 'master' }}" /></figure>
+                  <form method="post">
+                    <input type="number" name="pincode" placeholder="Enter pincode" class="Form__Input pincode">
+                    <button type="button" class="Button Button--primary pincode_button">Check</button>
+                  </form>
               </div>
             </div>
             <ul class="product_specifications">
