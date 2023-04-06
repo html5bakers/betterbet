@@ -166,7 +166,7 @@ $('.pincode_button').click(function(){
     $('.unserviceable_msg').addClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
   }else{
-    // alert('3');
+    alert('3');
     deleteCookie('serviceable_category');
     setCookie('serviceable', '0', 30);
     $('.pincode_availability_msg').addClass('unserviceable');
