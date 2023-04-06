@@ -298,6 +298,13 @@
                 {%- when 'product_meta' -%}
                   {%- render 'product-meta', form: form, block: block, product: product -%}
 
+                {%- when 'price' -%}
+                {%- if block.settings.show_product_rating -%}
+    <div class="ProductMeta__Rating Heading Text--subdued u-h7">
+      {%- render 'product-rating', product: product -%}
+    </div>
+  {%- endif -%}
+                
                 {%- when 'description' -%}
                   {%- if product.description != blank -%}
                     <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
