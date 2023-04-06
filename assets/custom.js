@@ -149,6 +149,8 @@ if(getCookie('pincode_entered')){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
   }
+}else if(getCookie('pincode_entered') == NaN){
+   $('.pincode_availability_msg').addClass('hide');
 }
 
 $('.pincode_button').click(function(){
