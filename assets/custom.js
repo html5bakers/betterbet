@@ -132,7 +132,7 @@ $('.CartItem__QuantitySelector .QuantitySelector__CurrentQuantity').on('change',
     success: function() {
       document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
         bubbles: true,
-        detail: cartData
+        detail: cart.items
       }));
     }   
   });
