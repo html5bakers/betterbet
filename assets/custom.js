@@ -127,12 +127,15 @@ $('.CartItem__QuantitySelector .QuantitySelector__CurrentQuantity').on('change',
   jQuery.ajax({
     type: 'POST',
     url: '/cart/add.js',
-    data: { items: items },
+    data: data,
     dataType: 'json',
     success: function() {
       document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
-        bubbles: true
+        bubbles: true,
+        detail: cartData
       }));
+    }   
+  });
 });
 
 // Slider
