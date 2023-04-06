@@ -149,8 +149,6 @@ if(getCookie('pincode_entered')){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
   }
-}else if(getCookie('pincode_entered') == nanvalue){
-   $('.pincode_availability_msg').addClass('hide');
 }
 
 $('.pincode_button').click(function(){
@@ -174,7 +172,9 @@ $('.pincode_button').click(function(){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
     $('.serviceable_msg').addClass('hide');
-  }
-  
+  } 
 });
 
+if(getCookie('pincode_entered') == nanvalue){
+   $('.pincode_availability_msg').addClass('hide');
+}
