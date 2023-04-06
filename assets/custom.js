@@ -181,6 +181,16 @@ $(document).ready(function(){
       $('.atc_custom').removeClass('opacity-80');
       $('.delivery_time_wrap').removeClass('hide');
       $('.ProductForm__QuantitySelector').removeClass('hide');
+    }else if(jQuery.inArray(entered_value, pincode_cat_b) > -1){
+      // alert('2');
+      setCookie('serviceable_category', 'B', 30);
+      setCookie('serviceable', '1', 30);
+      $('.serviceable_msg').removeClass('hide');
+      $('.unserviceable_msg').addClass('hide');
+      $('.pincode_availability_msg').addClass('serviceable');
+      $('.atc_custom').removeClass('opacity-80');
+      $('.delivery_time_wrap').removeClass('hide');
+      $('.ProductForm__QuantitySelector').removeClass('hide');
     }else{
       // alert('3');
       deleteCookie('serviceable_category');
@@ -195,7 +205,5 @@ $(document).ready(function(){
     
   });
 
-
-  });
  
 });
