@@ -151,11 +151,10 @@ if(getCookie('pincode_entered')){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
   }
-}
-/*else if(getCookie('pincode_entered') == nanvalue){
+}else{
     $('.pincode_availability_msg').addClass('hide');
   }
-*/
+
 $('.pincode_button').click(function(){
   var entered_value = parseInt($(this).parents('.pincode_checker_form').find('input[name=pincode]').val());
   $(this).parents('.pincode_checker_form_wrapper').addClass('hide');
