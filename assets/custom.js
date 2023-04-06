@@ -127,7 +127,7 @@ $('.CartItem__QuantitySelector .QuantitySelector__CurrentQuantity').on('change',
   jQuery.ajax({
     type: 'POST',
     url: '/cart/add.js',
-    data: data,
+    data: {items: items},
     dataType: 'json',
     success: function() {
       document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
