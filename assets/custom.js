@@ -148,8 +148,8 @@ if(getCookie('pincode_entered')){
     $('.serviceable_msg').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
   }else{
-    $('.pincode_availability_msg').addClass('unserviceable');
-    $('.unserviceable_msg').removeClass('hide');
+    //$('.pincode_availability_msg').addClass('unserviceable');
+    //$('.unserviceable_msg').removeClass('hide');
   }
 }
 
