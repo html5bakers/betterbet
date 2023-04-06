@@ -162,8 +162,8 @@ $('.pincode_button').click(function(){
     //alert('NAN');
     $('.nan_value_msg').removeClass('hide');
     setTimeout(function(){
-      $('.nan_value_msg').fadeOut().addClass('hide');
-    }, 1500);
+      $('.nan_value_msg').fadeOut(10000).addClass('hide');
+    }, 15000);
   }else{
     $('.pincode_availability_msg').removeClass('hide');
     setCookie('pincode_entered', entered_value, 30);
