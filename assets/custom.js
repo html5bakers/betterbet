@@ -70,7 +70,7 @@ $(window).on('load', function(){
    e.preventDefault();
    var variant_id = $(this).parents('.ProductItem__Info').find('.prod-grid-swatch li.active').data('id');
    console.log('variant_id',variant_id,this)
-   setTimeout(function(){
+   //setTimeout(function(){
       $.ajax({
       type: 'POST',
       url: '/cart/add.js',
@@ -88,8 +88,8 @@ $(window).on('load', function(){
          $('.Header__CartDot.is-visible').trigger('click');
        } 
        });
-      }, 1000);
-  }) 
+     // }, 1000);
+  });
   
 //     var elem = document.querySelector('.reviews.Slideshow__Carousel');
 // var flkty = new Flickity( elem, {
