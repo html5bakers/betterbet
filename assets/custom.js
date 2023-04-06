@@ -133,7 +133,6 @@ $('.CartItem__QuantitySelector .QuantitySelector__CurrentQuantity').on('change',
       document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
         bubbles: true
       }));
-      }));
 });
 
 // Slider
