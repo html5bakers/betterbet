@@ -160,9 +160,9 @@ $('.pincode_button').click(function(){
   setCookie('pincode_entered', entered_value, 30);
   
   if(jQuery.inArray(entered_value, pincode) > -1){
-    // alert('1');
+    alert('1');
     //setCookie('serviceable_category', 'A', 30);
-   // setCookie('serviceable', '1', 30);
+    setCookie('serviceable', '1', 30);
     $('.serviceable_msg').removeClass('hide');
     $('.unserviceable_msg').addClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
