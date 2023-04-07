@@ -1,5 +1,10 @@
 {
   "current": {
+    "recurpay_domain": "https:\/\/altfoods.recurpay.com",
+    "recurpay_button_color": "#ffffff",
+    "recurpay_button_bg": "#000000",
+    "recurpay_redirect": "checkout",
+    "recurpay_start_link": "\/",
     "heading_color": "#000000",
     "text_color": "#000000",
     "text_light_color": "#18301c",
