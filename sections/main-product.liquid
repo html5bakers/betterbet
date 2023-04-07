@@ -81,6 +81,7 @@
 
     {%- capture slideshow_media -%}
       {%- for media in product.media -%}
+        <li>
         {%- if product.selected_variant and media.id == product.selected_variant.featured_media.id -%}
           {%- assign initial_media_index = media_count -%}
           {%- assign initial_media_id = media.id -%}
@@ -132,6 +133,7 @@
         {%- endcase -%}
 
         {%- assign media_count = media_count | plus: 1 -%}
+        </li>
       {%- endfor -%}
     {%- endcapture -%}
 
