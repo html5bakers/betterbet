@@ -90,9 +90,6 @@ $(window).on('load', function(){
        });
      // }, 1000);
   });
-  document.dispatchEvent(new CustomEvent('cart:build' , {bubbles: true }));
-document.dispatchEvent(new CustomEvent('cart:refresh', {bubbles: true })); 
-document.dispatchEvent(new CustomEvent('cart:update ', {bubbles: true })); 
   
 //     var elem = document.querySelector('.reviews.Slideshow__Carousel');
 // var flkty = new Flickity( elem, {
