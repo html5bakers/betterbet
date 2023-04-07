@@ -59,7 +59,7 @@ function isScrolledIntoView(elem){
 }
 
 $(window).on('load', function(){                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-/*  $('.prod-grid-swatch li').click(function(e){
+ $('.prod-grid-swatch li').click(function(e){
     e.preventDefault();
     $(this).parents('.prod-grid-swatch').find('li').removeClass('active');
     $(this).addClass('active');
@@ -90,7 +90,7 @@ $(window).on('load', function(){
        });
      // }, 1000);
   });
-  */
+  
 //     var elem = document.querySelector('.reviews.Slideshow__Carousel');
 // var flkty = new Flickity( elem, {
 //   // options
