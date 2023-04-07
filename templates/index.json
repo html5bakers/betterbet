@@ -40,7 +40,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner_878e3a40-3da8-404e-a9b7-d7317700eb4f.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Mobile-banner.png",
+            "mobile_image": "shopify:\/\/shop_images\/mob-banner.jpg",
             "apply_overlay": true,
             "content_position": "bottomLeft",
             "subheading": "",
@@ -55,6 +55,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/New_Project_4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mob-banner.jpg",
             "apply_overlay": false,
             "content_position": "bottomLeft",
             "subheading": "",
