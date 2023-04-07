@@ -157,6 +157,21 @@ $('.slick').slick({
   ].join(""),
 });
 
+$('.Product__Slideshow').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   fade: true,
+   asNavFor: '.slide-nav'
+ });
+ $('.slide-nav').slick({
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   asNavFor: '.Product__Slideshow',
+   dots: true,
+   focusOnSelect: true
+ });
+
 // Animation
 $('.animateR').each(function(){
     if(isScrolledIntoView(this)){
