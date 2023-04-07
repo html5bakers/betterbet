@@ -215,8 +215,8 @@ figure{ margin: 0; }
     width: 30px;
 }
 .hidden-tablet-and-up svg{
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .Header__CartDot{
   top: 8px;
@@ -230,6 +230,12 @@ figure{ margin: 0; }
   padding-left: 2px;
   background: var(--secondary-color);
   font-family: 'paralucent-demiboldregular';
+}
+@media screen and (min-width: 640px){
+  .hidden-tablet-and-up svg{
+    width: 30px;
+    height: 30px;
+  }
 }
 @media screen and (min-width: 1442px){
   .Header__MainNav .HorizontalList__Item .Heading{ font-size: 1.2rem;}
