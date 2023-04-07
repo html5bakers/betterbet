@@ -171,7 +171,7 @@
                         {{- nav_item_badge -}}
                       </a>
                     {%- else -%}
-                      <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
+                      <a href="javascript:void(0)" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
