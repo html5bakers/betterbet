@@ -143,8 +143,9 @@
       "blocks": {
         "7bf2fb7c-31f9-42fb-9d76-dae2a280cbca": {
           "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/9d35f684-f743-45ca-9cc2-c5409bb241a8",
+          "disabled": true,
           "settings": {
-            "heading": "<span>People we love<\/span>@betterbet",
+            "heading": "People we love@betterbet",
             "feeds_type": "FEEDS"
           }
         }
@@ -155,6 +156,12 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1680905334a24e1e78": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -162,6 +169,7 @@
     "0e652373-6cc8-4a24-bfeb-0fae125d3836",
     "42843943-fe88-44d4-9511-b3edd4bb08d6",
     "recently-viewed-products",
-    "1680905207976c8e29"
+    "1680905207976c8e29",
+    "1680905334a24e1e78"
   ]
 }
