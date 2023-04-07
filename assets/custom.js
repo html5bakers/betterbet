@@ -161,14 +161,16 @@ $('.Product__Slideshow').slick({
    slidesToShow: 1,
    slidesToScroll: 1,
    arrows: false,
+  dots: false,
    fade: true,
    asNavFor: '.slide-nav'
  });
  $('.slide-nav').slick({
-   slidesToShow: 3,
+   slidesToShow: 5,
    slidesToScroll: 1,
    asNavFor: '.Product__Slideshow',
-   dots: true,
+   dots: false,
+   arrows: false,
    focusOnSelect: true
  });
 
