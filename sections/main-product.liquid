@@ -493,7 +493,9 @@
           {% comment %} Free Shipping {% endcomment %}
           <div class="free_shipping_section">
             <div class="free_shipping_list flex_always">
+              {%- if section.settings.shipping_price != blank -%}
               <div class="col-left"><h3>Free shipping</h3><p>at or above INR {{ section.settings.shipping_price }} per order</p></div>
+              {%- endif -%}
               <div class="col-right"><a href="#delivery_check" data-lity>Check same day delivery</a></div>
             </div>
             <div id="delivery_check" class="lity-hide lity_popup_wrapper" style="background:#fff">
