@@ -130,6 +130,14 @@
           }));
         };
       })();
+
+      function isScrolledIntoView(elem){
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+        return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
+      }
     </script>
 
     {% render 'microdata-schema' %}
@@ -195,7 +203,7 @@
       </main>
 
       {% section 'footer' %}
-          {% include 'recurpay' %}
+      {% include 'recurpay' %}
     </div>
   </body>
 </html>
