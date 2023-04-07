@@ -149,7 +149,8 @@
           {%- if media_count > 1 -%}
             {%- if section.settings.show_thumbnails -%}
               <div class="Product__SlideshowNav Product__SlideshowNav--thumbnails">
-                <div class="Product__SlideshowNavScroller 99">
+                <div class="Product__SlideshowNavScroller">
+              <ul class="slide-nav">
                   {%- for media in product.media -%}
                     {%- capture nav_item_badge -%}
                       {%- case media.media_type -%}
@@ -161,6 +162,7 @@
                       {%- endcase -%}
                     {%- endcapture -%}
 
+                    <li>
                     {%- if section.settings.stack_images -%}
                       <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if forloop.first %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
@@ -172,7 +174,9 @@
                         {{- nav_item_badge -}}
                       </a>
                     {%- endif -%}
+                    </li>
                   {%- endfor -%}
+              </ul>
                 </div>
               </div>
             {%- endif -%}
