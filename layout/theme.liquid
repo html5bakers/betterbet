@@ -185,7 +185,6 @@
       {% render 'cart-drawer' %}
     {%- endif -%}
 
-    {% include 'recurpay' %}
     
     <div class="PageContainer">
       {% section 'announcement' %}
@@ -196,6 +195,7 @@
       </main>
 
       {% section 'footer' %}
+          {% include 'recurpay' %}
     </div>
   </body>
 </html>
