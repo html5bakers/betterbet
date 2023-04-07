@@ -175,6 +175,12 @@ $('.Product__Slideshow').slick({
  });
 
 // Animation
+ $('.animate').each(function(){
+    if(isScrolledIntoView(this)){
+        $(this).addClass('animated');
+    }
+});
+
 $('.animateR').each(function(){
     if(isScrolledIntoView(this)){
         $(this).addClass('animatedR');
