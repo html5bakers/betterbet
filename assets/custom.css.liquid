@@ -1215,7 +1215,7 @@ figure{ margin: 0; }
   min-height: 50px;
 }
 .prod-grid-swatch::-webkit-scrollbar{ display:none; }
-.prod-grid-swatch li{
+.prod-grid-swatch li,.product_section .SizeSwatch{
   display: inline-block;
   width: auto;
   min-width: 75px;
@@ -1246,7 +1246,7 @@ figure{ margin: 0; }
 .ProductItem .ProductItem__Image{
   border-radius:10px;
 }
-.prod-grid-swatch li.active{
+.prod-grid-swatch li.active,.product_section .SizeSwatch__Radio:checked+.SizeSwatch{
   border-color:var(--secondary-color);
   color:var(--secondary-color);
 }
@@ -2329,7 +2329,9 @@ figure{ margin: 0; }
 .product_section .ProductMeta__Price.Price--compareAt.u-h4:before{
   display:none !important;
 }
-
+.product_section .ProductForm__Label{
+  display:none;
+}
 
 
 
