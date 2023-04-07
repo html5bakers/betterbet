@@ -367,13 +367,6 @@
                       </div>
                     </div>
                   {%- endif -%}
-                <div id="recurpay-pdp-widget"></div>
-                {% comment %} 
-                Subscription Button 'subscription-product' {% endcomment %}
-                {% if product.template_suffix == 'product-free-shipping' %}
-                  <div id="recurpay-pdp-widget"></div>
-                  helkk
-                {% endif %} 
                
                 {%- when 'share_buttons' -%}
                   <div class="ProductMeta__ShareButtons hidden-pocket" {{ block.shopify_attributes }}>
@@ -429,13 +422,22 @@
                     {%- endif -%}
                   </p>
 
+
+                {% comment %} 
+                Subscription Button 'subscription-product' {% endcomment %}
+                {% if product.template_suffix == 'product-free-shipping' %}
+                  <div id="recurpay-pdp-widget"></div>
+                  helkk
+                {% endif %}
+
+                
                 {%- when 'buy_buttons' -%}
                   {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
                     {%- assign use_primary_button = true -%}
                   {%- else -%}
                     {%- assign use_primary_button = false -%}
                   {%- endif -%}
-                  <div id="recurpay-pdp-widget"></div>
+                  <div id="recurpay-pdp-widget"></div> fgfhhf
                   <div class="ProductForm__BuyButtons" {{ block.shopify_attributes }}>
                     {%- if block.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
                       <style>
