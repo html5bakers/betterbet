@@ -166,7 +166,7 @@ $('.Product__Slideshow').slick({
    asNavFor: '.slide-nav'
  });
  $('.slide-nav').slick({
-   slidesToShow: 5,
+   slidesToShow: 6,
    slidesToScroll: 1,
    asNavFor: '.Product__Slideshow',
    dots: false,
