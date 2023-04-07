@@ -38,17 +38,17 @@
             "size_chart": ""
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-            "show_label": false
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_price_in_button": false,
             "show_payment_button": false
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_label": false
           }
         }
       },
@@ -58,8 +58,8 @@
         "e1215868-1e78-432e-bd32-6aa71e122ada",
         "share_buttons",
         "variant_selector",
-        "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "quantity_selector"
       ],
       "settings": {
         "image_size": "medium",
