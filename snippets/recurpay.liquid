@@ -23,6 +23,7 @@
 
     // This is our JavaScript that we'll run after jQuery is included
     var recurpaySubscription = function($) {
+      debugger;
       window.recurpay = {};
       recurpay.domainURL = '{{ settings.recurpay_domain }}';
       recurpay.action = '{{ settings.recurpay_redirect }}';
