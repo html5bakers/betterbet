@@ -346,8 +346,8 @@
                   {%- if product.description != blank -%}
                     <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
                       <div class="Rte">
-                        {{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}
-                    
+                        {% comment %}{{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}{% endcomment %}
+                    {{- product.description | strip_html | truncatewords: 50 -}}
                         {% comment %} Nutrition Information {% endcomment %}
                         {% if product.metafields.custom.nutrition_information_image != blank %}
                           <a href="#nutrition_information" data-lity>Nutrition Information</a>
