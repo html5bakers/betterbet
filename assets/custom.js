@@ -51,12 +51,21 @@ function setCookie(name, value, days) { var d = new Date; d.setTime(d.getTime() 
 function deleteCookie(name) { setCookie(name, '', -1); }
 
 function isScrolledIntoView(elem){
-  var docViewTop = $(window).scrollTop();
-  var docViewBottom = docViewTop + $(window).height();
-  var elemTop = $(elem).offset().top;
-  var elemBottom = elemTop + $(elem).height();
-  return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
-}
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
+  }
+  
+  function isScrolledOutOfView(elem){
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height()/20;
+    // return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
+    return ((elemTop <= docViewBottom) && (elemBottom <= docViewTop)); 
+  }
 
 $(window).on('load', function(){                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
  $('.prod-grid-swatch li').click(function(e){
