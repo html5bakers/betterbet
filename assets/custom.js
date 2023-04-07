@@ -53,7 +53,7 @@ function deleteCookie(name) { setCookie(name, '', -1); }
 function isScrolledIntoView(elem){
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
-  var elemTop = $(elem).offset().top + 100;
+  var elemTop = $(elem).offset().top;
   var elemBottom = elemTop + $(elem).height();
   return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
 }
