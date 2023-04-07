@@ -93,6 +93,14 @@
             "title": "ALWAYS 100% PLANT BASED"
           }
         },
+        "c2e38b7d-3f26-499c-8cd9-ee843d5e57ef": {
+          "type": "Text",
+          "settings": {
+            "bg_color": "#fff2cc",
+            "text_color": "#000000",
+            "title": "Sugar Free Milk"
+          }
+        },
         "cfb2a792-aeea-4c89-88b8-f99728a54a60": {
           "type": "Text",
           "settings": {
@@ -101,27 +109,19 @@
             "title": "HIGH QUALITY INGREDIENTS"
           }
         },
-        "c2e38b7d-3f26-499c-8cd9-ee843d5e57ef": {
-          "type": "Text",
-          "settings": {
-            "bg_color": "#fff2cc",
-            "text_color": "#000000",
-            "title": "LOREM LOREM IPSUM"
-          }
-        },
         "694018ed-50af-43c6-bb31-8b434e861341": {
           "type": "Text",
           "settings": {
             "bg_color": "#eb513d",
             "text_color": "#ffffff",
-            "title": "LOREM LOREM IPSUM"
+            "title": "Lactose Free Milk"
           }
         }
       },
       "block_order": [
         "54ee8a35-39c8-43d6-a63c-40acc978f43e",
-        "cfb2a792-aeea-4c89-88b8-f99728a54a60",
         "c2e38b7d-3f26-499c-8cd9-ee843d5e57ef",
+        "cfb2a792-aeea-4c89-88b8-f99728a54a60",
         "694018ed-50af-43c6-bb31-8b434e861341"
       ],
       "settings": {
