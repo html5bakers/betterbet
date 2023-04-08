@@ -483,10 +483,12 @@
           {%- endform -%}
 
           {% comment %} Free Shipping {% endcomment %}
-          <div>
-            <div>
-              <div>Free shipping</div>
-              <div><a href="#delivery_check" data-lity>Check same day delivery</a></div>
+          <div class="free_shipping_section">
+            <div class="free_shipping_list flex_always">
+              {%- if section.settings.shipping_price != blank -%}
+              <div class="col-left"><h3>Free shipping</h3><p>at or above INR {{ section.settings.shipping_price }} per order</p></div>
+              {%- endif -%}
+              <div class="col-right"><a href="#delivery_check" data-lity>Check same day delivery</a></div>
             </div>
             <div id="delivery_check" class="lity-hide lity_popup_wrapper" style="background:#fff">
               <div class="lity_popup">
@@ -503,8 +505,17 @@
                   </div> 
               </div>
             </div>
-            <ul class="product_specifications">
-              <li></li>
+            <ul class="product_specifications flex_always">
+              {%- assign i = -1 -%}
+              {%- for image in product.metafields.custom.product_ingrediant_image.value -%}
+                {%- assign i = i | plus: 1 -%}
+                {%- if image != blank and product.metafields.custom.product_ingrediants_heading.value[i] != blank -%}
+              <li class="flex_always">
+                <figure><img src="{{ image }}" /></figure>
+                <p>{{ product.metafields.custom.product_ingrediants_heading.value[i] }}</p>
+              </li>
+                  {%- endif -%}
+              {%- endfor -%}
             </ul>
           </div>
           
