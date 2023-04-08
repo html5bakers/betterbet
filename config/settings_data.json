@@ -154,9 +154,9 @@
         ],
         "settings": {
           "show_payment_methods": true,
-          "show_country_selector": true,
-          "show_locale_selector": true,
-          "footer_bottom": "Our brand offers a revolutionary sprouted millet milk that is creamy, nutritious, and environmentally sustainable. Made from a unique blend of sprouted millets, our milk is free from lactose, dairy, cholesterol, added sugar, and artificial preservatives, providing a delicious and healthy alternative to traditional milk. Our milk is ultra-smooth, creamy, and frothy, fortified with essential vitamins A, B, and D, and lower in calories and fat. We are committed to sustainability and source our ingredients from climate-resistant crops with low water consumption, making it a guilt-free choice for your overall health and well-being."
+          "show_country_selector": false,
+          "show_locale_selector": false,
+          "footer_bottom": "<p>Our brand offers a revolutionary sprouted millet milk that is creamy, nutritious, and environmentally sustainable. Made from a unique blend of sprouted millets, our milk is free from lactose, dairy, cholesterol, added sugar, and artificial preservatives, providing a delicious and healthy alternative to traditional milk. Our milk is ultra-smooth, creamy, and frothy, fortified with essential vitamins A, B, and D, and lower in calories and fat. We are committed to sustainability and source our ingredients from climate-resistant crops with low water consumption, making it a guilt-free choice for your overall health and well-being.<\/p>"
         }
       },
       "popup": {
