@@ -39,7 +39,7 @@
   })();
 </script>
 
-<section class="Product Product--{{ section.settings.image_size }} Container" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
+<section class="Product product_section Product--{{ section.settings.image_size }} Container" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
   <div class="Product__Wrapper">
     {%- capture action_list_items -%}
       {%- if section.settings.enable_image_zoom -%}
@@ -81,6 +81,7 @@
 
     {%- capture slideshow_media -%}
       {%- for media in product.media -%}
+        <li>
         {%- if product.selected_variant and media.id == product.selected_variant.featured_media.id -%}
           {%- assign initial_media_index = media_count -%}
           {%- assign initial_media_id = media.id -%}
@@ -132,6 +133,7 @@
         {%- endcase -%}
 
         {%- assign media_count = media_count | plus: 1 -%}
+        </li>
       {%- endfor -%}
     {%- endcapture -%}
 
@@ -150,6 +152,7 @@
             {%- if section.settings.show_thumbnails -%}
               <div class="Product__SlideshowNav Product__SlideshowNav--thumbnails">
                 <div class="Product__SlideshowNavScroller">
+              <ul class="slide-nav">
                   {%- for media in product.media -%}
                     {%- capture nav_item_badge -%}
                       {%- case media.media_type -%}
@@ -161,18 +164,21 @@
                       {%- endcase -%}
                     {%- endcapture -%}
 
+                    <li>
                     {%- if section.settings.stack_images -%}
                       <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if forloop.first %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
                     {%- else -%}
-                      <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
+                      <a href="javascript:void(0)" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
                     {%- endif -%}
+                    </li>
                   {%- endfor -%}
+              </ul>
                 </div>
               </div>
             {%- endif -%}
@@ -205,7 +211,7 @@
         }
         {%- endcapture -%}
 
-        <div class="Product__Slideshow {% if section.settings.enable_image_zoom %}Product__Slideshow--zoomable{% endif %} Carousel" data-flickity-config='{{ flickity_options }}'>
+        <div class="Product__Slideshow {% if section.settings.enable_image_zoom %}Product__Slideshow--zoomable{% endif %}">
           {{ slideshow_media }}
         </div>
 
