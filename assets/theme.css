@@ -7780,7 +7780,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 
 .Footer {
   padding: 34px 0;
-  background: var(--footer-background);
+  /*background: var(--footer-background);*/
   color: var(--footer-text-color);
 }
 
