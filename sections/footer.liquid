@@ -1,5 +1,6 @@
 <footer id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="footer" class="Footer {% if section.blocks.size <= 2 %}Footer--center{% endif %}" role="contentinfo">
-  <div class="Container">
+  <div class="footer_upper">
+    <div class="Container">
     {%- if section.blocks.size > 0 -%}
       <div class="Footer__Inner">
         {%- for block in section.blocks -%}
@@ -168,6 +169,16 @@
       {%- endif -%}
     </div>
   </div>
+  </div>
+  
+  {% if section.settings.footer_bottom != blank %}
+    <div class="footer_lower">
+      <div class="Container">
+        <p>{{ section.settings.footer_bottom }}</p>
+      </div>
+    </div>
+  {% endif %}
+  
 </footer>
 
 {%- if settings.footer_background == settings.background -%}
@@ -211,6 +222,11 @@
       "id": "show_locale_selector",
       "label": "Show language selector",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "footer_bottom",
+      "label": "Footer Bottom Text"
     }
   ],
   "blocks": [
