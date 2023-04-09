@@ -2499,12 +2499,17 @@ p,
   display:block;
 }
 .product_section .Product__InfoWrapper{
-  right:50px;
+  right:0;
+  position:unset;
 }
 .Product__SlideshowMobileNav.hidden-lap-and-up{
   display: flex !important;
 }
 @media screen and (min-width: 1025px){
+  .product_section .Product__InfoWrapper{
+  right:50px;
+    position:absolute;
+}
   .Product__SlideshowMobileNav.hidden-lap-and-up{
   display: none !important;
 }
