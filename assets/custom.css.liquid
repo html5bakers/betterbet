@@ -2501,7 +2501,13 @@ p,
 .product_section .Product__InfoWrapper{
   right:50px;
 }
+.Product__SlideshowMobileNav.hidden-lap-and-up{
+  display: flex !important;
+}
 @media screen and (min-width: 1025px){
+  .Product__SlideshowMobileNav.hidden-lap-and-up{
+  display: none !important;
+}
  .features--heading-large .product_section .u-h6, .features--heading-large .product_section .Rte h6{
   font-size: 1.4rem;
 }
