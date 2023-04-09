@@ -25,17 +25,18 @@
       </header>
     {% endif %}
     <div class="product_faq">
-      {% for block in section.blocks %}
+  {% assign i = -1 %}
+      {% for title in product.metafields.custom.faq_heading.value %}
 {%- if block.settings.title != blank and block.settings.answer != blank -%}
             <div class="Faq__Item {% if section.blocks[forloop.index].type == 'separator' or forloop.last %}Faq__Item--lastOfSection{% endif %}" aria-expanded="false" {{ block.shopify_attributes }}>
               <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
 
               <div class="Faq__ItemWrapper">
-                <button class="Faq__Question">{{ block.settings.title | escape }}</button>
+                <button class="Faq__Question">{{ title | escape }}</button>
 
                 <div class="Faq__AnswerWrapper" aria-hidden="true">
                   <div class="Faq__Answer Rte">
-                    {{ block.settings.answer }}
+                    {{ product.metafields.custom.faq_description.value[i] }}
                   </div>
                 </div>
               </div>
