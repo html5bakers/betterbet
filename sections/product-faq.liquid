@@ -1,3 +1,4 @@
+{% if product.metafields.custom.faq_heading != blank and product.metafields.custom.faq_description != blank %}
   {% style %}
     #section-{{ section.id }}{
       background:{{ section.settings.bg_color }};
@@ -44,6 +45,7 @@
               </div>
   </div>
 </section>
+  {% endif %}
 
 {% schema %}
   {
