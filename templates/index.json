@@ -54,8 +54,8 @@
         "682b8ae2-02a5-44f8-a5ad-711b11301ae4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/New_Project_4.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/mob-banner.jpg",
+            "image": "shopify:\/\/shop_images\/banner-2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mob-banner-2.jpg",
             "apply_overlay": false,
             "content_position": "bottomLeft",
             "subheading": "",
