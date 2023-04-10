@@ -195,7 +195,7 @@
                  "slidesToScroll": 1
                  }'>
                   {%- for media in product.media -%}
-                    <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click class="Product__SlideshowNavDot {% if forloop.first %}is-selected{% endif %}"></a>
+                    <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click class="slide Product__SlideshowNavDot {% if forloop.first %}is-selected{% endif %}"></a>
                   {%- endfor -%}
                 </div>
               </div>
