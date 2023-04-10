@@ -82,7 +82,7 @@
 
     {%- capture slideshow_media -%}
       {%- for media in product.media -%}
-        <li>
+       {% comment %} <li> {% endcomment %}
         {%- if product.selected_variant and media.id == product.selected_variant.featured_media.id -%}
           {%- assign initial_media_index = media_count -%}
           {%- assign initial_media_id = media.id -%}
@@ -134,7 +134,7 @@
         {%- endcase -%}
 
         {%- assign media_count = media_count | plus: 1 -%}
-        </li>
+       {% comment %} </li> {% endcomment %}
       {%- endfor -%}
     {%- endcapture -%}
 
@@ -153,7 +153,7 @@
             {%- if section.settings.show_thumbnails -%}
               <div class="Product__SlideshowNav Product__SlideshowNav--thumbnails">
                 <div class="Product__SlideshowNavScroller">
-              <ul class="slide-nav">
+             {% comment %} <ul class="slide-nav">{% endcomment %}
                   {%- for media in product.media -%}
                     {%- capture nav_item_badge -%}
                       {%- case media.media_type -%}
@@ -165,21 +165,22 @@
                       {%- endcase -%}
                     {%- endcapture -%}
 
-                    <li>
+                   {% comment %} <li> {% endcomment %}
                     {%- if section.settings.stack_images -%}
                       <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if forloop.first %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
                     {%- else -%}
-                      <a href="javascript:void(0)" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
+                       <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
+                      {% comment %}<a href="javascript:void(0)" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">{% endcomment %}
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
                     {%- endif -%}
-                    </li>
+                     {% comment %}</li> {% endcomment %}
                   {%- endfor -%}
-              </ul>
+              {% comment %} </ul>  {% endcomment %}
                 </div>
               </div>
             {%- endif -%}
@@ -211,8 +212,8 @@
           "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
         }
         {%- endcapture -%}
-
-        <div class="Product__Slideshow {% if section.settings.enable_image_zoom %}Product__Slideshow--zoomable{% endif %}" data-flickity-config='{{ flickity_options }}'>
+        <div class="Product__Slideshow {% if section.settings.enable_image_zoom %}Product__Slideshow--zoomable{% endif %} Carousel" data-flickity-config='{{ flickity_options }}'>
+         {% comment %}<div class="Product__Slideshow {% if section.settings.enable_image_zoom %}Product__Slideshow--zoomable{% endif %}" data-flickity-config='{{ flickity_options }}'> {% endcomment %}
           {{ slideshow_media }}
         </div>
 
