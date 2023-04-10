@@ -97,7 +97,7 @@
           "b6919479-51e9-40d3-86dc-d6a170b65863"
         ],
         "settings": {
-          "use_sticky_header": false,
+          "use_sticky_header": true,
           "logo": "shopify:\/\/shop_images\/better-bet.png",
           "logo_max_width": 150,
           "mobile_logo_max_width": 80,
