@@ -8,18 +8,7 @@
   "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
 }
 {%- endcapture -%}
-{% style %}
- /* #section-{{ section.id }}{
-    padding-top: 50px;
-    padding-bottom: 10px;
-  }*/
-@media(min-width:992px){
-  #section-{{ section.id }}{
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
-  }
-}
-{% endstyle %}
+
 <section class="Section Section--spacingNormal featured_logo_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="featured_logo">
@@ -70,26 +59,6 @@
         "id": "enabled_featured_logo",
         "label": "Show Featured Logo",
         "default": true
-      },
-      {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 250,
-        "step": 5,
-        "unit": "px",
-        "label": "Padding Top",
-        "default": 40
-      }, 
-      {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 250,
-        "step": 5,
-        "unit": "px",
-        "label": "Padding Bottom",
-        "default": 40
       },
       {
         "type": "text",
