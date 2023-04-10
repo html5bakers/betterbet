@@ -187,7 +187,13 @@
 
             {%- if section.settings.stack_images -%}
               <div class="Product__SlideshowNav Product__SlideshowNav--dots">
-                <div class="Product__SlideshowNavScroller">
+                <div class="Product__SlideshowNavScroller slick" data-slick='{
+                 "dots": true,
+                 "arrows": false,
+                 "draggable": true,
+                 "slidesToShow": 5,
+                 "slidesToScroll": 1
+                 }'>
                   {%- for media in product.media -%}
                     <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click class="Product__SlideshowNavDot {% if forloop.first %}is-selected{% endif %}"></a>
                   {%- endfor -%}
