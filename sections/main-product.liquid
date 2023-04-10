@@ -152,7 +152,13 @@
           {%- if media_count > 1 -%}
             {%- if section.settings.show_thumbnails -%}
               <div class="Product__SlideshowNav Product__SlideshowNav--thumbnails">
-                <div class="Product__SlideshowNavScroller">
+                <div class="Product__SlideshowNavScroller slick"  data-slick='{
+                 "dots": true,
+                 "arrows": false,
+                 "draggable": true,
+                 "slidesToShow": 5,
+                 "slidesToScroll": 1
+                 }'>
              {% comment %} <ul class="slide-nav">{% endcomment %}
                   {%- for media in product.media -%}
                     {%- capture nav_item_badge -%}
@@ -172,7 +178,7 @@
                         {{- nav_item_badge -}}
                       </a>
                     {%- else -%}
-                       <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
+                       <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="slide Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
                       {% comment %}<a href="javascript:void(0)" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">{% endcomment %}
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
@@ -187,15 +193,9 @@
 
             {%- if section.settings.stack_images -%}
               <div class="Product__SlideshowNav Product__SlideshowNav--dots">
-                <div class="Product__SlideshowNavScroller slick" data-slick='{
-                 "dots": true,
-                 "arrows": false,
-                 "draggable": true,
-                 "slidesToShow": 5,
-                 "slidesToScroll": 1
-                 }'>
+                <div class="Product__SlideshowNavScroller">
                   {%- for media in product.media -%}
-                    <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click class="slide Product__SlideshowNavDot {% if forloop.first %}is-selected{% endif %}"></a>
+                    <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click class="Product__SlideshowNavDot {% if forloop.first %}is-selected{% endif %}"></a>
                   {%- endfor -%}
                 </div>
               </div>
