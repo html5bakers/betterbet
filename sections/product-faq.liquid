@@ -1,4 +1,3 @@
-{% if product.metafields.custom.faq_heading != blank and product.metafields.custom.faq_description != blank %}
   {% style %}
     #section-{{ section.id }}{
       background:{{ section.settings.bg_color }};
@@ -25,18 +24,17 @@
       </header>
     {% endif %}
     <div class="product_faq">
-  {% assign i = -1 %}
-      {% for title in product.metafields.custom.faq_heading.value %}
-{%- if title != blank and product.metafields.custom.faq_description.value[i] != blank -%}
+      {% for block in section.blocks %}
+{%- if block.settings.title != blank and block.settings.answer != blank -%}
             <div class="Faq__Item {% if section.blocks[forloop.index].type == 'separator' or forloop.last %}Faq__Item--lastOfSection{% endif %}" aria-expanded="false" {{ block.shopify_attributes }}>
               <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
 
               <div class="Faq__ItemWrapper">
-                <button class="Faq__Question">{{ title | escape }}</button>
+                <button class="Faq__Question">{{ block.settings.title | escape }}</button>
 
                 <div class="Faq__AnswerWrapper" aria-hidden="true">
                   <div class="Faq__Answer Rte">
-                    {{ product.metafields.custom.faq_description.value[i] }}
+                    {{ block.settings.answer }}
                   </div>
                 </div>
               </div>
@@ -46,7 +44,6 @@
               </div>
   </div>
 </section>
-  {% endif %}
 
 {% schema %}
   {
