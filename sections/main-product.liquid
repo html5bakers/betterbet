@@ -306,47 +306,47 @@
 
                 {%- when 'price' -%}
                   {%- if product.template_suffix != 'coming-soon' -%}
-		<div class="ProductMeta__PriceList Heading">
-		  {%- if settings.currency_code_enabled -%}
-			{%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
-			  <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
-			  <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4">{{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}</span>
-			{%- else -%}
-			  <span class="ProductMeta__Price Price Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
-			{%- endif -%}
-		  {%- else -%}
-			{%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
-			  <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money }}</span>
-			  <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
-			{%- else -%}
-			  <span class="ProductMeta__Price Price Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money }}</span>
-			{%- endif -%}
-		  {%- endif -%}
-		</div>
+    <div class="ProductMeta__PriceList Heading">
+      {%- if settings.currency_code_enabled -%}
+        {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+          <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
+          <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4">{{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}</span>
+        {%- else -%}
+          <span class="ProductMeta__Price Price Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
+        {%- endif -%}
+      {%- else -%}
+        {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+          <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money }}</span>
+          <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
+        {%- else -%}
+          <span class="ProductMeta__Price Price Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money }}</span>
+        {%- endif -%}
+      {%- endif -%}
+    </div>
 
-		<div class="ProductMeta__UnitPriceMeasurement" style="display: {%- if product.selected_or_first_available_variant.unit_price_measurement -%}block{% else %}none{% endif %}">
-		  <div class="UnitPriceMeasurement Heading u-h6 Text--subdued">
-			<span class="UnitPriceMeasurement__Price">{{ product.selected_or_first_available_variant.unit_price | money }}</span>
-			<span class="UnitPriceMeasurement__Separator">/ </span>
-			<span class="UnitPriceMeasurement__ReferenceValue" style="display: {% if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 %}inline{% else %}none{% endif %}">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}</span>
-			<span class="UnitPriceMeasurement__ReferenceUnit">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}</span>
-		  </div>
-		</div>
-	  {%- endif -%}
+    <div class="ProductMeta__UnitPriceMeasurement" style="display: {%- if product.selected_or_first_available_variant.unit_price_measurement -%}block{% else %}none{% endif %}">
+      <div class="UnitPriceMeasurement Heading u-h6 Text--subdued">
+        <span class="UnitPriceMeasurement__Price">{{ product.selected_or_first_available_variant.unit_price | money }}</span>
+        <span class="UnitPriceMeasurement__Separator">/ </span>
+        <span class="UnitPriceMeasurement__ReferenceValue" style="display: {% if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 %}inline{% else %}none{% endif %}">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}</span>
+        <span class="UnitPriceMeasurement__ReferenceUnit">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}</span>
+      </div>
+    </div>
+  {%- endif -%}
 
-	  {%- if block.settings.show_taxes_included -%}
-		{%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-		  <p class="ProductMeta__TaxNotice Rte">
-			{%- if shop.taxes_included -%}
-			  {{ 'product.general.include_taxes' | t }}
-			{%- endif -%}
+  {%- if block.settings.show_taxes_included -%}
+    {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+      <p class="ProductMeta__TaxNotice Rte">
+        {%- if shop.taxes_included -%}
+          {{ 'product.general.include_taxes' | t }}
+        {%- endif -%}
 
-			{%- if shop.shipping_policy.body != blank -%}
-			  {{ 'product.general.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-			{%- endif -%}
-		  </p>
-		{%- endif -%}
-	  {%- endif -%}
+        {%- if shop.shipping_policy.body != blank -%}
+          {{ 'product.general.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+  {%- endif -%}
                 
                 {%- when 'description' -%}
                   {%- if product.description != blank -%}
@@ -367,7 +367,14 @@
                       </div>
                     </div>
                   {%- endif -%}
-               
+                
+                {% comment %} 
+                Subscription Button 'subscription-product'
+                {% if product.template_suffix == 'product-free-shipping' %}
+                  <div id="recurpay-pdp-widget"></div>
+                  helkk
+                {% endif %} 
+                {% endcomment %}
                 {%- when 'share_buttons' -%}
                   <div class="ProductMeta__ShareButtons hidden-pocket" {{ block.shopify_attributes }}>
                     <span class="ProductMeta__ShareTitle Heading Text--subdued u-h7">{{ 'product.form.share' | t }}</span>
@@ -422,22 +429,13 @@
                     {%- endif -%}
                   </p>
 
-
-                {% comment %} 
-                Subscription Button 'subscription-product' {% endcomment %}
-                {% if product.template_suffix == 'product-free-shipping' %}
-                  <div id="recurpay-pdp-widget"></div>
-                  helkk
-                {% endif %}
-
-                
                 {%- when 'buy_buttons' -%}
                   {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
                     {%- assign use_primary_button = true -%}
                   {%- else -%}
                     {%- assign use_primary_button = false -%}
                   {%- endif -%}
-                  <div id="recurpay-pdp-widget"></div> 
+                  <div id="recurpay-pdp-widget"></div>
                   <div class="ProductForm__BuyButtons" {{ block.shopify_attributes }}>
                     {%- if block.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
                       <style>
@@ -495,9 +493,7 @@
           {% comment %} Free Shipping {% endcomment %}
           <div class="free_shipping_section">
             <div class="free_shipping_list flex_always">
-              {%- if section.settings.shipping_price != blank -%}
-              <div class="col-left"><h3>Free shipping</h3><p>at or above INR {{ section.settings.shipping_price }} per order</p></div>
-              {%- endif -%}
+              <div class="col-left">Free shipping</div>
               <div class="col-right"><a href="#delivery_check" data-lity>Check same day delivery</a></div>
             </div>
             <div id="delivery_check" class="lity-hide lity_popup_wrapper" style="background:#fff">
@@ -515,17 +511,8 @@
                   </div> 
               </div>
             </div>
-            <ul class="product_specifications flex_always">
-              {%- assign i = -1 -%}
-              {%- for image in product.metafields.custom.product_ingrediant_image.value -%}
-                {%- assign i = i | plus: 1 -%}
-                {%- if image != blank and product.metafields.custom.product_ingrediants_heading.value[i] != blank -%}
-              <li class="flex_always">
-                <figure><img src="{{ image }}" /></figure>
-                <p>{{ product.metafields.custom.product_ingrediants_heading.value[i] }}</p>
-              </li>
-                  {%- endif -%}
-              {%- endfor -%}
+            <ul class="product_specifications">
+              <li></li>
             </ul>
           </div>
           
@@ -904,11 +891,6 @@ This is the root container for the zoom functionality. Must not be removed, as o
       "id": "enable_video_looping",
       "label": "Enable video looping",
       "default": false
-    },
-    {
-      "type": "text",
-      "id": "shipping_price",
-      "label": "Shipping Price"
     }
   ]
 }
