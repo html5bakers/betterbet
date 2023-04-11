@@ -5675,7 +5675,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 @media screen and (min-width: 1008px) {
   .Section--spacingNormal {
-    padding: 40px 0;
+    padding: 50px 0;
   }
 
   .Section--spacingLarge {
@@ -5687,7 +5687,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
 
   .shopify-section--bordered > .Section--spacingNormal {
-    padding: 40px 0;
+    padding: 50px 0;
   }
 
   .shopify-section--bordered > .Section--spacingLarge {
