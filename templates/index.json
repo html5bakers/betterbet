@@ -136,7 +136,7 @@
         "featured-collection-0": {
           "type": "collection",
           "settings": {
-            "collection": "test-collection",
+            "collection": "combos",
             "title": "",
             "grid_items_count": 19,
             "button_text": ""
@@ -160,8 +160,6 @@
     "ede4b2fc-27b9-437b-a123-f6c7958bb965": {
       "type": "text-with-background",
       "settings": {
-        "padding_top": 120,
-        "padding_bottom": 100,
         "enabled_bg_text": true,
         "bg_color": "#e6d93f",
         "bg_image": "shopify:\/\/shop_images\/dots-pattern.png",
@@ -218,8 +216,6 @@
         "c57c642c-3b1a-4c69-85bd-f74e284f8693"
       ],
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0,
         "title": "Creamy. Nutritious. Delicious.",
         "desc": "Our plant-based milk is the result of years of research and development, and the secret lies in our unique blend of sprouted millets. Packed with essential vitamins and minerals, our milk is not only nutritious but also creamy and frothy,  tastes just like your regular milk, with no bitter aftertaste. Plus, it's free from lactose, dairy, and cholesterol, with no added sugar or artificial preservatives.",
         "heading_image": "shopify:\/\/shop_images\/versatile-accent.png",
@@ -278,8 +274,6 @@
         "34683d4f-b8c2-4cf8-b018-336fe99baf69"
       ],
       "settings": {
-        "padding_top": 40,
-        "padding_bottom": 80,
         "bg_color": "#50a6ff",
         "best_image": "shopify:\/\/shop_images\/best-startup_badge.png",
         "image": "shopify:\/\/shop_images\/product-mock.png",
@@ -332,8 +326,6 @@
         "2e150ac4-75f4-4cb1-9e59-a88cb80bfe38"
       ],
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0,
         "bg_color": ""
       }
     },
@@ -406,8 +398,6 @@
         "e34cc2bd-37dc-4c5a-93e1-8caf53055e88"
       ],
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 0,
         "bg_color": "#eb513d",
         "title": "Reviews"
       }
@@ -444,8 +434,6 @@
       ],
       "settings": {
         "enabled_video_text": true,
-        "padding_top": 50,
-        "padding_bottom": 0,
         "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "desc": "<p>Description<\/p>",
         "btn_title": "Learn more",
@@ -523,8 +511,6 @@
       ],
       "settings": {
         "enabled_featured_logo": true,
-        "padding_top": 50,
-        "padding_bottom": 30,
         "title": "",
         "show_arrow": false,
         "autoplay": true,
@@ -615,8 +601,6 @@
       ],
       "settings": {
         "enabled_available_logo": true,
-        "padding_top": 55,
-        "padding_bottom": 0,
         "show_arrow": false,
         "autoplay": true,
         "cycle_speed": 5,
