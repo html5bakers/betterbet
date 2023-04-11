@@ -11,7 +11,8 @@
   {{ text_font_bold_italic | font_face: font_display: 'fallback' }}
 
   :root {
-    --heading-font-family : {{settings.heading_font.family}}, {{ settings.heading_font.fallback_families }};
+    {% comment %}--heading-font-family : {{settings.heading_font.family}}, {{ settings.heading_font.fallback_families }};{% endcomment %}
+    --heading-font-family :  'paralucentw00-mediumregular', {{ settings.heading_font.fallback_families }};
     --heading-font-weight : {{settings.heading_font.weight}};
     --heading-font-style  : {{settings.heading_font.style}};
 
