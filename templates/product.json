@@ -64,7 +64,7 @@
       "settings": {
         "image_size": "large",
         "stack_images": false,
-        "show_thumbnails": true,
+        "show_thumbnails": false,
         "enable_image_zoom": true,
         "enable_video_looping": false,
         "shipping_price": "1499"
@@ -112,8 +112,6 @@
         "5aa5cde3-dc03-4de5-bcf2-95b46a7c46fa"
       ],
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0,
         "title": "From smoothies to soups",
         "desc": "The Benefits of Millets and Plant-Based Milk: Better for You, Better for the Environment!",
         "heading_image": "shopify:\/\/shop_images\/versatile-accent.png",
@@ -190,8 +188,6 @@
       ],
       "settings": {
         "enabled_video_text": true,
-        "padding_top": 40,
-        "padding_bottom": 40,
         "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "desc": "",
         "btn_title": "Learn More",
