@@ -39,8 +39,7 @@
   })();
 </script>
 
-<section class="Product Product--{{ section.settings.image_size }} product_section Container" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
-{% comment %}<section class="Product product_section Product--{{ section.settings.image_size }} Container" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>{% endcomment %}
+<section class="Product Product--{{ section.settings.image_size }} Container" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
   <div class="Product__Wrapper">
     {%- capture action_list_items -%}
       {%- if section.settings.enable_image_zoom -%}
@@ -82,7 +81,6 @@
 
     {%- capture slideshow_media -%}
       {%- for media in product.media -%}
-       {% comment %} <li> {% endcomment %}
         {%- if product.selected_variant and media.id == product.selected_variant.featured_media.id -%}
           {%- assign initial_media_index = media_count -%}
           {%- assign initial_media_id = media.id -%}
@@ -134,7 +132,6 @@
         {%- endcase -%}
 
         {%- assign media_count = media_count | plus: 1 -%}
-       {% comment %} </li> {% endcomment %}
       {%- endfor -%}
     {%- endcapture -%}
 
@@ -160,7 +157,7 @@
                  "slidesToShow": 5,
                  "slidesToScroll": 1
                  }'>
-             {%- for media in product.media -%}
+                  {%- for media in product.media -%}
                     {%- capture nav_item_badge -%}
                       {%- case media.media_type -%}
                         {%- when 'model' -%}
@@ -214,8 +211,8 @@
           "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
         }
         {%- endcapture -%}
+
         <div class="Product__Slideshow {% if section.settings.enable_image_zoom %}Product__Slideshow--zoomable{% endif %} Carousel" data-flickity-config='{{ flickity_options }}'>
-         {% comment %}<div class="Product__Slideshow {% if section.settings.enable_image_zoom %}Product__Slideshow--zoomable{% endif %}" data-flickity-config='{{ flickity_options }}'> {% endcomment %}
           {{ slideshow_media }}
         </div>
 
