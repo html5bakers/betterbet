@@ -166,22 +166,22 @@ $('.slick').slick({
   ].join(""),
 });
 
-$('.Product__Slideshow').slick({
-   slidesToShow: 1,
-   slidesToScroll: 1,
-   arrows: false,
-  dots: false,
-   fade: true,
-   asNavFor: '.slide-nav'
- });
- $('.slide-nav').slick({
-   slidesToShow: 6,
-   slidesToScroll: 1,
-   asNavFor: '.Product__Slideshow',
-   dots: false,
-   arrows: false,
-   focusOnSelect: true
- });
+// $('.Product__Slideshow').slick({
+//    slidesToShow: 1,
+//    slidesToScroll: 1,
+//    arrows: false,
+//   dots: false,
+//    fade: true,
+//    asNavFor: '.slide-nav'
+//  });
+//  $('.slide-nav').slick({
+//    slidesToShow: 6,
+//    slidesToScroll: 1,
+//    asNavFor: '.Product__Slideshow',
+//    dots: false,
+//    arrows: false,
+//    focusOnSelect: true
+//  });
 
 // Animation
  $('.animate').each(function(){
