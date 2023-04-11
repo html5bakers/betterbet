@@ -161,24 +161,40 @@ p,
   max-width:850px;
   margin:0 auto;
   position:relative;
+  font-family: 'paralucentw00-mediumregular';
 }
-
-.lity-container{
-  width:100% !important;
-}
-.lity-container .lity-close{
-  display:none;
-}
+.lity-container{ width:100% !important; }
+.lity-container .lity-close{ display:none; }
 .lity-content .lity-close{
   display:block;
   color:var(--secondary-color);
 }
+/*
 #delivery_check .lity-container{
   max-width:400px;
+}*/
+.lity-close,
+.lity-close:active,
+.lity-close:focus,
+.lity-close:hover,
+.lity-close:visited{ position:absolute; }
+
+.lity_popup form input{
+  width:calc(100% - 150px);
+  /*font-family: 'paralucentw00-mediumregular';*/
+  font-size: 1.1rem;
+  letter-spacing: 0;
 }
-.lity-close, .lity-close:active, .lity-close:focus, .lity-close:hover, .lity-close:visited{
-  position:absolute;
+.lity_popup form button{
+  /*color:#fff;*/
+  /*font-family: 'paralucentw00-mediumregular'*/
+  font-size:1.1rem;
+  letter-spacing:0;
+  width:130px;
+  margin:0;
 }
+
+
 /*---------- Annimations ---------- */
 @-webkit-keyframes rotate {
   from {
@@ -2676,27 +2692,14 @@ p,
   }
 }
 
-/*---------- Popup ---------- */
+/*---------- Pincode Popup ---------- */
 
 .pincode_checker_form{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.pincode_checker_form input{
-  width:calc(100% - 150px);
-  font-family: 'paralucentw00-mediumregular';
-  font-size: 1.1rem;
-  letter-spacing: 0;
-}
-.pincode_checker_form button{
-  /*color:#fff;*/
-  font-family: 'paralucentw00-mediumregular';
-  font-size:1.1rem;
-  letter-spacing:0;
-  width:130px;
-  margin:0;
-}
+
 #delivery_check.lity_popup_wrapper{
   max-width:500px;
   padding:50px 30px;
