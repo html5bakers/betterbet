@@ -154,7 +154,14 @@ p,
 .lity_popup_wrapper{
   max-height: 750px;
   oveflow-y: auto;
+  padding:30px;
+  overflow: auto;
+  border-radius: 20px;
 }
+/*.lity_popup_wrapper{ max-height: 80vh !important; }*/
+.lity_popup_wrapper img{ max-width:100%; }
+
+
 /*---------- Annimations ---------- */
 @-webkit-keyframes rotate {
   from {
@@ -2629,31 +2636,21 @@ p,
   }
 }
 @media screen and (min-width: 1440px){
-  .product_section .Product__Info, .product_section .Product__Aside{
+.product_section .Product__Info, .product_section .Product__Aside{
   max-width:77%;
-}
-  .free_shipping_list .col-left p{
-  font-size:1.175rem;
-}
-  .product_specifications p{
-  font-size:1.175rem;
-}
+  }
+    .free_shipping_list .col-left p{
+    font-size:1.175rem;
+  }
+    .product_specifications p{
+    font-size:1.175rem;
+  }
   ul.slide-nav{
     margin-top:0;
   }
 }
 
-/*---------- Popup ---------- */
-
-.lity_popup_wrapper{
-  padding:30px;
-  overflow: auto;
-  border-radius: 20px
-  max-height: 80vh !important;
-}
-.lity_popup_wrapper img{
-  max-width:100%;
-}
+/*---------- Pincode Popup ---------- */
 .pincode_checker_form{
     display: flex;
     flex-wrap: wrap;
