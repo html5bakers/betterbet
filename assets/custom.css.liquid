@@ -46,7 +46,6 @@
     font-style: normal;
 
 }
-/*
 @font-face {
     font-family: 'obviously_CnMd';
     src: url('{{ "obviously-condensedmedium.eot" | file_url }}');
@@ -59,7 +58,7 @@
     font-style: normal;
 
 }
-*/
+
 /* General Styles */
 *{ word-break: break-word; }
 .Container{
@@ -112,7 +111,7 @@ figure{ margin: 0; }
   width: 100%;
   font-size: 3.5rem;
   letter-spacing: 1px;
-  font-family: 'obviously_CnSBd';
+  font-family: obviously_CnMd;
 }
 .SectionHeader p,
 p,
@@ -150,35 +149,11 @@ p,
   }
 }
 /*---------- Lity Container ---------- */
-.lity-close{
-  color: transparent;
-  box-shadow: none;
-}
+.lity-container{ width: 850px; }
 .lity_popup_wrapper{
-  width: 850px;
   max-height: 750px;
-  padding:30px;
-  overflow: auto;
-  border-radius: 20px;
-  height: 90vh;
+  oveflow-y: auto;
 }
-.lity_popup_wrapper .lity-close{
-  color: var(--button-background);
-  top: 5px;
-  right: 5px;
-}
-.lity_popup_wrapper figure{ text-align: center; }
-.lity_popup input,
-.lity_popup button{
-  font-family: 'paralucentw00-mediumregular';
-  font-size: 1.1rem;
-  letter-spacing: 0;
-  border-radius: 5px;
-}
-.lity_popup button{
-  
-}
-
 /*---------- Annimations ---------- */
 @-webkit-keyframes rotate {
   from {
@@ -245,7 +220,6 @@ p,
 
 
 /*---------- Header ---------- */
-.Header{ box-shadow: none; }
 .Header:not(.Header--sidebar) .Header__Wrapper{
   position: relative;
   max-width: 1490px;
@@ -723,7 +697,6 @@ p,
   justify-content: space-around;
   position: relative;
   z-index: 9;
-  padding: 60px 0;
 }
 .text_with_background_wrapper .content_left,
 .text_with_background_wrapper.content_right{ width:100%; }
@@ -757,7 +730,6 @@ p,
   .text_with_background_section .bg-shape svg{ width: 470px; }
 }
 @media screen and (min-width:992px){
- .text_with_background_wrapper{ padding: 100px 0; }
  .text_with_background_wrapper .content_left{ width: 35%; }
  .text_with_background_wrapper .content_right{
    width:49%;
@@ -812,7 +784,7 @@ p,
   right: 0;
   width: 100px;
   height: 100px;
-  /*display: none;*/
+  display: none;
 }
 .best_startup_img span{
   display: block;
@@ -946,11 +918,8 @@ p,
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: 30px;
   }
-  .text_with_overlay .left_block .left_block_desc h2{ font-size: 1.7rem; }
-  .text_with_overlay .left_block .left_block_desc p,
-  .text_with_overlay .right_block li{ font-size: 1.2rem; }
+  .text_with_overlay .left_block .left_block_desc h2{ font-size: 2rem ; }
   .text_with_overlay .left_block_desc > div{ margin-bottom: 30px; }
   .text_with_overlay .left_block_desc li{ width: 40px; }
   .text_with_overlay .left_block_desc li:before{
@@ -966,6 +935,7 @@ p,
   .text_with_overlay .center_block{ width: 80%; margin-bottom: 0; }
   .text_with_overlay .center_block:after{ display: none; }
   .text_with_overlay .center_block .image_back{
+   
     width: 110%;
     left: -9%;
   }
@@ -994,7 +964,6 @@ p,
 }
 
 @media screen and (min-width: 1367px){
-  .text_with_overlay .Container{ max-width: 95%; }
   .best_startup_img{
     right: auto;
     left: 30%;
@@ -1005,7 +974,7 @@ p,
   .text_with_overlay .center_block{
     width: 35%;
     padding: 0;
-    margin-bottom: -60px;
+    margin-bottom: -80px;
   }
   .text_with_overlay .right_block{
     width: 30%;
@@ -1252,7 +1221,7 @@ p,
    text-decoration:line-through;
   margin:0 0 0 5px;
 }
-.prod-grid-cart-btn{
+.prod-grid-cart-btn,.Button{
   display:block;
   margin:10px 0 0;
   border-radius:10px;
@@ -1271,7 +1240,7 @@ p,
   position: relative;
   z-index: 2;
 }
-.prod-grid-cart-btn:after{
+.prod-grid-cart-btn:after,.Button{
   content:'';
   width:100%;
   height:111%;
@@ -1424,17 +1393,16 @@ p,
 .custom_reviews .content_wrapper{
   position:relative;
   overflow: hidden;
-  padding-top: 40px;
 }
 .custom_reviews .content_wrapper:after{
-  content: '';
-  width: 102%;
-  height: 50px;
-  border-radius: 0 0 50% 50%;
-  background: #fff;
-  position: absolute;
-  top: -30px;
-  left: -1%;
+  content:'';
+  width:110%;
+  height:40px;
+  border-radius:50%;
+  background:#fff;
+  position:absolute;
+  top:-20px;
+  left: -4%;
 }
 .Carousel--insideDots .flickity-prev-next-button{
   bottom:calc(50% - 30px);
@@ -1538,7 +1506,9 @@ p,
     margin:0 10px 20px;
     padding:20px 15px;
   }
-  .custom_reviews .review_text .col_left{ width:65px; }
+  .custom_reviews .review_text .col_left{
+  width:65px;
+}
   /*
 .custom_reviews .review_text .col_left figure{
   width:50px;
@@ -1581,7 +1551,6 @@ p,
   }
 }
 @media screen and (min-width: 1025px){
-  .custom_reviews .content_wrapper{ padding-top: 60px; }
  .custom_reviews .reviews li{
     width: calc(33.3333% - 20px);
     margin: 0 10px 20px;
@@ -2546,15 +2515,10 @@ p,
 .ProductMeta__PriceList{
     margin-top:12px;
   }
-  /*
   .HorizontalList--spacingTight .HorizontalList__Item{
     margin-left:0;
     margin-right:0;
-  }*/
-
-/* Nutrition Information */
-#nutrition_information .lity_popup_wrapper img{ margin: 0 auto;}
-
+  }
 @media screen and (min-width: 640px){
   .product_section .ProductForm__QuantitySelector{
   width:175px;
@@ -2653,31 +2617,40 @@ p,
   }
 }
 @media screen and (min-width: 1440px){
-.product_section .Product__Info, .product_section .Product__Aside{
+  .product_section .Product__Info, .product_section .Product__Aside{
   max-width:77%;
-  }
-    .free_shipping_list .col-left p{
-    font-size:1.175rem;
-  }
-    .product_specifications p{
-    font-size:1.175rem;
-  }
+}
+  .free_shipping_list .col-left p{
+  font-size:1.175rem;
+}
+  .product_specifications p{
+  font-size:1.175rem;
+}
   ul.slide-nav{
     margin-top:0;
   }
 }
 
-/*---------- Pincode Popup ---------- */
-#delivery_check{
-  width: 400px;
-  height: 200px;
+/*---------- Popup ---------- */
+.lity_popup_wrapper{
+  padding:30px;
+  overflow: auto;
+  max-height: 80vh !important;
+}
+.lity_popup_wrapper img{
+  width:100%;
 }
 .pincode_checker_form{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.pincode_checker_form input{ width:calc(100% - 150px); }
+.pincode_checker_form input{
+  width:calc(100% - 150px);
+  font-family: 'paralucentw00-mediumregular';
+  font-size:1.1rem;
+  letter-spacing:0;
+}
 .pincode_checker_form button{
   color:#fff;
   font-family: 'paralucentw00-mediumregular';
