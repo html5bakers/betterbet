@@ -148,11 +148,36 @@ p,
     margin: 0;
   }
 }
+
 /*---------- Lity Container ---------- */
-.lity-container{ width: 850px; }
 .lity_popup_wrapper{
+  width: 90%;
   max-height: 750px;
-  oveflow-y: auto;
+  padding:30px;
+  overflow: auto;
+  max-height: 90vh !important;
+  text-align:center;
+  border-radius:15px;
+  max-width:850px;
+  margin:0 auto;
+  position:relative;
+}
+
+.lity-container{
+  width:100% !important;
+}
+.lity-container .lity-close{
+  display:none;
+}
+.lity-content .lity-close{
+  display:block;
+  color:var(--secondary-color);
+}
+#delivery_check .lity-container{
+  max-width:400px;
+}
+.lity-close, .lity-close:active, .lity-close:focus, .lity-close:hover, .lity-close:visited{
+  position:absolute;
 }
 /*---------- Annimations ---------- */
 @-webkit-keyframes rotate {
@@ -2652,53 +2677,25 @@ p,
 }
 
 /*---------- Popup ---------- */
-.lity_popup_wrapper{
-  padding:30px;
-  overflow: auto;
-  max-height: 90vh !important;
-  text-align:center;
-  border-radius:15px;
-  max-width:800px;
-  margin:0 auto;
-  position:relative;
-}
-.lity-container{
-  width:100% !important;
-}
-.lity_popup_wrapper img{
-  max-width:100%;
-}
+
 .pincode_checker_form{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .pincode_checker_form input{
   width:calc(100% - 150px);
   font-family: 'paralucentw00-mediumregular';
-  font-size:1.1rem;
-  letter-spacing:0;
+  font-size: 1.1rem;
+  letter-spacing: 0;
 }
 .pincode_checker_form button{
-  color:#fff;
+  /*color:#fff;*/
   font-family: 'paralucentw00-mediumregular';
   font-size:1.1rem;
   letter-spacing:0;
   width:130px;
   margin:0;
-}
-.lity-container .lity-close{
-  display:none;
-}
-.lity-content .lity-close{
-  display:block;
-  color:var(--secondary-color);
-}
-#delivery_check .lity-container{
-  max-width:400px;
-}
-.lity-close, .lity-close:active, .lity-close:focus, .lity-close:hover, .lity-close:visited{
-  position:absolute;
 }
 #delivery_check.lity_popup_wrapper{
   max-width:500px;
@@ -2706,8 +2703,8 @@ p,
 }
 .pincode_validate_msg,.nan_value_msg,.pincode_availability_msg,.pincode_availability_msg *{
   font-family: 'paralucentw00-mediumregular';
-  font-size:1.1rem;
-  letter-spacing:0;
+  font-size: 1.1rem;
+  letter-spacing: 0;
 }
 
 
