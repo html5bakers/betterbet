@@ -152,7 +152,14 @@
           {%- if media_count > 1 -%}
             {%- if section.settings.show_thumbnails -%}
               <div class="Product__SlideshowNav Product__SlideshowNav--thumbnails">
-                <div class="Product__SlideshowNavScroller ">
+                <div class="Product__SlideshowNavScroller slick" data-slick='{
+                 "dots": false,
+                 "arrows": true,
+                 "infinite": false,
+                 "draggable": true,
+                 "slidesToShow": 5,
+                 "slidesToScroll": 1
+                 }'>
              {% comment %} <ul class="slide-nav">{% endcomment %}
                   {%- for media in product.media -%}
                     {%- capture nav_item_badge -%}
