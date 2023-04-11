@@ -160,8 +160,7 @@
                  "slidesToShow": 5,
                  "slidesToScroll": 1
                  }'>
-             {% comment %} <ul class="slide-nav">{% endcomment %}
-                  {%- for media in product.media -%}
+             {%- for media in product.media -%}
                     {%- capture nav_item_badge -%}
                       {%- case media.media_type -%}
                         {%- when 'model' -%}
@@ -172,22 +171,18 @@
                       {%- endcase -%}
                     {%- endcapture -%}
 
-                   {% comment %} <li> {% endcomment %}
                     {%- if section.settings.stack_images -%}
                       <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if forloop.first %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
                     {%- else -%}
-                       <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="slide Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
-                      {% comment %}<a href="javascript:void(0)" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">{% endcomment %}
+                      <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="slide Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
                     {%- endif -%}
-                     {% comment %}</li> {% endcomment %}
                   {%- endfor -%}
-              {% comment %} </ul>  {% endcomment %}
                 </div>
               </div>
             {%- endif -%}
