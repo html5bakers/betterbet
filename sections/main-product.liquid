@@ -520,6 +520,7 @@
                   </div> 
               </div>
             </div>
+            {% if product.metafields.custom.product_ingrediant_image.value %}
             <ul class="product_specifications flex_always">
               {%- assign i = -1 -%}
               {%- for image in product.metafields.custom.product_ingrediant_image.value -%}
@@ -532,6 +533,7 @@
                   {%- endif -%}
               {%- endfor -%}
             </ul>
+            {% endif %}
           </div>
           
           {%- if section.settings.stack_images and product_aside != blank and media_count > 0 -%}
