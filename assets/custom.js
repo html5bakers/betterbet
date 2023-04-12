@@ -103,7 +103,7 @@ $(window).on('load', function(){
 });
 
 // Cart
-/*
+
 $('.ProductItem__Wrapper .ProductForm__AddToCart').click(function(e){
     e.preventDefault();
 
@@ -141,7 +141,7 @@ $(cart_change).on('change', function(){
     }   
   });
 });
-*/
+
 // Slider
 $('.slick').slick({
   prevArrow: [
