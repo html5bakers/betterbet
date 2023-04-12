@@ -34,6 +34,20 @@
         {% endfor %}
       </div>
     </div>
+    <div class="home_blog">
+       <div class="col_right">
+        {%- for article in blog.articles offset:3 -%}
+        <div class="home_blog_right_list">
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
+        <div class="blog-tag-list">
+          <div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+          <div class="blog-tag-right">{{ article.published_at | date: "%d/%m/%Y" }}</div>
+        </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </section>
 {% comment %}
