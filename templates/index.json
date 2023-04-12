@@ -656,6 +656,13 @@
         "bg_color": "",
         "title": "Reviews"
       }
+    },
+    "ecf118c2-b6ec-48fd-94fc-bf829756ce80": {
+      "type": "background-video",
+      "settings": {
+        "section_size": "preserveRatio",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+      }
     }
   },
   "order": [
@@ -672,6 +679,7 @@
     "e613ad79-2d51-47e8-968b-aad640e83297",
     "2b2ccd8b-5780-4ec3-ba5f-a089e0914185",
     "30d50290-b09a-4b70-a61c-1041883d308e",
-    "513ba4db-5ea0-45de-baae-0ebc339a4c5c"
+    "513ba4db-5ea0-45de-baae-0ebc339a4c5c",
+    "ecf118c2-b6ec-48fd-94fc-bf829756ce80"
   ]
 }
