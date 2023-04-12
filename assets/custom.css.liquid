@@ -1780,6 +1780,14 @@ p,
 .home_blog_right_list:last-child{
   margin:0;
 }
+.home_blog.blog_list_section .col_right{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+}
+.home_blog.blog_list_section .col_right .home_blog_right_list{
+  width: 100%;
+}
 
 @media screen and (min-width:1025px){
   .home_blog_right_list,.home_blog .col_left .home_blog_left_desc{
@@ -1802,6 +1810,9 @@ p,
   .home_blog .col_right{
     width:58%;
   }
+  .home_blog.blog_list_section .col_right .home_blog_right_list{
+  width: 49%;
+}
 }
 @media screen and (min-width:1440px){
   .home_blog .col_left{
