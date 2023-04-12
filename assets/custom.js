@@ -106,7 +106,6 @@ $(window).on('load', function(){
 
 $('.ProductItem__Wrapper .ProductForm__AddToCart').click(function(e){
     e.preventDefault();
-
     data = { "id": $(this).parents('form').find('input[name="id"]').val(), "quantity": 1 }
     jQuery.ajax({
       type: 'POST',
@@ -120,9 +119,7 @@ $('.ProductItem__Wrapper .ProductForm__AddToCart').click(function(e){
             variant: $(this).parents('form').find('input[name="id"]').val(),
             quantity: 1
           }
-          document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
-            bubbles: true
-          }));
+          
         }));
       }   
     });
