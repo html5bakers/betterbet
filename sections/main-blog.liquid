@@ -3,7 +3,7 @@
       <header class="SectionHeader SectionHeader--center text_center">
         <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{- blog.title -}}</h2>
       </header>
-    <div class="home_blog">
+    <div class="home_blog featured_blog_list">
       {%- for article in blog.articles limit:1 -%}
       <div class="col_left">
         <figure><a href="{{ article.url }}">
