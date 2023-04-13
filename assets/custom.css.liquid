@@ -61,11 +61,16 @@
 
 /* General Styles */
 *{ word-break: break-word; }
-.Container,.Article__Wrapper{
+.Container{
   max-width: 1490px;
   padding: 0 25px !important;
   margin: 0 auto !important;
   width: 100%;
+}
+.Article__Wrapper{
+  max-width: 1490px;
+  margin: 0 auto !important;
+  width: calc(100% - 50px);
 }
 body{ overflow-X: hidden; }
 .button_wrapper{
