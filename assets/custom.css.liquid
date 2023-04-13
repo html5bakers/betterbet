@@ -543,7 +543,8 @@ p,
   position: absolute;
   top: 0;
   left: 0;
-  background: url('{{ "blue-textured-circle.png" | file_url }}') no-repeat;
+  background: url('{{ "blue-textured-circle.svg" | file_url }}') no-repeat;
+  background-size: contain;
   z-index: 1;
 }
 .three_column_wrapper .icon svg{
@@ -1905,12 +1906,6 @@ p,
   width: 30px;
   height: 30px;
 }
-.Footer__Social{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.Footer__Social .Icon-Wrapper--clickable{ display: flex; }
 .Footer__Social svg{
   width: 25px;
   height: 25px;
