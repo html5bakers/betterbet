@@ -434,7 +434,7 @@
       ],
       "settings": {
         "enabled_video_text": true,
-        "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_link": "https:\/\/www.youtube.com\/embed\/_9VUPq3SxOc",
         "desc": "<p>Description<\/p>",
         "btn_title": "Learn more",
         "btn_link": "#"
