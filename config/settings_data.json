@@ -67,9 +67,30 @@
       },
       "announcement": {
         "type": "announcement",
+        "blocks": {
+          "8ea0a261-84d7-4b54-a16f-bcdfa7582a22": {
+            "type": "announcement",
+            "settings": {
+              "text": "SAME DAY DELIVERY - Delhi NCR, Bangalore, Mumbai, Pune, Hyderabad",
+              "text_link": ""
+            }
+          },
+          "ac7213f4-7277-4a55-be43-e20286664aae": {
+            "type": "announcement",
+            "settings": {
+              "text": "Free shipping above ₹1500",
+              "text_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "8ea0a261-84d7-4b54-a16f-bcdfa7582a22",
+          "ac7213f4-7277-4a55-be43-e20286664aae"
+        ],
         "settings": {
           "enable_bar": true,
-          "home_page_only": false,
+          "home_page_only": true,
+          "show_slider": true,
           "background": "#a5c423",
           "text_color": "#152315",
           "content": "",
