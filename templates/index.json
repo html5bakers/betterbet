@@ -421,6 +421,7 @@
         },
         "f7eb247a-bd5b-4161-b339-2e9606c4f243": {
           "type": "Text",
+          "disabled": true,
           "settings": {
             "title": "Casual user feedback driven USP",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
