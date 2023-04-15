@@ -660,6 +660,7 @@
     },
     "ecf118c2-b6ec-48fd-94fc-bf829756ce80": {
       "type": "background-video",
+      "disabled": true,
       "settings": {
         "section_size": "preserveRatio",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
