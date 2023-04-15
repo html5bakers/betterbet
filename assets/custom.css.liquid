@@ -255,7 +255,7 @@ p,
 
 
 /*---------- Announcement Bar ---------- */
-.AnnouncementBar.Container{ max-width: calc(100% - 150px); margin: 0 0 0 auto !important; }
+
 .AnnouncementBar__Content.Heading{
   font-family: 'paralucent-demiboldregular';
   font-size: 1rem; 
@@ -270,7 +270,9 @@ p,
 @media screen and (max-width: 640px){
   .AnnouncementBar__Wrapper{ padding: 8px; }
 }
-
+@media screen and (min-width: 1200px){
+  .AnnouncementBar.Container{ max-width: calc(100% - 150px); margin: 0 0 0 auto !important; }
+}
 
 /*---------- Header ---------- */
 .Header:not(.Header--sidebar) .Header__Wrapper{
