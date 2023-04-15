@@ -679,13 +679,15 @@ iframe{
 }
 
 @media screen and (min-width: 1250px){
-  .video_text_wrapper .col_left{ width: 60%; }
+  .video_text_wrapper .col_left{ width: 60%;  }
   .video_text_wrapper .col_right{ width: 35%; }
   .video_text_wrapper{ padding-top: 0; }
   /*.video_text_wrapper .col_right h3{ font-size: 1.2rem; }*/
   .video_text_wrapper .col_right p{ font-size: 1.1rem; }
 }
-
+@media screen and (max-width: 640px){
+  .video_text_wrapper .col_left iframe{ max-height: 300px; }
+}
 /* Content Strip */
 .content_strip{
   display: flex;
