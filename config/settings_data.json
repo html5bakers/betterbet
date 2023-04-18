@@ -196,15 +196,7 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "17870684812516439219": {
-        "type": "shopify:\/\/apps\/instafeed\/blocks\/app-embed\/9d35f684-f743-45ca-9cc2-c5409bb241a8",
-        "disabled": false,
-        "settings": {
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Allure": {
