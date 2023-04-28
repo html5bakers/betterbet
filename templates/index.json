@@ -1,1 +1,621 @@
-{"sections":{"b79520c5-e8b9-44d3-a05c-4eee38545502":{"type":"review-topbar","blocks":{"3c51e998-ccd5-4286-941b-53a4e3b1422b":{"type":"Image","settings":{"review_image":"shopify:\/\/shop_images\/top-review-text.png"}},"dfbc14e5-1746-4b59-be98-d157e0d56e4f":{"type":"Image","settings":{"review_image":"shopify:\/\/shop_images\/top-review-text.png"}}},"block_order":["3c51e998-ccd5-4286-941b-53a4e3b1422b","dfbc14e5-1746-4b59-be98-d157e0d56e4f"],"settings":{"bg_color":"#ffe8cb","left_title":"Rated 4.6\/5"}},"slideshow":{"type":"slideshow","blocks":{"slide-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/banner_7d739bb7-3049-41f3-b5bb-cbe1305dfe8f.jpg","mobile_image":"shopify:\/\/shop_images\/mob-banner.jpg","apply_overlay":true,"content_position":"bottomLeft","subheading":"","title":"","button_1_text":"","button_1_link":"","button_2_text":"","button_2_link":""}},"slide-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/banner-2.jpg","mobile_image":"shopify:\/\/shop_images\/mob-banner-2.jpg","apply_overlay":true,"content_position":"bottomLeft","subheading":"","title":"","button_1_text":"","button_1_link":"","button_2_text":"","button_2_link":""}}},"block_order":["slide-0","slide-1"],"settings":{"show_fullscreen":false,"show_arrow":false,"autoplay":true,"cycle_speed":5,"text_color":"#ffffff","button_color":"#363636","button_background":"#ffffff"}},"4ee6fe54-cba5-4499-b5dc-260224b4250c":{"type":"custom-html","disabled":true,"settings":{"subheading":"Sub-heading","title":"Your HTMLYour HTML Your HTML Your HTML Your HTML","html":"<p>Write your own custom HTML content.<\/p>\n<p>Write your own custom HTML content.<\/p>\n<p>Write your own custom HTML content.<\/p><p>Write your own custom HTML content.<\/p>\n<p>Write your own custom HTML content.<\/p>"}},"acf8f5f2-b509-46d6-9f4c-f3555508026a":{"type":"text-logo","blocks":{"c70d1840-ef76-43c8-8bfa-4b0fdb499759":{"type":"Text","settings":{"bg_color":"#498fcd","text_color":"#ffffff","title":"ALWAYS 100% PLANT BASED"}},"76ca7164-905a-4324-bc12-2c8905878483":{"type":"Text","settings":{"bg_color":"#fff2cc","text_color":"#162516","title":"100% Sugar <br> Free"}},"4dfa5304-7dac-40b5-a42f-b4e3808d8737":{"type":"Text","settings":{"bg_color":"#496427","text_color":"#ffffff","title":"HIGH QUALITY Ingredients"}},"ce09787d-58cf-4b5f-995e-c110a86fafe4":{"type":"Text","settings":{"bg_color":"#eb513d","text_color":"#ffffff","title":"100% Lactose<br> Free"}}},"block_order":["c70d1840-ef76-43c8-8bfa-4b0fdb499759","76ca7164-905a-4324-bc12-2c8905878483","4dfa5304-7dac-40b5-a42f-b4e3808d8737","ce09787d-58cf-4b5f-995e-c110a86fafe4"],"settings":{"title":"","desc":"At BetterBet, we're all about solving your milk problems - and we've got just the thing. Indulge in the richness and nourishment of our plant-based milk that is made from sprouted millets, providing a delicious and healthy alternative to traditional dairy milk. And the best part? We're committed to being environmentally responsible and sustainable, so you get to indulge in our milk guilt-free!"}},"c72a943f-3702-4653-b593-f43033aa4002":{"type":"featured-collections","blocks":{"template--15488998342709__c72a943f-3702-4653-b593-f43033aa4002-1682375775d0b73e58-0":{"type":"collection","settings":{"collection":"test-collection","title":"","grid_items_count":8,"button_text":""}}},"block_order":["template--15488998342709__c72a943f-3702-4653-b593-f43033aa4002-1682375775d0b73e58-0"],"settings":{"title":"","layout_mode":"carousel","show_product_info":true,"show_vendor":false,"show_color_swatch":false,"show_header":false,"grid_mobile_items_per_row":"2","grid_desktop_items_per_row":3}},"795d526c-10f6-4816-89a6-4384f9865feb":{"type":"text-with-background","settings":{"bg_color":"#e6d93f","bg_image":"shopify:\/\/shop_images\/dots-pattern.png","shape":"<svg width=\"500\" height=\"100%\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Group_11\" data-name=\"Group 11\" viewbox=\"0 0 659.16 334.148\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n  <defs>\n    <clippath id=\"clip-path\">\n      <rect id=\"Rectangle_433\" data-name=\"Rectangle 433\" width=\"659.16\" height=\"334.148\" fill=\"none\"><\/rect>\n    <\/clippath>\n  <\/defs>\n  <g id=\"Group_10\" data-name=\"Group 10\" clip-path=\"url(#clip-path)\">\n    <path id=\"Path_438\" data-name=\"Path 438\" d=\"M189.52,123.728l9.36.92a31.864,31.864,0,0,1-9.36-.92\" fill=\"#fff\"><\/path>\n    <path id=\"Path_439\" data-name=\"Path 439\" d=\"M306.22,73.068c-.16,15.36-10.42,29.03-22.77,38.18a87.821,87.821,0,0,1-71.84,14.66l-12.73-1.26c9.61-.45,19.11-4.94,26.37-11.44,9.65-8.61,15.92-20.36,20.95-32.29,3.32-7.87,6.25-16,11.1-23.03s12.05-12.95,20.53-14c15.25-1.86,28.56,13.8,28.39,29.18\" fill=\"#fff\"><\/path>\n    <path id=\"Path_440\" data-name=\"Path 440\" d=\"M659.16,42.6v291.55H0c11.36-11.3,20.83-25.48,29.25-38.96q26.16-41.895,52.35-83.8c6.58-10.51,13.31-21.22,22.9-29.2,13.83-11.51,32.3-16.19,50.34-18.03,59.23-6,124.74,13.82,175.32-17.09,37.41-22.83,54.66-67.02,85.23-98.18,35.34-36.05,88.67-52.98,139.34-48.05,37.93,3.7,74.09,18.97,104.43,41.76\" fill=\"#fff\"><\/path>\n    <path id=\"Path_441\" data-name=\"Path 441\" d=\"M185.04,108.5a23.321,23.321,0,0,1-30.54-32.72l5.64-2.58a24.418,24.418,0,0,1,24.9,35.3\" fill=\"#fff\"><\/path>\n  <\/g>\n<\/svg>","title":"How Does IT Taste?","sub_title":"Umm... But,","right_desc":"Just like your regular milk! <br>\nIts unmatched taste comes from a smooth texture made from a unique blend of sprouted millets. Our milk has no bitter aftertaste and froths perfectly, making it the perfect choice for your favorite recipes.","btn_title_01":"Reviews","btn_link_01":"#","btn_title_02":"FAQs","btn_link_02":"#"}},"9f86c8f8-67d9-44ac-ab70-5a056a038d40":{"type":"three-column","blocks":{"24022657-dbae-46fe-99b4-4b7ea50a8338":{"type":"Text","settings":{"image":"<svg id=\"Layer_2\" width=\"80\" height=\"80\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 78.64 79.86\"><defs><style>.cls-1{fill:#fff;}<\/style><\/defs><g id=\"Layer_1-2\"><path class=\"cls-1\" d=\"m35.76,34.05c0-.53,0-.79,0-1.05,0-7.93,0-15.86,0-23.79,0-.66.02-1.04-.88-.79-1.11.31-2.2-.24-2.65-1.11-.54-1.04-.37-2.13.51-3,1.22-1.2,2.45-2.39,3.7-3.55,1.1-1.02,2.38-1.02,3.48,0,1.25,1.16,2.48,2.35,3.7,3.55.88.87,1.05,1.97.5,2.99-.47.89-1.59,1.38-2.75,1.1-.55-.13-.8-.15-.8.54.02,8.17.01,16.33.01,24.5,0,.12.03.23.07.6,8.22-8.49,17.78-14,29.82-14.51-.33-.61-.58-1.11-.59-1.68-.02-1,.35-1.79,1.27-2.24.94-.46,1.88-.4,2.64.32,1.38,1.32,2.75,2.68,4.02,4.1,1.16,1.29,1.06,2.49-.15,3.77-1.11,1.18-2.23,2.35-3.36,3.51-1.01,1.04-2.11,1.27-3.18.69-1.04-.56-1.43-1.52-1.09-2.97.17-.73-.24-.66-.66-.62-3.66.35-7.21,1.14-10.62,2.56-4.58,1.9-8.54,4.73-12.17,8.06-1.59,1.46-3.09,2.99-4.62,4.5-.33.32-.43.56-.06.94,3.82,3.91,7.73,7.7,12.49,10.48,4.45,2.6,9.24,4.11,14.35,4.67.2.02.41.01.62.03.6.06.87-.05.63-.77-.37-1.14.07-2.18,1.02-2.76.95-.57,2.09-.46,2.93.36,1.31,1.28,2.6,2.57,3.85,3.9,1.14,1.22,1.11,2.55-.05,3.78-1.17,1.25-2.36,2.47-3.56,3.69-.93.94-2.19,1.16-3.13.57-1.08-.67-1.44-1.83-.9-3.17.3-.74-.12-.73-.6-.76-6.29-.41-12.15-2.2-17.59-5.38-3.25-1.9-6.17-4.23-8.93-6.77-.73-.67-1.47-1.35-2.2-2.02-.35.19-.22.49-.22.73,0,7.9,0,15.8-.02,23.7,0,.64.06.9.83.69,1.14-.31,2.27.22,2.73,1.12.52,1,.33,2.14-.54,2.99-1.24,1.22-2.49,2.42-3.77,3.61-1,.93-2.33.93-3.34-.02-1.25-1.17-2.48-2.36-3.7-3.55-.93-.9-1.11-2.01-.56-3.06.48-.9,1.55-1.37,2.74-1.09.56.13.79.14.79-.54-.02-8.11-.01-16.22-.01-24.32,0-.11-.03-.23-.06-.49-1.1,1.01-2.13,1.95-3.16,2.89-5.05,4.56-10.71,8.1-17.3,10-2.13.61-4.28,1.09-6.49,1.32-.51.05-.7.11-.39.67.73,1.34.46,2.6-.63,3.37-.98.7-2.28.51-3.28-.51-1.18-1.2-2.35-2.4-3.5-3.62-1.22-1.29-1.23-2.63,0-3.91,1.2-1.26,2.43-2.49,3.66-3.71.9-.88,1.98-1.03,2.99-.47.9.5,1.35,1.51,1.07,2.66-.15.6-.04.72.56.63,6.96-1.03,13.01-4.03,18.38-8.5,2.33-1.94,4.46-4.1,6.61-6.24.46-.46.48-.8.03-1.25-4.06-4.13-8.27-8.07-13.41-10.87-3.67-1.99-7.56-3.26-11.69-3.87-.61-.09-.62.05-.49.57.28,1.2-.16,2.19-1.12,2.72-1,.56-2.11.41-2.99-.48-1.27-1.27-2.52-2.56-3.74-3.89-1.02-1.12-1.11-2.27-.1-3.42,1.32-1.5,2.74-2.92,4.19-4.3.84-.8,2.11-.73,3.01-.02.86.68,1.16,2.01.55,3.05-.41.69-.22.8.45.89,4.06.52,7.97,1.59,11.69,3.3,4.6,2.11,8.66,5,12.38,8.41.86.79,1.72,1.58,2.77,2.54Z\"><\/path><\/g><\/svg>","title":"Nutritious Nectar","desc":"Say goodbye to boring and unhealthy milk options! Our plant-based milk is fortified with essential vitamins A, B, and D, and is lower in calories and fat, making it a delicious and nutritious choice for your overall health and well-being."}},"f8189777-af2f-4528-b386-660daac57f13":{"type":"Text","disabled":true,"settings":{"image":"<svg id=\"Layer_2\" width=\"80\" height=\"80\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 76.46 84.97\"><defs><style>.cls-1{fill:#fff;}<\/style><\/defs><g id=\"Layer_1-2\"><path class=\"cls-1\" d=\"m23.25,62.75c.57-.85,1.1-1.65,1.65-2.44,1.54-2.23,3.32-4.25,5.35-6.04,3.05-2.68,6.7-3.9,10.64-4.37,3.63-.44,7.27-.44,10.86.42,2.4.57,4.69,1.44,6.45,3.28,1.17,1.22,1.97,2.69,2.66,4.23.1.22.2.45.33.73.26-.27.21-.54.21-.79.02-3.24-1.19-5.76-4.21-7.25-.88-.43-.87-.49-.28-1.3,1.98-2.76,4.57-4.56,8.02-4.98,1.14-.14,2.24.07,3.33.33,1.22.28,2.39.72,3.57,1.12.33.11.56.26.71.46.27.37.23.82.23.91-.07,1.31,3.39,8.58,3.67,14.78.34,7.44-3.77,16.13-3.67,17.27,0,.06.05.42-.13.54-.1.07-.27.03-.55-.11-1.5-.77-3.04-.3-4.54,0-6.8,1.38-13.58,2.82-20.39,4.16-3.42.67-6.85,1.42-10.38,1.25-3.34-.16-6.64-.74-9.93-1.35-3.31-.61-6.6-1.36-9.94-1.81-1.48-.2-2.93-.07-4.4.11-1.97.23-3.94.19-5.88-.23-1.55-.33-1.87-.72-2-2.33-.1-1.32-.19-2.64-.3-3.95-.09-1.1-.35-2.16-.87-3.16-.59-1.15-1.16-2.32-1.75-3.48-1.65-3.2-2.02-6.58-1.52-10.12.6-4.28,1.54-8.49,2.56-12.68.75-3.08,1.08-6.24,1.58-9.37,1.2-7.56,2.13-15.17,3.62-22.68.49-2.44,1.38-4.79,2.56-7.01.8-1.5,2.14-2.36,3.67-2.92,2.65-.97,5.33-1.86,7.99-2.79.87-.31,1.74-.63,2.59-.97.97-.38,1.86-.24,2.68.38,2.3,1.76,4.69,3.41,6.86,5.33.65.58,1.27,1.2,1.78,1.92.46.64.51,1.28.05,1.94-.68.98-1.37,1.97-2.04,2.96-.29.42-.43.81-.15,1.37.44.87.17,1.56-.63,2.1-.27.18-.58.34-.77.59-.7.92-1.62.97-2.63.77-.17-.03-.35-.05-.51-.1-2.17-.68-4.3-.62-6.42.25-1.08.45-1.98.14-2.69-.81-.79-1.06-1.64-2.08-2.41-3.15-.32-.44-.6-.53-1.05-.24-.46.3-.68.66-.37,1.19.43.74,1.08,1.31,1.83,1.62,1.62.68,1.91,1.91,1.9,3.49-.01,3.9-.31,7.78-.61,11.66-.08,1.07.07,2.07.56,3.05,1.24,2.47,2.69,4.83,4.45,6.91,2.26,2.68,3.02,5.78,3.35,9.1.05.55.05,1.11.18,1.63.29,1.11-.08,1.94-.83,2.76-1.29,1.42-2.44,2.97-3.52,4.56-.67.98-.83,1.94-.54,3.27Zm8.67,1.78c3.35,3.45,7.3,5.51,12.2,5.05,3.76-.35,6.92-1.97,9.51-4.8-.34-.19-.54-.03-.75.02-1.26.32-2.52.62-3.76.99-4.67,1.38-9.32,1.52-13.95-.18-1.07-.39-2.16-.72-3.25-1.08Zm-18-3.54c-.22-1.25-.47-2.49-.64-3.75-.29-2.09-.68-4.18-.38-6.32.21-1.54.71-3.01,1.08-4.5.13-.51.26-1.05.01-1.54-.38-.74-.56-1.52-.74-2.33-2.19,6.23-2.29,12.39.67,18.43Z\"><\/path><\/g><\/svg>","title":"Ultra smooth","desc":"Our milk is a blend of sprouted millets that creates a texture so smooth, it's like silk in a glass. So you get to indulge without guilt."}},"0e3a1935-1ff6-4154-b786-f5d83ea50b16":{"type":"Text","settings":{"image":"<svg id=\"Layer_2\" width=\"80\" height=\"80\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 86.78 83.69\"><defs><style>.cls-1{fill:#fff;}<\/style><\/defs><g id=\"Layer_1-2\"><path class=\"cls-1\" d=\"m18.98,67.98c1.38,1.61,3.09,2.74,5.01,3.53,7.72,3.21,15.49,3.28,23.27.2,2.58-1.02,5-2.32,7.21-4,.94-.71,1.2-.61,1.63.49.76,1.98.06,4.08-1.81,5.2-4.41,2.65-9.19,4.27-14.28,4.91-1.57.2-2.79.68-4,1.76-3.86,3.45-8.47,4.24-13.44,3.21-5.61-1.16-10.12-4.2-14.01-8.29-3.77-3.97-6.26-8.63-7.61-13.91-1.22-4.79-1.23-9.61-.19-14.44.16-.75.31-.92.98-.29,2.25,2.1,5.14,2.88,8.03,3.57,4.83,1.16,9.75,1.92,14.45,3.56,3.52,1.23,6.79,2.9,9.47,5.54,3.05,3.01,4.72,6.73,5.49,10.91.17.9-.34,1.07-1.02,1.17-3.85.55-7.64.11-11.4-.68-2.66-.56-5.27-1.32-7.79-2.44Z\"><\/path><path class=\"cls-1\" d=\"m38.7,13.28c-2.42.45-4.47,1.64-6.32,3.15-6.67,5.46-10.48,12.47-11.35,21.07-.23,2.31-.24,4.61.06,6.91.12.9-.29,1.08-1.06,1.02-2.17-.15-3.76-1.97-3.78-4.42-.06-5.35,1.03-10.48,3.19-15.37.45-1.02.58-1.92.31-3.04-1.24-5.04.13-9.51,3.44-13.37C27.85,3.83,33.99,1.17,40.95.27c6.47-.84,12.65.26,18.46,3.2,2.5,1.26,4.8,2.85,6.83,4.8.39.38.56.64-.1.84-2.6.81-4.56,2.54-6.37,4.45-2.57,2.69-5.06,5.46-7.63,8.15-3.33,3.49-6.94,6.64-11.55,8.33-4.63,1.69-9.26,1.45-13.87-.19-.69-.24-.69-.64-.49-1.2.93-2.67,2.49-4.99,4.19-7.21,2.38-3.1,5.13-5.83,8.28-8.17Z\"><\/path><path class=\"cls-1\" d=\"m74.14,57.23c.91-2.59.85-5.2.34-7.79-2.11-10.79-8.33-18.32-18.24-22.91-1.19-.55-1.27-.87-.39-1.84,1.43-1.59,3.6-1.87,5.67-.7,4.76,2.69,8.68,6.31,11.85,10.75.42.58.86,1.03,1.59,1.22,5.96,1.53,9.34,5.63,10.9,11.33,1.81,6.63.86,13.07-1.92,19.26-2.96,6.58-7.7,11.54-14.09,14.89-1.62.85-3.29,1.6-5.06,2.09-.41.11-.91.31-.76-.45.79-3.94-.49-7.57-1.64-11.23-1.37-4.37-2.93-8.7-3.62-13.26-.7-4.66-.5-9.22,1.71-13.52,1.3-2.52,3.11-4.62,5.21-6.5.53-.47.93-.39,1.38.15,1.99,2.35,3.27,5.09,4.4,7.92,1.36,3.41,2.27,6.93,2.68,10.59Z\"><\/path><\/g><\/svg>","title":"Creamy Dreamy","desc":"Get ready to indulge in the yummiest milk you've ever tasted! Our formula creates a frothy, rich, and velvety texture that will elevate your drinks and recipes to a whole new level."}},"d690b894-8ca6-455b-88a5-a42e6c0f091b":{"type":"Text","settings":{"image":"<svg id=\"Layer_2\" width=\"80\" height=\"80\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 76.46 84.97\"><defs><style>.cls-1{fill:#fff;}<\/style><\/defs><g id=\"Layer_1-2\"><path class=\"cls-1\" d=\"m23.25,62.75c.57-.85,1.1-1.65,1.65-2.44,1.54-2.23,3.32-4.25,5.35-6.04,3.05-2.68,6.7-3.9,10.64-4.37,3.63-.44,7.27-.44,10.86.42,2.4.57,4.69,1.44,6.45,3.28,1.17,1.22,1.97,2.69,2.66,4.23.1.22.2.45.33.73.26-.27.21-.54.21-.79.02-3.24-1.19-5.76-4.21-7.25-.88-.43-.87-.49-.28-1.3,1.98-2.76,4.57-4.56,8.02-4.98,1.14-.14,2.24.07,3.33.33,1.22.28,2.39.72,3.57,1.12.33.11.56.26.71.46.27.37.23.82.23.91-.07,1.31,3.39,8.58,3.67,14.78.34,7.44-3.77,16.13-3.67,17.27,0,.06.05.42-.13.54-.1.07-.27.03-.55-.11-1.5-.77-3.04-.3-4.54,0-6.8,1.38-13.58,2.82-20.39,4.16-3.42.67-6.85,1.42-10.38,1.25-3.34-.16-6.64-.74-9.93-1.35-3.31-.61-6.6-1.36-9.94-1.81-1.48-.2-2.93-.07-4.4.11-1.97.23-3.94.19-5.88-.23-1.55-.33-1.87-.72-2-2.33-.1-1.32-.19-2.64-.3-3.95-.09-1.1-.35-2.16-.87-3.16-.59-1.15-1.16-2.32-1.75-3.48-1.65-3.2-2.02-6.58-1.52-10.12.6-4.28,1.54-8.49,2.56-12.68.75-3.08,1.08-6.24,1.58-9.37,1.2-7.56,2.13-15.17,3.62-22.68.49-2.44,1.38-4.79,2.56-7.01.8-1.5,2.14-2.36,3.67-2.92,2.65-.97,5.33-1.86,7.99-2.79.87-.31,1.74-.63,2.59-.97.97-.38,1.86-.24,2.68.38,2.3,1.76,4.69,3.41,6.86,5.33.65.58,1.27,1.2,1.78,1.92.46.64.51,1.28.05,1.94-.68.98-1.37,1.97-2.04,2.96-.29.42-.43.81-.15,1.37.44.87.17,1.56-.63,2.1-.27.18-.58.34-.77.59-.7.92-1.62.97-2.63.77-.17-.03-.35-.05-.51-.1-2.17-.68-4.3-.62-6.42.25-1.08.45-1.98.14-2.69-.81-.79-1.06-1.64-2.08-2.41-3.15-.32-.44-.6-.53-1.05-.24-.46.3-.68.66-.37,1.19.43.74,1.08,1.31,1.83,1.62,1.62.68,1.91,1.91,1.9,3.49-.01,3.9-.31,7.78-.61,11.66-.08,1.07.07,2.07.56,3.05,1.24,2.47,2.69,4.83,4.45,6.91,2.26,2.68,3.02,5.78,3.35,9.1.05.55.05,1.11.18,1.63.29,1.11-.08,1.94-.83,2.76-1.29,1.42-2.44,2.97-3.52,4.56-.67.98-.83,1.94-.54,3.27Zm8.67,1.78c3.35,3.45,7.3,5.51,12.2,5.05,3.76-.35,6.92-1.97,9.51-4.8-.34-.19-.54-.03-.75.02-1.26.32-2.52.62-3.76.99-4.67,1.38-9.32,1.52-13.95-.18-1.07-.39-2.16-.72-3.25-1.08Zm-18-3.54c-.22-1.25-.47-2.49-.64-3.75-.29-2.09-.68-4.18-.38-6.32.21-1.54.71-3.01,1.08-4.5.13-.51.26-1.05.01-1.54-.38-.74-.56-1.52-.74-2.33-2.19,6.23-2.29,12.39.67,18.43Z\"><\/path><\/g><\/svg>","title":"Sustainable Sip","desc":"We're committed to sustainability and the environment. That's why we source our ingredients from climate-resistant crops with low water consumption and use indigenous grains.  Drink up, guilt-free!"}}},"block_order":["24022657-dbae-46fe-99b4-4b7ea50a8338","f8189777-af2f-4528-b386-660daac57f13","0e3a1935-1ff6-4154-b786-f5d83ea50b16","d690b894-8ca6-455b-88a5-a42e6c0f091b"],"settings":{"title":"Creamy. Nutritious. Delicious.","desc":"Our sprouted milk is the result of years of research and development, and the secret lies in our unique blend of sprouted millets. Packed with essential vitamins and minerals, our milk is not only nutritious but also rich and frothy,  tastes just like your regular milk, with no bitter aftertaste. Plus, it's free from lactose, dairy, and cholesterol, with no added sugar or artificial preservatives.","heading_image":"shopify:\/\/shop_images\/versatile-accent.png","left_image":"shopify:\/\/shop_images\/stick-fig-jumping.png","right_image":"shopify:\/\/shop_images\/stick-fig-running.png"}},"c9f98d4a-f488-4b31-9b51-44b9d9c51f74":{"type":"background-overlay-text","blocks":{"b5ae0d16-7c6f-47db-bf73-c2d4f1de956f":{"type":"no-ingradiants","settings":{"image":"","image_png":"shopify:\/\/shop_images\/no-lactose.png","title":"100% No lactose"}},"4a240d45-3602-44f8-af76-936a3ecd4b22":{"type":"no-ingradiants","settings":{"image":"","image_png":"shopify:\/\/shop_images\/no-diary.png","title":"100% NO DAIRY"}},"77db51a8-ba26-4680-8e24-eae5a19b4f72":{"type":"no-ingradiants","settings":{"image":"","image_png":"shopify:\/\/shop_images\/no-sugar.png","title":"100% NO SUGAR"}},"382e0aa2-9757-457c-80a0-b36955787204":{"type":"no-ingradiants","settings":{"image":"","image_png":"shopify:\/\/shop_images\/no-preservations.png","title":"100% NO ARTIFICIAL PRESERVATIVES"}},"9405870b-afff-4585-a356-565a4ae4457f":{"type":"no-ingradiants","settings":{"image":"","image_png":"shopify:\/\/shop_images\/no-soy.png","title":"100% NO NUTS OR SOY"}},"719129e2-1389-4c15-b98c-774bf5d7f2fb":{"type":"no-ingradiants","settings":{"image":"","title":""}}},"block_order":["b5ae0d16-7c6f-47db-bf73-c2d4f1de956f","4a240d45-3602-44f8-af76-936a3ecd4b22","77db51a8-ba26-4680-8e24-eae5a19b4f72","382e0aa2-9757-457c-80a0-b36955787204","9405870b-afff-4585-a356-565a4ae4457f","719129e2-1389-4c15-b98c-774bf5d7f2fb"],"settings":{"bg_color":"#50a6ff","best_image":"shopify:\/\/shop_images\/best-startup_badge.png","image":"shopify:\/\/shop_images\/product-mock.png","content_title_01":"Unique Blend of Sprouted Millets","content_desc_01":"Our plant-based milk is the result of years of research and development, and the secret lies in our unique blend of sprouted millets.\nRich in nutrients and easy to digest, our millet-based milk is perfect for those seeking a healthy alternative to dairy milk.","content_list_1_title_01":"Nutrition","content_list_1_desc_01":"<li>A<\/li>\n<li>B1<\/li>\n<li>B2<\/li>\n<li>B12<\/li>\n<li>D<\/li>\n<li>Ca<\/li>","content_list_1_title_02":"","content_list_1_desc_02":"","content_title_02":"Fortified with Vitamins A, B, and D","content_desc_02":"We take your health seriously, which is why our millet milk is fortified with Vitamins A, B, and D.\n\nBy choosing our plant-based milk, you are making a smart choice for your overall well-being, without sacrificing taste or texture","content_list_2_title_01":"","content_list_2_desc_01":"","content_list_2_title_02":"","content_list_2_desc_02":""}},"b4c4cb57-48be-4198-adae-8718a29e81f7":{"type":"content-strip","blocks":{"4100c1b4-a1bd-4894-aea3-779879aebdb8":{"type":"Text","settings":{"title":"Millet Milk - A World First!"}},"ffb45b6a-960c-4f8d-8988-9e054ad7d8b2":{"type":"Text","settings":{"title":"Deliciousness in every drop"}},"ce5cfe2c-d0b3-47c5-85a8-71d3e98545a7":{"type":"Text","settings":{"title":"Made for the health enthusiasts"}},"c492f1ad-ab8d-45f6-aaaf-950b5c051db0":{"type":"Text","settings":{"title":"Designed with care"}}},"block_order":["4100c1b4-a1bd-4894-aea3-779879aebdb8","ffb45b6a-960c-4f8d-8988-9e054ad7d8b2","ce5cfe2c-d0b3-47c5-85a8-71d3e98545a7","c492f1ad-ab8d-45f6-aaaf-950b5c051db0"],"settings":{"bg_color":""}},"042dc1f0-4d71-4995-8281-82634917cb99":{"type":"custom-review","blocks":{"defb972f-6af6-42d0-b0c5-4b855105b06c":{"type":"Review","settings":{"star":"5","image":"shopify:\/\/shop_images\/vegan-dukan.png","title":"Lorem Ipsum","designation":"Lorem Ipsum - Designation","desc":"\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""}},"0e0fe10e-73b8-4ca3-8695-3c9086f852f3":{"type":"Review","settings":{"star":"5","image":"shopify:\/\/shop_images\/Ellipse_1.png","title":"Lorem Ipsum","designation":"Lorem Ipsum - Designation","desc":"\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""}},"695f557b-73e9-4bbd-946a-d9c70150da2e":{"type":"Review","settings":{"star":"4","image":"shopify:\/\/shop_images\/vegan-dukan.png","title":"Lorem Ipsum","designation":"Lorem Ipsum - Designation","desc":"\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""}},"96736bfd-65a1-4adc-8f6a-87beaed62c9c":{"type":"Review","settings":{"star":"4","image":"shopify:\/\/shop_images\/versatile-accent.png","title":"Lorem Ipsum","designation":"Lorem Ipsum - Designation","desc":"\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""}}},"block_order":["defb972f-6af6-42d0-b0c5-4b855105b06c","0e0fe10e-73b8-4ca3-8695-3c9086f852f3","695f557b-73e9-4bbd-946a-d9c70150da2e","96736bfd-65a1-4adc-8f6a-87beaed62c9c"],"settings":{"bg_color":"#eb513d","title":"Reviews"}},"5cfda789-1414-48b2-8f30-fe54999897d4":{"type":"video-with-text","blocks":{"0d9a6511-9435-41cb-bde0-f3accb4ca100":{"type":"Text","settings":{"title":"Great milk alternative for the whole family","desc":"I have been using this plant-based milk as a replacement for regular milk and have noticed a significant decrease in inflammation. Even my kids can't tell the difference in taste, making it a win-win for the whole family."}},"df9079f5-7393-453d-9f7a-f1a7409f9c20":{"type":"Text","settings":{"title":"This milk has made my healthcare journey easy","desc":"Millet milk has been a game-changer in my journey towards a healthier lifestyle. Its versatility has allowed me to easily incorporate it into my daily routine, and I love how it enhances the flavor of my recipes. It has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for a delicious and nutritious dairy-free alternative."}}},"block_order":["0d9a6511-9435-41cb-bde0-f3accb4ca100","df9079f5-7393-453d-9f7a-f1a7409f9c20"],"settings":{"video_link":"https:\/\/www.youtube.com\/embed\/_9VUPq3SxOc","video_title":"Video Title","btn_title":"Learn more","btn_link":"#"}},"0f99470a-3402-4a60-85af-e6e052bd3ddf":{"type":"featured-logos","blocks":{"9b5dabeb-a52f-4ca2-aeb5-962f48ba78cc":{"type":"Logo","settings":{"logo":"shopify:\/\/shop_images\/reporter.png","link":""}},"0f8a0060-c1de-4889-abb6-d97247c9602b":{"type":"Logo","settings":{"logo":"shopify:\/\/shop_images\/food-matters.png","link":""}},"f4ced112-592b-4b1e-aa6a-cd07605ecbc8":{"type":"Logo","settings":{"logo":"shopify:\/\/shop_images\/nuf-foods.png","link":""}},"d2a6cae6-ffd9-48c9-a29e-d9006244af90":{"type":"Logo","settings":{"logo":"shopify:\/\/shop_images\/edible.png","link":""}},"f1c46506-f4da-4ee3-b3c4-750ca7527c8d":{"type":"Logo","settings":{"logo":"shopify:\/\/shop_images\/proveg.png","link":""}},"ebdea712-2b04-4f2c-92b2-6ca558f099a1":{"type":"Logo","settings":{"logo":"shopify:\/\/shop_images\/pbn.png","link":""}},"7814705c-8cbe-44c5-800b-ed8a1c77d80d":{"type":"Logo","settings":{"logo":"shopify:\/\/shop_images\/gq.png","link":""}},"e9c1967b-2da3-4013-8389-bef636f500b8":{"type":"Logo","settings":{"link":""}}},"block_order":["9b5dabeb-a52f-4ca2-aeb5-962f48ba78cc","0f8a0060-c1de-4889-abb6-d97247c9602b","f4ced112-592b-4b1e-aa6a-cd07605ecbc8","d2a6cae6-ffd9-48c9-a29e-d9006244af90","f1c46506-f4da-4ee3-b3c4-750ca7527c8d","ebdea712-2b04-4f2c-92b2-6ca558f099a1","7814705c-8cbe-44c5-800b-ed8a1c77d80d","e9c1967b-2da3-4013-8389-bef636f500b8"],"settings":{"title":"","show_arrow":false,"autoplay":true,"cycle_speed":5}},"6133615d-9dd6-403b-a69f-f18dc7bdddcd":{"type":"custom-blog","settings":{"title":"Blogs","blog":"news"}},"bd136bbb-4bff-4de1-b11e-0783142eb620":{"type":"available-at-stores-logos","blocks":{"e5f38de2-f70d-47d8-97f6-41a839c54d4a":{"type":"left-column","settings":{"logo":"shopify:\/\/shop_images\/greener.png"}},"dcdf026b-ee50-4fee-9b67-c21455fea853":{"type":"left-column","settings":{"logo":"shopify:\/\/shop_images\/colocal.png"}},"baf7d7fe-f869-43d4-a2ae-4031737db4d8":{"type":"left-column","settings":{"logo":"shopify:\/\/shop_images\/blue-tokai.png"}},"37f2e542-c543-4b1e-8757-cd4bab8fc053":{"type":"left-column","settings":{"logo":"shopify:\/\/shop_images\/sardar-ji-cafe.png"}},"6304f61c-1e4f-47da-be11-a63f610d0aec":{"type":"left-column","disabled":true,"settings":{}},"d8668fe3-254b-4bbe-89a7-e32dd2403bd6":{"type":"right-column","settings":{"logo":"shopify:\/\/shop_images\/natures-basket.png"}},"8fb05c58-9b85-435d-b4fe-dde1e605e521":{"type":"right-column","settings":{"logo":"shopify:\/\/shop_images\/amazon.png"}},"69febd08-7fd7-415e-914b-6e372be583c5":{"type":"right-column","settings":{"logo":"shopify:\/\/shop_images\/vegan-dukan.png"}},"80cced6a-5ae5-49f6-b8e3-e70e114362b6":{"type":"right-column","settings":{"logo":"shopify:\/\/shop_images\/zepto.png"}}},"block_order":["e5f38de2-f70d-47d8-97f6-41a839c54d4a","dcdf026b-ee50-4fee-9b67-c21455fea853","baf7d7fe-f869-43d4-a2ae-4031737db4d8","37f2e542-c543-4b1e-8757-cd4bab8fc053","6304f61c-1e4f-47da-be11-a63f610d0aec","d8668fe3-254b-4bbe-89a7-e32dd2403bd6","8fb05c58-9b85-435d-b4fe-dde1e605e521","69febd08-7fd7-415e-914b-6e372be583c5","80cced6a-5ae5-49f6-b8e3-e70e114362b6"],"settings":{"show_arrow":false,"autoplay":true,"cycle_speed":5,"left_title":"RESTAURANTS AND CAFE PARTNERS","right_title":"Also available at"}},"1681777290f3dda194":{"type":"apps","blocks":{"802b34e3-8c44-451b-83a3-e0fca6a78b13":{"type":"shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5","settings":{"heading_size":20,"feed_width":100,"html_area":""}}},"block_order":["802b34e3-8c44-451b-83a3-e0fca6a78b13"],"settings":{"include_margins":true}}},"order":["b79520c5-e8b9-44d3-a05c-4eee38545502","slideshow","4ee6fe54-cba5-4499-b5dc-260224b4250c","acf8f5f2-b509-46d6-9f4c-f3555508026a","c72a943f-3702-4653-b593-f43033aa4002","795d526c-10f6-4816-89a6-4384f9865feb","9f86c8f8-67d9-44ac-ab70-5a056a038d40","c9f98d4a-f488-4b31-9b51-44b9d9c51f74","b4c4cb57-48be-4198-adae-8718a29e81f7","042dc1f0-4d71-4995-8281-82634917cb99","5cfda789-1414-48b2-8f30-fe54999897d4","0f99470a-3402-4a60-85af-e6e052bd3ddf","6133615d-9dd6-403b-a69f-f18dc7bdddcd","bd136bbb-4bff-4de1-b11e-0783142eb620","1681777290f3dda194"]}
+{
+  "sections": {
+    "b79520c5-e8b9-44d3-a05c-4eee38545502": {
+      "type": "review-topbar",
+      "blocks": {
+        "3c51e998-ccd5-4286-941b-53a4e3b1422b": {
+          "type": "Image",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/top-review-text.png"
+          }
+        },
+        "dfbc14e5-1746-4b59-be98-d157e0d56e4f": {
+          "type": "Image",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/top-review-text.png"
+          }
+        }
+      },
+      "block_order": [
+        "3c51e998-ccd5-4286-941b-53a4e3b1422b",
+        "dfbc14e5-1746-4b59-be98-d157e0d56e4f"
+      ],
+      "settings": {
+        "bg_color": "#ffe8cb",
+        "left_title": "Rated 4.6\/5"
+      }
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_7d739bb7-3049-41f3-b5bb-cbe1305dfe8f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mob-banner.jpg",
+            "apply_overlay": true,
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        },
+        "slide-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mob-banner-2.jpg",
+            "apply_overlay": true,
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide-0",
+        "slide-1"
+      ],
+      "settings": {
+        "show_fullscreen": false,
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 5,
+        "text_color": "#ffffff",
+        "button_color": "#363636",
+        "button_background": "#ffffff"
+      }
+    },
+    "4ee6fe54-cba5-4499-b5dc-260224b4250c": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "Sub-heading",
+        "title": "Your HTMLYour HTML Your HTML Your HTML Your HTML",
+        "html": "<p>Write your own custom HTML content.<\/p>\n<p>Write your own custom HTML content.<\/p>\n<p>Write your own custom HTML content.<\/p><p>Write your own custom HTML content.<\/p>\n<p>Write your own custom HTML content.<\/p>"
+      }
+    },
+    "acf8f5f2-b509-46d6-9f4c-f3555508026a": {
+      "type": "text-logo",
+      "blocks": {
+        "c70d1840-ef76-43c8-8bfa-4b0fdb499759": {
+          "type": "Text",
+          "settings": {
+            "bg_color": "#498fcd",
+            "text_color": "#ffffff",
+            "title": "ALWAYS 100% PLANT BASED"
+          }
+        },
+        "76ca7164-905a-4324-bc12-2c8905878483": {
+          "type": "Text",
+          "settings": {
+            "bg_color": "#fff2cc",
+            "text_color": "#162516",
+            "title": "100% Sugar <br> Free"
+          }
+        },
+        "4dfa5304-7dac-40b5-a42f-b4e3808d8737": {
+          "type": "Text",
+          "settings": {
+            "bg_color": "#496427",
+            "text_color": "#ffffff",
+            "title": "HIGH QUALITY Ingredients"
+          }
+        },
+        "ce09787d-58cf-4b5f-995e-c110a86fafe4": {
+          "type": "Text",
+          "settings": {
+            "bg_color": "#eb513d",
+            "text_color": "#ffffff",
+            "title": "100% Lactose<br> Free"
+          }
+        }
+      },
+      "block_order": [
+        "c70d1840-ef76-43c8-8bfa-4b0fdb499759",
+        "76ca7164-905a-4324-bc12-2c8905878483",
+        "4dfa5304-7dac-40b5-a42f-b4e3808d8737",
+        "ce09787d-58cf-4b5f-995e-c110a86fafe4"
+      ],
+      "settings": {
+        "title": "",
+        "desc": "At BetterBet, we're all about solving your milk problems - and we've got just the thing. Indulge in the richness and nourishment of our plant-based milk that is made from sprouted millets, providing a delicious and healthy alternative to traditional dairy milk. And the best part? We're committed to being environmentally responsible and sustainable, so you get to indulge in our milk guilt-free!"
+      }
+    },
+    "c72a943f-3702-4653-b593-f43033aa4002": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--15488998342709__c72a943f-3702-4653-b593-f43033aa4002-1682375775d0b73e58-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "test-collection",
+            "title": "",
+            "grid_items_count": 8,
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15488998342709__c72a943f-3702-4653-b593-f43033aa4002-1682375775d0b73e58-0"
+      ],
+      "settings": {
+        "title": "",
+        "layout_mode": "carousel",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "show_header": false,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 3
+      }
+    },
+    "795d526c-10f6-4816-89a6-4384f9865feb": {
+      "type": "text-with-background",
+      "settings": {
+        "bg_color": "#e6d93f",
+        "bg_image": "shopify:\/\/shop_images\/dots-pattern.png",
+        "shape": "<svg width=\"500\" height=\"100%\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Group_11\" data-name=\"Group 11\" viewbox=\"0 0 659.16 334.148\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n  <defs>\n    <clippath id=\"clip-path\">\n      <rect id=\"Rectangle_433\" data-name=\"Rectangle 433\" width=\"659.16\" height=\"334.148\" fill=\"none\"><\/rect>\n    <\/clippath>\n  <\/defs>\n  <g id=\"Group_10\" data-name=\"Group 10\" clip-path=\"url(#clip-path)\">\n    <path id=\"Path_438\" data-name=\"Path 438\" d=\"M189.52,123.728l9.36.92a31.864,31.864,0,0,1-9.36-.92\" fill=\"#fff\"><\/path>\n    <path id=\"Path_439\" data-name=\"Path 439\" d=\"M306.22,73.068c-.16,15.36-10.42,29.03-22.77,38.18a87.821,87.821,0,0,1-71.84,14.66l-12.73-1.26c9.61-.45,19.11-4.94,26.37-11.44,9.65-8.61,15.92-20.36,20.95-32.29,3.32-7.87,6.25-16,11.1-23.03s12.05-12.95,20.53-14c15.25-1.86,28.56,13.8,28.39,29.18\" fill=\"#fff\"><\/path>\n    <path id=\"Path_440\" data-name=\"Path 440\" d=\"M659.16,42.6v291.55H0c11.36-11.3,20.83-25.48,29.25-38.96q26.16-41.895,52.35-83.8c6.58-10.51,13.31-21.22,22.9-29.2,13.83-11.51,32.3-16.19,50.34-18.03,59.23-6,124.74,13.82,175.32-17.09,37.41-22.83,54.66-67.02,85.23-98.18,35.34-36.05,88.67-52.98,139.34-48.05,37.93,3.7,74.09,18.97,104.43,41.76\" fill=\"#fff\"><\/path>\n    <path id=\"Path_441\" data-name=\"Path 441\" d=\"M185.04,108.5a23.321,23.321,0,0,1-30.54-32.72l5.64-2.58a24.418,24.418,0,0,1,24.9,35.3\" fill=\"#fff\"><\/path>\n  <\/g>\n<\/svg>",
+        "title": "How Does IT Taste?",
+        "sub_title": "Umm... But,",
+        "right_desc": "Just like your regular milk! <br>\nIts unmatched taste comes from a smooth texture made from a unique blend of sprouted millets. Our milk has no bitter aftertaste and froths perfectly, making it the perfect choice for your favorite recipes.",
+        "btn_title_01": "Reviews",
+        "btn_link_01": "#",
+        "btn_title_02": "FAQs",
+        "btn_link_02": "#"
+      }
+    },
+    "9f86c8f8-67d9-44ac-ab70-5a056a038d40": {
+      "type": "three-column",
+      "blocks": {
+        "24022657-dbae-46fe-99b4-4b7ea50a8338": {
+          "type": "Text",
+          "settings": {
+            "image": "<svg id=\"Layer_2\" width=\"80\" height=\"80\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 78.64 79.86\"><defs><style>.cls-1{fill:#fff;}<\/style><\/defs><g id=\"Layer_1-2\"><path class=\"cls-1\" d=\"m35.76,34.05c0-.53,0-.79,0-1.05,0-7.93,0-15.86,0-23.79,0-.66.02-1.04-.88-.79-1.11.31-2.2-.24-2.65-1.11-.54-1.04-.37-2.13.51-3,1.22-1.2,2.45-2.39,3.7-3.55,1.1-1.02,2.38-1.02,3.48,0,1.25,1.16,2.48,2.35,3.7,3.55.88.87,1.05,1.97.5,2.99-.47.89-1.59,1.38-2.75,1.1-.55-.13-.8-.15-.8.54.02,8.17.01,16.33.01,24.5,0,.12.03.23.07.6,8.22-8.49,17.78-14,29.82-14.51-.33-.61-.58-1.11-.59-1.68-.02-1,.35-1.79,1.27-2.24.94-.46,1.88-.4,2.64.32,1.38,1.32,2.75,2.68,4.02,4.1,1.16,1.29,1.06,2.49-.15,3.77-1.11,1.18-2.23,2.35-3.36,3.51-1.01,1.04-2.11,1.27-3.18.69-1.04-.56-1.43-1.52-1.09-2.97.17-.73-.24-.66-.66-.62-3.66.35-7.21,1.14-10.62,2.56-4.58,1.9-8.54,4.73-12.17,8.06-1.59,1.46-3.09,2.99-4.62,4.5-.33.32-.43.56-.06.94,3.82,3.91,7.73,7.7,12.49,10.48,4.45,2.6,9.24,4.11,14.35,4.67.2.02.41.01.62.03.6.06.87-.05.63-.77-.37-1.14.07-2.18,1.02-2.76.95-.57,2.09-.46,2.93.36,1.31,1.28,2.6,2.57,3.85,3.9,1.14,1.22,1.11,2.55-.05,3.78-1.17,1.25-2.36,2.47-3.56,3.69-.93.94-2.19,1.16-3.13.57-1.08-.67-1.44-1.83-.9-3.17.3-.74-.12-.73-.6-.76-6.29-.41-12.15-2.2-17.59-5.38-3.25-1.9-6.17-4.23-8.93-6.77-.73-.67-1.47-1.35-2.2-2.02-.35.19-.22.49-.22.73,0,7.9,0,15.8-.02,23.7,0,.64.06.9.83.69,1.14-.31,2.27.22,2.73,1.12.52,1,.33,2.14-.54,2.99-1.24,1.22-2.49,2.42-3.77,3.61-1,.93-2.33.93-3.34-.02-1.25-1.17-2.48-2.36-3.7-3.55-.93-.9-1.11-2.01-.56-3.06.48-.9,1.55-1.37,2.74-1.09.56.13.79.14.79-.54-.02-8.11-.01-16.22-.01-24.32,0-.11-.03-.23-.06-.49-1.1,1.01-2.13,1.95-3.16,2.89-5.05,4.56-10.71,8.1-17.3,10-2.13.61-4.28,1.09-6.49,1.32-.51.05-.7.11-.39.67.73,1.34.46,2.6-.63,3.37-.98.7-2.28.51-3.28-.51-1.18-1.2-2.35-2.4-3.5-3.62-1.22-1.29-1.23-2.63,0-3.91,1.2-1.26,2.43-2.49,3.66-3.71.9-.88,1.98-1.03,2.99-.47.9.5,1.35,1.51,1.07,2.66-.15.6-.04.72.56.63,6.96-1.03,13.01-4.03,18.38-8.5,2.33-1.94,4.46-4.1,6.61-6.24.46-.46.48-.8.03-1.25-4.06-4.13-8.27-8.07-13.41-10.87-3.67-1.99-7.56-3.26-11.69-3.87-.61-.09-.62.05-.49.57.28,1.2-.16,2.19-1.12,2.72-1,.56-2.11.41-2.99-.48-1.27-1.27-2.52-2.56-3.74-3.89-1.02-1.12-1.11-2.27-.1-3.42,1.32-1.5,2.74-2.92,4.19-4.3.84-.8,2.11-.73,3.01-.02.86.68,1.16,2.01.55,3.05-.41.69-.22.8.45.89,4.06.52,7.97,1.59,11.69,3.3,4.6,2.11,8.66,5,12.38,8.41.86.79,1.72,1.58,2.77,2.54Z\"><\/path><\/g><\/svg>",
+            "title": "Nutritious Nectar",
+            "desc": "Say goodbye to boring and unhealthy milk options! Our plant-based milk is fortified with essential vitamins A, B, and D, and is lower in calories and fat, making it a delicious and nutritious choice for your overall health and well-being."
+          }
+        },
+        "f8189777-af2f-4528-b386-660daac57f13": {
+          "type": "Text",
+          "disabled": true,
+          "settings": {
+            "image": "<svg id=\"Layer_2\" width=\"80\" height=\"80\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 76.46 84.97\"><defs><style>.cls-1{fill:#fff;}<\/style><\/defs><g id=\"Layer_1-2\"><path class=\"cls-1\" d=\"m23.25,62.75c.57-.85,1.1-1.65,1.65-2.44,1.54-2.23,3.32-4.25,5.35-6.04,3.05-2.68,6.7-3.9,10.64-4.37,3.63-.44,7.27-.44,10.86.42,2.4.57,4.69,1.44,6.45,3.28,1.17,1.22,1.97,2.69,2.66,4.23.1.22.2.45.33.73.26-.27.21-.54.21-.79.02-3.24-1.19-5.76-4.21-7.25-.88-.43-.87-.49-.28-1.3,1.98-2.76,4.57-4.56,8.02-4.98,1.14-.14,2.24.07,3.33.33,1.22.28,2.39.72,3.57,1.12.33.11.56.26.71.46.27.37.23.82.23.91-.07,1.31,3.39,8.58,3.67,14.78.34,7.44-3.77,16.13-3.67,17.27,0,.06.05.42-.13.54-.1.07-.27.03-.55-.11-1.5-.77-3.04-.3-4.54,0-6.8,1.38-13.58,2.82-20.39,4.16-3.42.67-6.85,1.42-10.38,1.25-3.34-.16-6.64-.74-9.93-1.35-3.31-.61-6.6-1.36-9.94-1.81-1.48-.2-2.93-.07-4.4.11-1.97.23-3.94.19-5.88-.23-1.55-.33-1.87-.72-2-2.33-.1-1.32-.19-2.64-.3-3.95-.09-1.1-.35-2.16-.87-3.16-.59-1.15-1.16-2.32-1.75-3.48-1.65-3.2-2.02-6.58-1.52-10.12.6-4.28,1.54-8.49,2.56-12.68.75-3.08,1.08-6.24,1.58-9.37,1.2-7.56,2.13-15.17,3.62-22.68.49-2.44,1.38-4.79,2.56-7.01.8-1.5,2.14-2.36,3.67-2.92,2.65-.97,5.33-1.86,7.99-2.79.87-.31,1.74-.63,2.59-.97.97-.38,1.86-.24,2.68.38,2.3,1.76,4.69,3.41,6.86,5.33.65.58,1.27,1.2,1.78,1.92.46.64.51,1.28.05,1.94-.68.98-1.37,1.97-2.04,2.96-.29.42-.43.81-.15,1.37.44.87.17,1.56-.63,2.1-.27.18-.58.34-.77.59-.7.92-1.62.97-2.63.77-.17-.03-.35-.05-.51-.1-2.17-.68-4.3-.62-6.42.25-1.08.45-1.98.14-2.69-.81-.79-1.06-1.64-2.08-2.41-3.15-.32-.44-.6-.53-1.05-.24-.46.3-.68.66-.37,1.19.43.74,1.08,1.31,1.83,1.62,1.62.68,1.91,1.91,1.9,3.49-.01,3.9-.31,7.78-.61,11.66-.08,1.07.07,2.07.56,3.05,1.24,2.47,2.69,4.83,4.45,6.91,2.26,2.68,3.02,5.78,3.35,9.1.05.55.05,1.11.18,1.63.29,1.11-.08,1.94-.83,2.76-1.29,1.42-2.44,2.97-3.52,4.56-.67.98-.83,1.94-.54,3.27Zm8.67,1.78c3.35,3.45,7.3,5.51,12.2,5.05,3.76-.35,6.92-1.97,9.51-4.8-.34-.19-.54-.03-.75.02-1.26.32-2.52.62-3.76.99-4.67,1.38-9.32,1.52-13.95-.18-1.07-.39-2.16-.72-3.25-1.08Zm-18-3.54c-.22-1.25-.47-2.49-.64-3.75-.29-2.09-.68-4.18-.38-6.32.21-1.54.71-3.01,1.08-4.5.13-.51.26-1.05.01-1.54-.38-.74-.56-1.52-.74-2.33-2.19,6.23-2.29,12.39.67,18.43Z\"><\/path><\/g><\/svg>",
+            "title": "Ultra smooth",
+            "desc": "Our milk is a blend of sprouted millets that creates a texture so smooth, it's like silk in a glass. So you get to indulge without guilt."
+          }
+        },
+        "0e3a1935-1ff6-4154-b786-f5d83ea50b16": {
+          "type": "Text",
+          "settings": {
+            "image": "<svg id=\"Layer_2\" width=\"80\" height=\"80\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 86.78 83.69\"><defs><style>.cls-1{fill:#fff;}<\/style><\/defs><g id=\"Layer_1-2\"><path class=\"cls-1\" d=\"m18.98,67.98c1.38,1.61,3.09,2.74,5.01,3.53,7.72,3.21,15.49,3.28,23.27.2,2.58-1.02,5-2.32,7.21-4,.94-.71,1.2-.61,1.63.49.76,1.98.06,4.08-1.81,5.2-4.41,2.65-9.19,4.27-14.28,4.91-1.57.2-2.79.68-4,1.76-3.86,3.45-8.47,4.24-13.44,3.21-5.61-1.16-10.12-4.2-14.01-8.29-3.77-3.97-6.26-8.63-7.61-13.91-1.22-4.79-1.23-9.61-.19-14.44.16-.75.31-.92.98-.29,2.25,2.1,5.14,2.88,8.03,3.57,4.83,1.16,9.75,1.92,14.45,3.56,3.52,1.23,6.79,2.9,9.47,5.54,3.05,3.01,4.72,6.73,5.49,10.91.17.9-.34,1.07-1.02,1.17-3.85.55-7.64.11-11.4-.68-2.66-.56-5.27-1.32-7.79-2.44Z\"><\/path><path class=\"cls-1\" d=\"m38.7,13.28c-2.42.45-4.47,1.64-6.32,3.15-6.67,5.46-10.48,12.47-11.35,21.07-.23,2.31-.24,4.61.06,6.91.12.9-.29,1.08-1.06,1.02-2.17-.15-3.76-1.97-3.78-4.42-.06-5.35,1.03-10.48,3.19-15.37.45-1.02.58-1.92.31-3.04-1.24-5.04.13-9.51,3.44-13.37C27.85,3.83,33.99,1.17,40.95.27c6.47-.84,12.65.26,18.46,3.2,2.5,1.26,4.8,2.85,6.83,4.8.39.38.56.64-.1.84-2.6.81-4.56,2.54-6.37,4.45-2.57,2.69-5.06,5.46-7.63,8.15-3.33,3.49-6.94,6.64-11.55,8.33-4.63,1.69-9.26,1.45-13.87-.19-.69-.24-.69-.64-.49-1.2.93-2.67,2.49-4.99,4.19-7.21,2.38-3.1,5.13-5.83,8.28-8.17Z\"><\/path><path class=\"cls-1\" d=\"m74.14,57.23c.91-2.59.85-5.2.34-7.79-2.11-10.79-8.33-18.32-18.24-22.91-1.19-.55-1.27-.87-.39-1.84,1.43-1.59,3.6-1.87,5.67-.7,4.76,2.69,8.68,6.31,11.85,10.75.42.58.86,1.03,1.59,1.22,5.96,1.53,9.34,5.63,10.9,11.33,1.81,6.63.86,13.07-1.92,19.26-2.96,6.58-7.7,11.54-14.09,14.89-1.62.85-3.29,1.6-5.06,2.09-.41.11-.91.31-.76-.45.79-3.94-.49-7.57-1.64-11.23-1.37-4.37-2.93-8.7-3.62-13.26-.7-4.66-.5-9.22,1.71-13.52,1.3-2.52,3.11-4.62,5.21-6.5.53-.47.93-.39,1.38.15,1.99,2.35,3.27,5.09,4.4,7.92,1.36,3.41,2.27,6.93,2.68,10.59Z\"><\/path><\/g><\/svg>",
+            "title": "Creamy Dreamy",
+            "desc": "Get ready to indulge in the yummiest milk you've ever tasted! Our formula creates a frothy, rich, and velvety texture that will elevate your drinks and recipes to a whole new level."
+          }
+        },
+        "d690b894-8ca6-455b-88a5-a42e6c0f091b": {
+          "type": "Text",
+          "settings": {
+            "image": "<svg id=\"Layer_2\" width=\"80\" height=\"80\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 76.46 84.97\"><defs><style>.cls-1{fill:#fff;}<\/style><\/defs><g id=\"Layer_1-2\"><path class=\"cls-1\" d=\"m23.25,62.75c.57-.85,1.1-1.65,1.65-2.44,1.54-2.23,3.32-4.25,5.35-6.04,3.05-2.68,6.7-3.9,10.64-4.37,3.63-.44,7.27-.44,10.86.42,2.4.57,4.69,1.44,6.45,3.28,1.17,1.22,1.97,2.69,2.66,4.23.1.22.2.45.33.73.26-.27.21-.54.21-.79.02-3.24-1.19-5.76-4.21-7.25-.88-.43-.87-.49-.28-1.3,1.98-2.76,4.57-4.56,8.02-4.98,1.14-.14,2.24.07,3.33.33,1.22.28,2.39.72,3.57,1.12.33.11.56.26.71.46.27.37.23.82.23.91-.07,1.31,3.39,8.58,3.67,14.78.34,7.44-3.77,16.13-3.67,17.27,0,.06.05.42-.13.54-.1.07-.27.03-.55-.11-1.5-.77-3.04-.3-4.54,0-6.8,1.38-13.58,2.82-20.39,4.16-3.42.67-6.85,1.42-10.38,1.25-3.34-.16-6.64-.74-9.93-1.35-3.31-.61-6.6-1.36-9.94-1.81-1.48-.2-2.93-.07-4.4.11-1.97.23-3.94.19-5.88-.23-1.55-.33-1.87-.72-2-2.33-.1-1.32-.19-2.64-.3-3.95-.09-1.1-.35-2.16-.87-3.16-.59-1.15-1.16-2.32-1.75-3.48-1.65-3.2-2.02-6.58-1.52-10.12.6-4.28,1.54-8.49,2.56-12.68.75-3.08,1.08-6.24,1.58-9.37,1.2-7.56,2.13-15.17,3.62-22.68.49-2.44,1.38-4.79,2.56-7.01.8-1.5,2.14-2.36,3.67-2.92,2.65-.97,5.33-1.86,7.99-2.79.87-.31,1.74-.63,2.59-.97.97-.38,1.86-.24,2.68.38,2.3,1.76,4.69,3.41,6.86,5.33.65.58,1.27,1.2,1.78,1.92.46.64.51,1.28.05,1.94-.68.98-1.37,1.97-2.04,2.96-.29.42-.43.81-.15,1.37.44.87.17,1.56-.63,2.1-.27.18-.58.34-.77.59-.7.92-1.62.97-2.63.77-.17-.03-.35-.05-.51-.1-2.17-.68-4.3-.62-6.42.25-1.08.45-1.98.14-2.69-.81-.79-1.06-1.64-2.08-2.41-3.15-.32-.44-.6-.53-1.05-.24-.46.3-.68.66-.37,1.19.43.74,1.08,1.31,1.83,1.62,1.62.68,1.91,1.91,1.9,3.49-.01,3.9-.31,7.78-.61,11.66-.08,1.07.07,2.07.56,3.05,1.24,2.47,2.69,4.83,4.45,6.91,2.26,2.68,3.02,5.78,3.35,9.1.05.55.05,1.11.18,1.63.29,1.11-.08,1.94-.83,2.76-1.29,1.42-2.44,2.97-3.52,4.56-.67.98-.83,1.94-.54,3.27Zm8.67,1.78c3.35,3.45,7.3,5.51,12.2,5.05,3.76-.35,6.92-1.97,9.51-4.8-.34-.19-.54-.03-.75.02-1.26.32-2.52.62-3.76.99-4.67,1.38-9.32,1.52-13.95-.18-1.07-.39-2.16-.72-3.25-1.08Zm-18-3.54c-.22-1.25-.47-2.49-.64-3.75-.29-2.09-.68-4.18-.38-6.32.21-1.54.71-3.01,1.08-4.5.13-.51.26-1.05.01-1.54-.38-.74-.56-1.52-.74-2.33-2.19,6.23-2.29,12.39.67,18.43Z\"><\/path><\/g><\/svg>",
+            "title": "Sustainable Sip",
+            "desc": "We're committed to sustainability and the environment. That's why we source our ingredients from climate-resistant crops with low water consumption and use indigenous grains.  Drink up, guilt-free!"
+          }
+        }
+      },
+      "block_order": [
+        "24022657-dbae-46fe-99b4-4b7ea50a8338",
+        "f8189777-af2f-4528-b386-660daac57f13",
+        "0e3a1935-1ff6-4154-b786-f5d83ea50b16",
+        "d690b894-8ca6-455b-88a5-a42e6c0f091b"
+      ],
+      "settings": {
+        "title": "Creamy. Nutritious. Delicious.",
+        "desc": "Our sprouted milk is the result of years of research and development, and the secret lies in our unique blend of sprouted millets. Packed with essential vitamins and minerals, our milk is not only nutritious but also rich and frothy,  tastes just like your regular milk, with no bitter aftertaste. Plus, it's free from lactose, dairy, and cholesterol, with no added sugar or artificial preservatives.",
+        "heading_image": "shopify:\/\/shop_images\/badges.png",
+        "left_image": "shopify:\/\/shop_images\/stick-fig-jumping.png",
+        "right_image": "shopify:\/\/shop_images\/stick-fig-running.png"
+      }
+    },
+    "c9f98d4a-f488-4b31-9b51-44b9d9c51f74": {
+      "type": "background-overlay-text",
+      "blocks": {
+        "b5ae0d16-7c6f-47db-bf73-c2d4f1de956f": {
+          "type": "no-ingradiants",
+          "settings": {
+            "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-lactose.png",
+            "title": "100% No lactose"
+          }
+        },
+        "4a240d45-3602-44f8-af76-936a3ecd4b22": {
+          "type": "no-ingradiants",
+          "settings": {
+            "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-diary.png",
+            "title": "100% NO DAIRY"
+          }
+        },
+        "77db51a8-ba26-4680-8e24-eae5a19b4f72": {
+          "type": "no-ingradiants",
+          "settings": {
+            "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-sugar.png",
+            "title": "100% NO SUGAR"
+          }
+        },
+        "382e0aa2-9757-457c-80a0-b36955787204": {
+          "type": "no-ingradiants",
+          "settings": {
+            "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-preservations.png",
+            "title": "100% NO ARTIFICIAL PRESERVATIVES"
+          }
+        },
+        "9405870b-afff-4585-a356-565a4ae4457f": {
+          "type": "no-ingradiants",
+          "settings": {
+            "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-soy.png",
+            "title": "100% NO NUTS OR SOY"
+          }
+        },
+        "719129e2-1389-4c15-b98c-774bf5d7f2fb": {
+          "type": "no-ingradiants",
+          "settings": {
+            "image": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "b5ae0d16-7c6f-47db-bf73-c2d4f1de956f",
+        "4a240d45-3602-44f8-af76-936a3ecd4b22",
+        "77db51a8-ba26-4680-8e24-eae5a19b4f72",
+        "382e0aa2-9757-457c-80a0-b36955787204",
+        "9405870b-afff-4585-a356-565a4ae4457f",
+        "719129e2-1389-4c15-b98c-774bf5d7f2fb"
+      ],
+      "settings": {
+        "bg_color": "#50a6ff",
+        "best_image": "shopify:\/\/shop_images\/best-startup_badge.png",
+        "image": "shopify:\/\/shop_images\/product-mock.png",
+        "content_title_01": "Unique Blend of Sprouted Millets",
+        "content_desc_01": "Our plant-based milk is the result of years of research and development, and the secret lies in our unique blend of sprouted millets.\nRich in nutrients and easy to digest, our millet-based milk is perfect for those seeking a healthy alternative to dairy milk.",
+        "content_list_1_title_01": "Nutrition",
+        "content_list_1_desc_01": "<li>A<\/li>\n<li>B1<\/li>\n<li>B2<\/li>\n<li>B12<\/li>\n<li>D<\/li>\n<li>Ca<\/li>",
+        "content_list_1_title_02": "",
+        "content_list_1_desc_02": "",
+        "content_title_02": "Fortified with Vitamins A, B, and D",
+        "content_desc_02": "We take your health seriously, which is why our millet milk is fortified with Vitamins A, B, and D.\n\nBy choosing our plant-based milk, you are making a smart choice for your overall well-being, without sacrificing taste or texture",
+        "content_list_2_title_01": "",
+        "content_list_2_desc_01": "",
+        "content_list_2_title_02": "",
+        "content_list_2_desc_02": ""
+      }
+    },
+    "b4c4cb57-48be-4198-adae-8718a29e81f7": {
+      "type": "content-strip",
+      "blocks": {
+        "4100c1b4-a1bd-4894-aea3-779879aebdb8": {
+          "type": "Text",
+          "settings": {
+            "title": "Millet Milk - A World First!"
+          }
+        },
+        "ffb45b6a-960c-4f8d-8988-9e054ad7d8b2": {
+          "type": "Text",
+          "settings": {
+            "title": "Deliciousness in every drop"
+          }
+        },
+        "ce5cfe2c-d0b3-47c5-85a8-71d3e98545a7": {
+          "type": "Text",
+          "settings": {
+            "title": "Made for the health enthusiasts"
+          }
+        },
+        "c492f1ad-ab8d-45f6-aaaf-950b5c051db0": {
+          "type": "Text",
+          "settings": {
+            "title": "Designed with care"
+          }
+        }
+      },
+      "block_order": [
+        "4100c1b4-a1bd-4894-aea3-779879aebdb8",
+        "ffb45b6a-960c-4f8d-8988-9e054ad7d8b2",
+        "ce5cfe2c-d0b3-47c5-85a8-71d3e98545a7",
+        "c492f1ad-ab8d-45f6-aaaf-950b5c051db0"
+      ],
+      "settings": {
+        "bg_color": ""
+      }
+    },
+    "042dc1f0-4d71-4995-8281-82634917cb99": {
+      "type": "custom-review",
+      "blocks": {
+        "defb972f-6af6-42d0-b0c5-4b855105b06c": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "image": "shopify:\/\/shop_images\/vegan-dukan.png",
+            "title": "Lorem Ipsum",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "0e0fe10e-73b8-4ca3-8695-3c9086f852f3": {
+          "type": "Review",
+          "settings": {
+            "star": "5",
+            "image": "shopify:\/\/shop_images\/Ellipse_1.png",
+            "title": "Lorem Ipsum",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "695f557b-73e9-4bbd-946a-d9c70150da2e": {
+          "type": "Review",
+          "settings": {
+            "star": "4",
+            "image": "shopify:\/\/shop_images\/vegan-dukan.png",
+            "title": "Lorem Ipsum",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        },
+        "96736bfd-65a1-4adc-8f6a-87beaed62c9c": {
+          "type": "Review",
+          "settings": {
+            "star": "4",
+            "image": "shopify:\/\/shop_images\/versatile-accent.png",
+            "title": "Lorem Ipsum",
+            "designation": "Lorem Ipsum - Designation",
+            "desc": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Duis aute irure dolor in reprehenderit.\""
+          }
+        }
+      },
+      "block_order": [
+        "defb972f-6af6-42d0-b0c5-4b855105b06c",
+        "0e0fe10e-73b8-4ca3-8695-3c9086f852f3",
+        "695f557b-73e9-4bbd-946a-d9c70150da2e",
+        "96736bfd-65a1-4adc-8f6a-87beaed62c9c"
+      ],
+      "settings": {
+        "bg_color": "#eb513d",
+        "title": "Reviews"
+      }
+    },
+    "5cfda789-1414-48b2-8f30-fe54999897d4": {
+      "type": "video-with-text",
+      "blocks": {
+        "0d9a6511-9435-41cb-bde0-f3accb4ca100": {
+          "type": "Text",
+          "settings": {
+            "title": "Great milk alternative for the whole family",
+            "desc": "I have been using this plant-based milk as a replacement for regular milk and have noticed a significant decrease in inflammation. Even my kids can't tell the difference in taste, making it a win-win for the whole family."
+          }
+        },
+        "df9079f5-7393-453d-9f7a-f1a7409f9c20": {
+          "type": "Text",
+          "settings": {
+            "title": "This milk has made my healthcare journey easy",
+            "desc": "Millet milk has been a game-changer in my journey towards a healthier lifestyle. Its versatility has allowed me to easily incorporate it into my daily routine, and I love how it enhances the flavor of my recipes. It has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for a delicious and nutritious dairy-free alternative."
+          }
+        }
+      },
+      "block_order": [
+        "0d9a6511-9435-41cb-bde0-f3accb4ca100",
+        "df9079f5-7393-453d-9f7a-f1a7409f9c20"
+      ],
+      "settings": {
+        "video_link": "https:\/\/www.youtube.com\/embed\/_9VUPq3SxOc",
+        "video_title": "Video Title",
+        "btn_title": "Learn more",
+        "btn_link": "#"
+      }
+    },
+    "0f99470a-3402-4a60-85af-e6e052bd3ddf": {
+      "type": "featured-logos",
+      "blocks": {
+        "9b5dabeb-a52f-4ca2-aeb5-962f48ba78cc": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/reporter.png",
+            "link": ""
+          }
+        },
+        "0f8a0060-c1de-4889-abb6-d97247c9602b": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/food-matters.png",
+            "link": ""
+          }
+        },
+        "f4ced112-592b-4b1e-aa6a-cd07605ecbc8": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/nuf-foods.png",
+            "link": ""
+          }
+        },
+        "d2a6cae6-ffd9-48c9-a29e-d9006244af90": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/edible.png",
+            "link": ""
+          }
+        },
+        "f1c46506-f4da-4ee3-b3c4-750ca7527c8d": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/proveg.png",
+            "link": ""
+          }
+        },
+        "ebdea712-2b04-4f2c-92b2-6ca558f099a1": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/pbn.png",
+            "link": ""
+          }
+        },
+        "7814705c-8cbe-44c5-800b-ed8a1c77d80d": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/gq.png",
+            "link": ""
+          }
+        },
+        "e9c1967b-2da3-4013-8389-bef636f500b8": {
+          "type": "Logo",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "9b5dabeb-a52f-4ca2-aeb5-962f48ba78cc",
+        "0f8a0060-c1de-4889-abb6-d97247c9602b",
+        "f4ced112-592b-4b1e-aa6a-cd07605ecbc8",
+        "d2a6cae6-ffd9-48c9-a29e-d9006244af90",
+        "f1c46506-f4da-4ee3-b3c4-750ca7527c8d",
+        "ebdea712-2b04-4f2c-92b2-6ca558f099a1",
+        "7814705c-8cbe-44c5-800b-ed8a1c77d80d",
+        "e9c1967b-2da3-4013-8389-bef636f500b8"
+      ],
+      "settings": {
+        "title": "",
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "6133615d-9dd6-403b-a69f-f18dc7bdddcd": {
+      "type": "custom-blog",
+      "settings": {
+        "title": "Blogs",
+        "blog": "news"
+      }
+    },
+    "bd136bbb-4bff-4de1-b11e-0783142eb620": {
+      "type": "available-at-stores-logos",
+      "blocks": {
+        "e5f38de2-f70d-47d8-97f6-41a839c54d4a": {
+          "type": "left-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/greener.png"
+          }
+        },
+        "dcdf026b-ee50-4fee-9b67-c21455fea853": {
+          "type": "left-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/colocal.png"
+          }
+        },
+        "baf7d7fe-f869-43d4-a2ae-4031737db4d8": {
+          "type": "left-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/blue-tokai.png"
+          }
+        },
+        "37f2e542-c543-4b1e-8757-cd4bab8fc053": {
+          "type": "left-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/sardar-ji-cafe.png"
+          }
+        },
+        "6304f61c-1e4f-47da-be11-a63f610d0aec": {
+          "type": "left-column",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "d8668fe3-254b-4bbe-89a7-e32dd2403bd6": {
+          "type": "right-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/natures-basket.png"
+          }
+        },
+        "8fb05c58-9b85-435d-b4fe-dde1e605e521": {
+          "type": "right-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/amazon.png"
+          }
+        },
+        "69febd08-7fd7-415e-914b-6e372be583c5": {
+          "type": "right-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/vegan-dukan.png"
+          }
+        },
+        "80cced6a-5ae5-49f6-b8e3-e70e114362b6": {
+          "type": "right-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/zepto.png"
+          }
+        }
+      },
+      "block_order": [
+        "e5f38de2-f70d-47d8-97f6-41a839c54d4a",
+        "dcdf026b-ee50-4fee-9b67-c21455fea853",
+        "baf7d7fe-f869-43d4-a2ae-4031737db4d8",
+        "37f2e542-c543-4b1e-8757-cd4bab8fc053",
+        "6304f61c-1e4f-47da-be11-a63f610d0aec",
+        "d8668fe3-254b-4bbe-89a7-e32dd2403bd6",
+        "8fb05c58-9b85-435d-b4fe-dde1e605e521",
+        "69febd08-7fd7-415e-914b-6e372be583c5",
+        "80cced6a-5ae5-49f6-b8e3-e70e114362b6"
+      ],
+      "settings": {
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 5,
+        "left_title": "RESTAURANTS AND CAFE PARTNERS",
+        "right_title": "Also available at"
+      }
+    },
+    "1681777290f3dda194": {
+      "type": "apps",
+      "blocks": {
+        "802b34e3-8c44-451b-83a3-e0fca6a78b13": {
+          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "heading_size": 20,
+            "feed_width": 100,
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "802b34e3-8c44-451b-83a3-e0fca6a78b13"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "b79520c5-e8b9-44d3-a05c-4eee38545502",
+    "slideshow",
+    "4ee6fe54-cba5-4499-b5dc-260224b4250c",
+    "acf8f5f2-b509-46d6-9f4c-f3555508026a",
+    "c72a943f-3702-4653-b593-f43033aa4002",
+    "795d526c-10f6-4816-89a6-4384f9865feb",
+    "9f86c8f8-67d9-44ac-ab70-5a056a038d40",
+    "c9f98d4a-f488-4b31-9b51-44b9d9c51f74",
+    "b4c4cb57-48be-4198-adae-8718a29e81f7",
+    "042dc1f0-4d71-4995-8281-82634917cb99",
+    "5cfda789-1414-48b2-8f30-fe54999897d4",
+    "0f99470a-3402-4a60-85af-e6e052bd3ddf",
+    "6133615d-9dd6-403b-a69f-f18dc7bdddcd",
+    "bd136bbb-4bff-4de1-b11e-0783142eb620",
+    "1681777290f3dda194"
+  ]
+}
