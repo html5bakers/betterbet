@@ -587,12 +587,20 @@ form button{ border-radius: 10px; }
 
 
 /*---------- Featured Collection ---------- */
+.ProductItem__Info{
+  text-align: center;
+  margin-top: 10px;
+}
 .ProductItem .ProductItem__Image{ border-radius: 10px; }
 .ProductItem__Title.Heading,
 .ProductItem__Price.Price{ text-transform: capitalize; }
 .ProductItem__Title.Heading{
   font-size: 1.3rem;
   margin: 0 0 7px;  
+}
+.product_section .ProductMeta__PriceList{
+  display: flex;
+  align-items: center;
 }
 .ProductItem__Price.Price.Price--compareAt{
   font-family: 'paralucentw00-mediumregular';
@@ -602,20 +610,12 @@ form button{ border-radius: 10px; }
   position: relative;
   top: -3px;
 }
-.productform_add_to_cart{
-  width: 100%;
-  position: relative;
-  margin: 10px 0 0;
-  overflow: hidden;
-}
-.ProductList .QuantitySelector__CurrentQuantity{ display: none; }
 .prod-grid-swatch{
   padding: 10px;
   overflow: auto;
   white-space: nowrap;
   min-height: 50px;
 }
-.prod-grid-swatch::-webkit-scrollbar{ display:none; }
 .prod-grid-swatch li,
 .product_section .SizeSwatch{
   display: inline-block;
@@ -630,15 +630,19 @@ form button{ border-radius: 10px; }
   text-transform: lowercase;
   border: solid 1px var(--text-color);
 }
-.ProductItem__Info{
-  text-align: center;
-  margin-top: 10px;
-}
 .prod-grid-swatch li.active,
 .product_section .SizeSwatch__Radio:checked+.SizeSwatch{
   border-color: var(--secondary-color);
   color: var(--secondary-color);
 }
+.productform_add_to_cart{
+  width: 100%;
+  position: relative;
+  margin: 10px 0 0;
+  overflow: hidden;
+}
+.ProductList .QuantitySelector__CurrentQuantity{ display: none; }
+.prod-grid-swatch::-webkit-scrollbar{ display:none; }
 .discount-price{  
   color: #fff;
   margin-left: 5px;
@@ -650,10 +654,7 @@ form button{ border-radius: 10px; }
   font-family: 'paralucentw00-mediumregular';
 }
 .product_section .discount-price{ padding: 3px 5px 4px; }
-.product_section .ProductMeta__PriceList{
-  display: flex;
-  align-items: center;
-}
+
 @media screen and (min-width: 640px){
   .ProductItem__Title.Heading{ margin:0 0 8px; }
   .productform_add_to_cart{ margin:20px 0 0; }
@@ -672,7 +673,6 @@ form button{ border-radius: 10px; }
 }
 @media screen and (max-width: 1007px){
   .featured-collections .ProductList--carousel .Carousel__Cell:first-child { margin-left: 5%; }
-  /*.featured-collections .ProductList--carousel{ padding-bottom: 0; }*/
 }
 @media screen and (min-width: 1140px){
   .ProductList--carousel .Carousel__Cell{ width: 33%; }
