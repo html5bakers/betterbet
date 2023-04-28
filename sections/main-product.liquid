@@ -453,20 +453,6 @@
                   </div> 
               </div>
             </div>
-            {% if product.metafields.custom.product_ingrediant_image.value %}
-            <ul class="product_specifications flex_always">
-              {%- assign i = -1 -%}
-              {%- for image in product.metafields.custom.product_ingrediant_image.value -%}
-                {%- assign i = i | plus: 1 -%}
-                {%- if image != blank and product.metafields.custom.product_ingrediants_heading.value[i] != blank -%}
-              <li class="flex_always">
-                <figure><img src="{{ image }}" alt=""/></figure>
-                <p>{{ product.metafields.custom.product_ingrediants_heading.value[i] }}</p>
-              </li>
-                  {%- endif -%}
-              {%- endfor -%}
-            </ul>
-            {% endif %}
             
             {% if product.metafields.custom.product_usps.value %}
             <ul class="product_specifications flex_always">
