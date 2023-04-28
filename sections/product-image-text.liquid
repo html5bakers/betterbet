@@ -18,22 +18,22 @@
       {% assign i = -1 %}
       {% for image in product.metafields.custom.image_with_text_image.value %}
         {% assign i = i | plus:1 %}
-      <div class="product_img_text_wrapper flex_always {{ product.metafields.custom.image_with_text_image_position.value[i] | handle }}">
-        {% if image != blank %}
-        <figure>
-          {{ image }}
-        </figure>
-        {% endif %}
-        <div class="product_img_text_desc">
-        {%- if product.metafields.custom.image_with_text_heading.value[i] != blank -%}
-          <h3 class="Heading">{{ product.metafields.custom.image_with_text_heading.value[i] }}</h3>
-        {%- endif -%}
-        {%- if product.metafields.custom.image_with_text_description.value[i] != blank -%}
-          <p>{{ product.metafields.custom.image_with_text_description.value[i] }}</p>
-        {%- endif -%}
-       </div>
-      </div>
-        {% endfor %}
+        <div class="product_img_text_wrapper flex_always {{ product.metafields.custom.image_with_text_image_position.value[i] | handle }}">
+          {% if image != blank %}
+          <figure>
+            {{ image }}
+          </figure>
+          {% endif %}
+          <div class="product_img_text_desc">
+            {%- if product.metafields.custom.image_with_text_heading.value[i] != blank -%}
+              <h3 class="Heading">{{ product.metafields.custom.image_with_text_heading.value[i] }}</h3>
+            {%- endif -%}
+            {%- if product.metafields.custom.image_with_text_description.value[i] != blank -%}
+              <p>{{ product.metafields.custom.image_with_text_description.value[i] }}</p>
+            {%- endif -%}
+         </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
