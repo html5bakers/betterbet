@@ -1,11 +1,11 @@
-<section class="Section Section--spacingNormal home_blog_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
+<section class="Section Section--spacingNormal custom_blog_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     {% if section.settings.title != blank %}
       <header class="SectionHeader SectionHeader--center text_center">
         <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}</h2>
       </header>
     {% endif %}
-    <div class="home_blog">
+    <div class="custom_blog">
       {% assign blog = blogs[section.settings.blog] %}
       {% for article in blog.articles limit:1 %}
       <div class="col_left">
@@ -16,9 +16,9 @@
               <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ article.image.alt | escape }}" data-media-id="{{ article.image.id }}" />
               
         </a></figure>
-        <div class="home_blog_left_desc">
-          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
+        <div class="custom_blog_left_desc">
+          <h3 class="Heading heading_small"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p class="content">{{ article.content | strip_html | truncatewords: 45 }}</p>
         <div class="blog-tag-list"><div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
         <div class="blog-tag-right">{{ article.published_at | date: "%d/%m/%Y" }}</div></div>
         </div>
@@ -26,9 +26,9 @@
       {% endfor %}
       <div class="col_right">
         {% for article in blog.articles offset:1 limit:2 %}
-        <div class="home_blog_right_list">
-          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
+        <div class="custom_blog_right_list">
+          <h3 class="Heading heading_small"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p class="content">{{ article.content | strip_html | truncatewords: 45 }}</p>
         <div class="blog-tag-list">
           <div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
           <div class="blog-tag-right">{{ article.published_at | date: "%d/%m/%Y" }}</div>
@@ -42,14 +42,8 @@
 
 {% schema %}
   {
-    "name": "Home Blog",
+    "name": "Custom Blog Posts",
     "settings": [
-      {
-        "type": "checkbox",
-        "id": "enabled_home_blog",
-        "label": "Show Home Blog",
-        "default": true
-      },
       {
         "type": "text",
         "id": "title",
@@ -63,7 +57,7 @@
     ],
     "presets": [
       {
-        "name": "Home Blog",
+        "name": "Custom Blog Posts",
         "category": "Blog"
       }
     ]

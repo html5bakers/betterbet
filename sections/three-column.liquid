@@ -41,10 +41,10 @@
             </div>
           {%- endif -%}
           {%- if block.settings.title != blank -%}
-            <h3>{{ block.settings.title }}</h3>
+            <h3 class="heading_small">{{ block.settings.title }}</h3>
           {%- endif -%}
           {%- if block.settings.desc != blank -%}
-            <p>{{ block.settings.desc }}</p>
+            <p class="content">{{ block.settings.desc }}</p>
           {%- endif -%}
         </div>
         {%- endfor -%}
@@ -53,10 +53,6 @@
     </div>
   </div>
 </section>
-
-
-
-
 
 {% schema %}
   {
@@ -119,9 +115,3 @@
     ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

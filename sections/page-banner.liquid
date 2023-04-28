@@ -1,0 +1,79 @@
+{% style %}
+  #section-{{ section.id }}{background:{{section.settings.bg_color}};}
+  #section-{{ section.id }} .sec_heading{color:{{section.settings.title_color}};}
+  #section-{{ section.id }} .SectionHeader__Description.Rte{color:{{section.settings.desc_color}};}
+{% endstyle %}
+
+<section class="Section page_banner_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
+  <div class="Container">
+    <header class="PageHeader">
+       <div class="SectionHeader SectionHeader--center">
+          {% if section.settings.title != blank %}
+            <h1 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}</h1>
+          {% else %}
+            <h1 class="SectionHeader__Heading Heading u-h1 sec_heading">
+              {% if template.name == "page" %}
+                {{ page.title }}
+              {% else if template == "blog" %}
+                {{- blog.title -}}
+              {% endif %}
+            </h1>
+          {% endif %}
+          
+          {% if section.settings.desc != blank %}
+            <div class="SectionHeader__Description Rte">
+              {{ section.settings.desc }}
+            </div>
+          {% endif %}
+      </div>
+    </header>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Page Banner",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#FFF2CC"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Heading Color",
+        "default": "#000"
+      },
+      {
+        "type": "textarea",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "type": "color",
+        "id": "desc_color",
+        "label": "Description Color",
+        "default": "#000"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Page Banner",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

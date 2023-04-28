@@ -5,15 +5,16 @@
      "arrows": false,
      "infinite": true,
      "centerMode": true,
-     "centerPadding": "20%",
+     "centerPadding": "40%",
      "slidesToShow": 1,
      "slidesToScroll": 1,
      "autoplay": true,
-     "autoplaySpeed": 2000,
-     "speed": 8000,
+     "autoplaySpeed": 3000,
+     "speed": 19000,
      "pauseOnHover": false,
      "cssEase": "linear",
-      "responsive": [{"breakpoint":992,"settings":{"centerPadding": "10%"}}]
+     "variableWidth": true,
+      "responsive": [{"breakpoint":992,"settings":{"centerPadding": "25%"}}]
      }'>
       {%- for block in section.blocks -%}
         {%- if block.settings.title != blank -%}
@@ -59,9 +60,3 @@
     ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

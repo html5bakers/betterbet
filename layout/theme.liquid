@@ -29,14 +29,12 @@
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
 
-    {{ 'jquery.js' | asset_url | script_tag }}
-    
-
     <script>
       {%- if request.page_type == 'policy' -%}
         document.addEventListener('DOMContentLoaded', function() {
-          document.querySelector('.shopify-policy__title').classList.add('PageHeader', 'Heading', 'u-h1');
-          document.querySelector('.shopify-policy__body').classList.add('Rte');
+          document.querySelector('.shopify-policy__title').classList.add('PageHeader', 'Heading', 'u-h1', 'SectionHeader');
+          document.querySelector('.shopify-policy__title h1').classList.add('sec_heading');
+          document.querySelector('.shopify-policy__body').classList.add('Rte', 'PageContent', 'Container');
         });
       {%- endif -%}
 
@@ -100,7 +98,7 @@
         }, 250)
       {% endif %}
     </script>
-
+    <script src="{{ 'jquery-min.js' | asset_url }}"></script>
     <script src="{{ 'lazysizes.min.js' | asset_url }}" async></script>
 
     {%- if template == 'customers/addresses' -%}
@@ -185,7 +183,6 @@
       {% render 'cart-drawer' %}
     {%- endif -%}
 
-    
     <div class="PageContainer">
       {% section 'announcement' %}
       {% section 'header' %}
@@ -193,9 +190,15 @@
       <main id="main" role="main">
         {{ content_for_layout }}
       </main>
-
+          
       {% section 'footer' %}
-      {% include 'recurpay' %}
-    </div>
+
+      {% if template contains 'product' %}
+        {% if product.type contains 'subscribe' or settings.show_recurpay_widget %}
+          {% include 'recurpay' %}
+        {% endif %}
+      {% endif %}
+    
+    </div>      
   </body>
 </html>

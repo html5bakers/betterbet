@@ -39,7 +39,7 @@
   })();
 </script>
 
-<section class="Product product_section Product--{{ section.settings.image_size }} Container" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
+<section class="Product Product--{{ section.settings.image_size }} product_section Container" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
   <div class="Product__Wrapper">
     {%- capture action_list_items -%}
       {%- if section.settings.enable_image_zoom -%}
@@ -174,7 +174,7 @@
                         {{- nav_item_badge -}}
                       </a>
                     {%- else -%}
-                      <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="slide Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
+                      <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
                         <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
@@ -305,73 +305,15 @@
                 {%- when 'product_meta' -%}
                   {%- render 'product-meta', form: form, block: block, product: product -%}
 
-                {%- when 'price' -%}
-                  {%- if product.template_suffix != 'coming-soon' -%}
-                    <div class="ProductMeta__PriceList Heading">
-                      {%- if settings.currency_code_enabled -%}
-                        {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
-                          <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
-                          <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4">{{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}</span>
-                          <span class="discount-price">Save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
-                        {%- else -%}
-                          <span class="ProductMeta__Price Price Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
-                        {%- endif -%}
-                      {%- else -%}
-                        {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
-                          <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money }}</span>
-                          <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
-                          <span class="discount-price">Save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
-                        {%- else -%}
-                          <span class="ProductMeta__Price Price Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money }}</span>
-                        {%- endif -%}
-                      {%- endif -%}
-                    </div>
-
-                    <div class="ProductMeta__UnitPriceMeasurement" style="display: {%- if product.selected_or_first_available_variant.unit_price_measurement -%}block{% else %}none{% endif %}">
-                      <div class="UnitPriceMeasurement Heading u-h6 Text--subdued">
-                        <span class="UnitPriceMeasurement__Price">{{ product.selected_or_first_available_variant.unit_price | money }}</span>
-                        <span class="UnitPriceMeasurement__Separator">/ </span>
-                        <span class="UnitPriceMeasurement__ReferenceValue" style="display: {% if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 %}inline{% else %}none{% endif %}">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}</span>
-                        <span class="UnitPriceMeasurement__ReferenceUnit">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}</span>
-                      </div>
-                    </div>
-                  {%- endif -%}
-                
-                  {%- if block.settings.show_taxes_included -%}
-                    {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-                      <p class="ProductMeta__TaxNotice Rte">
-                        {%- if shop.taxes_included -%}
-                          {{ 'product.general.include_taxes' | t }}
-                        {%- endif -%}
-                
-                        {%- if shop.shipping_policy.body != blank -%}
-                          {{ 'product.general.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                        {%- endif -%}
-                      </p>
-                    {%- endif -%}
-                  {%- endif -%}
-                
                 {%- when 'description' -%}
                   {%- if product.description != blank -%}
                     <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
                       <div class="Rte">
-                        {% comment %}{{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}{% endcomment %}
-                    {{- product.description | strip_html | truncatewords: 50 -}}
-                        {% comment %} Nutrition Information {% endcomment %}
-                        {% if product.metafields.custom.nutrition_information_image != blank %}
-                          <a href="#nutrition_information" data-lity>Nutrition Information</a>
-                          <div id="nutrition_information" class="lity-hide lity_popup_wrapper" style="background:#fff">
-                            <button class="lity-close" type="button" aria-label="Close (Press escape to close)" data-lity-close="">×</button>
-                            <div class="lity_popup">
-                                <figure><img src="{{ product.metafields.custom.nutrition_information_image | img_url: 'master' }}" /></figure>
-                            </div>
-                          </div>
-                        {% endif %}
-                    
+                        {{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}
                       </div>
                     </div>
                   {%- endif -%}
-               
+              
                 {%- when 'share_buttons' -%}
                   <div class="ProductMeta__ShareButtons hidden-pocket" {{ block.shopify_attributes }}>
                     <span class="ProductMeta__ShareTitle Heading Text--subdued u-h7">{{ 'product.form.share' | t }}</span>
@@ -426,22 +368,13 @@
                     {%- endif -%}
                   </p>
 
-
-                {% comment %} 
-                Subscription Button 'subscription-product' 
-                {% if product.template_suffix == 'product-free-shipping' %}
-                  <div id="recurpay-pdp-widget"></div>
-                  helkk
-                {% endif %}
-                {% endcomment %}
-                
                 {%- when 'buy_buttons' -%}
                   {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
                     {%- assign use_primary_button = true -%}
                   {%- else -%}
                     {%- assign use_primary_button = false -%}
                   {%- endif -%}
-                
+
                   <div class="ProductForm__BuyButtons" {{ block.shopify_attributes }}>
                     {%- if block.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
                       <style>
@@ -536,6 +469,7 @@
             {% endif %}
           </div>
           
+  
           {%- if section.settings.stack_images and product_aside != blank and media_count > 0 -%}
             <div class="Product__QuickNav hidden-pocket">
               <div class="Product__QuickNavWrapper">
@@ -624,19 +558,6 @@ This is the root container for the zoom functionality. Must not be removed, as o
           "info": "To display a rating, add a product rating app. [Learn more](https://help.shopify.com/en/manual/products/product-reviews/installation)",
           "default": false
         },
-        {
-          "type": "checkbox",
-          "id": "show_taxes_included",
-          "label": "Show price taxes notice",
-          "default": false
-        }
-      ]
-    },
-    {
-      "type": "price",
-      "name": "Product Price",
-      "limit": 1,
-      "settings": [
         {
           "type": "checkbox",
           "id": "show_taxes_included",

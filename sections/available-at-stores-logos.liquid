@@ -1,31 +1,10 @@
-{%- capture flickity_options -%}
-{
-  "prevNextButtons": false,
-  "wrapAround": true,
-  "dragThreshold": 15,
-  "pauseAutoPlayOnHover": false,
-  "autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %},
-  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
-}
-{%- endcapture -%}
-{%- capture flickity_options1 -%}
-{
-  "prevNextButtons": false,
-  "wrapAround": true,
-  "dragThreshold": 15,
-  "pauseAutoPlayOnHover": false,
-  "autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %},
-  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
-}
-{%- endcapture -%}
-
 <section class="Section Section--spacingNormal availability_at_stores" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="available_logo">
       <div class="available_logo_left text_center">
         {% if section.settings.left_title != blank %}
           <header class="SectionHeader SectionHeader--center text_center">
-            <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.left_title }}</h2>
+            <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.left_title }}</h2>
           </header>
         {% endif %}
         <ul class="available_logo_slider slick"  data-slick='{
@@ -53,7 +32,7 @@
       <div class="available_logo_right text_center">
         {% if section.settings.right_title != blank %}
           <header class="SectionHeader SectionHeader--center text_center">
-            <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.right_title }}</h2>
+            <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.right_title }}</h2>
           </header>
         {% endif %}
         <ul class="available_logo_slider slick"  data-slick='{
@@ -82,19 +61,10 @@
   </div>
 </section>
 
-
-
-
 {% schema %}
   {
-    "name": "Available Logo",
+    "name": "Available At Stores Logos",
     "settings": [
-      {
-        "type": "checkbox",
-        "id": "enabled_available_logo",
-        "label": "Show Available Logo",
-        "default": true
-      },
       {
         "type": "checkbox",
         "id": "show_arrow",
@@ -154,15 +124,9 @@
     ],
     "presets": [
       {
-        "name": "Available Logo",
+        "name": "Available At Stores Logos",
         "category": "Image"
       }
     ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

@@ -3986,7 +3986,7 @@
           this.intersectionObserver = new IntersectionObserver(this._reveal.bind(this), {
             threshold: 0.3
           });
-          Dom.nodeListToArray(this.element.querySelectorAll('.ProductList .ProductItem, .ArticleList .ArticleItem')).forEach(function (item) {
+          Dom.nodeListToArray(this.element.querySelectorAll('.ProductList .ProductItem, .ArticleList .ArticleItem, .animate')).forEach(function (item) {
             _this.intersectionObserver.observe(item);
           });
         }
@@ -7108,10 +7108,3 @@
   })();
 
 })));
-
-
-
-
-
-
-

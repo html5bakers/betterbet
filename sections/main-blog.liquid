@@ -1,9 +1,11 @@
-<section class="Section Section--spacingNormal home_blog_section blogs" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="article-list">
+<section class="Section Section--spacingNormal blogs_list" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="article-list">
   <div class="Container">
+     {% comment %}
       <header class="SectionHeader SectionHeader--center text_center">
         <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{- blog.title -}}</h2>
       </header>
-    <div class="home_blog featured_blog_list">
+    {% endcomment %}
+    <div class="custom_blog featured_blog_list">
       {%- for article in blog.articles limit:1 -%}
       <div class="col_left">
         <figure><a href="{{ article.url }}">
@@ -13,9 +15,9 @@
               <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ article.image.alt | escape }}" data-media-id="{{ article.image.id }}" />
               
         </a></figure>
-        <div class="home_blog_left_desc">
-          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
+        <div class="custom_blog_left_desc">
+          <h3 class="Heading heading_small"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p class="content">{{ article.content | strip_html | truncatewords: 45 }}</p>
         <div class="blog-tag-list"><div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
         <div class="blog-tag-right">{{ article.published_at | date: "%d/%m/%Y" }}</div></div>
         </div>
@@ -23,9 +25,9 @@
       {% endfor %}
       <div class="col_right">
         {%- for article in blog.articles offset:1 limit:2 -%}
-        <div class="home_blog_right_list">
-          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
+        <div class="custom_blog_right_list">
+          <h3 class="Heading heading_small"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <p class="content">{{ article.excerpt_or_content | strip_html | truncatewords: 45 }}</p>
         <div class="blog-tag-list">
           <div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
           <div class="blog-tag-right">{{ article.published_at | date: "%d/%m/%Y" }}</div>
@@ -34,24 +36,28 @@
         {% endfor %}
       </div>
     </div>
-    <div class="home_blog blog_list_section">
-       <div class="col_right">
-        {%- for article in blog.articles offset:3 -%}
-        <div class="home_blog_right_list">
-          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-          <p>{{ article.content | strip_html | truncatewords: 45 }}</p>
-        <div class="blog-tag-list">
-          <div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
-          <div class="blog-tag-right">{{ article.published_at | date: "%d/%m/%Y" }}</div>
+    {% if blog.articles_count < 3 %}
+      <div class="custom_blog blog_list_section">
+         <div class="col_right">
+          {%- for article in blog.articles offset:3 -%}
+          <div class="custom_blog_right_list">
+            <h3 class="Heading heading_small"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <p class="content">{{ article.excerpt_or_content | strip_html | truncatewords: 45 }}</p>
+          <div class="blog-tag-list">
+            <div class="blog-tag-left">{% for tag in article.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+            <div class="blog-tag-right">{{ article.published_at | date: "%d/%m/%Y" }}</div>
+          </div>
+          </div>
+          {% endfor %}
         </div>
-        </div>
-        {% endfor %}
       </div>
-    </div>
+    {% endif %}
   </div>
 </section>
-{% comment %}
-<div id="section-{{ section.id }}" class="Section" data-section-id="{{ section.id }}" data-section-type="article-list">
+
+
+
+{% comment %} <div id="section-{{ section.id }}" class="Section" data-section-id="{{ section.id }}" data-section-type="article-list">
   {%- if blog.articles_count == 0 -%}
     <div class="EmptyState">
       <div class="Container">
@@ -152,7 +158,6 @@
     </div>
   {%- endif -%}
 </div>
-{% endcomment %}
 
 <style>
   #section-{{ section.id }} .ImageHero,
@@ -176,7 +181,7 @@
       }
     }
   {%- endif -%}
-</style>
+</style> {% endcomment %}
 
 {% schema %}
 {

@@ -1,14 +1,14 @@
-{% if section.settings.enabled_bg_text %}
 {% style %}
   #section-{{ section.id }}{
     {% if section.settings.bg_image != blank %}
-      background:url({{ section.settings.bg_image | img_url: 'master' }}) no-repeat center top {{ section.settings.bg_color }};
-      background-size:200%;
+      background: url({{ section.settings.bg_image | img_url: 'master' }}) no-repeat center top {{ section.settings.bg_color }};
+      background-size: cover;
     {% else %}
       background:{{ section.settings.bg_color }};
     {% endif %}
     }
 {% endstyle %}
+
 <section class="Section text_with_background_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="text_with_background_wrapper">
@@ -18,7 +18,7 @@
         <span>{{ section.settings.sub_title }}</span>
         {%- endif -%}
         {%- if section.settings.title != blank -%}
-        <h2>{{ section.settings.title }}</h2>
+        <h2 class="Heading">{{ section.settings.title }}</h2>
         {%- endif -%}
       </div>
       {%- endif -%}
@@ -28,10 +28,10 @@
         {%- endif -%}
         <div class="button_wrapper">
           {% if section.settings.btn_link_01 != blank and section.settings.btn_title_01 != blank %}
-            <a href="{{ section.settings.btn_link_01 }}" class="btn">{{ section.settings.btn_title_01 }}</a>
+            <a href="{{ section.settings.btn_link_01 }}" class="btn Button"><span>{{ section.settings.btn_title_01 }}</span></a>
           {% endif %}
           {% if section.settings.btn_link_02 != blank and section.settings.btn_title_02 != blank %}
-            <a href="{{ section.settings.btn_link_02 }}" class="btn">{{ section.settings.btn_title_02 }}</a>
+            <a href="{{ section.settings.btn_link_02 }}" class="btn Button"><span>{{ section.settings.btn_title_02 }}</span></a>
           {% endif %}
         </div>
       </div>
@@ -41,22 +41,12 @@
   <div class="bg-shape">{{ section.settings.shape }}</div>
   {%- endif -%}
 </section>
-{% endif %}
-
-
-
 
 {% schema %}
   {
     "name": "Text With Background",
     "class": "Section--spacingNormal",
     "settings": [
-      {
-        "type": "checkbox",
-        "id": "enabled_bg_text",
-        "label": "Show Background Text",
-        "default": true
-      },
       {
         "type": "color",
         "id": "bg_color",
@@ -116,9 +106,3 @@
     ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

@@ -28,7 +28,13 @@
                 {%- assign linklist = linklists[block.settings.menu] -%}
 
                 {%- if linklist != empty -%}
-                  <h2 class="Footer__Title Heading u-h6">{{ linklist.title | escape }}</h2>
+                  <h2 class="Footer__Title Heading u-h6">
+                    {% if block.settings.custom_menu_title != blank %}
+                      {{ block.settings.custom_menu_title }}
+                    {% else %}
+                      {{ linklist.title | escape }}
+                    {% endif %}
+                  </h2>
 
                   <ul class="Linklist">
                     {%- for link in linklist.links -%}
@@ -150,10 +156,12 @@
       {%- endif -%}
 
       <div class="Footer__Copyright">
-        <a href="{{ routes.root_url }}" class="Footer__StoreName Heading u-h7 Link Link--secondary">© {{ shop.name }}</a>
+        <a href="{{ routes.root_url }}" class="Footer__StoreName Heading u-h7 Link Link--secondary">©{{ 'now' | date: "%Y" }} SAP Agrotech Private Limited.</a>
         <!--<p class="Footer__ThemeAuthor">{{ powered_by_link }}</p> -->
       </div>
-
+      <div class="u-h7 Footer__Content">
+        Designed by <a href="/pages/site-credit" class="Link Link--primary">HTML5Bakers</a>
+      </div>
       {%- if section.settings.show_payment_methods -%}
         {%- capture payment_methods -%}
           {%- for type in shop.enabled_payment_types -%}
@@ -279,6 +287,11 @@
           "id": "menu",
           "label": "Menu",
           "info": "This menu won't show dropdown items."
+        },
+        {
+          "type": "text",
+          "id": "custom_menu_title",
+          "label": "Custom Menu Title"
         }
       ]
     },

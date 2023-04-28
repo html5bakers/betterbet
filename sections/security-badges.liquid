@@ -1,8 +1,7 @@
-
-  {%- style -%}
-    #section-{{ section.id }}{background:{{ section.settings.bg_color }};}
-    #section-{{ section.id }} p{color:{{ section.settings.text_color }};}
-  {%- endstyle -%}
+{%- style -%}
+  #section-{{ section.id }}{background:{{ section.settings.bg_color }};}
+  #section-{{ section.id }} p{color:{{ section.settings.text_color }};}
+{%- endstyle -%}
 <section class="Section security_badges_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}"><!-- data-section-type="security-badges"-->
   <div class="Container">
     <div class="security_badges">
@@ -10,7 +9,7 @@
       <div class="security_badges_wrapper">
         {{ block.settings.icon }}
         {%- if block.settings.title != blank -%}
-        <p>{{ block.settings.title }}</p>
+          <p class="content">{{ block.settings.title }}</p>
         {%- endif -%}
       </div>
       {%- endfor -%}
@@ -54,7 +53,7 @@
           {
             "type": "textarea",
             "id": "icon",
-            "label": "Icon"
+            "label": "Icon (SVG Code)"
           },
           {
             "type": "text",

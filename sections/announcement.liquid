@@ -8,18 +8,19 @@
            "arrows": false,
            "infinite": true,
            "centerMode": true,
-           "centerPadding": "20%",
+           "centerPadding": "40%",
            "slidesToShow": 1,
            "slidesToScroll": 1,
            "autoplay": true,
-           "autoplaySpeed": 2000,
-           "speed": 8000,
+           "autoplaySpeed": 3000,
+           "speed": 19000,
            "pauseOnHover": false,
            "cssEase": "linear",
-            "responsive": [{"breakpoint":1199,"settings":{"centerMode": false,"centerPadding": "20%"}}]
-           }'> <!--Carousel -->
+           "variableWidth": true,
+            "responsive": [{"breakpoint":992,"settings":{"centerPadding": "25%"}}]
+           }'>
              {% for block in section.blocks %}
-               <div class="slide"> <!-- Carousel__Cell-->
+               <div class="slide">
                  <p class="AnnouncementBar__Content Heading">
                     {%- if block.settings.link -%}
                       <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
@@ -57,7 +58,7 @@
   {%- endunless -%}
 {%- endif -%}
 {% comment %}
-   data-flickity='{ 
+  data-flickity='{ 
             "cellAlign": "left",
             "contain": true,
             "wrapAround": true,

@@ -1,4 +1,4 @@
-<div class="store-availability-container" data-section-id="{{ section.id }}"> <!-- data-section-type="store-availability" -->
+<div class="store-availability-container" data-section-id="{{ section.id }}" data-section-type="store-availability">
   {%- assign pick_up_availabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
   {%- if pick_up_availabilities.size > 0 -%}

@@ -1,3 +1,4 @@
+
 {{ 'recurpay.scss.css' | asset_url | stylesheet_tag }}
 <script>
   (function() {
@@ -44,7 +45,7 @@
           pdpSelector = "#recurpay-pdp-widget",
           subscriptionSelector = "#recurpay-manage-subscriptions",
           checkoutSelector = '[href="/checkout"], form[action="/cart"] button[type="submit"], form[action="/cart"] input[type="submit"], form[action="/checkout"] input[type="submit"], form[action="/checkout"] button[type="submit"], button.ucd-checkout-btn',
-          atcSelector = 'form[action="/cart/add"] button[type="submit"],form[action="/cart/add"] input[type="submit"],.ProductForm__AddToCart',
+          atcSelector = 'form[action="/cart/add"] button[type="submit"],form[action="/cart/add"] input[type="submit"],.ProductForm__QuantitySelector',
           buynowSelector = 'form[action="/cart/add"] .shopify-payment-button';
       
       function randomStrings() {
@@ -270,8 +271,8 @@
 
         pdpTemplate += '<div class="recurpay__widget" data-recurpay-widget><div class="new__label"><span class="new__label--text">New</span></div><div class="recurpay__content">'
         pdpTemplate += '<label class="recurpay__label"><div class="recurpay__label--text"><input type="checkbox" checked="checked" class="recurpay__checkbox" autocomplete="off" data-subscribe-input /><span class="recurpay__checkmark"></span>'
-        pdpTemplate += 'Subscribe Now and Save <br/> <span style="font-size:12px">All subscription discounts will be applicable from checkout</span></div><img src="https://cdn.shopify.com/s/files/1/0265/7687/9691/files/image.svg?v=1600689960" class="recurpay__label--img">'
-        pdpTemplate += '</label><div class="recurpay__plans" style="display:block">'
+        pdpTemplate += 'Subscribe Now and Save <br/> <span style="font-size:12px">All subscription discounts will be applicable from checkout</span></div><svg class="Icon Icon--select-arrow-right " role="presentation" viewBox="0 0 11 18"><path d="M1.5 1.5l8 7.5-8 7.5" stroke-width="2" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square"></path></svg><img src="https://cdn.shopify.com/s/files/1/0265/7687/9691/files/image.svg?v=1600689960" class="recurpay__label--img">'
+        pdpTemplate += '</label><div class="recurpay__plans" style="display:none">'
         pdpTemplate += '<div data-recurpay-plans>'+tabHTML+GetPlans+'</div><div class="recurpay__action"><button type="button" data-recurpay-action>Subscribe Now</button></div>'
         pdpTemplate += '</div></div></div>';
         

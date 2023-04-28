@@ -1,0 +1,50 @@
+<section class="Section Section--spacingNormal about_team_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
+  <div class="Container">
+    <div class="about_team">
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "About Team",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Team",
+        "name": "Team",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "textarea",
+            "id": "desc",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

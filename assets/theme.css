@@ -1078,7 +1078,7 @@ body {
   font-style: var(--text-font-style);
   color: var(--text-color);
   background: var(--background);
-  line-height: 1.65;
+  line-height: 1.4;
 }
 
 .Link {
@@ -1412,7 +1412,7 @@ body {
 
   .features--heading-large .u-h6,
   .features--heading-large .Rte h6 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .features--heading-large .u-h7 {
@@ -1705,8 +1705,8 @@ input.spr-button-primary[disabled],
   height: 45px;
   border: none;
   border-radius: 50%;
-  background: var(--button-text-color);
-  color: var(--button-background);
+  color: var(--button-text-color);
+  background: var(--button-background);
   cursor: pointer;
   text-align: center;
   z-index: 1;
@@ -4827,13 +4827,15 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
  */
 .PageHeader {
   position: relative;
-  margin: 35px 0;
+  /*margin: 35px 0;*/
+  padding: 35px 0;
 }
 
 .PageHeader--withBackground {
   display: flex;
   margin: 0;
   width: 100%;
+  /*min-height: 450px;*/
   min-height: 250px;
   flex-direction: column;
   justify-content: center;
@@ -4907,7 +4909,8 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 @media screen and (min-width: 641px) {
   .PageHeader {
-    margin: 50px 0;
+    /*margin: 50px 0;*/
+    padding: 80px 0;
   }
 
   .PageHeader--withBackground {
@@ -4927,8 +4930,12 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
   @supports (--css: variables) {
     .PageHeader--small.PageHeader--withBackground {
+      /*
       min-height: calc(350px + var(--header-height) * 0);
       min-height: calc(350px + var(--header-height) * var(--header-is-transparent, 0));
+      */
+      min-height: calc(320px + var(--header-height) * 0);
+      min-height: calc(320px + var(--header-height) * var(--header-is-transparent, 0));
     }
   }
 
@@ -5000,8 +5007,8 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
   @supports (--css: variables) {
     .PageHeader--small.PageHeader--withBackground {
-      min-height: calc(320px + var(--header-height) * 0);
-      min-height: calc(320px + var(--header-height) * var(--header-is-transparent, 0));
+      min-height: calc(550px + var(--header-height) * 0);
+      min-height: calc(550px + var(--header-height) * var(--header-is-transparent, 0));
     }
   }
 
@@ -5478,9 +5485,9 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out, -webkit-text-decoration-color 0.2s ease-in-out;
 }
 .Rte a:not(.Button):hover {
-  color: var(--text-color);
-  -webkit-text-decoration-color: rgba(var(--text-color-rgb), 0.6);
-          text-decoration-color: rgba(var(--text-color-rgb), 0.6);
+  color: var(--primary-color);
+  -webkit-text-decoration-color: rgba(var(--primary-color-rgb), 0.6);
+          text-decoration-color: rgba(var(--primary-color-rgb), 0.6);
 }
 .Rte p:not(:last-child),
 .Rte ul:not(:last-child),
@@ -5594,6 +5601,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 
 /* When a spacing is applied to a bordered section, as it is isolated, we use padding, otherwise margin */
 .Section--spacingNormal {
+  /*margin: 50px 0;*/
   padding: 30px 0;
 }
 
@@ -5603,7 +5611,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 .shopify-section--bordered > .Section--spacingNormal {
- /* padding: 50px 0;*/
+  padding: 30px 0;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -5616,7 +5624,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 .SectionHeader:not(:only-child) {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .SectionHeader--center {
@@ -5711,7 +5719,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
 
   .SectionFooter {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }
 .TableWrapper {
@@ -6553,16 +6561,16 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
 
   .CartItem__Title {
-    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 12px));
+    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 13px));
   }
 
   .CartItem__Meta,
   .CartItem__LinePriceList {
-    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 11px));
+    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 12px));
   }
 
   .CartItem__Remove {
-    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 9px));
+    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 10px));
   }
 
   .CartItem__Actions {
@@ -7250,7 +7258,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
 
   .ProductItem__Info {
-    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 13px));
+    font-size: calc(var(--base-text-font-size) - (var(--default-text-font-size) - 19px));
   }
 
   .features--heading-uppercase .ProductItem__Info {
@@ -7404,7 +7412,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 
   .ProductList--grid[data-desktop-count="4"] > .Grid__Cell,
   .ProductList--grid[data-desktop-count="3"] > .Grid__Cell {
-    padding-left: calc(10px + var(--horizontal-spacing-four-products-per-row));
+    padding-left: var(--horizontal-spacing-four-products-per-row);
     margin-bottom: var(--vertical-spacing-four-products-per-row);
   }
 
@@ -7780,7 +7788,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 
 .Footer .footer_upper{
   padding: 34px 0;
-  /*background: var(--footer-background);*/
+  background: var(--footer-background);
   color: var(--footer-text-color);
 }
 
@@ -8196,7 +8204,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
 
   .Header:not(.Header--sidebar) .Header__Wrapper {
-    padding: 0 50px;
+    padding: 18px 50px;
   }
 
   .Header__Localization {
@@ -9540,7 +9548,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 .ProductMeta__PriceList {
-  margin-top: 29px;
+  margin-top: 15px;
 }
 
 .ProductMeta__Price.Price--compareAt {
@@ -11380,33 +11388,3 @@ shopify-payment-terms {
     margin-top: 65px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,14 +1,3 @@
-{%- capture flickity_options -%}
-{
-  "prevNextButtons": false,
-  "wrapAround": true,
-  "dragThreshold": 15,
-  "pauseAutoPlayOnHover": false,
-  "autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %},
-  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
-}
-{%- endcapture -%}
-
 <section class="Section Section--spacingNormal featured_logo_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="featured_logo">
@@ -23,25 +12,25 @@
        "dots": true,
        "arrows": false,
        "draggable": true,
-       "slidesToShow": 4,
+       "slidesToShow": 6,
        "slidesToScroll": 1,
-        "autoPlay": true,
-        "autoplaySpeed": 2000,
+       "autoplay": true,
+       "autoplaySpeed": 2000,
        "responsive": [{"breakpoint":1025,"settings":{"slidesToShow": 3,
        "slidesToScroll": 1,"dots": true}},{"breakpoint":600,"settings":{"slidesToShow": 2,
        "slidesToScroll": 1, "dots": true}}]
        }'>
         {% for block in section.blocks %}
           {% if block.settings.logo != blank %}
-        <li class="slide"><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
-        
-      {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.logo -%}{%- endcapture -%}
-
-          {%- assign image_url = block.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-              <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.logo.alt | escape }}" data-media-id="{{ block.settings.logo.id }}" />
-            
-            {% if block.settings.link != blank %}</a>{% endif %}</figure></li>
-            {% endif %}
+            <li class="slide">
+              <figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
+                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.logo -%}{%- endcapture -%}
+                {%- assign image_url = block.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.logo.alt | escape }}" data-media-id="{{ block.settings.logo.id }}" />
+                {% if block.settings.link != blank %}</a>{% endif %}
+              </figure>
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </div>
@@ -52,14 +41,8 @@
 
 {% schema %}
   {
-    "name": "Featured Logo",
-    "settings": [      
-      {
-        "type": "checkbox",
-        "id": "enabled_featured_logo",
-        "label": "Show Featured Logo",
-        "default": true
-      },
+    "name": "Featured Logos",
+    "settings": [
       {
         "type": "text",
         "id": "title",
@@ -108,15 +91,9 @@
     ],
     "presets": [
       {
-        "name": "Featured Logo",
+        "name": "Featured Logos",
         "category": "Image"
       }
     ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

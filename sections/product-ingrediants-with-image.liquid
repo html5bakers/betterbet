@@ -1,12 +1,16 @@
 {%- if product.metafields.custom.ingrediant_with_image_image != blank and product.metafields.custom.ingrediant_with_image_heading != blank -%}
   {% style %}
-    #section-{{ section.id }}{
-      background:{{ section.settings.bg_color }};
-      padding-top: 50px;
+    .product-ingrediants-main{
+      {% unless section.settings.padding_top == 0 %}
+        padding-top: 50px;
+      {% endunless %}
       padding-bottom: 50px;
   }
-  @media(min-width:992px){
     #section-{{ section.id }}{
+      background:{{ section.settings.bg_color }};
+    }
+  @media(min-width:992px){
+    .product-ingrediants-main{
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
@@ -26,11 +30,25 @@
           {% assign i = i | plus:1 %}
           {% if image != blank and product.metafields.custom.ingrediant_with_image_heading.value[i] != blank %}
         <div class="product_ingrediants_image_wrap">
-          <h3>{{ product.metafields.custom.ingrediant_with_image_heading.value[i] }}</h3>
+          <h3>
+            {% if product.metafields.custom.ingrediant_with_image_links.value[i] != blank %}
+            <a href="{{ product.metafields.custom.ingrediant_with_image_links.value[i] }}">
+              {% endif %}
+            {{ product.metafields.custom.ingrediant_with_image_heading.value[i] }}
+            {% if product.metafields.custom.ingrediant_with_image_links.value[i] != blank %}
+            </a>
+            {% endif %}
+          </h3>
           <figure>{%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: image -%}{%- endcapture -%}
 
           {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-              <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}" data-media-id="{{ image.id }}" />
+            {% if product.metafields.custom.ingrediant_with_image_links.value[i] != blank %}
+              <a href="{{ product.metafields.custom.ingrediant_with_image_links.value[i] }}">
+              {% endif %}
+            <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}" data-media-id="{{ image.id }}" />
+             {% if product.metafields.custom.ingrediant_with_image_links.value[i] != blank %}
+              </a>
+            {% endif %}
                 </figure>
         </div>
             {% endif %}
@@ -47,6 +65,7 @@
 {% schema %}
   {
     "name": "Product Ingrediants Image",
+    "class": "product-ingrediants-main",
     "settings": [
       {
         "type": "header",

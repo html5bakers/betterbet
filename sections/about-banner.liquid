@@ -1,0 +1,91 @@
+{% style %}
+  #section-{{ section.id }}{background:{{ section.settings.bg_color }};}
+  #section-{{ section.id }} h1{color:{{ section.settings.title_color }};}
+  #section-{{ section.id }} p{color:{{ section.settings.desc_color }};}
+{% endstyle %}
+
+<section class="Section Section--spacingNormal about_banner_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
+  <div class="Container">
+    <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+      <div class="col-left">
+      {% if section.settings.title != blank %}
+      <h1 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title }}</h1>
+      {% else %}
+      <h1 class="SectionHeader__Heading Heading u-h1">{{ page.title }}</h1>
+      {% endif %}
+      </div>
+      {% if section.settings.desc != blank %}
+        <div class="col-right">
+      <p>{{ section.settings.desc }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </header>
+  </div>
+</section>
+{% if section.settings.badge_image != blank %}
+<div class="slideshow_badge about_badge Container">
+    <div class="badge_inner">
+      <span class="badge_text">
+  {{ section.settings.badge_image }}
+        
+      </span>
+    </div>
+  </div>
+  {% endif %}
+
+{% schema %}
+  {
+    "name": "About Us Banner",
+    "class": "about-main-banner",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Banner"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Heading Color"
+      },
+      {
+        "type": "textarea",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "type": "color",
+        "id": "desc_color",
+        "label": "Description Color"
+      },
+      {
+        "type": "textarea",
+        "id": "badge_image",
+        "label": "Badge Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Banner",
+        "category": "Banner"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

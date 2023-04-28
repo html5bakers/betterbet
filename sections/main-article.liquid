@@ -69,7 +69,7 @@
           </div>
         {%- endif -%}
 
-        <h1 class="Article__Title Heading u-h1">{{ article.title }}</h1>
+        <h1 class="Article__Title Heading u-h1 heading_small">{{ article.title }}</h1>
       </header>
 
       <div class="Article__Body Rte">
@@ -183,7 +183,7 @@
             <p class="Form__Hint">{{ 'blog.comments.approval_notice' | t }}</p>
           {%- endif -%}
 
-          <button type="submit" class="Form__Submit Button Button--primary">{{ 'blog.comments.submit' | t }}</button>
+          <button type="submit" class="Form__Submit Button Button--primary"><span>{{ 'blog.comments.submit' | t }}</span></button>
         {%- endform -%}
       </div>
     {%- endif -%}
