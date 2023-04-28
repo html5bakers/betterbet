@@ -473,14 +473,14 @@
               {%- assign i = -1 -%}
               {%- for image in product.metafields.custom.product_usps.value -%}
                 {%- assign i = i | plus: 1 -%}
-                {%- if image != blank and product.metafields.custom.product_ingrediants_heading.value[i] != blank -%}
+                {%- if image != blank and product.metafields.custom.product_usps_heading.value[i] != blank -%}
               <li class="flex_always">
                 <figure>
                   {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: image -%}{%- endcapture -%}
                   {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
                   <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}" data-media-id="{{ image.id }}" />
                 </figure>
-                <p>{{ product.metafields.custom.product_ingrediants_heading.value[i] }}</p>
+                <p>{{ product.metafields.custom.product_usps_heading.value[i] }}</p>
               </li>
                   {%- endif -%}
               {%- endfor -%}
