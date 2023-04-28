@@ -16,8 +16,11 @@
   <div class="Container">
     {% if product.metafields.custom.product_use_main_heading != blank %}
       <header class="SectionHeader SectionHeader--center text_center">
-        <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ product.metafields.custom.product_use_main_heading }}
-          <figure><img src="{{ product.metafields.custom.use_main_heading_badge_icon | img_url: 'master' }}" /></figure>  
+        <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">
+          {{ product.metafields.custom.product_use_main_heading }}
+          {% if product.metafields.custom.use_main_heading_badge_icon %}
+            <figure><img src="{{ product.metafields.custom.use_main_heading_badge_icon | img_url: 'master' }}" /></figure>
+          {% endif %}
         </h2>
       </header>
       {% endif %}
