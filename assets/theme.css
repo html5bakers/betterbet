@@ -5475,7 +5475,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   margin: 0 auto;
 }
 .Rte a:not(.Button) {
-  color: var(--link-color);
+  color: var(--primary-color);
   text-decoration: underline;
   -webkit-text-decoration-color: rgba(var(--link-color-rgb), 0.6);
           text-decoration-color: rgba(var(--link-color-rgb), 0.6);
@@ -5485,7 +5485,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out, -webkit-text-decoration-color 0.2s ease-in-out;
 }
 .Rte a:not(.Button):hover {
-  color: var(--primary-color);
+  color: var(--link-color);
   -webkit-text-decoration-color: rgba(var(--primary-color-rgb), 0.6);
           text-decoration-color: rgba(var(--primary-color-rgb), 0.6);
 }
