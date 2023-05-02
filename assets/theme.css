@@ -8708,8 +8708,10 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 .NewsletterPopup {
   position: fixed;
-  bottom: 15px;
-  left: 15px;
+  /*bottom: 15px;
+  left: 15px;*/
+  top: 50%;
+  left: 50%;
   width: calc(100% - 30px);
   padding: 24px 30px 30px 30px;
   background: var(--newsletter-popup-background);
@@ -8772,7 +8774,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 .NewsletterPopup[aria-hidden=false] {
-  transform: translateY(0);
+  transform: translate(-50%, -50%);
   opacity: 1;
   visibility: visible;
 }
