@@ -19,7 +19,7 @@
             </div>
           {% endif %}
           {%- if section.settings.title != blank or section.settings.content != blank -%}
-            <div class="popup_content">
+            <div {% if section.settings.image != blank  %}class="popup_content" {% endif %}>
               {%- if section.settings.title != blank -%}
                 <h2 class="NewsletterPopup__Heading Heading u-h2">{{ section.settings.title | escape }}</h2>
               {%- endif -%}
