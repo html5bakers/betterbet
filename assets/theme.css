@@ -8722,6 +8722,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   visibility: hidden;
   transform: translate(-50%, -50%);
   opacity: 0;
+  border-radius: 10px;
   transition: all 0.5s var(--drawer-transition-timing);
 }
 
