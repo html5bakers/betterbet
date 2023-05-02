@@ -64,7 +64,7 @@
 
         {%- if product.available -%}
           {%- if product.compare_at_price > product.price -%}
-            <span class="ProductItem__Label ProductItem__Label--onSale Text--subdued content">{{ 'product.labels.on_sale' | t }}</span>
+            <span class="ProductItem__Label ProductItem__Label--onSale Text--subdued">{{ 'product.labels.on_sale' | t }}</span>
           {%- endif -%}
         {%- else -%}
           <span class="ProductItem__Label ProductItem__Label--soldOut Heading Text--subdued content">{{ 'product.labels.sold_out' | t }}</span>
