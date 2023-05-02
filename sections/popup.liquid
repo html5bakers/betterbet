@@ -11,7 +11,11 @@
       <aside class="NewsletterPopup" data-section-id="{{ section.id }}" data-section-type="newsletter-popup" data-section-settings='{{ section_settings }}' aria-hidden="true">
         <button class="NewsletterPopup__Close" data-action="close-popup" aria-label="{{ 'general.popup.close' | t }}">{% render 'icon' with 'close' %}</button>
         <div>
-          <div></div>
+          {% if section.settings.image != blank  %}
+            <div>
+              
+            </div>
+          {% endif %}
           {%- if section.settings.title != blank or section.settings.content != blank -%}
             <div>
               {%- if section.settings.title != blank -%}
