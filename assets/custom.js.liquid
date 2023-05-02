@@ -182,6 +182,11 @@ $('.pincode_button').click(function(){
     } 
   }
 });
+
+/*Newsletter Pop up*/
+if(.NewsletterPopup[aria-hidden=false]){
+  $('#shopify-section-popup').after().show();
+}
 $('.NewsletterPopup__Close').click(function(){
   $('#shopify-section-popup').after().hide();
 });
