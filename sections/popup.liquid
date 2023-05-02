@@ -50,7 +50,15 @@
     {%- endunless -%}
   {%- endunless -%}
 {%- endif -%}
-
+<script>
+  $(document).ready(function(){
+    setTimeout(
+      if($('.NewsletterPopup').attr('aria-hidden') == 'false'){
+        $('#shopify-section-popup').after().show();
+        console.log('yes');
+      }, {{section.settings.apparition_delay}});
+  });
+</script>
 {% schema %}
 {
   "name": "Popup",
