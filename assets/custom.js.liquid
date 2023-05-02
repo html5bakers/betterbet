@@ -186,8 +186,9 @@ $('.pincode_button').click(function(){
 /*Newsletter Pop up*/
 var news_popup = $('.NewsletterPopup[aria-hidden=false]');
 console.log(news_popup);
-if(news_popup){
+if($('.NewsletterPopup[aria-hidden=false]').){
   $('#shopify-section-popup').after().show();
+  alert('yes');
 }
 $('.NewsletterPopup__Close').click(function(){
   $('#shopify-section-popup').after().hide();
