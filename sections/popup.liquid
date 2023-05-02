@@ -1,4 +1,5 @@
 {%- if section.settings.show_popup -%}
+  <div class="popup_bg"></div>
   {%- unless section.settings.show_only_on_index and template != 'index' -%}
     {%- unless section.settings.show_only_for_visitors and customer -%}
       {% capture section_settings %}
@@ -7,7 +8,7 @@
           "showOnlyOnce": {{ section.settings.show_only_once | json }}
         }
       {% endcapture %}
-      <div class="popup_bg"></div>
+      
       <aside class="NewsletterPopup" data-section-id="{{ section.id }}" data-section-type="newsletter-popup" data-section-settings='{{ section_settings }}' aria-hidden="true">
         <button class="NewsletterPopup__Close" data-action="close-popup" aria-label="{{ 'general.popup.close' | t }}">{% render 'icon' with 'close' %}</button>
         <div class="newsletter_popup_wrapper">
