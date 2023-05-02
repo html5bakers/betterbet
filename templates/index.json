@@ -599,17 +599,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "eac804b0-6744-420b-bea0-68709fd5cf6b": {
-      "type": "newsletter",
-      "settings": {
-        "section_size": "small",
-        "text_color": "#ffffff",
-        "button_color": "#000000",
-        "subheading": "Keep updated",
-        "title": "Newsletter",
-        "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
-      }
     }
   },
   "order": [
@@ -627,7 +616,6 @@
     "0f99470a-3402-4a60-85af-e6e052bd3ddf",
     "6133615d-9dd6-403b-a69f-f18dc7bdddcd",
     "bd136bbb-4bff-4de1-b11e-0783142eb620",
-    "1681777290f3dda194",
-    "eac804b0-6744-420b-bea0-68709fd5cf6b"
+    "1681777290f3dda194"
   ]
 }
