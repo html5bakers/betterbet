@@ -8720,7 +8720,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   text-align: center;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   visibility: hidden;
-  transform: translateY(25px);
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition: all 0.5s var(--drawer-transition-timing);
 }
