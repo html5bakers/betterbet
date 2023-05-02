@@ -4488,6 +4488,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 
 .Newsletter .Form__Submit {
   width: 100%;
+  min-width: 150px;
 }
 
 @media screen and (max-width: 640px) {
