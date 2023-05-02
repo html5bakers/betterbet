@@ -210,7 +210,7 @@
           "title": "Popup",
           "content": "<p>You can use this popup to display some useful information to your customers.<\/p>",
           "show_newsletter": true,
-          "apparition_delay": 5
+          "apparition_delay": 9
         }
       }
     },
