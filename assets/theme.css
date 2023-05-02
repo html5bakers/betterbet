@@ -8803,9 +8803,10 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 @media screen and (min-width: 641px) {
   .NewsletterPopup {
     max-width: 385px;
-    right: 25px;
-    bottom: 25px;
-    left: auto;
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
     padding-top: 35px;
   }
 
