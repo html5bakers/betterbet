@@ -52,11 +52,13 @@
 {%- endif -%}
 <script>
   $(document).ready(function(){
-    setTimeout(
+    function timeout(
       if($('.NewsletterPopup').attr('aria-hidden') == 'false'){
         $('#shopify-section-popup').after().show();
         console.log('yes');
-      }, {{section.settings.apparition_delay}});
+      }
+    );
+    setTimeout(timeout, {{section.settings.apparition_delay}});
   });
 </script>
 {% schema %}
