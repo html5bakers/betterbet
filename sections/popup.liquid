@@ -12,14 +12,14 @@
         <button class="NewsletterPopup__Close" data-action="close-popup" aria-label="{{ 'general.popup.close' | t }}">{% render 'icon' with 'close' %}</button>
         <div class="newsletter_popup_wrapper">
           {% if section.settings.image != blank  %}
-            <div>
+            <div class="popup_image">
               {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
                  {%- assign image_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
                  <figure><img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image.alt | escape }}" data-media-id="{{ section.settings.image.id }}" /></figure>
             </div>
           {% endif %}
           {%- if section.settings.title != blank or section.settings.content != blank -%}
-            <div>
+            <div class="popup_content">
               {%- if section.settings.title != blank -%}
                 <h2 class="NewsletterPopup__Heading Heading u-h2">{{ section.settings.title | escape }}</h2>
               {%- endif -%}
