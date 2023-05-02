@@ -10,7 +10,7 @@
 
       <aside class="NewsletterPopup" data-section-id="{{ section.id }}" data-section-type="newsletter-popup" data-section-settings='{{ section_settings }}' aria-hidden="true">
         <button class="NewsletterPopup__Close" data-action="close-popup" aria-label="{{ 'general.popup.close' | t }}">{% render 'icon' with 'close' %}</button>
-        <div>
+        <div class="newsletter_popup_wrapper">
           {% if section.settings.image != blank  %}
             <div>
               {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
