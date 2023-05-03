@@ -54,13 +54,16 @@
   $(document).ready(function(){
     var timer = {{ section.settings.apparition_delay }} * 1000 ;
     console.log(timer);
-    if($('.NewsletterPopup').attr('aria-hidden') == 'false' && timer){
+    function timeout(
+       if($('.NewsletterPopup').attr('aria-hidden') == 'false'){
         $('#shopify-section-popup').after().show();
         console.log('yes');
       }else{
       console.log('no');
       }
-
+    );
+   
+timeout();
   });
 </script>
 {% schema %}
