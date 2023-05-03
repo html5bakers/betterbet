@@ -54,7 +54,7 @@
   $(document).ready(function(){
     var timer = {{ section.settings.apparition_delay }} * 1000 ;
     console.log(timer);
-    setTimeout(timeout, 9000);
+    setTimeout(timeout, timer);
     function timeout(){
       $('#shopify-section-popup').addClass('active');
       console.log('yes'); 
