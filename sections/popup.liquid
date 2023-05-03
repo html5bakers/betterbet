@@ -55,7 +55,7 @@
     var timer = {{ section.settings.apparition_delay }} * 1000 ;
     console.log(timer);
     function timeout(
-       if($('.NewsletterPopup').attr('aria-hidden') == 'false'){
+       if($('.NewsletterPopup[aria-hidden=false]')){
         $('#shopify-section-popup').after().show();
         console.log('yes');
       }else{
