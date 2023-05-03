@@ -54,7 +54,7 @@
   $(document).ready(function(){
     var timer = {{ section.settings.apparition_delay }} * 1000 ;
     console.log(timer);
-    if($('.NewsletterPopup').attr('aria-hidden') == 'false'){
+    if($('.NewsletterPopup').attr('aria-hidden') == 'false' && timer){
         $('#shopify-section-popup').after().show();
         console.log('yes');
       }else{
