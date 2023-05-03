@@ -53,11 +53,10 @@
 <script>
   $(document).ready(function(){
     var timer = {{ section.settings.apparition_delay }} * 1000 ;
-    var aria_hidden = 
     console.log(timer);
     setTimeout(timeout, timer);
     function timeout(){
-      $('#shopify-section-popup').after().show();
+      $('#shopify-section-popup').addClass('hide');
       console.log('yes'); 
     }
    
