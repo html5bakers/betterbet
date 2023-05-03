@@ -55,13 +55,10 @@
     var timer = {{ section.settings.apparition_delay }} * 1000 ;
     var aria_hidden = 
     console.log(timer);
+    setTimeout(timeout, timer);
     function timeout(
-       if(timer == 9000){
-        $('#shopify-section-popup').after().show();
-        console.log('yes');
-      }else{
-      console.log('no');
-      }
+      $('#shopify-section-popup').after().show();
+    console.log('yes');
     );
    
 timeout();
