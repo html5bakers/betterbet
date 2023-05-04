@@ -176,11 +176,12 @@
         {%- endif -%}
         {% if section.settings.show_payment_methods %}
           <ul class="Footer__PaymentList HorizontalList">
-              <li class="HorizontalList__Item">{{ settings.amex }}</li>
-              <li class="HorizontalList__Item">{{ settings.dinerclub }}</li>
-              <li class="HorizontalList__Item">{{ settings.maestro }}</li>
-              <li class="HorizontalList__Item">{{ settings.mastercard }}</li>
-              <li class="HorizontalList__Item">{{ settings.other }}</li>
+            <li class="HorizontalList__Item">{{ settings.amex }}</li>
+            <li class="HorizontalList__Item">{{ settings.dinerclub }}</li>
+            <li class="HorizontalList__Item">{{ settings.maestro }}</li>
+            <li class="HorizontalList__Item">{{ settings.mastercard }}</li>
+            <li class="HorizontalList__Item">{{ settings.visa }}</li>
+            <li class="HorizontalList__Item">{{ settings.other }}</li>
           </ul>
         {% endif %}
       {%- endif -%}
