@@ -4756,10 +4756,11 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 .Modal__Content tbody th {
   background: var(--secondary-elements-background) !important;
 }
-
+.Modal:not(.Modal--pageContent){ border-radius: 5px; }
 @media screen and (min-width: 641px) {
   .Modal:not(.Modal--pageContent) {
     padding: 35px 40px 40px 40px;
+    border-radius: 10px;
   }
 }
 
