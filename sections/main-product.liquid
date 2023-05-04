@@ -435,7 +435,9 @@
               {%- if section.settings.shipping_price != blank -%}
               <div class="col-left"><h3>Free shipping</h3><p>at or above INR {{ section.settings.shipping_price }} per order</p></div>
               {%- endif -%}
-              <div class="col-right"><a href="#delivery_check" data-lity>Check same day delivery</a></div>
+              {% if section.settings.show_delivery %}
+                <div class="col-right"><a href="#delivery_check" data-lity>Check same day delivery</a></div>
+              {% endif %}
             </div>
             <div id="delivery_check" class="lity-hide lity_popup_wrapper" style="background:#fff">
               <div class="lity_popup">
@@ -842,6 +844,11 @@ This is the root container for the zoom functionality. Must not be removed, as o
       "type": "text",
       "id": "shipping_price",
       "label": "Shipping Price"
+    },
+    {
+      "type": "text",
+      "id": "show_delivery",
+      "label": "Show Delivery Link"
     }
   ]
 }
