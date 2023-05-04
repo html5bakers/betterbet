@@ -80,7 +80,7 @@
                   <p>{{ 'customer.account.no_addresses_content' | t }}</p>
 
                   <div class="Segment__ButtonWrapper">
-                    <a href="{{ routes.account_addresses_url }}" class="Button Button--primary">{{ 'customer.account.manage_addresses' | t }}</a>
+                    <a href="{{ routes.account_addresses_url }}" class="Button Button--primary"><span>{{ 'customer.account.manage_addresses' | t }}</span></a>
                   </div>
                 </div>
               {%- else -%}
@@ -90,7 +90,7 @@
                   {{ customer.default_address | format_address | replace: '<p>', '<p class="AccountAddress"><span>' | replace_first: '<br>', '</span><br>' }}
 
                   <div class="Segment__ButtonWrapper">
-                    <a href="{{ routes.account_addresses_url }}" class="Button Button--primary">{{ 'customer.account.edit_addresses' | t }}</a>
+                    <a href="{{ routes.account_addresses_url }}" class="Button Button--primary"><span>{{ 'customer.account.edit_addresses' | t }}</span></a>
                   </div>
                 </div>
               {%- endif -%}
