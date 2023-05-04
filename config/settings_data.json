@@ -166,7 +166,7 @@
           "footer-1": {
             "type": "links",
             "settings": {
-              "menu": "footer",
+              "menu": "footer-menu",
               "custom_menu_title": ""
             }
           },
