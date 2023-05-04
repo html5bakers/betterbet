@@ -10707,9 +10707,10 @@ shopify-payment-terms {
   color: var(--navigation-text-color);
 }
 
+/*
 .SidebarMenu .Text--subdued {
   color: var(--navigation-text-color-light);
-}
+}*/
 
 .SidebarMenu .Collapsible,
 .SidebarMenu .Linklist {
