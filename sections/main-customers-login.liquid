@@ -45,7 +45,7 @@
             <button type="button" class="Form__ItemHelp Link Link--primary" data-action="toggle-recover-form">{{ 'customer.login.forgot' | t }}</button>
           </div>
   
-          <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'customer.login.submit' | t }}</button>
+          <button type="submit" class="Form__Submit Button Button--primary Button--full"><span>{{ 'customer.login.submit' | t }}</span></button>
   
           <div class="Form__Hint Form__Hint--center">
             <span class="Text--subdued">{{ 'customer.login.register_label' | t }}</span>
@@ -91,11 +91,11 @@
             <label class="Form__FloatingLabel">{{ 'customer.recover_password.email' | t }}</label>
           </div>
   
-          <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'customer.recover_password.submit' | t }}</button>
+          <button type="submit" class="Form__Submit Button Button--primary Button--full"><span>{{ 'customer.recover_password.submit' | t }}</span></button>
   
           <div class="Form__Hint Form__Hint--center">
             <span class="Text--subdued">{{ 'customer.recover_password.login_label' | t }}</span>
-            <button type="button" class="Link Link--secondary" data-action="toggle-recover-form">{{ 'customer.recover_password.login_link' | t }}</button>
+            <button type="button" class="Link Link--secondary" data-action="toggle-recover-form"><span>{{ 'customer.recover_password.login_link' | t }}</span></button>
           </div>
         {%- endform -%}
       </div>
@@ -157,7 +157,7 @@
             <label class="Form__FloatingLabel">{{ 'customer.register.password' | t }}</label>
           </div>
   
-          <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'customer.register.submit' | t }}</button>
+          <button type="submit" class="Form__Submit Button Button--primary Button--full"><span>{{ 'customer.register.submit' | t }}</span></button>
         {%- endform -%}
       </div>
     </div>
