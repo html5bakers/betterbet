@@ -22,6 +22,7 @@
       ],
       "settings": {
         "bg_color": "#ffe8cb",
+        "star_color": "#9ab926",
         "left_title": "Rated 4.6\/5"
       }
     },
