@@ -8407,7 +8407,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   width: 100%;
   left: 0;
   top: 100%;
-  z-index: 1;
+  z-index: 3;
   visibility: hidden;
   opacity: 0;
   max-height: 600px;
