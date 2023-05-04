@@ -32,7 +32,7 @@
                 {{ address | format_address | replace: '<p>', '<p class="AccountAddress"><span>' | replace_first: '<br>', '</span><br>' }}
 
                 <div class="Segment__ActionList">
-                  <button class="Segment__ActionItem Link Link--underline" data-action="open-modal" aria-controls="modal-{{ address.id }}">{{ 'customer.addresses.edit' | t }}</button>
+                  <button class="Segment__ActionItem Link Link--underline" data-action="open-modal" aria-controls="modal-{{ address.id }}"><span>{{ 'customer.addresses.edit' | t }}</span></button>
                   <button class="Segment__ActionItem Link Link--underline" onclick="Shopify.CustomerAddress.destroy({{ address.id }}); return false">{{ 'customer.addresses.delete' | t }}</button>
                 </div>
               </div>
