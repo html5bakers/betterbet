@@ -713,5 +713,20 @@
         "info": "96 x 96px .png recommended"
       }
     ]
+  },
+  {
+    "name": "Customer Activity",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_customer_activity",
+        "label": "Enable Customer Activity"
+      },
+      {
+        "type": "collection",
+        "id": "activity_collection",
+        "label": "Collection with products to highlight in activity"
+      }
+    ]
   }
 ]
