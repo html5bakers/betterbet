@@ -54,7 +54,8 @@
         "show_thumbnails": true,
         "enable_image_zoom": true,
         "enable_video_looping": false,
-        "shipping_price": "500"
+        "shipping_price": true,
+        "show_delivery": true
       }
     },
     "148d68e1-7080-4316-bfc8-e60488f08cee": {
