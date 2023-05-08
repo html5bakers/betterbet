@@ -66,6 +66,18 @@ function isScrolledOutOfView(elem){
 }
 
 
+/* Social Proof */
+{% if settings.enable_customer_activity %}
+  /* Customer Activity */
+  if(getCookie('socialproofclose') != 'true'){
+    $('#socialproof').fadeIn();
+  }
+ $('#socialproof .close').click(function(){
+   setCookie('socialproofclose', 'true', 2);
+   $('#socialproof').remove();
+ });
+{% endif %}
+
 $('.prod-grid-swatch li').click(function(e){
   e.preventDefault();
   $(this).parents('.prod-grid-swatch').find('li').removeClass('active');
@@ -196,16 +208,5 @@ $(document).on('click', '.recurpay__label', function(e){
   $('.recurpay__plans').slideToggle('slow');
 });
 
-/* Social Proof */
-{% if settings.enable_customer_activity %}
-  /* Customer Activity */
-  if(getCookie('socialproofclose') != 'true'){
-    $('#socialproof').fadeIn();
-  }
- $('#socialproof .close').click(function(){
-   setCookie('socialproofclose', 'true', 2);
-   $('#socialproof').remove();
- });
-{% endif %}
 
         
