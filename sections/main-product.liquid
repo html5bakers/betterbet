@@ -433,7 +433,7 @@
           <div class="free_shipping_section">
             <div class="free_shipping_list flex_always">
               {%- if section.settings.shipping_price != blank -%}
-              <div class="col-left"><h3>Free shipping</h3><p>at or above INR {{ section.settings.shipping_price }} per order</p></div>
+              <div class="col-left"><h3>Free shipping</h3><p>at or above INR {{ settings.cart_free_shipping_threshold }} per order</p></div>
               {%- endif -%}
               {% if section.settings.show_delivery %}
                 <div class="col-right"><a href="#delivery_check" data-lity>Check same day delivery</a></div>
@@ -841,9 +841,9 @@ This is the root container for the zoom functionality. Must not be removed, as o
       "default": false
     },
     {
-      "type": "text",
+      "type": "checkbox",
       "id": "shipping_price",
-      "label": "Shipping Price"
+      "label": "Show Free Shipping Text"
     },
     {
       "type": "checkbox",
