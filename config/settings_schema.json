@@ -597,6 +597,12 @@
     "name": "Cart Discount",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "show_cart_discount",
+        "label": "Show Cart Discount",
+        "default": false
+      },
+      {
         "type": "text",
         "id": "discount_threshold_01",
         "label": "Discount Threshold 01",
