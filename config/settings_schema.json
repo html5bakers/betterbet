@@ -594,6 +594,29 @@
     ]
   },
   {
+    "name": "Cart Discount",
+    "settings": [
+      {
+        "type": "text",
+        "id": "discount_threshold_01",
+        "label": "Discount Threshold 01",
+        "default": "500"
+      },
+      {
+        "type": "text",
+        "id": "discount_threshold_02",
+        "label": "Discount Threshold 02",
+        "default": "900"
+      },
+      {
+        "type": "text",
+        "id": "discount_threshold_03",
+        "label": "Discount Threshold 03",
+        "default": "1250"
+      }
+    ]
+  },
+  {
     "name": "Social media",
     "settings": [
       {
