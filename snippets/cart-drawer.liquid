@@ -22,6 +22,7 @@
         {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
 
         <div class="Cart__ShippingNotice Text--subdued">
+        {% comment %}
           <div class="Drawer__Container">
             {%- if cart.total_price >= threshold_in_cents -%}
               <p>{{- 'cart.general.free_shipping' | t -}}</p>
@@ -30,6 +31,36 @@
               <p>{{- 'cart.general.free_shipping_remaining_html' | t: remaining_amount: remaining_amount -}}</p>
             {%- endif -%}
           </div>
+        {% endcomment %}
+        <div class="Drawer__Container">
+            {%- capture remaining_amount -%}<span>{{ cart.total_price | minus: threshold_in_cents | abs | money_without_trailing_zeros }}</span>{%- endcapture -%}
+              {% if settings.discount_threshold_01 != blank or settings.discount_threshold_02 != blank or settings.discount_threshold_03 != blank %}
+              {% assign threshold_in_cents_01 = settings.discount_threshold_01 | times: 100 %}
+              {% assign threshold_in_cents_02 = settings.discount_threshold_02 | times: 100 %}
+              {% assign threshold_in_cents_03 = settings.discount_threshold_03 | times: 100 %}
+                {%- if cart.total_price < threshold_in_cents_01 -%}
+                  <p>Add {{ threshold_in_cents_01 | minus: cart.total_price | money_without_trailing_zeros }}, get additional 10% off - go on, score!</p>
+                  {% assign width = cart.total_price | times: 100 | divided_by: threshold_in_cents_01 %}
+                {%- elsif cart.total_price >= threshold_in_cents_01 and cart.total_price < threshold_in_cents_02 -%}
+                  <p class="eligible-offer">Apply code WGUP10 during checkout & save 10% on your existing order.</p>
+                  <p>Add {{ threshold_in_cents_02 | minus: cart.total_price| money_without_trailing_zeros }}, get additional 20% off - go on, score!</p>
+                  {% assign width = cart.total_price | times: 100 | divided_by: threshold_in_cents_02 %}
+                {%- elsif cart.total_price >= threshold_in_cents_02 and cart.total_price < threshold_in_cents_03 -%}
+                  <p class="eligible-offer">Apply code WGUP20 during checkout & save 20% on your existing order.</p>
+                  <p>Add {{ threshold_in_cents_03 | minus: cart.total_price | money_without_trailing_zeros }}, get additional 30% off - go on, score!</p>
+                  {% assign width = cart.total_price | times: 100 | divided_by: threshold_in_cents_03 %}
+                {% else %}
+                  <p class="eligible-offer">Apply code WGUP30 during checkout & save 30% on your existing order.</p>
+                  <!-- <p>Congratulations, you got 30% off.</p> -->
+                  {% assign width = '100' %}
+                {% endif %}
+            {% endif %}
+            {% if cart.total_price > 0 %} 
+              <div class="cart-progress-bar">
+                <div class="cart-progress-bar-handle" style="width:{{ width }}%"></div>
+              </div>
+            {% endif %}
+       </div>
         </div>
       {%- endif -%}
 
