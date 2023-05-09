@@ -754,17 +754,20 @@
       {
         "type": "text",
         "id": "min_value",
-        "label": "Minimun Value"
+        "label": "Minimun Value",
+        "default": "10"
       },
       {
         "type": "text",
         "id": "max_value",
-        "label": "Maximum Value"
+        "label": "Maximum Value",
+        "default": "100"
       },
       {
         "type": "text",
         "id": "frequency",
-        "label": "Frequency"
+        "label": "Frequency",
+        "default": "4000"
       }
     ]
   },
