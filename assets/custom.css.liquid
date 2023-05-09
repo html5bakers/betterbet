@@ -2150,6 +2150,35 @@ form button,
 .CartItem__Title{ font-family: 'paralucentw00-mediumregular'; }
 .QuantitySelector{ border-radius: 10px; }
 
+.cart-progress-bar{
+  width: 100%;
+  padding: 1px;
+  border-radius: 10px;
+  border: 1px solid var(--button-background);
+  margin: 22px 0 8px;
+}
+.cart-progress-bar-handle{
+  height: 80%;
+  background: var(--button-background);
+  border-radius: 10px;
+  height: 7px;
+  position: relative;
+}
+.cart-progress-bar-handle:after{
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  background: url('{{'progress-handle.png'|asset_url}}') no-repeat center right;
+  background-size: contain;
+  animation: rotate 5s infinite;
+  -webkit-animation: rotate 5s infinite;
+  margin: -13px -12px 0 0;
+  animation-timing-function: linear;
+}
+
 @media screen and (max-width: 640px){
   .Cart__Taxes.Text--subdued{ font-size: 14px; }
   .CartItem__Meta, .CartItem__LinePriceList, .CartItem__DiscountList{ font-size: 12px; }
