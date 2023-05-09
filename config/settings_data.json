@@ -45,6 +45,7 @@
     "cart_enable_notes": false,
     "cart_show_free_shipping_threshold": true,
     "cart_free_shipping_threshold": "500",
+    "discount_threshold_01": "",
     "discount_threshold_02": "",
     "discount_threshold_03": "",
     "social_facebook": "https:\/\/www.facebook.com\/altfoodsworld",
