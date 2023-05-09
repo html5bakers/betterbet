@@ -744,6 +744,31 @@
     ]
   },
   {
+    "name": "Customer Visits",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_customer_visits",
+        "label": "Enable Customer Visits"
+      },
+      {
+        "type": "text",
+        "id": "min_value",
+        "label": "Minimun Value"
+      },
+      {
+        "type": "text",
+        "id": "max_value",
+        "label": "Maximum Value"
+      },
+      {
+        "type": "text",
+        "id": "frequency",
+        "label": "Frequency"
+      }
+    ]
+  },
+  {
     "name": "Customer Activity",
     "settings": [
       {
