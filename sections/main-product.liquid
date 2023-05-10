@@ -294,7 +294,7 @@
         <div class="Container">
           {%- assign has_ouputted_variant_selector = false -%}
 
-          {%- form 'product', product, class: 'ProductForm' -%}
+          {%- form 'product', product, class: 'ProductForm clearfix' -%}
             {%- render 'product-data', product: product -%}
 
             {%- for block in section.blocks -%}
