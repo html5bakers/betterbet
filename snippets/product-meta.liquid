@@ -53,7 +53,7 @@
     <div class="ProductMeta__PriceList Heading">
       {%- if settings.currency_code_enabled -%}
         {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
-          <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
+          <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4 dd">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
           <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4">{{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}</span>
           <span class="discount-price">Save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
         {%- else -%}
