@@ -2409,8 +2409,8 @@
           }
 
           productMetaPrices.innerHTML = '';
-          price = newVariant['price'];
-          compare = newVariant['compare_at_price'];
+          var price = newVariant['price'];
+          var compare = newVariant['compare_at_price'];
 
           if (newVariant['compare_at_price'] > newVariant['price']) {
             productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--highlight Text--subdued u-h4 fffdff\" data-money-convertible>".concat(Currency.formatMoney(newVariant['price'], currencyFormat), "</span>");
