@@ -2409,11 +2409,13 @@
           }
 
           productMetaPrices.innerHTML = '';
+          price = newVariant['price'];
+          compare = newVariant['compare_at_price'];
 
           if (newVariant['compare_at_price'] > newVariant['price']) {
             productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--highlight Text--subdued u-h4 fffdff\" data-money-convertible>".concat(Currency.formatMoney(newVariant['price'], currencyFormat), "</span>");
             productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--compareAt Text--subdued u-h4\" data-money-convertible>".concat(Currency.formatMoney(newVariant['compare_at_price'], currencyFormat), "</span>");
-            productMetaPrices.innerHTML += "<span class=\"discount-price\" data-money-convertible> save" + newVariant['compare_at_price'] + newVariant['price'] + "</span>";
+            productMetaPrices.innerHTML += "<span class=\"discount-price\" data-money-convertible> save" + price - compare + "</span>";
           } else {
             productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Text--subdued u-h4\" data-money-convertible>".concat(Currency.formatMoney(newVariant['price'], currencyFormat), "</span>");
           }
