@@ -2409,11 +2409,11 @@
           }
 
           productMetaPrices.innerHTML = '';
-          var hello = Currency.formatMoney(newVariant['price'];
-          var save_number = (newVariant['compare_at_price'] - newVariant['price'] / 100) / newVariant['compare_at_price'] * 100 ;
+        
+          var save_number = ((newVariant['compare_at_price'] / 100) - (newVariant['price'] / 100)) / (newVariant['compare_at_price'] / 100) * 100 ;
           if (newVariant['compare_at_price'] > newVariant['price']) {
             productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--highlight Text--subdued u-h4 fffdff\" data-money-convertible>".concat(Currency.formatMoney(newVariant['price'], currencyFormat), "</span>");
-            productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--compareAt Text--subdued u-h4\" data-money-convertible>".concat(Currency.formatMoney(newVariant['compare_at_price'], currencyFormat), "</span>" + save_number + hello);
+            productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--compareAt Text--subdued u-h4\" data-money-convertible>".concat(Currency.formatMoney(newVariant['compare_at_price'], currencyFormat), "</span>" + save_number);
           } else {
             productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Text--subdued u-h4\" data-money-convertible>".concat(Currency.formatMoney(newVariant['price'], currencyFormat), "</span>");
           }
