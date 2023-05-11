@@ -64,8 +64,10 @@ function isScrolledOutOfView(elem){
   // return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
   return ((elemTop <= docViewBottom) && (elemBottom <= docViewTop)); 
 }
-var scrolltop = $(window).scrollTop();
-console.log('scroll top: ' + scrolltop);
+$(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+    console.log("Scrolled:", scrollTop);
+});
 /* Social Proof */
 {% if settings.enable_customer_activity %}
   /* Customer Activity */
