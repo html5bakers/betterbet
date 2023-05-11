@@ -209,7 +209,8 @@
            
               <ul class="SizeSwatchList HorizontalList HorizontalList--spacingTight prod-grid-swatch"  {% unless product.variants.size > 1 %} style="opacity: 0;"{% endunless %}>
                   {%- for variant in product.variants -%}
-                    <li class="HorizontalList__Item {% if forloop.first %} active{% endif %}" data-id="{{ variant.id }}">
+                    {% capture save_p %}Save {{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%{% endcapture %}
+                    <li class="HorizontalList__Item {% if forloop.first %} active{% endif %}" data-save="{% if variant.price < variant.compare_at_price %}{{ save_p }}{% endif %}" data-id="{{ variant.id }}" data-price="{{ variant.price | money }}" data-compare-price="{% if variant.price < variant.compare_at_price %}{{ variant.compare_at_price | money }}{% endif %}">
                       {{ variant.title }}
                     </li>
                   {%- endfor -%}
