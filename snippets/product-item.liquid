@@ -161,7 +161,7 @@
                   <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.ProductItem__Price .compare_at_price | money_with_currency }}</span>
                   {% if save %}<span class="discount-price">Save {{ save }}%</span>{% endif %}
                 {%- else -%}
-                  <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.price | money }}</span>
+                  <span class="ProductItem__Price Price Price--highlight Text--subdued gfhfghgfhgf">{{ product.price | money }}</span>
                   <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.compare_at_price | money }}</span>
                   <span class="discount-price">Save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
               {%- endif -%}
