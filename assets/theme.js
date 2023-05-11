@@ -2410,7 +2410,7 @@
 
           productMetaPrices.innerHTML = '';
         
-          var save_number = newVariant['compare_at_price'] / 100 - newVariant['price'] / 100 ;
+          var save_number = (newVariant['compare_at_price'] / 100 - newVariant['price'] / 100) / newVariant['compare_at_price'] ;
           if (newVariant['compare_at_price'] > newVariant['price']) {
             productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--highlight Text--subdued u-h4 fffdff\" data-money-convertible>".concat(Currency.formatMoney(newVariant['price'], currencyFormat), "</span>");
             productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--compareAt Text--subdued u-h4\" data-money-convertible>".concat(Currency.formatMoney(newVariant['compare_at_price'], currencyFormat), "</span>" + save_number);
