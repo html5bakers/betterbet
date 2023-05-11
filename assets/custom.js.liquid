@@ -82,6 +82,22 @@ $('.prod-grid-swatch li').click(function(e){
   e.preventDefault();
   $(this).parents('.prod-grid-swatch').find('li').removeClass('active');
   $(this).addClass('active');
+  var m_price = $(this).attr('data-price');
+  var c_price = $(this).attr('data-compare-price');
+  var data_s = $(this).attr('data-save');
+  console.log(m_price,c_price,data_s)
+  
+  $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Text--subdued').text(m_price);
+  $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Price--highlight.Text--subdued').text(m_price);
+  if(c_price != ''){
+    $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Price--compareAt.Text--subdued').text(c_price);
+    $(this).parents('.ProductItem').find('.discount-price').text(data_s);
+    $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Price--compareAt.Text--subdued').show();
+    $(this).parents('.ProductItem').find('.discount-price').show();
+  }else{
+    $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Price--compareAt.Text--subdued').hide();
+    $(this).parents('.ProductItem').find('.discount-price').hide();
+  }
 });
 
 $('.product_grid_form_wrapper .productform_add_to_cart').click(function(e){
