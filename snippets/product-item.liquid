@@ -157,7 +157,7 @@
             {% assign save = product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | round %}
             {%- if product.compare_at_price > product.price -%}
               {%- if settings.currency_code_enabled -%}
-                  <span class="ProductItem__Price Price Price--highlight Text--subdued ggg">{{ product.ProductItem__Price .price | money_with_currency }}</span>
+                  <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.ProductItem__Price .price | money_with_currency }}</span>
                   <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.ProductItem__Price .compare_at_price | money_with_currency }}</span>
                   {% if save %}<span class="discount-price">Save {{ save }}%</span>{% endif %}
                 {%- else -%}
