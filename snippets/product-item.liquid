@@ -154,18 +154,17 @@
 
         {%- if product.template_suffix != 'coming-soon' -%}
           <div class="ProductItem__PriceList {% if show_price_on_hover %}ProductItem__PriceList--showOnHover{% endif %} Heading">
-            {% assign save = product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | round %}
-            {%- if product.compare_at_price > product.price -%}
+            
               {%- if settings.currency_code_enabled -%}
-                  <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.ProductItem__Price .price | money_with_currency }}</span>
-                  <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.ProductItem__Price .compare_at_price | money_with_currency }}</span>
-                  {% if save %}<span class="discount-price">Save {{ save }}%</span>{% endif %}
+                  <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
+                  <span class="ProductItem__Price Price Price--compareAt Text--subdued"{%- if product.compare_at_price > product.price -%} style="display:inline-block"{% else %} style="display:none"{% endif %}>{{ product.selected_or_first_available_variant.compare_at_price | money_with_currency }}</span>
+                  <span class="discount-price"{%- if product.compare_at_price > product.price -%} style="display:inline-block"{% else %} style="display:none"{% endif %}>Save {{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%</span>
                 {%- else -%}
-                  <span class="ProductItem__Price Price Price--highlight Text--subdued gfhfghgfhgf">{{ product.price | money }}</span>
-                  <span class="ProductItem__Price Price Price--compareAt Text--subdued">{{ product.compare_at_price | money }}</span>
-                  <span class="discount-price">Save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
+                  <span class="ProductItem__Price Price Price--highlight Text--subdued">{{ product.selected_or_first_available_variant.price | money }}</span>
+                  <span class="ProductItem__Price Price Price--compareAt Text--subdued"{%- if product.compare_at_price > product.price -%} style="display:inline-block"{% else %} style="display:none"{% endif %}>{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
+                  <span class="discount-price"{%- if product.compare_at_price > product.price -%} style="display:inline-block"{% else %} style="display:none"{% endif %}>Save {{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%</span>
               {%- endif -%}
-            {%- elsif product.selected_or_first_available_variant.price_varies -%}
+            {%- if product.selected_or_first_available_variant.price_varies -%}
               {%- if settings.currency_code_enabled -%}
                 {%- capture formatted_min_price -%}{{ product.selected_or_first_available_variant.price_min | money_with_currency }}{%- endcapture -%}
                 {%- capture formatted_max_price -%}{{ product.selected_or_first_available_variant.price_max | money_with_currency }}{%- endcapture -%}
@@ -174,13 +173,13 @@
                 {%- capture formatted_max_price -%}{{ product.selected_or_first_available_variant.price_max | money }}{%- endcapture -%}
               {%- endif -%}
 
-              <span class="ProductItem__Price Price Text--subdued">{{ 'collection.product.from_price_html' | t: min_price: formatted_min_price, max_price: formatted_max_price }}</span>
+              <span class="ProductItem__Price Price Text--subdued">{{ product.selected_or_first_available_variant.price | money }}</span>
             {%- else -%}
-              {%- if settings.currency_code_enabled -%}
-                <span class="ProductItem__Price Price Text--subdued">{{ product.price | money_with_currency }}</span>
+<!--               {%- if settings.currency_code_enabled -%}
+                <span class="ProductItem__Price Price Text--subdued">{{ product.selected_or_first_available_variant.price | money_with_currency }}</span>
               {%- else -%}
-                <span class="ProductItem__Price Price Text--subdued">{{ product.price | money }}</span>
-              {%- endif -%}
+                <span class="ProductItem__Price Price Text--subdued">{{ product.selected_or_first_available_variant.price | money }}</span>
+              {%- endif -%} -->
             {%- endif -%}
           </div>
 
