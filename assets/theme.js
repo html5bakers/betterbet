@@ -3976,7 +3976,7 @@
 
         if (forceLoadFromTop) {
           this.timeline.clear();
-          this.timeline.staggerFromTo(this.element.querySelectorAll('.ProductList .ProductItem, .ArticleList .ArticleItem'), 0.25, {
+          this.timeline.staggerFromTo(this.element.querySelectorAll('.ProductList .ProductItem, .ArticleList .ArticleItem, .text_logo_section .SectionHeader'), 0.25, {
             autoAlpha: 0,
             y: 25
           }, {
@@ -3987,7 +3987,7 @@
           this.intersectionObserver = new IntersectionObserver(this._reveal.bind(this), {
             threshold: 0.3
           });
-          Dom.nodeListToArray(this.element.querySelectorAll('.ProductList .ProductItem, .ArticleList .ArticleItem, .animate')).forEach(function (item) {
+          Dom.nodeListToArray(this.element.querySelectorAll('.ProductList .ProductItem, .ArticleList .ArticleItem')).forEach(function (item) {
             _this.intersectionObserver.observe(item);
           });
         }
