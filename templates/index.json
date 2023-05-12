@@ -90,6 +90,27 @@
         "html": "<p>Write your own custom HTML content.<\/p>\n<p>Write your own custom HTML content.<\/p>\n<p>Write your own custom HTML content.<\/p><p>Write your own custom HTML content.<\/p>\n<p>Write your own custom HTML content.<\/p>"
       }
     },
+    "e8f9ad7b-8dcd-4f9a-b586-a8438b3c5f33": {
+      "type": "blog-posts",
+      "blocks": {
+        "template--15477110407221__e8f9ad7b-8dcd-4f9a-b586-a8438b3c5f33-1683849759f14b47a4-0": {
+          "type": "blog",
+          "settings": {
+            "blog": "news"
+          }
+        }
+      },
+      "block_order": [
+        "template--15477110407221__e8f9ad7b-8dcd-4f9a-b586-a8438b3c5f33-1683849759f14b47a4-0"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Blog posts",
+        "show_category": false,
+        "button_link": "",
+        "button_text": "View all articles"
+      }
+    },
     "acf8f5f2-b509-46d6-9f4c-f3555508026a": {
       "type": "text-logo",
       "blocks": {
@@ -613,6 +634,7 @@
     "b79520c5-e8b9-44d3-a05c-4eee38545502",
     "slideshow",
     "4ee6fe54-cba5-4499-b5dc-260224b4250c",
+    "e8f9ad7b-8dcd-4f9a-b586-a8438b3c5f33",
     "acf8f5f2-b509-46d6-9f4c-f3555508026a",
     "c72a943f-3702-4653-b593-f43033aa4002",
     "795d526c-10f6-4816-89a6-4384f9865feb",
