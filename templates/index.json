@@ -17,12 +17,14 @@
         },
         "23f9c68d-66ee-46d0-9c83-e195761edcd0": {
           "type": "Image",
+          "disabled": true,
           "settings": {
             "review_image": "shopify:\/\/shop_images\/top-review-1.png"
           }
         },
         "dfbc14e5-1746-4b59-be98-d157e0d56e4f": {
           "type": "Image",
+          "disabled": true,
           "settings": {
             "review_image": "shopify:\/\/shop_images\/top-review-2.png"
           }
