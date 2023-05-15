@@ -985,17 +985,24 @@ form button,
   padding: 50px 0;
   position: relative;
   text-align: center;
-  margin: 0 auto 30px; 
+  margin: 0 auto 30px;
+   transition: .7s;
+  transition-origin: center center; 
+  -webkit-animation-delay: 2000ms;
+  animation-delay: 2000ms;
 }
 .text_with_overlay .center_block:after{
   content: "";
-  width: 120%;
+  width: 90%;
   height: 100px;
   position: absolute;
   bottom: 0;
   left: -10%;
   background: url({{ 'milk-curved-base.png' | file_url }}) no-repeat;
   z-index: 2;
+}
+.text_with_overlay .center_block.animated:after{
+    width: 120%;
 }
 .text_with_overlay .center_block .sec_image{
   position:relative;
