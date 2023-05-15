@@ -1075,13 +1075,15 @@ form button,
   .text_with_overlay .center_block{ width: 80%; margin-bottom: 0; }
   .text_with_overlay .center_block:after{ display: none; }
   .text_with_overlay .center_block .image_back{
-    width: 110%;
+    /*width: 110%;*/
     left: -9%;
   }
   .text_with_overlay .center_block .image_front{
     left: -6%;
-    width: 110%;
+    /*width: 110%;*/
   }
+  .text_with_overlay .center_block .image_back,
+  .text_with_overlay .center_block .image_front.animated{ width: 110%; }
 }
 @media screen and (min-width:992px){
   .best_startup_img{
