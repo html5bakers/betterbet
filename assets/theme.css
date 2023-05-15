@@ -8010,7 +8010,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   width: 100%;
   top: 0;
   left: 0;
-  /*z-index: 5;*/
+  z-index: 3;
 }
 
 .Header .Heading,
