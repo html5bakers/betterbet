@@ -1,7 +1,6 @@
 <section class="Section Section--spacingNormal video_with_text animate show_up" id="section-{{ section.id }}">
   <div class="Container">
-    
-    <div class="video_text_wrapper">
+    <div class="video_text_wrapper animate show_up ad-1">
       <div class="col_left">
           {%- if section.settings.video_link != blank or section.settings.image != blank -%}
             {% if section.settings.video_link != blank %}
@@ -14,7 +13,7 @@
           {%- endif -%}
       </div>
       
-      <div class="col_right">
+      <div class="col_right animate show_up ad-1-5">
         {% for block in section.blocks %}
           <div class="col_right_desc">
             {% if block.settings.title != blank %}
