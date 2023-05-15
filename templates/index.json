@@ -29,13 +29,20 @@
           "settings": {
             "review_image": "shopify:\/\/shop_images\/top-review-2.png"
           }
+        },
+        "58b11d07-7bcd-4870-9a5f-9a0adebb66f7": {
+          "type": "Image",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/New_Project.png"
+          }
         }
       },
       "block_order": [
         "3c51e998-ccd5-4286-941b-53a4e3b1422b",
         "0091d49b-3491-40f9-9af2-8da2a7bfb769",
         "23f9c68d-66ee-46d0-9c83-e195761edcd0",
-        "dfbc14e5-1746-4b59-be98-d157e0d56e4f"
+        "dfbc14e5-1746-4b59-be98-d157e0d56e4f",
+        "58b11d07-7bcd-4870-9a5f-9a0adebb66f7"
       ],
       "settings": {
         "bg_color": "#ffe8cb",
