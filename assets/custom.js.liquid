@@ -49,13 +49,11 @@ function setCookie(name, value, days) { var d = new Date; d.setTime(d.getTime() 
 function deleteCookie(name) { setCookie(name, '', -1); }
 
 function isScrolledIntoView(elem){
-  alert('hello');
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
   var elemTop = $(elem).offset().top;
   var elemBottom = elemTop + $(elem).height();
   return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
-  console.log('in view');
 }
   
 function isScrolledOutOfView(elem){
@@ -141,11 +139,13 @@ $('.slick').slick({
 });
 
 // Animation
- $('.animate').each(function(){
+$(window).scroll(function(){
+  $('.animate').each(function(){
     if(isScrolledIntoView(this)){
         $(this).addClass('animated');
     }
-});
+  });
+}):
 
 $('.animateR').each(function(){
     if(isScrolledIntoView(this)){
