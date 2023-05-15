@@ -1,5 +1,5 @@
 <section class="Section Section--spacingNormal text_logo_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
-  <div class="Container animate">
+  <div class="Container animate show_up">
     <header class="SectionHeader SectionHeader--center">
         {%- if section.settings.title != blank -%}
           <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title | escape }}</h2>
@@ -10,7 +10,7 @@
         {% endif %}
       </header>
     
-      <ul class="list animate">
+      <ul class="list animate show_up ad-1-5">
         {% for block in section.blocks %}
         <li class="color-{{ block.id }}" style="color:{{block.settings.text_color}};">
           <span class="bg_image"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 186.922 109.362" style="background: linear-gradient(90deg, {{ block.settings.bg_color }} 20%, rgba(255,255,255,1) 44%);">
