@@ -64,10 +64,7 @@ function isScrolledOutOfView(elem){
   // return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
   return ((elemTop <= docViewBottom) && (elemBottom <= docViewTop)); 
 }
-$(window).scroll(function() {
-    var scrollTop = $(this).scrollTop();
-    console.log("Scrolled:", scrollTop);
-});
+
 /* Social Proof */
 {% if settings.enable_customer_activity %}
   /* Customer Activity */
@@ -139,6 +136,11 @@ $('.slick').slick({
 });
 
 // Animation
+$('.animate').each(function(){
+  if(isScrolledIntoView(this)){
+      $(this).addClass('animated');
+  }
+});
 $(window).scroll(function(){
   $('.animate').each(function(){
     if(isScrolledIntoView(this)){
