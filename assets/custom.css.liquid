@@ -135,8 +135,7 @@
   -webkit-animation-delay: 120ms;
   animation-delay: 120ms;
 }
-.animatebox{ bottom: 80px; }
-.animatedbox{ bottom: 60px; }
+
 /* General Styles */
 body{
   overflow-X: hidden;
@@ -1001,10 +1000,11 @@ form button,
 .text_with_overlay .center_block .sec_image{
   position:relative;
   z-index: 2;
-  bottom: 1%;
+  bottom: 0;
   width: 66%;
   margin: 0 auto;
 }
+.text_with_overlay .center_block .sec_image.animatedbox{ bottom: 1%; }
 .text_with_overlay .center_block .image_back{
   position: absolute;
   bottom: 0;
@@ -1109,8 +1109,9 @@ form button,
   .text_with_overlay .center_block .sec_image{
     position: absolute;
     left: 14%;
-    /*bottom: 60px;*/
+    bottom: 80px;
   }
+  .text_with_overlay .center_block .sec_image.animatedbox{ bottom: 60px; }
   .text_with_overlay .center_block .image_back{
     bottom: -13px;
     width: 125%;
