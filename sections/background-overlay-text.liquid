@@ -19,7 +19,7 @@
   }
 {% endstyle %}
 <section class="Section Section--spacingNormal text_with_overlay" id="section-{{ section.id }}">
-  <div class="Container">
+  <div class="Container animate show_up">
     {%- if section.settings.best_image != blank -%}
         <span class="best_startup_img badge_text">
           <figure><img src="{{ section.settings.best_image | img_url: 'master' }}" /></figure>
