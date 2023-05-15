@@ -16,12 +16,12 @@
         {%- endif -%}
       </header>
     {%- endif -%}
-      <div class="list_wrapper">
+      <div class="list_wrapper animate show_up ad-2">
         {% if section.settings.left_image != blank %}
-        <figure class="bg_left animate slide_right"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
+        <figure class="bg_left animate show_up ad-2-5"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
         {% endif %}
         {% if section.settings.right_image != blank %}
-        <figure class="bg_right animate slide_left"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
+        <figure class="bg_right animate show_up ad-2-5"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
         {% endif %}
         <div class="list slick" data-slick='{
          "dots": false,
