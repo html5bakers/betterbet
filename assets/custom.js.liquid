@@ -55,7 +55,7 @@ function isScrolledIntoView(elem){
   var elemTop = $(elem).offset().top;
   var elemBottom = elemTop + $(elem).height();
   return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
-  alert('in view');
+  console.log('in view');
 }
   
 function isScrolledOutOfView(elem){
