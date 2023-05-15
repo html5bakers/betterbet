@@ -49,12 +49,13 @@ function setCookie(name, value, days) { var d = new Date; d.setTime(d.getTime() 
 function deleteCookie(name) { setCookie(name, '', -1); }
 
 function isScrolledIntoView(elem){
-  alert('in view');
+  alert('hello');
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
   var elemTop = $(elem).offset().top;
   var elemBottom = elemTop + $(elem).height();
   return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
+  alert('in view');
 }
   
 function isScrolledOutOfView(elem){
