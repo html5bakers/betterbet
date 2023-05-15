@@ -49,6 +49,7 @@ function setCookie(name, value, days) { var d = new Date; d.setTime(d.getTime() 
 function deleteCookie(name) { setCookie(name, '', -1); }
 
 function isScrolledIntoView(elem){
+  alert('in view');
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
   var elemTop = $(elem).offset().top;
@@ -57,7 +58,6 @@ function isScrolledIntoView(elem){
 }
   
 function isScrolledOutOfView(elem){
-  alert('in view');
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
   var elemTop = $(elem).offset().top;
