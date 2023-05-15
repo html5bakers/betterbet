@@ -5,6 +5,7 @@
       "blocks": {
         "3c51e998-ccd5-4286-941b-53a4e3b1422b": {
           "type": "Image",
+          "disabled": true,
           "settings": {
             "review_image": "shopify:\/\/shop_images\/top-review-text.png"
           }
