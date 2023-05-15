@@ -55,7 +55,13 @@ function isScrolledIntoView(elem){
   var elemBottom = elemTop + $(elem).height();
   return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
 }
-  
+function isScrolledIntoViewbox(elem){
+  var docViewTop = $(window).scrollTop() + 200;
+  var docViewBottom = docViewTop + $(window).height();
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+  return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
+}  
 function isScrolledOutOfView(elem){
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
@@ -147,9 +153,9 @@ $(window).scroll(function(){
         $(this).addClass('animated');
     }
   });
-  $('.animatebox').each(function(){
-    if(isScrolledIntoView(this)){
-        $(this).addClass('animatedbox');
+  $('.animate').each(function(){
+    if(isScrolledIntoViewbox(this)){
+        $(this).addClass('animated');
     }
   });
 });
