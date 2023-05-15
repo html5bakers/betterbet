@@ -147,6 +147,11 @@ $(window).scroll(function(){
         $(this).addClass('animated');
     }
   });
+  $('.animatebox').each(function(){
+    if(isScrolledIntoView(this)){
+        $(this).addClass('animatedbox');
+    }
+  });
 });
 
 $('.animateR').each(function(){
