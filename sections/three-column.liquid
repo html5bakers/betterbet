@@ -1,6 +1,6 @@
 
 <section class="Section Section--spacingNormal three_column_section" id="section-{{ section.id }}">
-  <div class="Container">
+  <div class="Container animate show_up">
     <div class="three_column_wrapper">
       {%- if section.settings.desc != blank or section.settings.title != blank -%}
       <header class="SectionHeader SectionHeader--center text_center">
@@ -18,10 +18,10 @@
     {%- endif -%}
       <div class="list_wrapper">
         {% if section.settings.left_image != blank %}
-        <figure class="bg_left"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
+        <figure class="bg_left animate slide_right"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
         {% endif %}
         {% if section.settings.right_image != blank %}
-        <figure class="bg_right"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
+        <figure class="bg_right animate slide_left"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
         {% endif %}
         <div class="list slick" data-slick='{
          "dots": false,
