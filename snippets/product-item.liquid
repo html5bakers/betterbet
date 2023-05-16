@@ -204,34 +204,35 @@
         {%- endif -%}
       
        {% comment  %} ATC button and Variants{% endcomment %}
-        <div class="product_grid_form_wrapper ff">
-          {%- form 'product', product, class: 'ProductForm' -%}
-           
-              <ul class="SizeSwatchList HorizontalList HorizontalList--spacingTight prod-grid-swatch"  {% unless product.variants.size > 1 %} style="opacity: 0;"{% endunless %}>
-                  {%- for variant in product.variants -%}
-                    {% capture save_p %}Save {{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%{% endcapture %}
-                    <li class="HorizontalList__Item {% if forloop.first %} active{% endif %}" data-save="{% if variant.price < variant.compare_at_price %}{{ save_p }}{% endif %}" data-id="{{ variant.id }}" data-price="{{ variant.price | money }}" data-compare-price="{% if variant.price < variant.compare_at_price %}{{ variant.compare_at_price | money }}{% endif %}">
-                      {{ variant.title }}
-                    </li>
-                  {%- endfor -%}
-              </ul>
-            
-            <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="Quantity">
-            <input type="hidden" name="id"  data-id="{{product.selected_or_first_available_variant.id}}" value="{{product.selected_or_first_available_variant.id}}">
-            <button type="submit" class="productform_add_to_cart btn Button" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if product.selected_or_first_available_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
-              {%- if product.selected_or_first_available_variant.available -%}
-                <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
-  
-                {%- if block.settings.show_price_in_button -%}
-                  <span class="Button__SeparatorDot"></span>
-                  <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+        {% unless product.type == 'subscription' %}
+          <div class="product_grid_form_wrapper ff">
+            {%- form 'product', product, class: 'ProductForm' -%}
+                <ul class="SizeSwatchList HorizontalList HorizontalList--spacingTight prod-grid-swatch"  {% unless product.variants.size > 1 %} style="opacity: 0;"{% endunless %}>
+                    {%- for variant in product.variants -%}
+                      {% capture save_p %}Save {{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%{% endcapture %}
+                      <li class="HorizontalList__Item {% if forloop.first %} active{% endif %}" data-save="{% if variant.price < variant.compare_at_price %}{{ save_p }}{% endif %}" data-id="{{ variant.id }}" data-price="{{ variant.price | money }}" data-compare-price="{% if variant.price < variant.compare_at_price %}{{ variant.compare_at_price | money }}{% endif %}">
+                        {{ variant.title }}
+                      </li>
+                    {%- endfor -%}
+                </ul>
+              
+              <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="Quantity">
+              <input type="hidden" name="id"  data-id="{{product.selected_or_first_available_variant.id}}" value="{{product.selected_or_first_available_variant.id}}">
+              <button type="submit" class="productform_add_to_cart btn Button" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if product.selected_or_first_available_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
+                {%- if product.selected_or_first_available_variant.available -%}
+                  <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
+    
+                  {%- if block.settings.show_price_in_button -%}
+                    <span class="Button__SeparatorDot"></span>
+                    <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                  {%- endif -%}
+                {%- else -%}
+                  {{- 'product.form.sold_out' | t -}}
                 {%- endif -%}
-              {%- else -%}
-                {{- 'product.form.sold_out' | t -}}
-              {%- endif -%}
-            </button>
-        {% endform %}
-        </div>
+              </button>
+            {% endform %}
+          </div>
+        {% endunless %}
       
       </div>
     {%- endif -%}
