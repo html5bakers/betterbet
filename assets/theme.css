@@ -7872,7 +7872,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 
 @media screen and (min-width: 641px) {
   .Footer .footer_upper{
-    padding: 75px 0 42px 0;
+    padding: 50px 0;
   }
 
   .Footer__Inner {
@@ -7947,7 +7947,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   }
 
   .Footer__Inner + .Footer__Aside {
-    margin-top: 80px;
+    margin-top: 30px;
   }
 }
 
