@@ -6466,13 +6466,12 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   overflow: hidden;
 }
 
-.CartItem {
+.CartItem{
   display: table;
   table-layout: fixed;
-  margin: 30px 0;
+  margin: 15px 0;
   width: 100%;
 }
-
 .CartItem__ImageWrapper,
 .CartItem__Info {
   display: table-cell;
