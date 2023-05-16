@@ -6469,7 +6469,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 .CartItem{
   display: table;
   table-layout: fixed;
-  margin: 15px 0;
+  margin: 20px 0;
   width: 100%;
 }
 .CartItem__ImageWrapper,
