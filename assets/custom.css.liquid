@@ -2198,7 +2198,14 @@ form button,
 }
 .cart-progress-bar-handle{
   height: 80%;
-  background: var(--button-background);
+  background: repeating-linear-gradient(
+  45deg,
+  var(--button-background),
+  var(--button-background) 10px,
+  var(--button-text-color) 10px,
+  var(--button-text-color) 20px
+);
+  /*background: var(--button-background);*/
   border-radius: 10px;
   height: 7px;
   position: relative;
