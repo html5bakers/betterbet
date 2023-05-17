@@ -87,7 +87,7 @@
         <ul>
           {% assign i = ' ' %}
           {%- for block in section.blocks -%}
-            {% assign ad =  "0, 1, 1-5, 2, 2-5" | split: ',' %}
+            {% assign ad =  "0,1,1-5,2,2-5" | split: ',' %}
             {%- if block.settings.image != blank or block.settings.image_png != blank and block.settings.title != blank -%}
               <li class="flex_always {{ i }} ad-{{ad[1]}}">
                 {% if block.settings.image_png != blank %}
