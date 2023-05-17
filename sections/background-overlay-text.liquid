@@ -87,7 +87,7 @@
         <ul>
           {%- for block in section.blocks -%}
             {%- if block.settings.image != blank or block.settings.image_png != blank and block.settings.title != blank -%}
-              <li class="flex_always">
+              <li class="flex_always {{ forloop.index }}">
               {% if block.settings.image_png != blank %}
                 {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.image_png -%}{%- endcapture -%}
 
