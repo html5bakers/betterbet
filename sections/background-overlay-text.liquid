@@ -26,8 +26,8 @@
         </span>
     {%- endif -%}
     <div class="text_block content_wrapper">
-      <div class="left_block animate slide_right ad-1-5">
-        <div class="left_block_desc">
+      <div class="left_block">
+        <div class="left_block_desc animate slide_right ad-1-5">
           {%- if section.settings.content_title_01 != blank -%}
             <h2 class="Heading heading_small">{{ section.settings.content_title_01 }}</h2>
           {%- endif -%}
@@ -51,7 +51,7 @@
           {%- endif -%}
           </div>
         </div>
-        <div class="left_block_desc block_2">
+        <div class="left_block_desc block_2 animate slide_right ad-2">
           {%- if section.settings.content_title_02 != blank -%}
             <h2 class="Heading heading_small">{{ section.settings.content_title_02 }}</h2>
           {%- endif -%}
@@ -78,7 +78,7 @@
           <span class="image_back animate"><img class="Image--lazyLoad" src="{{ 'milk-back.png' | file_url }}" /></span>
           {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
           {%- assign image_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-          <figure class="sec_image animate animatebox"><img class="Image--lazyLoad" src="{{ section.settings.image | img_url: 'master' }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image.alt | escape }}" data-media-id="{{ section.settings.image.id }}" /></figure>
+          <figure class="sec_image animate"><img class="Image--lazyLoad" src="{{ section.settings.image | img_url: 'master' }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image.alt | escape }}" data-media-id="{{ section.settings.image.id }}" /></figure>
           <span class="image_front animate"><img class="Image--lazyLoad" src="{{ 'milk-front.png' | file_url }}" /></span>
         </div>
       {%- endif -%}
