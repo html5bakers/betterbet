@@ -19,14 +19,14 @@
   }
 {% endstyle %}
 <section class="Section Section--spacingNormal text_with_overlay animate show_up" id="section-{{ section.id }}">
-  <div class="Container animate slide_right ad-1-5">
+  <div class="Container">
     {%- if section.settings.best_image != blank -%}
         <span class="best_startup_img badge_text">
           <figure><img src="{{ section.settings.best_image | img_url: 'master' }}" /></figure>
         </span>
     {%- endif -%}
     <div class="text_block content_wrapper">
-      <div class="left_block">
+      <div class="left_block animate slide_right ad-1-5">
         <div class="left_block_desc">
           {%- if section.settings.content_title_01 != blank -%}
             <h2 class="Heading heading_small">{{ section.settings.content_title_01 }}</h2>
