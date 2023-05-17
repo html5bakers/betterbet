@@ -87,8 +87,9 @@
         <ul>
           {%- for block in section.blocks -%}
             {% assign ads =  "0, 1, 1-5, 2, 2-5" | split: ',' %}
+            {% assign i = forloop.index %}
             {%- if block.settings.image != blank or block.settings.image_png != blank and block.settings.title != blank -%}
-              <li class="flex_always {{ forloop.index }} ad-{{ ad[forloop.index] }}">
+              <li class="flex_always {{ forloop.index }} ad-{{ ad[i] }}">
               {% if block.settings.image_png != blank %}
                 {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.image_png -%}{%- endcapture -%}
                 {%- assign image_url = block.settings.image_png | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
