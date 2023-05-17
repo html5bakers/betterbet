@@ -986,8 +986,9 @@ form button,
   position: relative;
   text-align: center;
   margin: 0 auto 30px;
-   transition: .7s;
-  transition-origin: center center; 
+  transform: scale(0.9);
+  transform-origin: center center; 
+  transition: all .7s ease;
   -webkit-animation-delay: 2000ms;
   animation-delay: 2000ms;
 }
@@ -1004,25 +1005,23 @@ form button,
 .text_with_overlay .center_block.animated:after{
     width: 120%;
 }
+.text_with_overlay .center_block.animated{ transform: scale(1); }
 .text_with_overlay .center_block .sec_image{
   position:relative;
   z-index: 2;
   bottom: 1px;
-  width: 50%;
+  width: 66%;
   margin: 0 auto;
   transition: all 1s ease;
-  transform-origin: center center;
   -webkit-animation-delay: 3000ms;
   animation-delay: 3000ms;  
 }
-.text_with_overlay .center_block .sec_image.animated{ width: 66%; }
 .text_with_overlay .center_block .image_back{
   position: absolute;
   bottom: 0;
   left: -2%;
-  width: 80%;
+  width: 100%;
   transition: .7s;
-  transition-origin: center center; 
   -webkit-animation-delay: 2000ms;
   animation-delay: 2000ms; 
 }
@@ -1031,13 +1030,12 @@ form button,
   bottom: 10px;
   left: -2%;
   z-index: 3;
-  width: 80%;
+  width: 100%;
   transition: .7s;
-  transition-origin: center center;
   -webkit-animation-delay: 2000ms;
   animation-delay: 2000ms; 
 }
-    .text_with_overlay .center_block .image_back.animated,
+.text_with_overlay .center_block .image_back.animated,
 .text_with_overlay .center_block .image_front.animated{ width: 100%; }
 .text_with_overlay .right_block li{
   margin-bottom: 15px;
