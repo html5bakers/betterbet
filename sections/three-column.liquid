@@ -34,7 +34,7 @@
          "slidesToScroll": 1, "dots": true}}]
          }'>
         {%- for block in section.blocks -%}
-        <div class="column text_center slide animate show_up ad-{% cycle ' ', '1', '1-5', '2', '2-5' %}">
+        <div class="column text_center slide animate show_up ad-{% cycle '1', '1-5', '2', '2-5', '3' %}">
           {%- if block.settings.image != blank -%}
             <div class="icon">
               {{ block.settings.image}}
