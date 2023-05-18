@@ -18,7 +18,7 @@
     {%- endif -%}
       <div class="list_wrapper animate show_up">
         {% if section.settings.left_image != blank %}
-        <figure class="bg_left animate ad-2"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
+        <figure class="bg_left animate ad-2-5"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
         {% endif %}
         {% if section.settings.right_image != blank %}
         <figure class="bg_right animate ad-2-5"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
@@ -34,7 +34,7 @@
          "slidesToScroll": 1, "dots": true}}]
          }'>
         {%- for block in section.blocks -%}
-        <div class="column text_center slide animate show_up ad-{% cycle '1', '1-5', '2', '2-5', '3' %}">
+        <div class="column text_center slide animate show_up ad-{% cycle '0', '1', '1-5', '2', '2-5' %}">
           {%- if block.settings.image != blank -%}
             <div class="icon animate ad-1">
               {{ block.settings.image}}
