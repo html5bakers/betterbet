@@ -7,7 +7,7 @@
     {% endcomment %}
     <div class="custom_blog featured_blog_list">
       {%- for article in blog.articles limit:1 -%}
-      <div class="col_left">
+      <div class="col_left animate show_up">
         <figure><a href="{{ article.url }}">
          {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: article.image -%}{%- endcapture -%}
 
@@ -23,7 +23,7 @@
         </div>
       </div>
       {% endfor %}
-      <div class="col_right">
+      <div class="col_right animate show_up ad-1">
         {%- for article in blog.articles offset:1 limit:2 -%}
         <div class="custom_blog_right_list">
           <h3 class="Heading heading_small"><a href="{{ article.url }}">{{ article.title }}</a></h3>
@@ -40,7 +40,7 @@
       <div class="custom_blog blog_list_section">
          <div class="col_right">
           {%- for article in blog.articles offset:3 -%}
-          <div class="custom_blog_right_list">
+          <div class="custom_blog_right_list animate show_up ad-{% cycle '0', '1', '1-5', '2', '2-5' %}">
             <h3 class="Heading heading_small"><a href="{{ article.url }}">{{ article.title }}</a></h3>
             <p class="content">{{ article.excerpt_or_content | strip_html | truncatewords: 45 }}</p>
           <div class="blog-tag-list">
