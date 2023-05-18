@@ -18,10 +18,10 @@
     {%- endif -%}
       <div class="list_wrapper animate show_up ad-2">
         {% if section.settings.left_image != blank %}
-        <figure class="bg_left animate show_up ad-3"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
+        <figure class="bg_left animate ad-3"><img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ block.settings.left_image.title }}" title="{{ block.settings.left_image.title }}" /></figure>
         {% endif %}
         {% if section.settings.right_image != blank %}
-        <figure class="bg_right animate show_up ad-3"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
+        <figure class="bg_right animate ad-3"><img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image.title }}" title="{{ block.settings.right_image.title }}" /></figure>
         {% endif %}
         <div class="list slick" data-slick='{
          "dots": false,
@@ -34,7 +34,7 @@
          "slidesToScroll": 1, "dots": true}}]
          }'>
         {%- for block in section.blocks -%}
-        <div class="column text_center slide">
+        <div class="column text_center slide animate show_up ad-{% cycle ' ', '1', '1-5', '2', '2-5' %}">
           {%- if block.settings.image != blank -%}
             <div class="icon">
               {{ block.settings.image}}
