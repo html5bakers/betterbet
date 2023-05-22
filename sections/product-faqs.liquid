@@ -17,10 +17,10 @@
   }
 {% endstyle %}
 
-  <section class="Section Section--spacingNormal product_faq_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="faq" ><!-- data-section-type="product-faq"-->
+  <section class="Section Section--spacingNormal product_faq_section animate show_up" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="faq" ><!-- data-section-type="product-faq"-->
     <div class="Container">
       {% if section.settings.title != blank %}
-        <header class="SectionHeader SectionHeader--center text_center">
+        <header class="SectionHeader SectionHeader--center text_center animate show_up ad-1">
           <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}</h2>
         </header>
       {% endif %}
@@ -28,7 +28,7 @@
     {% assign i = -1 %}
         {% for title in product.metafields.custom.faq_heading.value %}
           {%- if title != blank and product.metafields.custom.faq_description.value[i] != blank -%}
-              <div class="Faq__Item {% if section.blocks[forloop.index].type == 'separator' or forloop.last %}Faq__Item--lastOfSection{% endif %}" aria-expanded="false" {{ block.shopify_attributes }}>
+              <div class="Faq__Item  animate show_up ad-{% cycle '0', '1', '1-5', '2', '2-5' %} {% if section.blocks[forloop.index].type == 'separator' or forloop.last %}Faq__Item--lastOfSection{% endif %}" aria-expanded="false" {{ block.shopify_attributes }}>
                 <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
   
                 <div class="Faq__ItemWrapper">
