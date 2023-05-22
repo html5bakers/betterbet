@@ -12,6 +12,26 @@
     },
     "main": {
       "type": "main-faq",
+      "blocks": {
+        "ba8988da-acdc-4864-97b7-3b505c6a3c00": {
+          "type": "question",
+          "settings": {
+            "title": "What is return Policy?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "36c380a4-bcdf-4c7b-831c-c4d3e653f431": {
+          "type": "question",
+          "settings": {
+            "title": "What is the shipping Policy?",
+            "answer": "<p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ba8988da-acdc-4864-97b7-3b505c6a3c00",
+        "36c380a4-bcdf-4c7b-831c-c4d3e653f431"
+      ],
       "settings": {
       }
     }
