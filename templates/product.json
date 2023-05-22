@@ -183,6 +183,18 @@
     },
     "22b7f2d5-cee9-42a2-b34d-31be3cfe7642": {
       "type": "product-faqs",
+      "blocks": {
+        "83e9f24c-45d3-4880-bceb-67c42a4b8acf": {
+          "type": "FAQ",
+          "settings": {
+            "title": "{{ product.metafields.custom.faq_heading | metafield_text }}",
+            "answer": "{{ product.metafields.custom.faq_description | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "83e9f24c-45d3-4880-bceb-67c42a4b8acf"
+      ],
       "settings": {
         "padding_top": 115,
         "padding_bottom": 55,
