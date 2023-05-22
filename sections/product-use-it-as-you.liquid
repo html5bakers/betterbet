@@ -12,10 +12,10 @@
     }
   }
 {% endstyle %}
-<section class="Section Section--spacingNormal product_use_it_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
-  <div class="Container gg">
+<section class="Section Section--spacingNormal product_use_it_section animate show_up" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
+  <div class="Container">
     {% if product.metafields.custom.product_use_main_heading != blank %}
-      <header class="SectionHeader SectionHeader--center text_center">
+      <header class="SectionHeader SectionHeader--center text_center  animate show_up ad-1">
         <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">
           {{ product.metafields.custom.product_use_main_heading }}
           {% if product.metafields.custom.use_main_heading_badge_icon %}
