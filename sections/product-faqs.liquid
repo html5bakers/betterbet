@@ -17,36 +17,36 @@
   }
 {% endstyle %}
 
-<section class="Section Section--spacingNormal product_faq_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="faq" ><!-- data-section-type="product-faq"-->
-  <div class="Container">
-    {% if section.settings.title != blank %}
-      <header class="SectionHeader SectionHeader--center text_center">
-        <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}</h2>
-      </header>
-    {% endif %}
-    <div class="product_faq">
-  {% assign i = -1 %}
-      {% for title in product.metafields.custom.faq_heading.value %}
-{%- if title != blank and product.metafields.custom.faq_description.value[i] != blank -%}
-            <div class="Faq__Item {% if section.blocks[forloop.index].type == 'separator' or forloop.last %}Faq__Item--lastOfSection{% endif %}" aria-expanded="false" {{ block.shopify_attributes }}>
-              <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
-
-              <div class="Faq__ItemWrapper">
-                <button class="Faq__Question">{{ title | escape }}</button>
-
-                <div class="Faq__AnswerWrapper" aria-hidden="true">
-                  <div class="Faq__Answer Rte">
-                    <p>{{ product.metafields.custom.faq_description.value[i] }}</p>
+  <section class="Section Section--spacingNormal product_faq_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="faq" ><!-- data-section-type="product-faq"-->
+    <div class="Container">
+      {% if section.settings.title != blank %}
+        <header class="SectionHeader SectionHeader--center text_center">
+          <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}</h2>
+        </header>
+      {% endif %}
+      <div class="product_faq">
+    {% assign i = -1 %}
+        {% for title in product.metafields.custom.faq_heading.value %}
+          {%- if title != blank and product.metafields.custom.faq_description.value[i] != blank -%}
+              <div class="Faq__Item {% if section.blocks[forloop.index].type == 'separator' or forloop.last %}Faq__Item--lastOfSection{% endif %}" aria-expanded="false" {{ block.shopify_attributes }}>
+                <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
+  
+                <div class="Faq__ItemWrapper">
+                  <button class="Faq__Question">{{ title | escape }}</button>
+  
+                  <div class="Faq__AnswerWrapper" aria-hidden="true">
+                    <div class="Faq__Answer Rte">
+                      <p>{{ product.metafields.custom.faq_description.value[i] }}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          {%- endif -%}
-        {% endfor %}
-              </div>
-  </div>
-</section>
-  {% endif %}
+            {%- endif -%}
+          {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
 
 {% schema %}
   {
