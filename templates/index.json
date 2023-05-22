@@ -301,13 +301,6 @@
             "image_png": "shopify:\/\/shop_images\/no-soy.png",
             "title": "100% NO NUTS OR SOY"
           }
-        },
-        "719129e2-1389-4c15-b98c-774bf5d7f2fb": {
-          "type": "no-ingradiants",
-          "settings": {
-            "image": "",
-            "title": ""
-          }
         }
       },
       "block_order": [
@@ -315,8 +308,7 @@
         "4a240d45-3602-44f8-af76-936a3ecd4b22",
         "77db51a8-ba26-4680-8e24-eae5a19b4f72",
         "382e0aa2-9757-457c-80a0-b36955787204",
-        "9405870b-afff-4585-a356-565a4ae4457f",
-        "719129e2-1389-4c15-b98c-774bf5d7f2fb"
+        "9405870b-afff-4585-a356-565a4ae4457f"
       ],
       "settings": {
         "bg_color": "#50a6ff",
