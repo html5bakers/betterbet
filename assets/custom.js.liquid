@@ -170,6 +170,8 @@ $('.animateR').each(function(){
 // Delivery Check
 var pincodes = [400001, 400002, 400004, 400005];
 //alert(pincodes);
+var hello = '{{ settings.pincodes }}';
+console.log(hello);
 //Pincode Validation
 $('input[name=pincode]').keyup(function(){
   var entered_value = $(this).val();
