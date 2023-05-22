@@ -472,7 +472,7 @@
             </div>
             
             {% if product.metafields.custom.product_usps.value %}
-            <ul class="product_specifications flex_always gg">
+            <ul class="product_specifications flex_always">
               {%- assign i = -1 -%}
               {%- for image in product.metafields.custom.product_usps.value -%}
                 {%- assign i = i | plus: 1 -%}
