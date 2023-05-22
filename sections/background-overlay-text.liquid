@@ -51,6 +51,7 @@
           {%- endif -%}
           </div>
         </div>
+        {% comment %}
         <div class="left_block_desc block_2">
           {%- if section.settings.content_title_02 != blank -%}
             <h2 class="Heading heading_small animate slide_right ad-1">{{ section.settings.content_title_02 }}</h2>
@@ -72,7 +73,7 @@
           {%- endif -%}
         </div>
       </div>
-  
+  {% endcomment %}
       {%- if section.settings.image != blank -%}
         <div class="center_block animate">
           <span class="image_back animate"><img class="Image--lazyLoad" src="{{ 'milk-back.png' | file_url }}" /></span>
