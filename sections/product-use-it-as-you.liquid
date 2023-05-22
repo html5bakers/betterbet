@@ -28,7 +28,7 @@
       {% assign i = -1 %}
       {% for image in product.metafields.custom.product_use_image.value %}
         {% assign i = i | plus:1 %}
-      <div class="product_use_it_wrapper">
+      <div class="product_use_it_wrapper animate show_up ad-{% cycle '0', '1', '1-5', '2', '2-5' %}">
         {% if image != blank %}
         <figure>
         {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: image -%}{%- endcapture -%}
