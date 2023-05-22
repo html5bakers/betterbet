@@ -72,8 +72,9 @@
             <ul class="flex animate slide_right ad-1-5">{{ section.settings.content_list_2_desc_02 }}</ul>
           {%- endif -%}
         </div>
+        {% endcomment %}
       </div>
-  {% endcomment %}
+  
       {%- if section.settings.image != blank -%}
         <div class="center_block animate">
           <span class="image_back animate"><img class="Image--lazyLoad" src="{{ 'milk-back.png' | file_url }}" /></span>
