@@ -12,7 +12,7 @@
     }
   }
 {% endstyle %}
-<section class="Section Section--spacingNormal product_img_text_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
+<section class="Section Section--spacingNormal product_img_text_section animate show_up" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="product_img_text">
       {% assign i = -1 %}
@@ -20,11 +20,11 @@
         {% assign i = i | plus:1 %}
         <div class="product_img_text_wrapper flex_always {{ product.metafields.custom.image_with_text_image_position.value[i] | handle }}">
           {% if image != blank %}
-          <figure>
+          <figure class="animate show_up ad-1">
             {{ image }}
           </figure>
           {% endif %}
-          <div class="product_img_text_desc">
+          <div class="product_img_text_desc animate show_up ad-1-5">
             {%- if product.metafields.custom.image_with_text_heading.value[i] != blank -%}
               <h3 class="Heading">{{ product.metafields.custom.image_with_text_heading.value[i] }}</h3>
             {%- endif -%}
