@@ -13,6 +13,12 @@
     "main": {
       "type": "main-faq",
       "blocks": {
+        "975be2fc-317b-496a-8e97-4fd8c659ed31": {
+          "type": "separator",
+          "settings": {
+            "title": "General"
+          }
+        },
         "ba8988da-acdc-4864-97b7-3b505c6a3c00": {
           "type": "question",
           "settings": {
@@ -29,6 +35,7 @@
         }
       },
       "block_order": [
+        "975be2fc-317b-496a-8e97-4fd8c659ed31",
         "ba8988da-acdc-4864-97b7-3b505c6a3c00",
         "36c380a4-bcdf-4c7b-831c-c4d3e653f431"
       ],
