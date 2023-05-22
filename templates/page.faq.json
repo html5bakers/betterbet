@@ -1,1 +1,23 @@
-{"sections":{"main":{"type":"main-faq","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "64119687-f668-474c-b080-c7715bfe1baf": {
+      "type": "page-banner",
+      "settings": {
+        "bg_color": "#FFF2CC",
+        "title": "",
+        "title_color": "#000",
+        "desc": "",
+        "desc_color": "#000"
+      }
+    },
+    "main": {
+      "type": "main-faq",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "64119687-f668-474c-b080-c7715bfe1baf",
+    "main"
+  ]
+}
