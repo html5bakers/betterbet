@@ -49,9 +49,9 @@
       <div class="inner">
         <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow"><img src="{{prodimages[randomNumber]}}" alt="{{prodnames[randomNumber]}}" /></a>      
         {%- if i == action -%}
-        	<span class="text">Someone purchased <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow">{{prodnames[randomNumber] | replace: 'TGL Co.', ''}}</a>. <small>{{minutes}} mins ago</small></span>
+        	<span class="text">Someone purchased <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow">{{prodnames[randomNumber] }}</a>. <small>{{minutes}} mins ago</small></span>
         {%- else -%}
-        	<span class="text">Someone viewed <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow">{{prodnames[randomNumber] | replace: 'TGL Co.', ''}}</a>. <small>{{minutes}} mins ago</small></span>
+        	<span class="text">Someone viewed <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow">{{prodnames[randomNumber] }}</a>. <small>{{minutes}} mins ago</small></span>
         {%- endif -%}
       </div>
     </li>
