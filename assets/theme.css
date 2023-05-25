@@ -6236,8 +6236,9 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 
 .ArticleNav {
   padding: 50px 0;
-  background: var(--secondary-elements-background);
-  color: var(--secondary-elements-text-color);
+  /*background: var(--secondary-elements-background);*/
+  /*color: var(--secondary-elements-text-color);*/
+  color: var(--heading-color);
 }
 
 .ArticleNav .Heading {
