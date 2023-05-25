@@ -6235,7 +6235,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
  */
 
 .ArticleNav {
-  padding: 75px 0;
+  padding: 50px 0;
   background: var(--secondary-elements-background);
   color: var(--secondary-elements-text-color);
 }
@@ -6262,7 +6262,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 
 @media screen and (min-width: 641px) {
   .ArticleNav {
-    padding: 140px 0;
+    padding: 50px 0;
   }
 }
 /**
