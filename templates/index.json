@@ -46,8 +46,8 @@
         "slide-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Better_Bet_Web_Banners-01_1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Better_Bet_Web_Banners-02_1.jpg",
+            "image": "shopify:\/\/shop_images\/BetterBet-Banner-1-W.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/BetterBet-Banner-1-M.jpg",
             "apply_overlay": false,
             "content_position": "bottomLeft",
             "subheading": "",
@@ -61,9 +61,9 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner-2.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/image_1.png",
-            "apply_overlay": true,
+            "image": "shopify:\/\/shop_images\/BetterBet-Banner-2-W.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/BetterBet-Banner-2-M.jpg",
+            "apply_overlay": false,
             "content_position": "bottomLeft",
             "subheading": "",
             "title": "",
