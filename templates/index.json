@@ -46,9 +46,9 @@
         "slide-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner_7d739bb7-3049-41f3-b5bb-cbe1305dfe8f.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/mob-banner.jpg",
-            "apply_overlay": true,
+            "image": "shopify:\/\/shop_images\/Better_Bet_Web_Banners-01_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Better_Bet_Web_Banners-02_1.jpg",
+            "apply_overlay": false,
             "content_position": "bottomLeft",
             "subheading": "",
             "title": "",
