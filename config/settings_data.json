@@ -61,7 +61,7 @@
     "favicon": "shopify:\/\/shop_images\/favicon_dd7e5b2e-2f7b-4742-a74a-7b2228bcc587.png",
     "enable_customer_visits": true,
     "enable_customer_activity": true,
-    "activity_collection": "test-collection",
+    "activity_collection": "combos",
     "checkout_logo_image": "shopify:\/\/shop_images\/better-bet.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "large",
