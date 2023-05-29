@@ -62,7 +62,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner-2.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/mob-banner-2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/image_1.png",
             "apply_overlay": true,
             "content_position": "bottomLeft",
             "subheading": "",
