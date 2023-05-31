@@ -192,6 +192,10 @@ var current_minutes = current_date.getMinutes();
 console.log(current_date);
 console.log(current_hours);
 
+if(current_hours < 15){
+  console.log('no');
+}else{ console.log('yes'); }
+
 if(getCookie('pincode_entered')){
   $('.pincode_availability_msg').removeClass('hide');
   //$('.pincode_checker_form_wrapper').addClass('hide');
