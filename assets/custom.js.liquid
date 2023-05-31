@@ -204,7 +204,7 @@ if(getCookie('pincode_entered')){
     console.log('nahi hoga');
     $('.serviceable_msg').text('Congratulations! Your order will deliver in 4-5 days.');
     $('.pincode_availability_msg').addClass('serviceable');
-  }else if(getCookie('serviceable') == 1 && current_hours > 15){
+  }else if(getCookie('serviceable') == 1 && current_hours < 15){
     console.log('hojayega');
     $('.serviceable_msg').text('Congratulations! Your order will deliver today.');
     $('.pincode_availability_msg').addClass('serviceable');
