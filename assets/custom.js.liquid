@@ -172,6 +172,7 @@ var pincodes = [400001, 400002, 400004, 400005];
 //alert(pincodes);
 var hello = '{{ settings.pincodes }}';
 console.log(hello);
+
 //Pincode Validation
 $('input[name=pincode]').keyup(function(){
   var entered_value = $(this).val();
@@ -183,6 +184,13 @@ $('input[name=pincode]').keyup(function(){
     $('.pincode_validate_msg').text('');
   }
 });
+
+
+var current_date = new Date();
+var current_hours = current_date.getHours();
+var current_minutes = current_date.getMinutes();
+console.log(current_date);
+console.log(current_hours);
 
 if(getCookie('pincode_entered')){
   $('.pincode_availability_msg').removeClass('hide');
@@ -243,6 +251,5 @@ $(document).on('click', '.recurpay__label', function(e){
   $('.recurpay__content').toggleClass('active');
   $('.recurpay__plans').slideToggle('slow');
 });
-
 
         
