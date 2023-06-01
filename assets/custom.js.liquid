@@ -231,7 +231,7 @@ $('.pincode_button').click(function(){
     $('.pincode_availability_msg').removeClass('hide');
     setCookie('pincode_entered', entered_value, 30);
     if(jQuery.inArray(entered_value, pincodes) > -1){
-      //alert('1');
+      alert('1');
       //setCookie('serviceable_category', 'A', 30);
       setCookie('serviceable', '1', 30);
       if(current_hours > 19){
@@ -248,7 +248,7 @@ $('.pincode_button').click(function(){
       $('.unserviceable_msg').removeClass('hide');
       $('.serviceable_msg').addClass('hide');
     }else{
-      //alert('3');
+      alert('3');
       //deleteCookie('serviceable_category');
       setCookie('serviceable', '2', 30);
       $('.serviceable_msg_later').removeClass('hide');
