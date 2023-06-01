@@ -205,10 +205,10 @@ if(getCookie('pincode_entered')){
     console.log('hojayega');
     $('.serviceable_msg_today').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
-  }else if(getCookie('serviceable') == 0){
+  }/*else if(getCookie('serviceable') == 0){
     $('.serviceable_msg').text('Congratulations! Your order will deliver in 4-5 days.');
     $('.pincode_availability_msg').addClass('serviceable');
-  }else if(getCookie('serviceable') == 0){
+  }*/else if(getCookie('serviceable') == 0){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
   }
