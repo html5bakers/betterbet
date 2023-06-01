@@ -202,7 +202,7 @@ if(getCookie('pincode_entered')){
   //console.log('inupt value: '+ $('.pincode').val());
   if(getCookie('serviceable') == 1 && current_hours > 15){
     console.log('nahi hoga');
-    $('.serviceable_msg').text('Congratulations! Your order will deliver in 4-5 days.');
+    $('.serviceable_msg').text('Congratulations! Your order will deliver tomorrow.');
     $('.pincode_availability_msg').addClass('serviceable');
   }else if(getCookie('serviceable') == 1 && current_hours < 15){
     console.log('hojayega');
