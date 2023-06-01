@@ -107,6 +107,30 @@
         "id": "min_threshold",
         "label": "Same day time threshold",
         "info": "Enter minutes eg. 20"
+      },
+      {
+        "type": "text",
+        "id": "same_day_message",
+        "label": "Same day delivery Message",
+        "default": "Congratulations! Your order will deliver today."
+      },
+      {
+        "type": "text",
+        "id": "next_day_message",
+        "label": "Next day delivery Message",
+        "default": "Congratulations! Your order will deliver tomorrow."
+      },
+      {
+        "type": "text",
+        "id": "delivery_message",
+        "label": "Delivery Message",
+        "default": "Congratulations! Your order will deliver in 4-5 days."
+      },
+      {
+        "type": "text",
+        "id": "no_delivery_message",
+        "label": "No delivery Message",
+        "default": "Sorry, we do not deliver in your area."
       }
     ]
   },

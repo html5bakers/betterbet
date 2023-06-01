@@ -465,10 +465,10 @@
                   <div class="pincode_validate_msg"></div>
                   <div class="nan_value_msg hide">Please Enter Pincode.</div>
                   <div class="pincode_availability_msg hide">
-                    <div class="serviceable_msg text_center serviceable_msg_today hide">Congratulations! Your order will deliver today.</div>
-                    <div class="serviceable_msg text_center serviceable_msg_tom hide">Congratulations! Your order will deliver tomorrow.</div>
-                    <div class="serviceable_msg text_center serviceable_msg_later hide">Congratulations! Your order will deliver in 4-5 days.</div>
-                    <div class="unserviceable_msg hide text_center">Sorry, we do not deliver in your area. <span class="change_pincode">Check another pincode</span></div>
+                    <div class="serviceable_msg text_center serviceable_msg_today hide">{{ settings.same_day_message }}</div>
+                    <div class="serviceable_msg text_center serviceable_msg_tom hide">{{ settings.next_day_message }}</div>
+                    <div class="serviceable_msg text_center serviceable_msg_later hide">{{ settings.delivery_message }}</div>
+                    <div class="unserviceable_msg hide text_center">{{ settings.no_delivery_message }} <span class="change_pincode">Check another pincode</span></div>
                   </div> 
               </div>
             </div>
