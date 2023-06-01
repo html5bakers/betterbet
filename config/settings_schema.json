@@ -93,7 +93,7 @@
       },
       {
         "type": "textarea",
-        "id": "exclude_pincodes_list",
+        "id": "excluded_pincodes_list",
         "label": "Exluded Pincodes"
       },
       {
