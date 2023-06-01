@@ -202,9 +202,9 @@ if(getCookie('pincode_entered')){
   //console.log('inupt value: '+ $('.pincode').val());
   if(getCookie('serviceable') == 1){
     $('.pincode_availability_msg').addClass('serviceable');
-    if(current_hours >= 19){
+    if(current_hours >= 15){
        $('.serviceable_msg_tom').removeClass('hide');
-    }else if(current_hours < 19){
+    }else if(current_hours < 15){
       $('.serviceable_msg_today').removeClass('hide');
     }
   }else if(getCookie('serviceable') == 2){
