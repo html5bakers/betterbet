@@ -198,10 +198,10 @@ if(getCookie('pincode_entered')){
   $('.pincode_availability_msg').removeClass('hide');
   $('.pincode').val(getCookie('pincode_entered'));
   //console.log('inupt value: '+ $('.pincode').val());
-  if(getCookie('serviceable') == 1 && current_hours >= 19 && current_minutes > 1){
+  if(getCookie('serviceable') == 1 && current_hours >= 18 && current_minutes > 1){
     $('.serviceable_msg_tom').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
-  }else if(getCookie('serviceable') == 1 && current_hours <= 19 && current_minutes < 00 ){
+  }else if(getCookie('serviceable') == 1 && current_hours <= 19 && current_minutes < 0 ){
     console.log('hojayega');
     $('.serviceable_msg_today').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
