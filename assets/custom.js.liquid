@@ -199,7 +199,7 @@ if(getCookie('pincode_entered')){
   //console.log('inupt value: '+ $('.pincode').val());
   if(getCookie('serviceable') == 1 && current_hours > 15){
     console.log('nahi hoga');
-    $('.serviceable_msg_tom').removeClass('hide');
+    $('.serviceable_msg_tom').text('yes');
     $('.pincode_availability_msg').addClass('serviceable');
   }else if(getCookie('serviceable') == 1 && current_hours < 15){
     console.log('hojayega');
