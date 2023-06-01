@@ -25,8 +25,9 @@
 {%- assign prodimages = prodimages | remove_last: ';' | split: ';' -%}
 
 <div id="socialproof">
+  {{ prodlinks }}
   <span class="close"><svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span>
-  <ul class="proofs {{ prodlinks }}" data-flickity='{
+  <ul class="proofs" data-flickity='{
               "draggable": false,
               "percentPosition": false,
               "groupCells": "100%",
