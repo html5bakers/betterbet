@@ -211,11 +211,8 @@ if(getCookie('pincode_entered')){
   }else if(getCookie('serviceable') == 0){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
-  }else{
-    $('.pincode_availability_msg').addClass('hide');
   }
-
-/*  
+  /*
   if(getCookie('serviceable') == 1 && current_hours >= 19){
     $('.serviceable_msg_tom').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
@@ -230,6 +227,7 @@ if(getCookie('pincode_entered')){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
   }
+  */
 }else{
     $('.pincode_availability_msg').addClass('hide');
 }
