@@ -7,7 +7,7 @@
     "recurpay_redirect": "checkout",
     "recurpay_start_link": "\/",
     "pincodes_list": "[400001, 400002, 400004, 400005]",
-    "exclude_pincodes_list": "[143002]",
+    "hours_threshold": "17",
     "heading_color": "#162516",
     "text_color": "#162516",
     "text_light_color": "#18301c",
@@ -71,6 +71,7 @@
     "checkout_sidebar_background_color": "#fafafa",
     "checkout_accent_color": "#162516",
     "checkout_button_color": "#a5c423",
+    "exclude_pincodes_list": "[143002]",
     "sections": {
       "sidebar-menu": {
         "type": "sidebar-menu",
