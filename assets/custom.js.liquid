@@ -205,7 +205,7 @@ if(getCookie('pincode_entered')){
     if(current_hours >= 19){
        $('.serviceable_msg_tom').removeClass('hide');
     }else if(current_hours < 19){
-      $('.serviceable_msg_today').removeClass('hide');
+      $('.serviceable_msg_today').toggleClass('hide');
     }
   }else if(getCookie('serviceable') == 2){
     $('.pincode_availability_msg').addClass('serviceable');
