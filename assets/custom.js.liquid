@@ -168,7 +168,7 @@ $('.animateR').each(function(){
 });
 
 // Delivery Check
-var pincodes = [400001, 400002, 400004, 400005];
+var pincodes = "{{ settings.pincodes_list }}";
 var nondeliverablepincodes = [143002];
 var hours_threshold = "{{ settings.hours_threshold }}";
 var min_threshold = "{{ settings.min_threshold }}";
