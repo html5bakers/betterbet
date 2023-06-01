@@ -169,8 +169,8 @@ $('.animateR').each(function(){
 
 // Delivery Check
 var pincodes = [400001, 400002, 400004, 400005];
-var nondeliverablepincodes = "{{ settings.excluded_pincodes_list }}";
-var hours_threshold = "{{ settings.hours_threshold }}";
+var nondeliverablepincodes = [143001];
+var hours_threshold = "{{ settings.hours_threshold }} {{ settings.excluded_pincodes_list }}";
 var min_threshold = "{{ settings.min_threshold }}";
 //alert(pincodes);
 var hello = "{{ settings.pincodes_list }}";
