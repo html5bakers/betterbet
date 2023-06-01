@@ -207,7 +207,7 @@ if(getCookie('pincode_entered')){
   }else if(getCookie('serviceable') == 2){
     $('.serviceable_msg_later').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
-  }else if(getCookie('serviceable') == 1){
+  }else if(getCookie('serviceable') == 0){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
   }
