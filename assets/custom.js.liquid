@@ -192,10 +192,6 @@ var current_minutes = current_date.getMinutes();
 console.log(current_date);
 console.log(current_hours);
 
-if(current_hours < 15){
-  console.log('no');
-}else{ console.log('yes'); }
-
 if(getCookie('pincode_entered')){
   $('.pincode_availability_msg').removeClass('hide');
   $('.pincode').val(getCookie('pincode_entered'));
@@ -207,6 +203,9 @@ if(getCookie('pincode_entered')){
   }else if(getCookie('serviceable') == 1 && current_hours < 15){
     console.log('hojayega');
     $('.serviceable_msg').text('Congratulations! Your order will deliver today.');
+    $('.pincode_availability_msg').addClass('serviceable');
+  }else if(getCookie('serviceable') == 0){
+    $('.serviceable_msg').text('Congratulations! Your order will deliver in 4-5 days.');
     $('.pincode_availability_msg').addClass('serviceable');
   }else if(getCookie('serviceable') == 0){
     $('.pincode_availability_msg').addClass('unserviceable');
