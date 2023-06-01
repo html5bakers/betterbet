@@ -8,7 +8,7 @@
     "recurpay_start_link": "\/",
     "pincodes_list": "[400001, 400002, 400004, 400005]",
     "hours_threshold": "16",
-    "min_threshold": "53",
+    "min_threshold": "55",
     "heading_color": "#162516",
     "text_color": "#162516",
     "text_light_color": "#18301c",
