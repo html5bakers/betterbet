@@ -238,7 +238,7 @@ $('.pincode_button').click(function(){
       //setCookie('serviceable_category', 'A', 30);
       setCookie('serviceable', '1', 30);
       if(current_hours >= hours_threshold  || current_hours == hours_threshold && current_minutes > min_threshold){
-        alert('min_threshold');
+        alert(min_threshold);
         $('.serviceable_msg').addClass('hide');
         $('.serviceable_msg.serviceable_msg_tom').removeClass('hide');
         $('.pincode_availability_msg').addClass('serviceable');
