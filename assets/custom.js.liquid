@@ -233,7 +233,6 @@ $('.pincode_button').click(function(){
   }else{
     $('.pincode_availability_msg').removeClass('hide');
     setCookie('pincode_entered', entered_value, 30);
-    alert(pincodes);
     if(jQuery.inArray(entered_value, pincodes) > -1){
       alert('1');
       //setCookie('serviceable_category', 'A', 30);
@@ -248,6 +247,7 @@ $('.pincode_button').click(function(){
          $('.pincode_availability_msg').addClass('serviceable');
       }
     }else if(jQuery.inArray(entered_value, nondeliverablepincodes) > -1){
+      alert('No delivery');
       //setCookie('serviceable_category', 'B', 30);
       setCookie('serviceable', '0', 30);
       $('.pincode_availability_msg').addClass('unserviceable');
