@@ -171,7 +171,7 @@ $('.animateR').each(function(){
 var pincodes = [400001, 400002, 400004, 400005];
 var nondeliverablepincodes = [143001];
 //alert(pincodes);
-var hello = "1 {{ settings.pincodes_list }}";
+var hello = "{{ settings.pincodes_list }}";
 console.log('hi'+ hello);
 
 //Pincode Validation
@@ -198,6 +198,24 @@ if(getCookie('pincode_entered')){
   $('.pincode_availability_msg').removeClass('hide');
   $('.pincode').val(getCookie('pincode_entered'));
   //console.log('inupt value: '+ $('.pincode').val());
+  if(getCookie('serviceable') == 1){
+    $('.pincode_availability_msg').addClass('serviceable');
+    if(current_hours >= 19){
+       $('.serviceable_msg_tom').removeClass('hide');
+    }else if(current_hours < 19){
+      $('.serviceable_msg_today').removeClass('hide');
+    }
+  }else if(getCookie('serviceable') == 2){
+    $('.pincode_availability_msg').addClass('serviceable');
+    $('.serviceable_msg_later').removeClass('hide');
+  }else if(getCookie('serviceable') == 0){
+    $('.pincode_availability_msg').addClass('unserviceable');
+    $('.unserviceable_msg').removeClass('hide');
+  }else{
+    $('.pincode_availability_msg').addClass('hide');
+  }
+
+  
   if(getCookie('serviceable') == 1 && current_hours >= 19){
     $('.serviceable_msg_tom').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
