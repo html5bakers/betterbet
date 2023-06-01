@@ -90,6 +90,23 @@
         "type": "textarea",
         "id": "pincodes_list",
         "label": "Pincodes"
+      },
+      {
+        "type": "textarea",
+        "id": "exclude_pincodes_list",
+        "label": "Exluded Pincodes"
+      },
+      {
+        "type": "text",
+        "id": "hours_threshold",
+        "label": "Same day time threshold",
+        "info": "Enter hours in 24 format eg.15"
+      },
+      {
+        "type": "text",
+        "id": "min_threshold",
+        "label": "Same day time threshold",
+        "info": "Enter minutes eg. 20"
       }
     ]
   },
