@@ -170,7 +170,8 @@ $('.animateR').each(function(){
 // Delivery Check
 var pincodes = "{{ settings.pincodes_list }}";
 var nondeliverablepincodes = "{{ settings.exclude_pincodes_list }}";
-var time_threshold = "{{ settings.hours_threshold }}";
+var hours_threshold = "{{ settings.hours_threshold }}";
+var min_threshold = "{{ settings.min_threshold }}";
 //alert(pincodes);
 var hello = "{{ settings.pincodes_list }}";
 console.log('hi'+ hello);
