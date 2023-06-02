@@ -208,7 +208,7 @@ if(getCookie('pincode_entered')){
     }else if(current_hours < hours_threshold){
       $('.serviceable_msg').addClass('hide');
       $('.serviceable_msg.serviceable_msg_today').removeClass('hide');
-    }else if(current_hours == hours_threshold && current_minutes < min_threshold){
+    }else if(current_hours == hours_threshold && current_minutes < min_threshold || current_hours == hours_threshold && current_minutes == min_threshold){
       $('.serviceable_msg, .unserviceable_msg').addClass('hide');
       $('.serviceable_msg.serviceable_msg_today').removeClass('hide');
     }
