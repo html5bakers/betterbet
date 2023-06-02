@@ -45,7 +45,7 @@
     
     {%- for i in (1..products_total) -%}
     {%- assign randomNumber = "now" | date: "%N" | modulo: proddiff | plus: prodmin | plus: {{i}} -%}
-    
+    {{ randomNumber }}
     {%- assign minutes = "now" | date: "%N" | modulo: timediff | plus: timemin -%}
     {% if prodlinks[randomNumber] != blank %} 
     <li class="proof" rel="{{randomNumber}}">
