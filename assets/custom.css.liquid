@@ -2373,6 +2373,7 @@ form button,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 }
 .newsletter_popup_wrapper .popup_image,
 .newsletter_popup_wrapper .popup_content{ width: 100%; }
@@ -2395,6 +2396,7 @@ form button,
   visibility: visible;
 }
 @media screen and (min-width: 640px){
+  .newsletter_popup_wrapper{ flex-direction: row; }
   .newsletter_popup_wrapper .popup_image{ width: 40%; }
   .newsletter_popup_wrapper .popup_content{ width: 55%; }
 }
