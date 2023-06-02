@@ -26,11 +26,8 @@
 {%- assign prodlinks = prodlinks | remove_last: ';' | split: ';' -%}
 {%- assign prodimages = prodimages | remove_last: ';' | split: ';' -%}
 
-{{ prodlinks }}
-
-  
 <div id="socialproof">
-  <span class="close"><svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span>
+ 
   <ul class="proofs" data-flickity='{
               "draggable": false,
               "percentPosition": false,
@@ -48,10 +45,11 @@
     
     {%- for i in (1..10) -%}
     {%- assign randomNumber = "now" | date: "%N" | modulo: proddiff | plus: prodmin -%}
-    {{ randomNumber }}
+   {% comment %} {{ randomNumber }} {% endcomment %}
     {%- assign minutes = "now" | date: "%N" | modulo: timediff | plus: timemin -%}
     {% if prodlinks[randomNumber] != blank %} 
     <li class="proof" rel="{{randomNumber}}">
+       <span class="close"><svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></span>
       <div class="inner">
         <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow"><img src="{{prodimages[randomNumber]}}" alt="{{prodnames[randomNumber]}}" /></a>      
         {%- if i == action -%}
