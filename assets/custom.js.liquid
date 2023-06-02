@@ -203,18 +203,18 @@ if(getCookie('pincode_entered')){
   if(getCookie('serviceable') == 1){
     $('.pincode_availability_msg').addClass('serviceable');
     if(current_hours > hours_threshold){
-       $('.serviceable_msg').addClass('hide');
+       $('.serviceable_msg, .unserviceable_msg').addClass('hide');
        $('.serviceable_msg.serviceable_msg_tom').removeClass('hide');
     }else if(current_hours < hours_threshold){
       $('.serviceable_msg').addClass('hide');
       $('.serviceable_msg.serviceable_msg_today').removeClass('hide');
     }else if(current_hours == hours_threshold && current_minutes < min_threshold){
-      $('.serviceable_msg').addClass('hide');
+      $('.serviceable_msg, .unserviceable_msg').addClass('hide');
       $('.serviceable_msg.serviceable_msg_today').removeClass('hide');
     }
   }else if(getCookie('serviceable') == 2){
     $('.pincode_availability_msg').addClass('serviceable');
-    $('.serviceable_msg').addClass('hide');
+    $('.serviceable_msg, .unserviceable_msg').addClass('hide');
     $('.serviceable_msg.serviceable_msg_later').removeClass('hide');
   }else if(getCookie('serviceable') == 0){
     $('.pincode_availability_msg').addClass('unserviceable');
@@ -242,20 +242,17 @@ $('.pincode_button').click(function(){
       setCookie('serviceable', '1', 30);
       if(current_hours > hours_threshold){
         alert(min_threshold);
-        $('.serviceable_msg').addClass('hide');
+        $('.serviceable_msg, .unserviceable_msg').addClass('hide');
         $('.serviceable_msg.serviceable_msg_tom').removeClass('hide');
         $('.pincode_availability_msg').addClass('serviceable');
-        $('.unserviceable_msg').addClass('hide');
       }else if(current_hours < hours_threshold){
         alert('below thrshold');
-         $('.serviceable_msg').addClass('hide');
+         $('.serviceable_msg, .unserviceable_msg').addClass('hide');
          $('.serviceable_msg.serviceable_msg_today').toggleClass('hide');
          $('.pincode_availability_msg').addClass('serviceable');
-         $('.unserviceable_msg').addClass('hide');
       }else if(current_hours == hours_threshold && current_minutes < min_threshold){
-        $('.serviceable_msg').addClass('hide');
+        $('.serviceable_msg, .unserviceable_msg').addClass('hide');
         $('.serviceable_msg.serviceable_msg_today').removeClass('hide');
-        $('.unserviceable_msg').addClass('hide');
       }
     }else if(jQuery.inArray(entered_value, nondeliverablepincodes) > -1){
       alert('No delivery');
