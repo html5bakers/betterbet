@@ -30,6 +30,9 @@
     {%- assign action = "now" | date: "%N" | modulo: actiondiff | plus: actionmin -%}
 
     {% assign products_total = collections[settings.activity_collection].all_products_count %}
+    {%- assign timemin = 1 -%}
+    {%- assign timemax = 30 -%}
+    {%- assign timediff = timemax | minus: timemin -%}
     
     {%- for i in (1..products_total) -%}
     {%- assign randomNumber = "now" | date: "%N" | modulo: proddiff | plus: prodmin | plus: {{i}} -%}
