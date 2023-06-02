@@ -1,6 +1,8 @@
 {%- assign prodmin = 0 -%}
-{%- assign prodmax = collections[settings.activity_collection].products_count -%}
+{%- assign prodmax = collections.all_products_count -%}
 {%- assign proddiff = prodmax | minus: prodmin -%}
+
+{{ prodmax }}
 
 {%- assign timemin = 1 -%}
 {%- assign timemax = 30 -%}
@@ -13,7 +15,7 @@
 {%- assign prodnames = '' -%}
 {%- assign prodlinks = '' -%}
 {%- assign prodimages = '' -%}
-{%- for product in collections[settings.activity_collection].products -%}
+{%- for product in collections.all_products -%}
 	{%- assign prodnames = prodnames | append: product.title | append: ';' -%}
 	{%- assign prodlinks = prodlinks | append: product.url | append: ';' -%}
 	{%- capture image -%}{{product.featured_image.src | img_url: 'small' }}{%- endcapture-%}
@@ -40,10 +42,8 @@
               "autoPlay": 8000
             }'>
     {%- assign action = "now" | date: "%N" | modulo: actiondiff | plus: actionmin -%}
-
-    {% assign products_total = collections[settings.activity_collection].all_products_count %}
     
-    {%- for i in (1..products_total) -%}
+    {%- for i in (1..prodmax) -%}
     {%- assign randomNumber = "now" | date: "%N" | modulo: proddiff | plus: prodmin | plus: {{i}} -%}
     {{ randomNumber }}
     {%- assign minutes = "now" | date: "%N" | modulo: timediff | plus: timemin -%}
