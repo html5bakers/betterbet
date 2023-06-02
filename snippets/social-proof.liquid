@@ -1,5 +1,5 @@
 {%- assign prodmin = 0 -%}
-{%- assign prodmax = collections.all_products_count -%}
+{%- assign prodmax = collections['all'].products_count -%}
 {%- assign proddiff = prodmax | minus: prodmin -%}
 
 {{ prodmax }}
@@ -15,7 +15,7 @@
 {%- assign prodnames = '' -%}
 {%- assign prodlinks = '' -%}
 {%- assign prodimages = '' -%}
-{%- for product in collections.all_products -%}
+{%- for product in collections['all'].products -%}
 	{%- assign prodnames = prodnames | append: product.title | append: ';' -%}
 	{%- assign prodlinks = prodlinks | append: product.url | append: ';' -%}
 	{%- capture image -%}{{product.featured_image.src | img_url: 'small' }}{%- endcapture-%}
