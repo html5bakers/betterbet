@@ -44,7 +44,7 @@
     {%- assign action = "now" | date: "%N" | modulo: actiondiff | plus: actionmin -%}
     
     {%- for i in (1..10) -%}
-    {%- assign randomNumber = "now" | date: "%N" | modulo: proddiff | plus: prodmin | plus: {{i}} -%}
+    {%- assign randomNumber = "now" | date: "%N" | modulo: proddiff | plus: prodmin -%}
     {{ randomNumber }}
     {%- assign minutes = "now" | date: "%N" | modulo: timediff | plus: timemin -%}
     {% if prodlinks[randomNumber] != blank %} 
