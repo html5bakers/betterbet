@@ -34,16 +34,16 @@
     {%- for i in (1..products_total) -%}
     {%- assign randomNumber = "now" | date: "%N" | modulo: proddiff | plus: prodmin | plus: {{i}} -%}
     {%- assign randomNumber = i -%}
-    {{ randomNumber }}
+    
     {%- assign minutes = "now" | date: "%N" | modulo: timediff | plus: timemin -%}
     {% if prodlinks[randomNumber] != blank %} 
     <li class="proof" rel="{{randomNumber}}">
       <div class="inner">
         <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow"><img src="{{prodimages[randomNumber]}}" alt="{{prodnames[randomNumber]}}" /></a>      
         {%- if i == action -%}
-        	<span class="text">Someone purchased <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow">{{prodnames[randomNumber] }}</a>. <small>{{minutes}} mins ago</small></span>
+        	<span class="text">{{ randomNumber }} Someone purchased <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow">{{prodnames[randomNumber] }}</a>. <small>{{minutes}} mins ago</small></span>
         {%- else -%}
-        	<span class="text">Someone viewed <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow">{{prodnames[randomNumber] }}</a>. <small>{{minutes}} mins ago</small></span>
+        	<span class="text">{{ randomNumber }} Someone viewed <a href="{{prodlinks[randomNumber]}}?utm_source=socialproof" rel="nofollow">{{prodnames[randomNumber] }}</a>. <small>{{minutes}} mins ago</small></span>
         {%- endif -%}
       </div>
     </li>
