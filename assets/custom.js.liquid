@@ -170,9 +170,9 @@ $('.animateR').each(function(){
 // Delivery Check
 // var pincodes = [400001, 400002, 400004, 400005];
 var pincodes = {{ settings.pincodes_list }};
-var nondeliverablepincodes = {{ settings.excluded_pincodes_list }}
-var hours_threshold = {{ settings.hours_threshold }};
-var min_threshold = {{ settings.min_threshold }};
+var nondeliverablepincodes = {{ settings.excluded_pincodes_list }};
+var hours_threshold = "{{ settings.hours_threshold }}";
+var min_threshold = "{{ settings.min_threshold }}";
 //alert(pincodes);
 var hello = "{{ settings.pincodes_list }}  {{ settings.excluded_pincodes_list }}";
 console.log('hi'+ hello);
