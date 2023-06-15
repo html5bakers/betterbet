@@ -1,7 +1,66 @@
+<section>
+    <div>
+        <ul class="slick" data-slick='{
+         "dots": true,
+         "arrows": false,
+         "draggable": true,
+         "slidesToShow": {{ section.settings.logos_per_row }},
+         "slidesToScroll": 1
+         }'>
+          {% for block in section.blocks %}
+          <li class="slide"> <img src="{{ block.settings.left_column_logo | img_url: 'master' }}"</li>
+          {% endfor %}
+         </ul>
+        
+      </div>
+</section>
+
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "slidesToShow",
+        "label": "Logos per row",
+        "default": "6"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Auto rotate between slides",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "left_column_logo",
+            "label": "Logo"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Availbility Logos",
+        "category": "Image"
+      }
+    ]
   }
 {% endschema %}
 
