@@ -1,8 +1,7 @@
 <section class="Section Section--spacingNormal availability_at_stores" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
-    <div class="available_logo section_half">
+    <div class="available_logo {% if section.settings.show_two_block %}section_half{% endif %}">
       <div class="available_logo_left text_center">
-
         {% if section.settings.left_title != blank %}
           <header class="SectionHeader SectionHeader--center text_center">
             <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.left_title }}</h2>
@@ -37,7 +36,6 @@
       </div>
       
       <div class="available_logo_right text_center">
-
         {% if section.settings.right_title != blank %}
           <header class="SectionHeader SectionHeader--center text_center">
             <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.right_title }}</h2>
@@ -95,6 +93,12 @@
         "type": "checkbox",
         "id": "autoplay",
         "label": "Auto rotate between slides",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_two_block",
+        "label": "Show two Blocks",
         "default": true
       },
       {
