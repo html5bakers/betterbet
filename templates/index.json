@@ -587,6 +587,12 @@
           "settings": {
             "logo": "shopify:\/\/shop_images\/zepto.png"
           }
+        },
+        "bf5b25d8-6ff6-4551-91eb-3ba4fb67846f": {
+          "type": "left-column",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/footer-logo-without-splash.png"
+          }
         }
       },
       "block_order": [
@@ -597,11 +603,11 @@
         "d8668fe3-254b-4bbe-89a7-e32dd2403bd6",
         "8fb05c58-9b85-435d-b4fe-dde1e605e521",
         "69febd08-7fd7-415e-914b-6e372be583c5",
-        "80cced6a-5ae5-49f6-b8e3-e70e114362b6"
+        "80cced6a-5ae5-49f6-b8e3-e70e114362b6",
+        "bf5b25d8-6ff6-4551-91eb-3ba4fb67846f"
       ],
       "settings": {
         "autoplay": true,
-        "slide": 4,
         "section_half": false,
         "left_title": "RESTAURANTS AND CAFE PARTNERS",
         "right_title": "Also available at"
