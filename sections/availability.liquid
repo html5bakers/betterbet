@@ -11,7 +11,12 @@
          }'>
           {% for block in section.blocks %}
          {% if block.settings.left_column_logo != blank %}
-           <li class="slide"> left <img src="{{ block.settings.left_column_logo | img_url: 'master' }}" alt="left"/></li>
+           <li class="slide">
+             <figure>
+               {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.left_column_logo -%}{%- endcapture -%}
+               {%- assign image_url = block.settings.left_column_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+               <img src="{{ block.settings.left_column_logo | img_url: 'master' }}" alt="left"/></li>
+             </figure>
          {% endif %}
           {% endfor %}
          </ul>
