@@ -13,6 +13,20 @@
          </ul>
         
       </div>
+        <div>
+        <ul class="slick" data-slick='{
+         "dots": true,
+         "arrows": false,
+         "draggable": true,
+         "slidesToShow": {{ section.settings.logos_per_row }},
+         "slidesToScroll": 1
+         }'>
+          {% for block in section.blocks %}
+          <li class="slide"> <img src="{{ block.settings.right_column_logo | img_url: 'master' }}"</li>
+          {% endfor %}
+         </ul>
+        
+      </div>
 </section>
 
 {% schema %}
