@@ -301,6 +301,14 @@
             "image_png": "shopify:\/\/shop_images\/no-soy.png",
             "title": "NO NUTS OR SOY"
           }
+        },
+        "cb8d7bf1-c1b2-4c05-b720-128fbae0f2f9": {
+          "type": "no-ingradiants",
+          "settings": {
+            "image": "",
+            "image_png": "shopify:\/\/shop_images\/no-diary.png",
+            "title": "No Cholesterol"
+          }
         }
       },
       "block_order": [
@@ -308,7 +316,8 @@
         "4a240d45-3602-44f8-af76-936a3ecd4b22",
         "77db51a8-ba26-4680-8e24-eae5a19b4f72",
         "382e0aa2-9757-457c-80a0-b36955787204",
-        "9405870b-afff-4585-a356-565a4ae4457f"
+        "9405870b-afff-4585-a356-565a4ae4457f",
+        "cb8d7bf1-c1b2-4c05-b720-128fbae0f2f9"
       ],
       "settings": {
         "bg_color": "#50a6ff",
