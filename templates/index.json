@@ -694,8 +694,11 @@
         "6b304584-91d6-40ae-839f-2ae928865af8"
       ],
       "settings": {
-        "logos_per_row": "5",
-        "autoplay": true
+        "Left_logos_per_row": "4",
+        "right_logos_per_row": "3",
+        "autoplay": true,
+        "left_title": "Heading",
+        "right_title": "Heading"
       }
     },
     "1681777290f3dda194": {
