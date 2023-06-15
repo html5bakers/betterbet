@@ -267,7 +267,7 @@
           "settings": {
             "image": "",
             "image_png": "shopify:\/\/shop_images\/no-lactose.png",
-            "title": "100% No lactose"
+            "title": "No lactose"
           }
         },
         "4a240d45-3602-44f8-af76-936a3ecd4b22": {
@@ -275,7 +275,7 @@
           "settings": {
             "image": "",
             "image_png": "shopify:\/\/shop_images\/no-diary.png",
-            "title": "100% NO DAIRY"
+            "title": "NO DAIRY"
           }
         },
         "77db51a8-ba26-4680-8e24-eae5a19b4f72": {
@@ -283,7 +283,7 @@
           "settings": {
             "image": "",
             "image_png": "shopify:\/\/shop_images\/no-sugar.png",
-            "title": "100% NO SUGAR"
+            "title": "NO SUGAR"
           }
         },
         "382e0aa2-9757-457c-80a0-b36955787204": {
@@ -291,7 +291,7 @@
           "settings": {
             "image": "",
             "image_png": "shopify:\/\/shop_images\/no-preservations.png",
-            "title": "100% NO ARTIFICIAL PRESERVATIVES"
+            "title": "NO ARTIFICIAL PRESERVATIVES"
           }
         },
         "9405870b-afff-4585-a356-565a4ae4457f": {
@@ -299,7 +299,7 @@
           "settings": {
             "image": "",
             "image_png": "shopify:\/\/shop_images\/no-soy.png",
-            "title": "100% NO NUTS OR SOY"
+            "title": "NO NUTS OR SOY"
           }
         }
       },
