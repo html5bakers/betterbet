@@ -1,6 +1,6 @@
 <section class="Section Section--spacingNormal availability_at_stores" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
-    <div class="available_logo section_half">
+    <div class="available_logo ">
       <div class="available_logo_left text_center">
         <ul class="slick" data-slick='{
          "dots": true,
@@ -10,7 +10,7 @@
          "slidesToScroll": 1
          }'>
           {% for block in section.blocks %}
-         {% if block.settings.left_column_logo != blank %}
+           {% if block.settings.left_column_logo != blank %}
            <li class="slide">
              <figure>
                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.left_column_logo -%}{%- endcapture -%}
@@ -21,9 +21,8 @@
                   data-sizes="auto"
                   alt="{{ block.settings.left_column_logo.alt | escape }}"
                   data-media-id="{{ block.settings.left_column_logo.id }}" />
-               
              </figure>
-         {% endif %}
+           {% endif %}
           {% endfor %}
          </ul>
       </div>
