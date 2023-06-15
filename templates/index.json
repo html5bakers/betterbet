@@ -590,7 +590,6 @@
         },
         "80cced6a-5ae5-49f6-b8e3-e70e114362b6": {
           "type": "right-column",
-          "disabled": true,
           "settings": {
             "logo": "shopify:\/\/shop_images\/zepto.png"
           }
