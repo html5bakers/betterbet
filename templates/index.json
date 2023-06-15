@@ -611,7 +611,7 @@
         "80cced6a-5ae5-49f6-b8e3-e70e114362b6"
       ],
       "settings": {
-        "show_arrow": false,
+        "show_arrow": true,
         "autoplay": true,
         "cycle_speed": 5,
         "left_title": "RESTAURANTS AND CAFE PARTNERS",
