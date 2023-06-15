@@ -530,7 +530,7 @@
       ],
       "settings": {
         "title": "Featured In",
-        "slidesToShow": "5",
+        "slidesToShow": "4",
         "autoplay": true,
         "cycle_speed": 5
       }
