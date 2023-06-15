@@ -613,6 +613,58 @@
         "right_title": "Also available at"
       }
     },
+    "bba44958-25a4-4ce1-9ecb-82907dfd9946": {
+      "type": "availability",
+      "blocks": {
+        "308ea656-3721-4f7f-bb0e-808d068d42db": {
+          "type": "Logo",
+          "settings": {
+            "left_column_logo": "shopify:\/\/shop_images\/delicious-accent.png",
+            "link": ""
+          }
+        },
+        "7603da3d-a884-4c34-a161-6b664c1467c9": {
+          "type": "Logo",
+          "settings": {
+            "left_column_logo": "shopify:\/\/shop_images\/footer-logo-without-splash.png",
+            "link": ""
+          }
+        },
+        "6452a16b-e3ac-4652-ab0d-d089c651788c": {
+          "type": "Logo",
+          "settings": {
+            "left_column_logo": "shopify:\/\/shop_images\/finger-millets.png",
+            "link": ""
+          }
+        },
+        "333b5725-a190-4779-90e7-457bcec3413a": {
+          "type": "Logo",
+          "settings": {
+            "left_column_logo": "shopify:\/\/shop_images\/logo-without-splash.png",
+            "link": ""
+          }
+        },
+        "ec65011c-4e5d-4818-9d87-ed16aa058258": {
+          "type": "Logo",
+          "settings": {
+            "left_column_logo": "shopify:\/\/shop_images\/delicious-accent.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "308ea656-3721-4f7f-bb0e-808d068d42db",
+        "7603da3d-a884-4c34-a161-6b664c1467c9",
+        "6452a16b-e3ac-4652-ab0d-d089c651788c",
+        "333b5725-a190-4779-90e7-457bcec3413a",
+        "ec65011c-4e5d-4818-9d87-ed16aa058258"
+      ],
+      "settings": {
+        "title": "",
+        "slidesToShow": "3",
+        "autoplay": true
+      }
+    },
     "1681777290f3dda194": {
       "type": "apps",
       "blocks": {
@@ -649,6 +701,7 @@
     "0f99470a-3402-4a60-85af-e6e052bd3ddf",
     "6133615d-9dd6-403b-a69f-f18dc7bdddcd",
     "bd136bbb-4bff-4de1-b11e-0783142eb620",
+    "bba44958-25a4-4ce1-9ecb-82907dfd9946",
     "1681777290f3dda194"
   ]
 }
