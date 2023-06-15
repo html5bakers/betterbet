@@ -686,10 +686,10 @@
         "6b304584-91d6-40ae-839f-2ae928865af8"
       ],
       "settings": {
-        "Left_logos_per_row": "4",
-        "right_logos_per_row": "4",
+        "Left_logos_per_row": "3",
+        "right_logos_per_row": "3",
         "autoplay": false,
-        "show_two_block": false,
+        "show_two_block": true,
         "left_title": "RESTAURANTS AND CAFE PARTNERS",
         "right_title": "Also available at"
       }
