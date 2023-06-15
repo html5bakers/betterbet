@@ -560,12 +560,6 @@
             "logo": "shopify:\/\/shop_images\/sardar-ji-cafe.png"
           }
         },
-        "6304f61c-1e4f-47da-be11-a63f610d0aec": {
-          "type": "left-column",
-          "disabled": true,
-          "settings": {
-          }
-        },
         "d8668fe3-254b-4bbe-89a7-e32dd2403bd6": {
           "type": "right-column",
           "settings": {
@@ -596,7 +590,6 @@
         "dcdf026b-ee50-4fee-9b67-c21455fea853",
         "baf7d7fe-f869-43d4-a2ae-4031737db4d8",
         "37f2e542-c543-4b1e-8757-cd4bab8fc053",
-        "6304f61c-1e4f-47da-be11-a63f610d0aec",
         "d8668fe3-254b-4bbe-89a7-e32dd2403bd6",
         "8fb05c58-9b85-435d-b4fe-dde1e605e521",
         "69febd08-7fd7-415e-914b-6e372be583c5",
