@@ -651,6 +651,34 @@
             "left_column_logo": "shopify:\/\/shop_images\/delicious-accent.png",
             "link": ""
           }
+        },
+        "ea8aacba-af04-4fac-be57-650bdde25c54": {
+          "type": "right-logo",
+          "settings": {
+            "right_column_logo": "shopify:\/\/shop_images\/natures-basket.png",
+            "link": ""
+          }
+        },
+        "d0d5b1d1-a13a-433e-888a-a2c175b57db0": {
+          "type": "right-logo",
+          "settings": {
+            "right_column_logo": "shopify:\/\/shop_images\/amazon.png",
+            "link": ""
+          }
+        },
+        "fce737e2-3093-4156-bd39-e0eeb6224873": {
+          "type": "right-logo",
+          "settings": {
+            "right_column_logo": "shopify:\/\/shop_images\/vegan-dukan.png",
+            "link": ""
+          }
+        },
+        "6b304584-91d6-40ae-839f-2ae928865af8": {
+          "type": "right-logo",
+          "settings": {
+            "right_column_logo": "shopify:\/\/shop_images\/zepto.png",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -658,7 +686,11 @@
         "7603da3d-a884-4c34-a161-6b664c1467c9",
         "6452a16b-e3ac-4652-ab0d-d089c651788c",
         "333b5725-a190-4779-90e7-457bcec3413a",
-        "ec65011c-4e5d-4818-9d87-ed16aa058258"
+        "ec65011c-4e5d-4818-9d87-ed16aa058258",
+        "ea8aacba-af04-4fac-be57-650bdde25c54",
+        "d0d5b1d1-a13a-433e-888a-a2c175b57db0",
+        "fce737e2-3093-4156-bd39-e0eeb6224873",
+        "6b304584-91d6-40ae-839f-2ae928865af8"
       ],
       "settings": {
         "title": "",
