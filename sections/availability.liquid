@@ -50,7 +50,20 @@
          "slidesToScroll": 1
          }'>
           {% for block in section.blocks %}
-         {% if block.settings.right_column_logo != blank %} <li class="slide"> right <img src="{{ block.settings.right_column_logo | img_url: 'master' }}" alt="right"/></li>{% endif %}
+           {% if block.settings.right_column_logo != blank %}
+             <li class="slide">
+               <figure>
+               {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.right_column_logo -%}{%- endcapture -%}
+               {%- assign image_url = block.settings.right_column_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="Image--lazyLoad" 
+                  data-src="{{ image_url }}"
+                  data-widths="[{{ supported_sizes }}]"
+                  data-sizes="auto"
+                  alt="{{ block.settings.right_column_logo.alt | escape }}"
+                  data-media-id="{{ block.settings.right_column_logo.id }}" />
+             </figure>
+             </li>
+           {% endif %}
           {% endfor %}
          </ul>
     </div>
