@@ -541,159 +541,6 @@
         "blog": "news"
       }
     },
-    "bd136bbb-4bff-4de1-b11e-0783142eb620": {
-      "type": "available-at-stores-logos",
-      "blocks": {
-        "e5f38de2-f70d-47d8-97f6-41a839c54d4a": {
-          "type": "left-column",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/greener.png"
-          }
-        },
-        "dcdf026b-ee50-4fee-9b67-c21455fea853": {
-          "type": "left-column",
-          "settings": {
-          }
-        },
-        "baf7d7fe-f869-43d4-a2ae-4031737db4d8": {
-          "type": "left-column",
-          "settings": {
-          }
-        },
-        "37f2e542-c543-4b1e-8757-cd4bab8fc053": {
-          "type": "left-column",
-          "settings": {
-          }
-        },
-        "bf5b25d8-6ff6-4551-91eb-3ba4fb67846f": {
-          "type": "left-column",
-          "disabled": true,
-          "settings": {
-          }
-        },
-        "d8668fe3-254b-4bbe-89a7-e32dd2403bd6": {
-          "type": "right-column",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/natures-basket.png"
-          }
-        },
-        "8fb05c58-9b85-435d-b4fe-dde1e605e521": {
-          "type": "right-column",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/amazon.png"
-          }
-        },
-        "69febd08-7fd7-415e-914b-6e372be583c5": {
-          "type": "right-column",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/vegan-dukan.png"
-          }
-        },
-        "80cced6a-5ae5-49f6-b8e3-e70e114362b6": {
-          "type": "right-column",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/zepto.png"
-          }
-        }
-      },
-      "block_order": [
-        "e5f38de2-f70d-47d8-97f6-41a839c54d4a",
-        "dcdf026b-ee50-4fee-9b67-c21455fea853",
-        "baf7d7fe-f869-43d4-a2ae-4031737db4d8",
-        "37f2e542-c543-4b1e-8757-cd4bab8fc053",
-        "bf5b25d8-6ff6-4551-91eb-3ba4fb67846f",
-        "d8668fe3-254b-4bbe-89a7-e32dd2403bd6",
-        "8fb05c58-9b85-435d-b4fe-dde1e605e521",
-        "69febd08-7fd7-415e-914b-6e372be583c5",
-        "80cced6a-5ae5-49f6-b8e3-e70e114362b6"
-      ],
-      "settings": {
-        "logos_per_row": "3",
-        "autoplay": true,
-        "cycle_speed": 5,
-        "left_title": "RESTAURANTS AND CAFE PARTNERS",
-        "right_title": "Also available at"
-      }
-    },
-    "bba44958-25a4-4ce1-9ecb-82907dfd9946": {
-      "type": "availability",
-      "blocks": {
-        "308ea656-3721-4f7f-bb0e-808d068d42db": {
-          "type": "Logo",
-          "settings": {
-            "left_column_logo": "shopify:\/\/shop_images\/greener.png",
-            "link": ""
-          }
-        },
-        "7603da3d-a884-4c34-a161-6b664c1467c9": {
-          "type": "Logo",
-          "settings": {
-            "left_column_logo": "shopify:\/\/shop_images\/colocal.png",
-            "link": ""
-          }
-        },
-        "6452a16b-e3ac-4652-ab0d-d089c651788c": {
-          "type": "Logo",
-          "settings": {
-            "left_column_logo": "shopify:\/\/shop_images\/blue-tokai.png",
-            "link": ""
-          }
-        },
-        "333b5725-a190-4779-90e7-457bcec3413a": {
-          "type": "Logo",
-          "settings": {
-            "left_column_logo": "shopify:\/\/shop_images\/sardar-ji-cafe.png",
-            "link": ""
-          }
-        },
-        "ea8aacba-af04-4fac-be57-650bdde25c54": {
-          "type": "right-logo",
-          "settings": {
-            "right_column_logo": "shopify:\/\/shop_images\/natures-basket.png",
-            "link": ""
-          }
-        },
-        "d0d5b1d1-a13a-433e-888a-a2c175b57db0": {
-          "type": "right-logo",
-          "settings": {
-            "right_column_logo": "shopify:\/\/shop_images\/amazon.png",
-            "link": ""
-          }
-        },
-        "fce737e2-3093-4156-bd39-e0eeb6224873": {
-          "type": "right-logo",
-          "settings": {
-            "right_column_logo": "shopify:\/\/shop_images\/vegan-dukan.png",
-            "link": ""
-          }
-        },
-        "6b304584-91d6-40ae-839f-2ae928865af8": {
-          "type": "right-logo",
-          "settings": {
-            "right_column_logo": "shopify:\/\/shop_images\/zepto.png",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "308ea656-3721-4f7f-bb0e-808d068d42db",
-        "7603da3d-a884-4c34-a161-6b664c1467c9",
-        "6452a16b-e3ac-4652-ab0d-d089c651788c",
-        "333b5725-a190-4779-90e7-457bcec3413a",
-        "ea8aacba-af04-4fac-be57-650bdde25c54",
-        "d0d5b1d1-a13a-433e-888a-a2c175b57db0",
-        "fce737e2-3093-4156-bd39-e0eeb6224873",
-        "6b304584-91d6-40ae-839f-2ae928865af8"
-      ],
-      "settings": {
-        "Left_logos_per_row": "3",
-        "right_logos_per_row": "3",
-        "autoplay": false,
-        "show_two_block": true,
-        "left_title": "RESTAURANTS AND CAFE PARTNERS",
-        "right_title": "Also available at"
-      }
-    },
     "1681777290f3dda194": {
       "type": "apps",
       "blocks": {
@@ -712,6 +559,17 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "e561a542-7285-45db-89b8-aaf3a63d0441": {
+      "type": "availability-at-stores",
+      "settings": {
+        "Left_logos_per_row": "6",
+        "right_logos_per_row": "6",
+        "autoplay": true,
+        "show_two_block": true,
+        "left_title": "Heading",
+        "right_title": "Heading"
+      }
     }
   },
   "order": [
@@ -729,8 +587,7 @@
     "5cfda789-1414-48b2-8f30-fe54999897d4",
     "0f99470a-3402-4a60-85af-e6e052bd3ddf",
     "6133615d-9dd6-403b-a69f-f18dc7bdddcd",
-    "bd136bbb-4bff-4de1-b11e-0783142eb620",
-    "bba44958-25a4-4ce1-9ecb-82907dfd9946",
-    "1681777290f3dda194"
+    "1681777290f3dda194",
+    "e561a542-7285-45db-89b8-aaf3a63d0441"
   ]
 }
