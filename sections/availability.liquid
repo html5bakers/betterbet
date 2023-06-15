@@ -2,6 +2,13 @@
   <div class="Container">
     <div class="available_logo section_half">
       <div class="available_logo_left text_center">
+
+        {% if section.settings.left_title != blank %}
+          <header class="SectionHeader SectionHeader--center text_center">
+            <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.left_title }}</h2>
+          </header>
+        {% endif %}
+        
         <ul class="slick" data-slick='{
          "dots": true,
          "arrows": false,
