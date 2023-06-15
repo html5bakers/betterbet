@@ -1,7 +1,7 @@
 
 <section class="Section Section--spacingNormal availability_at_stores animate show_up" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
-    <div class="available_logo {% if  section.settings.section_half != blank %} section_half{% endif %}">
+    <div class="available_logo {% if  section.settings.w  %} section_half{% endif %}">
       <div class="available_logo_left text_center">
         {% if section.settings.left_title != blank %}
           <header class="SectionHeader SectionHeader--center text_center">
@@ -12,19 +12,18 @@
          "dots": true,
          "arrows": false,
          "draggable": true,
-         "slidesToShow": 4,
-         "slidesToScroll": 1,
-         "autoPlay": true,
-          "autoplaySpeed": 1000
+         "slidesToShow": 3,
+         "slidesToScroll": 1
          }'>
         {% for block in section.blocks %}
           {% if block.type == 'left-column' %}
-            {% if block.settings.left_logo != blank %}
+            {% if block.settings.logo != blank %}
               <li class=""><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
-                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.left_logo -%}{%- endcapture -%}
-                {%- assign image_url = block.settings.left_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.left_logo.alt | escape }}" data-media-id="{{ block.settings.logo.id }}" />
-                {% if block.settings.link != blank %}</a>{% endif %}</figure>
+                 {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.logo -%}{%- endcapture -%}
+
+          {%- assign image_url = block.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.logo.alt | escape }}" data-media-id="{{ block.settings.logo.id }}" />
+            {% if block.settings.link != blank %}</a>{% endif %}</figure>
               </li>
             {% endif %}
           {% endif %}
@@ -44,8 +43,7 @@
            "arrows": false,
            "draggable": true,
            "slidesToShow": 3,
-           "slidesToScroll": 1,
-            "autoPlay": {{ section.settings.autoplay }}
+           "slidesToScroll": 1
            }'>
           {% for block in section.blocks %}
             {% if block.type == 'right-column' %}
@@ -73,15 +71,25 @@
     "settings": [
       {
         "type": "checkbox",
+        "id": "show_arrow",
+        "label": "Show bottom arrow",
+        "default": false
+      },
+      {
+        "type": "checkbox",
         "id": "autoplay",
         "label": "Auto rotate between slides",
         "default": true
       },
       {
-        "type": "checkbox",
-        "id": "section_half",
-        "label": "Show two blocks",
-        "default": true
+        "type": "range",
+        "id": "cycle_speed",
+        "min": 3,
+        "max": 8,
+        "step": 1,
+        "unit": "sec",
+        "label": "Change slides every",
+        "default": 5
       },
       {
         "type": "text",
@@ -101,7 +109,7 @@
         "settings": [
           {
             "type": "image_picker",
-            "id": "left_logo",
+            "id": "logo",
             "label": "Logo"
           }
         ]
