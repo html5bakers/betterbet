@@ -19,11 +19,11 @@
          }'>
         {% for block in section.blocks %}
           {% if block.type == 'left-column' %}
-            {% if block.settings.logo != blank %}
+            {% if block.settings.left_logo != blank %}
               <li class=""><figure>{% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
-                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.logo -%}{%- endcapture -%}
-                {%- assign image_url = block.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.logo.alt | escape }}" data-media-id="{{ block.settings.logo.id }}" />
+                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.left_logo -%}{%- endcapture -%}
+                {%- assign image_url = block.settings.left_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="Image--lazyLoad"  data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.left_logo.alt | escape }}" data-media-id="{{ block.settings.logo.id }}" />
                 {% if block.settings.link != blank %}</a>{% endif %}</figure>
               </li>
             {% endif %}
@@ -101,7 +101,7 @@
         "settings": [
           {
             "type": "image_picker",
-            "id": "logo",
+            "id": "left_logo",
             "label": "Logo"
           }
         ]
