@@ -260,7 +260,14 @@ figure{ margin: 0; }
 }
 .text_center{ text-align:center; }
 .hide{ display: none; }
+
+/*Slick dots */
 .slick-dots{ z-index: 1; }
+.slick-dots li,
+.slick-dots li button{
+  width: 10px;
+  height: 10px;
+}
 .slick-dots li button:before{
   font-size: 0;
   opacity: 1;
@@ -323,12 +330,6 @@ form button,
 @media screen and (max-width: 600px){
   .SectionHeader p{ font-size: 1.2rem; }
   .slick-dots{ bottom: -15px; }
-  .slick-dots li,
-  .slick-dots li button{
-    width: 10px;
-    height: 10px;
-    margin: 0;
-  }
   .Button,
   .shopify-payment-button__button--unbranded,
   input.spr-button-primary,
