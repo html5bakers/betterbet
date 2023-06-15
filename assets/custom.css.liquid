@@ -263,7 +263,6 @@ figure{ margin: 0; }
 
 /*Slick dots */
 .slick-dots{ z-index: 1; }
-/*.slick-dots li,*/
 .slick-dots li button{
   width: 10px;
   height: 10px;
@@ -271,11 +270,7 @@ figure{ margin: 0; }
   border: 1px solid var(--button-background);
   background: var(--button-background);
 }
-.slick-dots li button:before{
-  font-size: 0;
-  opacity: 1;
-  color: var(--secondary-color);
-}
+.slick-dots li button:before{ font-size: 0; }
 .slick-dots li.slick-active button{
   background: var(--text-color);
   border: 1px solid var(--text-color);
@@ -285,6 +280,7 @@ figure{ margin: 0; }
 .slick-dotted.slick-slider{ margin-bottom: 0; }
 .slick-track{ display: flex !important; }
 .slick-track .slick-slide{ height: inherit !important; }
+
 iframe{ max-width: 100%; }
 .Price--highlight,
 .Price--compareAt{ color: var(--text-color); }
