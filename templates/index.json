@@ -547,48 +547,56 @@
         "4608ad7e-232c-4d41-8018-63841351ca0d": {
           "type": "Logo",
           "settings": {
+            "left_column_logo": "shopify:\/\/shop_images\/greener.png",
             "link": ""
           }
         },
         "44944fbe-6b14-47de-9f41-79f98d929402": {
           "type": "Logo",
           "settings": {
+            "left_column_logo": "shopify:\/\/shop_images\/colocal.png",
             "link": ""
           }
         },
         "a8a75352-7795-4d9f-ac08-a6cb6cd735a9": {
           "type": "Logo",
           "settings": {
+            "left_column_logo": "shopify:\/\/shop_images\/blue-tokai.png",
             "link": ""
           }
         },
         "4ceb69fb-c3ca-4492-941a-9db012968529": {
           "type": "Logo",
           "settings": {
+            "left_column_logo": "shopify:\/\/shop_images\/sardar-ji-cafe.png",
             "link": ""
           }
         },
         "7d2f8d9f-0e31-43ff-9718-458b96388cc2": {
           "type": "right-logo",
           "settings": {
+            "right_column_logo": "shopify:\/\/shop_images\/natures-basket.png",
             "link": ""
           }
         },
         "2aa9a43c-bc94-4d09-a7a8-b84498ae6cd7": {
           "type": "right-logo",
           "settings": {
+            "right_column_logo": "shopify:\/\/shop_images\/amazon.png",
             "link": ""
           }
         },
         "0ec32b18-fd8f-4e61-ad8e-620a83069d56": {
           "type": "right-logo",
           "settings": {
+            "right_column_logo": "shopify:\/\/shop_images\/big-basket.png",
             "link": ""
           }
         },
         "83bf2a44-66b1-4173-ac9a-0311b235e434": {
           "type": "right-logo",
           "settings": {
+            "right_column_logo": "shopify:\/\/shop_images\/zepto.png",
             "link": ""
           }
         }
