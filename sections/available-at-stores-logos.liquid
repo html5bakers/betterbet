@@ -10,7 +10,7 @@
          "slidesToScroll": 1
          }'>
           {% for block in section.blocks %}
-          <li> <img src="{{ block.settings.left_column_image | img_url: 'master' }}"</li>
+          <li> <img src="{{ block.settings.left_column_logo | img_url: 'master' }}"</li>
           {% endfor %}
          </ul>
         
@@ -130,7 +130,7 @@
         "settings": [
           {
             "type": "image_picker",
-            "id": "logo",
+            "id": "left_column_logo",
             "label": "Logo"
           }
         ]
