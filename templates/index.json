@@ -547,6 +547,7 @@
         "e5f38de2-f70d-47d8-97f6-41a839c54d4a": {
           "type": "left-column",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/greener.png"
           }
         },
         "dcdf026b-ee50-4fee-9b67-c21455fea853": {
@@ -693,7 +694,6 @@
         "6b304584-91d6-40ae-839f-2ae928865af8"
       ],
       "settings": {
-        "title": "",
         "logos_per_row": "5",
         "autoplay": true
       }
