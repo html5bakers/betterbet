@@ -531,8 +531,7 @@
       "settings": {
         "title": "Featured In",
         "slidesToShow": "6",
-        "autoplay": true,
-        "cycle_speed": 5
+        "autoplay": true
       }
     },
     "6133615d-9dd6-403b-a69f-f18dc7bdddcd": {
@@ -548,25 +547,30 @@
         "e5f38de2-f70d-47d8-97f6-41a839c54d4a": {
           "type": "left-column",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/greener.png"
           }
         },
         "dcdf026b-ee50-4fee-9b67-c21455fea853": {
           "type": "left-column",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/colocal.png"
           }
         },
         "baf7d7fe-f869-43d4-a2ae-4031737db4d8": {
           "type": "left-column",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/blue-tokai.png"
           }
         },
         "37f2e542-c543-4b1e-8757-cd4bab8fc053": {
           "type": "left-column",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/sardar-ji-cafe.png"
           }
         },
         "bf5b25d8-6ff6-4551-91eb-3ba4fb67846f": {
           "type": "left-column",
+          "disabled": true,
           "settings": {
           }
         },
