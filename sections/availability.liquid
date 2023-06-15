@@ -14,7 +14,9 @@
          "arrows": false,
          "draggable": true,
          "slidesToShow": {{ section.settings.Left_logos_per_row }},
-         "slidesToScroll": 1
+         "slidesToScroll": 1,
+         "autoplay": {{ section.settings.autoplay }},
+         "autoplaySpeed": 2000
          }'>
           {% for block in section.blocks %}
            {% if block.settings.left_column_logo != blank %}
@@ -47,7 +49,9 @@
          "arrows": false,
          "draggable": true,
          "slidesToShow": {{ section.settings.right_logos_per_row }},
-         "slidesToScroll": 1
+         "slidesToScroll": 1,
+         "autoplay": {{ section.settings.autoplay }},
+         "autoplaySpeed": 2000
          }'>
           {% for block in section.blocks %}
            {% if block.settings.right_column_logo != blank %}
