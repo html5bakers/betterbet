@@ -613,7 +613,7 @@
       ],
       "settings": {
         "autoplay": true,
-        "section_half": true,
+        "section_half": false,
         "left_title": "RESTAURANTS AND CAFE PARTNERS",
         "right_title": "Also available at"
       }
