@@ -543,7 +543,6 @@
     },
     "bd136bbb-4bff-4de1-b11e-0783142eb620": {
       "type": "available-at-stores-logos",
-      "disabled": true,
       "blocks": {
         "e5f38de2-f70d-47d8-97f6-41a839c54d4a": {
           "type": "left-column",
@@ -573,21 +572,18 @@
         },
         "d8668fe3-254b-4bbe-89a7-e32dd2403bd6": {
           "type": "right-column",
-          "disabled": true,
           "settings": {
             "logo": "shopify:\/\/shop_images\/natures-basket.png"
           }
         },
         "8fb05c58-9b85-435d-b4fe-dde1e605e521": {
           "type": "right-column",
-          "disabled": true,
           "settings": {
             "logo": "shopify:\/\/shop_images\/amazon.png"
           }
         },
         "69febd08-7fd7-415e-914b-6e372be583c5": {
           "type": "right-column",
-          "disabled": true,
           "settings": {
             "logo": "shopify:\/\/shop_images\/vegan-dukan.png"
           }
@@ -615,48 +611,7 @@
         "autoplay": true,
         "cycle_speed": 5,
         "left_title": "RESTAURANTS AND CAFE PARTNERS",
-        "right_title": ""
-      }
-    },
-    "9a8d4878-58ef-48f9-9664-2ece6e57789e": {
-      "type": "available-at-stores-logos",
-      "blocks": {
-        "e90d05b1-4afe-4010-86f6-8bc86b898da7": {
-          "type": "left-column",
-          "settings": {
-            "left_column_logo": "shopify:\/\/shop_images\/greener.png"
-          }
-        },
-        "7e7ce519-5c25-46da-b492-08bc62a80c67": {
-          "type": "left-column",
-          "settings": {
-            "left_column_logo": "shopify:\/\/shop_images\/colocal.png"
-          }
-        },
-        "ee64f727-63d5-4ef3-927e-e12816aa65ed": {
-          "type": "left-column",
-          "settings": {
-            "left_column_logo": "shopify:\/\/shop_images\/blue-tokai.png"
-          }
-        },
-        "b692a767-b2c5-4919-ac01-43b84abec9f3": {
-          "type": "left-column",
-          "settings": {
-            "left_column_logo": "shopify:\/\/shop_images\/sardar-ji-cafe.png"
-          }
-        }
-      },
-      "block_order": [
-        "e90d05b1-4afe-4010-86f6-8bc86b898da7",
-        "7e7ce519-5c25-46da-b492-08bc62a80c67",
-        "ee64f727-63d5-4ef3-927e-e12816aa65ed",
-        "b692a767-b2c5-4919-ac01-43b84abec9f3"
-      ],
-      "settings": {
-        "autoplay": true,
-        "cycle_speed": 5,
-        "left_title": "",
-        "right_title": ""
+        "right_title": "Also available at"
       }
     },
     "1681777290f3dda194": {
@@ -695,7 +650,6 @@
     "0f99470a-3402-4a60-85af-e6e052bd3ddf",
     "6133615d-9dd6-403b-a69f-f18dc7bdddcd",
     "bd136bbb-4bff-4de1-b11e-0783142eb620",
-    "9a8d4878-58ef-48f9-9664-2ece6e57789e",
     "1681777290f3dda194"
   ]
 }
