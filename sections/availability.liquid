@@ -34,8 +34,15 @@
          </ul>
       </div>
       
-      <div>
-        <ul class="slick" data-slick='{
+      <div class="available_logo_right text_center">
+
+        {% if section.settings.right_title != blank %}
+          <header class="SectionHeader SectionHeader--center text_center">
+            <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.right_title }}</h2>
+          </header>
+        {% endif %}
+        
+        <ul class="available_logo_slider slick" data-slick='{
          "dots": true,
          "arrows": false,
          "draggable": true,
