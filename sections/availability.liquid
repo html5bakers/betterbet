@@ -15,7 +15,13 @@
              <figure>
                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.left_column_logo -%}{%- endcapture -%}
                {%- assign image_url = block.settings.left_column_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-               <img src="{{ block.settings.left_column_logo | img_url: 'master' }}" alt="left"/></li>
+                <img class="Image--lazyLoad" 
+                  data-src="{{ image_url }}"
+                  data-widths="[{{ supported_sizes }}]"
+                  data-sizes="auto"
+                  alt="{{ block.settings.left_column_logo.alt | escape }}"
+                  data-media-id="{{ block.settings.left_column_logo.id }}" />
+               
              </figure>
          {% endif %}
           {% endfor %}
