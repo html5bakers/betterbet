@@ -696,7 +696,8 @@
       "settings": {
         "Left_logos_per_row": "4",
         "right_logos_per_row": "3",
-        "autoplay": true,
+        "autoplay": false,
+        "show_two_block": false,
         "left_title": "Heading",
         "right_title": "Heading"
       }
