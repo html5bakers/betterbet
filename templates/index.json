@@ -530,7 +530,7 @@
       ],
       "settings": {
         "title": "Featured In",
-        "show_arrow": false,
+        "slidesToShow": "5",
         "autoplay": true,
         "cycle_speed": 5
       }
@@ -548,31 +548,26 @@
         "e5f38de2-f70d-47d8-97f6-41a839c54d4a": {
           "type": "left-column",
           "settings": {
-            "left_logo": "shopify:\/\/shop_images\/greener.png"
           }
         },
         "dcdf026b-ee50-4fee-9b67-c21455fea853": {
           "type": "left-column",
           "settings": {
-            "left_logo": "shopify:\/\/shop_images\/colocal.png"
           }
         },
         "baf7d7fe-f869-43d4-a2ae-4031737db4d8": {
           "type": "left-column",
           "settings": {
-            "left_logo": "shopify:\/\/shop_images\/blue-tokai.png"
           }
         },
         "37f2e542-c543-4b1e-8757-cd4bab8fc053": {
           "type": "left-column",
           "settings": {
-            "left_logo": "shopify:\/\/shop_images\/sardar-ji-cafe.png"
           }
         },
         "bf5b25d8-6ff6-4551-91eb-3ba4fb67846f": {
           "type": "left-column",
           "settings": {
-            "left_logo": "shopify:\/\/shop_images\/delicious-accent.png"
           }
         },
         "d8668fe3-254b-4bbe-89a7-e32dd2403bd6": {
@@ -612,8 +607,9 @@
         "80cced6a-5ae5-49f6-b8e3-e70e114362b6"
       ],
       "settings": {
+        "show_arrow": false,
         "autoplay": true,
-        "section_half": false,
+        "cycle_speed": 5,
         "left_title": "RESTAURANTS AND CAFE PARTNERS",
         "right_title": "Also available at"
       }
