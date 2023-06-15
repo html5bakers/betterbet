@@ -1,6 +1,6 @@
 <section class="Section Section--spacingNormal availability_at_stores animate show_up" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
-    <div class="available_logo">
+    <div class="available_logo {% if section.settings.right_title != blank or block.type == 'right-column'  %} section_half{% endif %}">
       <div class="available_logo_left text_center">
         {% if section.settings.left_title != blank %}
           <header class="SectionHeader SectionHeader--center text_center">
