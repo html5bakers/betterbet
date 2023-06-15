@@ -543,6 +543,7 @@
     },
     "bd136bbb-4bff-4de1-b11e-0783142eb620": {
       "type": "available-at-stores-logos",
+      "disabled": true,
       "blocks": {
         "e5f38de2-f70d-47d8-97f6-41a839c54d4a": {
           "type": "left-column",
@@ -611,7 +612,6 @@
         "80cced6a-5ae5-49f6-b8e3-e70e114362b6"
       ],
       "settings": {
-        "show_arrow": true,
         "autoplay": true,
         "cycle_speed": 5,
         "left_title": "RESTAURANTS AND CAFE PARTNERS",
@@ -653,7 +653,6 @@
         "b692a767-b2c5-4919-ac01-43b84abec9f3"
       ],
       "settings": {
-        "show_arrow": false,
         "autoplay": true,
         "cycle_speed": 5,
         "left_title": "",
