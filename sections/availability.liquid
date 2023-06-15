@@ -8,7 +8,9 @@
          "slidesToScroll": 1
          }'>
           {% for block in section.blocks %}
-          <li class="slide"> left <img src="{{ block.settings.left_column_logo | img_url: 'master' }}" alt="left"/></li>
+         {% if block.settings.left_column_logo != blank %}
+           <li class="slide"> left <img src="{{ block.settings.left_column_logo | img_url: 'master' }}" alt="left"/></li>
+         {% endif %}
           {% endfor %}
          </ul>
         
