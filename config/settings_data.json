@@ -10,6 +10,7 @@
     "excluded_pincodes_list": "[143002]",
     "hours_threshold": "15",
     "min_threshold": "",
+    "same_day_message": "Yay! You can get same day delivery.",
     "heading_color": "#162516",
     "text_color": "#162516",
     "text_light_color": "#18301c",
