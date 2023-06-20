@@ -6,7 +6,7 @@
     "recurpay_button_bg": "#000000",
     "recurpay_redirect": "checkout",
     "recurpay_start_link": "\/",
-    "pincodes_list": "[400001, 400002, 400004, 400005]",
+    "pincodes_list": "[400001, 400002, 400004, 400005, 400006]",
     "excluded_pincodes_list": "[143002]",
     "hours_threshold": "15",
     "min_threshold": "",
