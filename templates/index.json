@@ -613,14 +613,14 @@
         "83bf2a44-66b1-4173-ac9a-0311b235e434"
       ],
       "settings": {
-        "Left_logos_per_row": "5",
+        "Left_logos_per_row": "3",
         "right_logos_per_row": "3",
         "autoplay": false,
-        "show_two_block": false,
+        "show_two_block": true,
         "left_title": "RESTAURANTS AND CAFE PARTNERS",
         "show_left_section": true,
         "right_title": "ALSO AVAILABLE AT",
-        "show_right_section": true
+        "show_right_section": false
       }
     },
     "1681777290f3dda194": {
