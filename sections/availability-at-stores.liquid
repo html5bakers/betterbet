@@ -1,74 +1,78 @@
 <section class="Section Section--spacingNormal availability_at_stores" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="available_logo {% if section.settings.show_two_block %}section_half{% endif %}">
-      <div class="available_logo_left text_center">
-        {% if section.settings.left_title != blank %}
-          <header class="SectionHeader SectionHeader--center text_center">
-            <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.left_title }}</h2>
-          </header>
-        {% endif %}
-        
-        <ul class="available_logo_slider slick" data-slick='{
-         "dots": true,
-         "arrows": false,
-         "draggable": true,
-         "slidesToShow": {{ section.settings.Left_logos_per_row }},
-         "slidesToScroll": 1,
-         "autoplay": {{ section.settings.autoplay }},
-         "autoplaySpeed": 2000
-         }'>
-          {% for block in section.blocks %}
-           {% if block.settings.left_column_logo != blank %}
-           <li class="slide">
-             <figure>
-               {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.left_column_logo -%}{%- endcapture -%}
-               {%- assign image_url = block.settings.left_column_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                <img class="Image--lazyLoad" 
-                  data-src="{{ image_url }}"
-                  data-widths="[{{ supported_sizes }}]"
-                  data-sizes="auto"
-                  alt="{{ block.settings.left_column_logo.alt | escape }}"
-                  data-media-id="{{ block.settings.left_column_logo.id }}" />
-             </figure>
-           {% endif %}
-          {% endfor %}
-         </ul>
-      </div>
-      
-      <div class="available_logo_right text_center">
-        {% if section.settings.right_title != blank %}
-          <header class="SectionHeader SectionHeader--center text_center">
-            <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.right_title }}</h2>
-          </header>
-        {% endif %}
-        
-        <ul class="available_logo_slider slick" data-slick='{
-         "dots": true,
-         "arrows": false,
-         "draggable": true,
-         "slidesToShow": {{ section.settings.right_logos_per_row }},
-         "slidesToScroll": 1,
-         "autoplay": {{ section.settings.autoplay }},
-         "autoplaySpeed": 2000
-         }'>
-          {% for block in section.blocks %}
-           {% if block.settings.right_column_logo != blank %}
+      {% if section.settings.show_left_section %}
+        <div class="available_logo_left text_center">
+          {% if section.settings.left_title != blank %}
+            <header class="SectionHeader SectionHeader--center text_center">
+              <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.left_title }}</h2>
+            </header>
+          {% endif %}
+          
+          <ul class="available_logo_slider slick" data-slick='{
+           "dots": true,
+           "arrows": false,
+           "draggable": true,
+           "slidesToShow": {{ section.settings.Left_logos_per_row }},
+           "slidesToScroll": 1,
+           "autoplay": {{ section.settings.autoplay }},
+           "autoplaySpeed": 2000
+           }'>
+            {% for block in section.blocks %}
+             {% if block.settings.left_column_logo != blank %}
              <li class="slide">
                <figure>
-               {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.right_column_logo -%}{%- endcapture -%}
-               {%- assign image_url = block.settings.right_column_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                <img class="Image--lazyLoad" 
-                  data-src="{{ image_url }}"
-                  data-widths="[{{ supported_sizes }}]"
-                  data-sizes="auto"
-                  alt="{{ block.settings.right_column_logo.alt | escape }}"
-                  data-media-id="{{ block.settings.right_column_logo.id }}" />
-             </figure>
-             </li>
-           {% endif %}
-          {% endfor %}
-         </ul>
-    </div>
+                 {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.left_column_logo -%}{%- endcapture -%}
+                 {%- assign image_url = block.settings.left_column_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="Image--lazyLoad" 
+                    data-src="{{ image_url }}"
+                    data-widths="[{{ supported_sizes }}]"
+                    data-sizes="auto"
+                    alt="{{ block.settings.left_column_logo.alt | escape }}"
+                    data-media-id="{{ block.settings.left_column_logo.id }}" />
+               </figure>
+             {% endif %}
+            {% endfor %}
+           </ul>
+        </div>
+      {% endif %}
+      {% if section.settings.show_right_section %}
+        <div class="available_logo_right text_center">
+          {% if section.settings.right_title != blank %}
+            <header class="SectionHeader SectionHeader--center text_center">
+              <h2 class="SectionHeader__Heading Heading u-h1 heading_small">{{ section.settings.right_title }}</h2>
+            </header>
+          {% endif %}
+          
+          <ul class="available_logo_slider slick" data-slick='{
+           "dots": true,
+           "arrows": false,
+           "draggable": true,
+           "slidesToShow": {{ section.settings.right_logos_per_row }},
+           "slidesToScroll": 1,
+           "autoplay": {{ section.settings.autoplay }},
+           "autoplaySpeed": 2000
+           }'>
+            {% for block in section.blocks %}
+             {% if block.settings.right_column_logo != blank %}
+               <li class="slide">
+                 <figure>
+                 {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.right_column_logo -%}{%- endcapture -%}
+                 {%- assign image_url = block.settings.right_column_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="Image--lazyLoad" 
+                    data-src="{{ image_url }}"
+                    data-widths="[{{ supported_sizes }}]"
+                    data-sizes="auto"
+                    alt="{{ block.settings.right_column_logo.alt | escape }}"
+                    data-media-id="{{ block.settings.right_column_logo.id }}" />
+               </figure>
+               </li>
+             {% endif %}
+            {% endfor %}
+           </ul>
+      </div>
+    {% endif %}
+    
     </div>
   </div>
 </section>
