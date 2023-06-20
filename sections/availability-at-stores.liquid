@@ -1,3 +1,8 @@
+<style>
+  {% if  section.settings.show_right_section and  section.settings.show_two_block %}
+    #section-{{ section.id }} .available_logo.section_half .available_logo_left > ul{ border-right: 1px solid #e7e9e7; }
+  {% endif %}
+</style>
 <section class="Section Section--spacingNormal availability_at_stores" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="available_logo {% if section.settings.show_two_block %}section_half{% endif %}">
