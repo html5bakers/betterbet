@@ -616,11 +616,11 @@
         "Left_logos_per_row": "3",
         "right_logos_per_row": "3",
         "autoplay": false,
-        "show_two_block": true,
+        "show_two_block": false,
         "left_title": "RESTAURANTS AND CAFE PARTNERS",
         "show_left_section": true,
         "right_title": "ALSO AVAILABLE AT",
-        "show_right_section": false
+        "show_right_section": true
       }
     },
     "1681777290f3dda194": {
