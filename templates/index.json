@@ -620,7 +620,7 @@
         "Left_logos_per_row": "3",
         "right_logos_per_row": "3",
         "autoplay": false,
-        "show_two_block": true,
+        "show_two_block": false,
         "left_title": "",
         "right_title": "ALSO AVAILABLE AT"
       }
