@@ -159,7 +159,7 @@
           "mobile_logo_max_width": 80,
           "show_country_selector": false,
           "show_locale_selector": false,
-          "navigation_menu": "main-menu",
+          "navigation_menu": "header-menu",
           "navigation_style": "logoLeft",
           "show_icons": true,
           "enable_transparent_header": false,
