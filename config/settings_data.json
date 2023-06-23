@@ -38,7 +38,7 @@
     "text_font": "sans-serif",
     "base_text_font_size": 16,
     "show_page_transition": false,
-    "show_image_zooming": false,
+    "show_image_zooming": true,
     "search_mode": "product,article",
     "product_show_price_on_hover": false,
     "product_show_secondary_image": false,
