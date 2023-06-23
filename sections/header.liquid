@@ -384,7 +384,7 @@ HEADER CONTENT
       </a>
     {%- endcapture -%}
 
-    <div class="Header__FlexItem Header__FlexItem--logo">
+    <div class="Header__FlexItem Header__FlexItem--logo" style="width: {{ section.settings.logo.width }}px; max-width: 150px; ">
       {%- if template == 'index' -%}
         <h1 class="Header__Logo" style="width: {{ section.settings.logo.width }}px; max-width: 150px; ">{{ header_logo }}</h1>
       {%- else -%}
