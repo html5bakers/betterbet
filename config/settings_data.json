@@ -157,7 +157,7 @@
           "use_sticky_header": false,
           "logo": "shopify:\/\/shop_images\/header_logo_font-big.png",
           "logo_max_width": 150,
-          "mobile_logo_max_width": 80,
+          "mobile_logo_max_width": 95,
           "show_country_selector": false,
           "show_locale_selector": false,
           "navigation_menu": "header-menu",
