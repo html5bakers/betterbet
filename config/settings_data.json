@@ -139,12 +139,12 @@
             "type": "mega_menu",
             "settings": {
               "navigation_mega_menu": "Shop",
-              "push_1_image": "shopify:\/\/shop_images\/WhatsApp_Image_2022-12-29_at_1.37.46_PM-2.jpg",
-              "push_1_heading": "Example heading",
-              "push_1_subheading": "Example sub-heading",
+              "push_1_image": "shopify:\/\/shop_images\/products-img.png",
+              "push_1_heading": "",
+              "push_1_subheading": "",
               "push_1_url": "",
-              "push_2_heading": "Example heading",
-              "push_2_subheading": "Example sub-heading",
+              "push_2_heading": "",
+              "push_2_subheading": "",
               "push_2_url": ""
             }
           }
