@@ -215,6 +215,22 @@
         "bg_color": "#eb513d",
         "title": "FAQs"
       }
+    },
+    "1687582612339e0de3": {
+      "type": "apps",
+      "blocks": {
+        "c2d0dcbd-a316-4ded-bbea-eaf1720a88a9": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "c2d0dcbd-a316-4ded-bbea-eaf1720a88a9"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -226,6 +242,7 @@
     "dfaa474c-a06d-413f-9831-be5d2d501a07",
     "5d94967a-69b4-48be-90b7-63eb9ad19e76",
     "2d69f24e-ea58-4ec9-8bc3-5bc39611e000",
-    "22b7f2d5-cee9-42a2-b34d-31be3cfe7642"
+    "22b7f2d5-cee9-42a2-b34d-31be3cfe7642",
+    "1687582612339e0de3"
   ]
 }
