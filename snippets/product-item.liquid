@@ -91,7 +91,21 @@
       <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
         {{ product.metafields.judgeme.badge }}
         <div class="review _badge"></div>
-      </div>  
+      </div> 
+      <style>
+        .ProductItem__Info .jdgm-preview-badge{
+  position: relative;
+}
+.ProductItem__Info .jdgm-preview-badge:before{
+  content: attr(data-average-rating);
+  width: 30px;
+  height: 20px;
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+      </style>
       <!-- End of Judge.me code -->
 
         {%- if settings.show_product_rating -%}
