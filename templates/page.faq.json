@@ -3,11 +3,11 @@
     "64119687-f668-474c-b080-c7715bfe1baf": {
       "type": "page-banner",
       "settings": {
-        "bg_color": "#FFF2CC",
+        "bg_color": "#fff2cc",
         "title": "",
-        "title_color": "#000",
+        "title_color": "#000000",
         "desc": "",
-        "desc_color": "#000"
+        "desc_color": "#000000"
       }
     },
     "main": {
@@ -17,6 +17,13 @@
           "type": "separator",
           "settings": {
             "title": "General"
+          }
+        },
+        "9b1e58dd-0868-4f72-b2a5-d253ea4b7f66": {
+          "type": "question",
+          "settings": {
+            "title": "Who are we?",
+            "answer": "<p>Answer<\/p>"
           }
         },
         "ba8988da-acdc-4864-97b7-3b505c6a3c00": {
@@ -36,6 +43,7 @@
       },
       "block_order": [
         "975be2fc-317b-496a-8e97-4fd8c659ed31",
+        "9b1e58dd-0868-4f72-b2a5-d253ea4b7f66",
         "ba8988da-acdc-4864-97b7-3b505c6a3c00",
         "36c380a4-bcdf-4c7b-831c-c4d3e653f431"
       ],
