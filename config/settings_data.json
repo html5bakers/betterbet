@@ -175,7 +175,7 @@
           "footer-0": {
             "type": "text",
             "settings": {
-              "footer_logo": "shopify:\/\/shop_images\/footer_logo_font_big.png",
+              "footer_logo": "shopify:\/\/shop_images\/logo-bottom.png",
               "footer_logo_width": 150,
               "title": "",
               "content": "<p>EMAIL: <a href=\"mailto:hello@altfoods.in\" title=\"mailto:hello@altfoods.in\">hello@altfoods.in<\/a><\/p><p>PHONE NUMBER: <a href=\"tel:+917866800020\" title=\"tel:+917866800020\">+91 78668 00020<\/a><\/p>",
