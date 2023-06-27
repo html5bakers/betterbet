@@ -101,17 +101,31 @@
             "answer": "<p>Our orders normally get shipped out within 3-4 business days of order placement. Final delivery time will be intimated to you at the time of order confirmation.<\/p>"
           }
         },
-        "80df923a-4cc3-4554-929b-10264b664f1e": {
-          "type": "separator",
-          "settings": {
-            "title": "Default"
-          }
-        },
         "92c5ea70-dd91-41d1-8b64-fb86fb83aa4d": {
           "type": "question",
           "settings": {
             "title": "Can I change my order?",
             "answer": "<p>Answer<\/p>"
+          }
+        },
+        "bf7d19ba-8eef-4521-9a5b-48492f5acbe8": {
+          "type": "question",
+          "settings": {
+            "title": "What can I do if I have entered an incorrect address?",
+            "answer": "<p>Please contact our customer service as soon as possible. If your order hasn’t been processed yet, we’ll change the address. If an order has already been processed or shipped, we will contact our shipping partner to ask if they can return the package to us. Unfortunately, this isn’t always possible. In that case, our customer service will discuss the situation with you in order to find an appropriate solution.<\/p>"
+          }
+        },
+        "f6d6666a-55c1-42ab-9b2c-be15477d3946": {
+          "type": "question",
+          "settings": {
+            "title": "How do I redeem a discount code?",
+            "answer": "<p>When your order is complete, go to the checkout page. The discount code can be entered on this page. The discount is deducted immediately.<\/p>"
+          }
+        },
+        "80df923a-4cc3-4554-929b-10264b664f1e": {
+          "type": "separator",
+          "settings": {
+            "title": "Default"
           }
         }
       },
@@ -129,8 +143,10 @@
         "36c380a4-bcdf-4c7b-831c-c4d3e653f431",
         "d4535d6b-cf1f-4b51-9316-4e64b3d7480c",
         "d49e176d-c341-47c8-80fa-dfdd4d660602",
-        "80df923a-4cc3-4554-929b-10264b664f1e",
-        "92c5ea70-dd91-41d1-8b64-fb86fb83aa4d"
+        "92c5ea70-dd91-41d1-8b64-fb86fb83aa4d",
+        "bf7d19ba-8eef-4521-9a5b-48492f5acbe8",
+        "f6d6666a-55c1-42ab-9b2c-be15477d3946",
+        "80df923a-4cc3-4554-929b-10264b664f1e"
       ],
       "settings": {
       }
