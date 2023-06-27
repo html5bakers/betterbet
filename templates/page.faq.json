@@ -49,10 +49,19 @@
       ],
       "settings": {
       }
+    },
+    "1f979540-76f4-4bc5-af08-b0d97617a611": {
+      "type": "custom-liquid",
+      "settings": {
+        "subheading": "Sub-heading",
+        "title": "Your Liquid",
+        "liquid": "<p>Write your own custom Liquid content.<\/p>"
+      }
     }
   },
   "order": [
     "64119687-f668-474c-b080-c7715bfe1baf",
-    "main"
+    "main",
+    "1f979540-76f4-4bc5-af08-b0d97617a611"
   ]
 }
