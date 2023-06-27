@@ -25,7 +25,7 @@
         </header>
       {% endif %}
       <div class="product_faq">
-    {% assign i = -1 %}
+    {% assign i = -1  | plus:1 %}
         {% for title in product.metafields.custom.faq_heading.value %}
           {{ product.metafields.custom.faq_description.value[i] }}
           {%- if title != blank and product.metafields.custom.faq_description.value[i] != blank -%}
