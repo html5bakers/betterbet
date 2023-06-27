@@ -118,7 +118,7 @@
           "type": "question",
           "settings": {
             "title": "What is your shipping policy?",
-            "answer": "<p>Same Day Deliveries for all orders in Delhi NCR, Pune, Bangalore and Mumbai, (orders before <strong>3pm<\/strong>).<\/p><p>For rest of India, once the order is dispatched, within<strong> 2-4<\/strong> business days for deliveries in North India and <strong>5-7<\/strong> business days for deliveries to the Rest of India.<\/p>"
+            "answer": "<p>Same Day Deliveries for all orders in Delhi NCR, Pune, Bangalore and Mumbai, (orders before <strong>3pm<\/strong>). For rest of India, once the order is dispatched, within<strong> 2-4<\/strong> business days for deliveries in North India and <strong>5-7<\/strong> business days for deliveries to the Rest of India.<\/p>"
           }
         },
         "36c380a4-bcdf-4c7b-831c-c4d3e653f431": {
