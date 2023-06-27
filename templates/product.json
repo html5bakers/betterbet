@@ -150,29 +150,21 @@
         "cc8bd31e-f81d-4227-81ff-14a90a0341ed": {
           "type": "Text",
           "settings": {
-            "title": "Your ultimate chai milk",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+            "title": "Great milk alternative for the whole family",
+            "desc": "I have been using this plant-based milk as a replacement for regular milk and have noticed a significant decrease in inflammation. Even my kids can't tell the difference in taste, making it a win-win for the whole family."
           }
         },
         "1d0e95f3-b16d-4872-a758-4ca65c594bb6": {
           "type": "Text",
           "settings": {
-            "title": "Your ultimate chai milk",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
-          }
-        },
-        "65940f71-1336-4a82-b4e0-6f703af8ed38": {
-          "type": "Text",
-          "settings": {
-            "title": "Your ultimate chai milk",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+            "title": "This milk has made my healthcare journey easy",
+            "desc": "Millet milk has been a game-changer in my journey towards a healthier lifestyle. Its versatility has allowed me to easily incorporate it into my daily routine, and I love how it enhances the flavor of my recipes. It has quickly become a staple in my kitchen, and I highly recommend it to anyone looking for a delicious and nutritious dairy-free alternative."
           }
         }
       },
       "block_order": [
         "cc8bd31e-f81d-4227-81ff-14a90a0341ed",
-        "1d0e95f3-b16d-4872-a758-4ca65c594bb6",
-        "65940f71-1336-4a82-b4e0-6f703af8ed38"
+        "1d0e95f3-b16d-4872-a758-4ca65c594bb6"
       ],
       "settings": {
         "video_link": "https:\/\/www.youtube.com\/embed\/_9VUPq3SxOc",
