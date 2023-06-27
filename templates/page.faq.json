@@ -76,7 +76,7 @@
         "000ed362-61b6-4c7c-8d2f-45577affeeb4": {
           "type": "question",
           "settings": {
-            "title": "",
+            "title": "What is your shipping policy?",
             "answer": "<p>Same Day Deliveries for all orders in Delhi NCR, Pune, Bangalore and Mumbai, (orders before <strong>3pm<\/strong>).<\/p><p>For rest of India, once the order is dispatched, within<strong> 2-4<\/strong> business days for deliveries in North India and <strong>5-7<\/strong> business days for deliveries to the Rest of India.<\/p>"
           }
         },
@@ -131,14 +131,14 @@
         "ba8988da-acdc-4864-97b7-3b505c6a3c00": {
           "type": "question",
           "settings": {
-            "title": "What is your return Policy?",
+            "title": "What is your return policy?",
             "answer": "<p>If your products arrive damaged or past their expiration date on delivery, we will be happy to issue a replacement\/credit note. Please contact us at <a href=\"mailto:hello@altfoods.in\" title=\"mailto:hello@altfoods.in\"><strong>hello@altfoods.in<\/strong><\/a> with details describing the problem supported by photographic evidence within 48 hours of delivery.<\/p>"
           }
         },
         "0e4280ec-29c5-49bc-a764-4e91864bee43": {
           "type": "question",
           "settings": {
-            "title": "",
+            "title": "Which products are eligible for returns?",
             "answer": ""
           }
         },
