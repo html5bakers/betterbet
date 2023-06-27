@@ -25,9 +25,9 @@
         </header>
       {% endif %}
       <div class="product_faq">
-    {% assign i = -1  | plus:1 %}
+    {% assign i = -1 %}
         {% for title in product.metafields.custom.faq_heading.value %}
-          {{ product.metafields.custom.faq_description.value[i] }}
+          {% assign i = i | plus:1 %}
           {%- if title != blank and product.metafields.custom.faq_description.value[i] != blank -%}
               <div class="Faq__Item  animate show_up ad-{% cycle '0', '1', '1-5', '2', '2-5', '3' %} {% if section.blocks[forloop.index].type == 'separator' or forloop.last %}Faq__Item--lastOfSection{% endif %}" aria-expanded="false" {{ block.shopify_attributes }}>
                 <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
