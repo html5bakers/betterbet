@@ -152,7 +152,48 @@
         "b2ce1200-460d-4d18-bcf0-729aa84ec73a": {
           "type": "question",
           "settings": {
-            "title": "",
+            "title": "When will I receive a replacement?",
+            "answer": "<p>Answer<\/p>"
+          }
+        },
+        "a277ae4d-bc42-440f-9561-aba33d04c04c": {
+          "type": "separator",
+          "settings": {
+            "title": "Product"
+          }
+        },
+        "b199df1d-2135-485f-b8f8-a07be4cb6a6a": {
+          "type": "question",
+          "settings": {
+            "title": "What are the ingredients in your product?",
+            "answer": ""
+          }
+        },
+        "9befaa9e-455a-412e-9917-ae2edb585266": {
+          "type": "question",
+          "settings": {
+            "title": "How should I store your product?",
+            "answer": ""
+          }
+        },
+        "3404416c-4f04-4015-a236-3e5a8ca9b037": {
+          "type": "question",
+          "settings": {
+            "title": "What is the shelf life of your product?",
+            "answer": ""
+          }
+        },
+        "dcf71ddd-4fef-44e7-9249-4bf07d2d07dd": {
+          "type": "question",
+          "settings": {
+            "title": "Are your products vegan or gluten-free?",
+            "answer": ""
+          }
+        },
+        "63ac731d-524c-4a3d-83bd-1d469fef32db": {
+          "type": "question",
+          "settings": {
+            "title": "Can your product be used for multiple purposes?",
             "answer": ""
           }
         }
@@ -178,7 +219,13 @@
         "ba8988da-acdc-4864-97b7-3b505c6a3c00",
         "0e4280ec-29c5-49bc-a764-4e91864bee43",
         "4312f147-c1c8-4152-a8f1-82da0f230f98",
-        "b2ce1200-460d-4d18-bcf0-729aa84ec73a"
+        "b2ce1200-460d-4d18-bcf0-729aa84ec73a",
+        "a277ae4d-bc42-440f-9561-aba33d04c04c",
+        "b199df1d-2135-485f-b8f8-a07be4cb6a6a",
+        "9befaa9e-455a-412e-9917-ae2edb585266",
+        "3404416c-4f04-4015-a236-3e5a8ca9b037",
+        "dcf71ddd-4fef-44e7-9249-4bf07d2d07dd",
+        "63ac731d-524c-4a3d-83bd-1d469fef32db"
       ],
       "settings": {
       }
