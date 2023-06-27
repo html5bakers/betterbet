@@ -26,6 +26,20 @@
             "answer": "<p>Answer<\/p>"
           }
         },
+        "2ed1dfa4-6835-40c7-80e8-1eaa83f0a7f8": {
+          "type": "question",
+          "settings": {
+            "title": "What products does the Better Bet sell?",
+            "answer": "<p>Answer<\/p>"
+          }
+        },
+        "8b3cb42a-42ee-47c6-87a5-3367844e36ac": {
+          "type": "question",
+          "settings": {
+            "title": "What is our mission?",
+            "answer": "<p>Answer<\/p>"
+          }
+        },
         "ba8988da-acdc-4864-97b7-3b505c6a3c00": {
           "type": "question",
           "settings": {
@@ -39,13 +53,46 @@
             "title": "What is the shipping Policy?",
             "answer": "<p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
           }
+        },
+        "069f3073-62b9-4853-9002-f3753b3e84ca": {
+          "type": "separator",
+          "settings": {
+            "title": "Account"
+          }
+        },
+        "53484bae-be9e-4350-be6a-c25363547a48": {
+          "type": "question",
+          "settings": {
+            "title": "How do I register?",
+            "answer": "<p>You can register yourself by clicking on this Registration Link. Upon subscribing, you can enjoy regular updates about product launches, offers and promotions. You can also access your purchase records, save your address which helps in quicker checkout.<\/p>"
+          }
+        },
+        "11492b5d-b65b-4262-8098-0ba33fcbe3c6": {
+          "type": "question",
+          "settings": {
+            "title": "Do I have to share my email id and phone number?",
+            "answer": "<p>Yes. We maintain these in our records and use them to send you live updates on your order and information about offers and promotions.<br\/>We maintain all safeguards to ensure that your details are secure in our system.<\/p>"
+          }
+        },
+        "04d45e29-282d-40a9-ba77-2c11af24a20c": {
+          "type": "question",
+          "settings": {
+            "title": "How Do I Reset My Password?",
+            "answer": "<p>To reset your password, please click on the “Forgot my Password” option available in the ‘Sign In’ section. A link to set a new password will be mailed to your registered Email ID.<\/p>"
+          }
         }
       },
       "block_order": [
         "975be2fc-317b-496a-8e97-4fd8c659ed31",
         "9b1e58dd-0868-4f72-b2a5-d253ea4b7f66",
+        "2ed1dfa4-6835-40c7-80e8-1eaa83f0a7f8",
+        "8b3cb42a-42ee-47c6-87a5-3367844e36ac",
         "ba8988da-acdc-4864-97b7-3b505c6a3c00",
-        "36c380a4-bcdf-4c7b-831c-c4d3e653f431"
+        "36c380a4-bcdf-4c7b-831c-c4d3e653f431",
+        "069f3073-62b9-4853-9002-f3753b3e84ca",
+        "53484bae-be9e-4350-be6a-c25363547a48",
+        "11492b5d-b65b-4262-8098-0ba33fcbe3c6",
+        "04d45e29-282d-40a9-ba77-2c11af24a20c"
       ],
       "settings": {
       }
