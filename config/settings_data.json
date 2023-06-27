@@ -226,8 +226,8 @@
           "show_only_for_visitors": true,
           "show_only_once": true,
           "image": "shopify:\/\/shop_images\/product-popup-image.png",
-          "title": "Popup",
-          "content": "<p>Stay up to date with our latest news, promotions, and exclusive offers by subscribing to our newsletter!<\/p>",
+          "title": "Stay up to date with our latest news, promotions, and exclusive offers by subscribing to our newsletter!",
+          "content": "",
           "show_newsletter": true,
           "apparition_delay": 9
         }
