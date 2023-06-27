@@ -9,7 +9,16 @@
   {{ page.content }}
 </div>
 {{  page.template_suffix   }} {{ template }}
-{% if page.template_suffix  %}{% endif %}
+{% if page.template_suffix == 'judgeme_all_reviews' %}
+<!-- Start of Judge.me code --> 
+  <div style='clear:both'></div>
+  <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='Original Plant Based Milk' data-id='6712291590197' data-auto-install='false'>
+    {% for product in all_products %}
+    {{ all_products['original-combo'].metafields.judgeme.widget }}
+    {% endfor %}
+  </div>
+<!-- End of Judge.me code -->
+{% endif %}
 {% comment %}
 {% schema %}
 {
