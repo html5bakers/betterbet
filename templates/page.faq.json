@@ -73,6 +73,13 @@
             "title": "Shipping"
           }
         },
+        "000ed362-61b6-4c7c-8d2f-45577affeeb4": {
+          "type": "question",
+          "settings": {
+            "title": "",
+            "answer": "<p>Same Day Deliveries for all orders in Delhi NCR, Pune, Bangalore and Mumbai, (orders before <strong>3pm<\/strong>).<\/p><p>For rest of India, once the order is dispatched, within<strong> 2-4<\/strong> business days for deliveries in North India and <strong>5-7<\/strong> business days for deliveries to the Rest of India.<\/p>"
+          }
+        },
         "36c380a4-bcdf-4c7b-831c-c4d3e653f431": {
           "type": "question",
           "settings": {
@@ -128,13 +135,6 @@
             "answer": "<p>If your products arrive damaged or past their expiration date on delivery, we will be happy to issue a replacement\/credit note. Please contact us at <a href=\"mailto:hello@altfoods.in\" title=\"mailto:hello@altfoods.in\"><strong>hello@altfoods.in<\/strong><\/a> with details describing the problem supported by photographic evidence within 48 hours of delivery.<\/p>"
           }
         },
-        "000ed362-61b6-4c7c-8d2f-45577affeeb4": {
-          "type": "question",
-          "settings": {
-            "title": "",
-            "answer": ""
-          }
-        },
         "0e4280ec-29c5-49bc-a764-4e91864bee43": {
           "type": "question",
           "settings": {
@@ -167,6 +167,7 @@
         "11492b5d-b65b-4262-8098-0ba33fcbe3c6",
         "04d45e29-282d-40a9-ba77-2c11af24a20c",
         "f536c9ff-8858-4d0d-8a3a-000ddee34788",
+        "000ed362-61b6-4c7c-8d2f-45577affeeb4",
         "36c380a4-bcdf-4c7b-831c-c4d3e653f431",
         "d4535d6b-cf1f-4b51-9316-4e64b3d7480c",
         "d49e176d-c341-47c8-80fa-dfdd4d660602",
@@ -175,7 +176,6 @@
         "f6d6666a-55c1-42ab-9b2c-be15477d3946",
         "80df923a-4cc3-4554-929b-10264b664f1e",
         "ba8988da-acdc-4864-97b7-3b505c6a3c00",
-        "000ed362-61b6-4c7c-8d2f-45577affeeb4",
         "0e4280ec-29c5-49bc-a764-4e91864bee43",
         "4312f147-c1c8-4152-a8f1-82da0f230f98",
         "b2ce1200-460d-4d18-bcf0-729aa84ec73a"
