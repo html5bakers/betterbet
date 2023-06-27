@@ -106,6 +106,13 @@
           "settings": {
             "title": "Default"
           }
+        },
+        "92c5ea70-dd91-41d1-8b64-fb86fb83aa4d": {
+          "type": "question",
+          "settings": {
+            "title": "Can I change my order?",
+            "answer": "<p>Answer<\/p>"
+          }
         }
       },
       "block_order": [
@@ -122,7 +129,8 @@
         "36c380a4-bcdf-4c7b-831c-c4d3e653f431",
         "d4535d6b-cf1f-4b51-9316-4e64b3d7480c",
         "d49e176d-c341-47c8-80fa-dfdd4d660602",
-        "80df923a-4cc3-4554-929b-10264b664f1e"
+        "80df923a-4cc3-4554-929b-10264b664f1e",
+        "92c5ea70-dd91-41d1-8b64-fb86fb83aa4d"
       ],
       "settings": {
       }
