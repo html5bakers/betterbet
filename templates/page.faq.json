@@ -93,6 +93,19 @@
             "title": "How will I know if my order is confirmed?",
             "answer": "<p>You will receive an email and SMS on order confirmation. Please contact us if you have not received it -<a href=\"mailto:hello@altfoods.in\" title=\"mailto:hello@altfoods.in\"> hello@altfoods.in<\/a> \/ <a href=\"tel:+917866800020\" title=\"tel:+917866800020\">+91 78668 00020<\/a><\/p>"
           }
+        },
+        "d49e176d-c341-47c8-80fa-dfdd4d660602": {
+          "type": "question",
+          "settings": {
+            "title": "When will my order be shipped?",
+            "answer": "<p>Our orders normally get shipped out within 3-4 business days of order placement. Final delivery time will be intimated to you at the time of order confirmation.<\/p>"
+          }
+        },
+        "80df923a-4cc3-4554-929b-10264b664f1e": {
+          "type": "separator",
+          "settings": {
+            "title": "Default"
+          }
         }
       },
       "block_order": [
@@ -107,7 +120,9 @@
         "f536c9ff-8858-4d0d-8a3a-000ddee34788",
         "ba8988da-acdc-4864-97b7-3b505c6a3c00",
         "36c380a4-bcdf-4c7b-831c-c4d3e653f431",
-        "d4535d6b-cf1f-4b51-9316-4e64b3d7480c"
+        "d4535d6b-cf1f-4b51-9316-4e64b3d7480c",
+        "d49e176d-c341-47c8-80fa-dfdd4d660602",
+        "80df923a-4cc3-4554-929b-10264b664f1e"
       ],
       "settings": {
       }
