@@ -1,5 +1,6 @@
 {% style %}
   #section-{{ section.id }}{background:{{ section.settings.bg_color }};}
+  #section-{{ section.id }}{ badge_image_bg}
   #section-{{ section.id }} h1{color:{{ section.settings.title_color }};}
   #section-{{ section.id }} p{color:{{ section.settings.desc_color }};}
 {% endstyle %}
@@ -25,7 +26,7 @@
   </div>
 </section>
 {% if section.settings.badge_image != blank %}
-<div class="slideshow_badge about_badge Container">
+<div class="about_badge Container">
     <div class="badge_inner">
       <span class="badge_text">
   {{ section.settings.badge_image }}
@@ -70,9 +71,15 @@
         "label": "Description Color"
       },
       {
+        "type": "image_picker",
+        "id": "badge_image_bg",
+        "label": "Badge Image Background"
+      },
+      {
         "type": "textarea",
         "id": "badge_image",
-        "label": "Badge Image"
+        "label": "Badge Image",
+        "info": "Enter SVG code"
       }
     ],
     "presets": [
