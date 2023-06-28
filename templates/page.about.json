@@ -22,7 +22,9 @@
       "type": "founders",
       "settings": {
         "subheading": "Meet the",
-        "title": "founders"
+        "title": "founders",
+        "image_1": "shopify:\/\/shop_images\/founder-1.png",
+        "image_2": "shopify:\/\/shop_images\/founder-2.png"
       }
     }
   },
