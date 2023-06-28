@@ -2768,9 +2768,14 @@ form button,
   margin: 0;
   line-height: 1;
 }
-.founders .founder_img,
+.founders .founder_img{
+  justify-content: space-between;
+  width: 100%;
+}
 .founders .title{ width: 100%; }
-
+.founders .founder_img figure{
+  width: calc( 33.33% - 20px);
+}
 @media screen and (min-width: 640px){
   .founders header{ width: 80%; }
   .founders .sec_heading{ font-size: 4rem; }
