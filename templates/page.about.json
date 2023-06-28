@@ -21,8 +21,8 @@
     "8b060cbf-ee08-4337-bef9-61abce86ce0a": {
       "type": "founders",
       "settings": {
-        "title": "founders",
-        "sub_title": "Meet the"
+        "subheading": "Meet the",
+        "title": "founders"
       }
     }
   },
