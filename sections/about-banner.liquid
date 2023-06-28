@@ -22,14 +22,14 @@
         {% endif %}
       </div>
     </header>
-    {% if section.settings.badge_image != blank %}
-      <div class="about_badge Container">
-        <div class="badge_inner">
-          <span class="badge_text">{{ section.settings.badge_image }}</span>
-        </div>
-      </div>
-    {% endif %}
   </div>
+  {% if section.settings.badge_image != blank %}
+    <div class="about_badge Container">
+      <div class="badge_inner">
+        <span class="badge_text">{{ section.settings.badge_image }}</span>
+      </div>
+    </div>
+  {% endif %}
 </section>
 
 
