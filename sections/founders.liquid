@@ -2,16 +2,6 @@
   <div class="Container">
     <div class="founders">
       <header class="SectionHeader SectionHeader--center animate show_up ad-1 flex">
-        {%- if section.settings.subheading != blank or section.settings.title != blank -%}
-          <div class="title">
-            {%- if section.settings.subheading != blank -%}
-              <span class="sub_heading">{{ section.settings.subheading }}</span>
-            {% endif %}
-            {%- if section.settings.title != blank -%}
-              <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}</h2>
-            {%- endif -%}
-          </div>
-        {%- endif -%}
         {%- if section.settings.image_1 != blank -%}
           <div class="founder_img flex">
             {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
@@ -31,6 +21,17 @@
                 <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_3.alt | escape }}">
               </figure>
             {% endif %}
+          </div>
+        {%- endif -%}
+        
+        {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+          <div class="title">
+            {%- if section.settings.subheading != blank -%}
+              <span class="sub_heading">{{ section.settings.subheading }}</span>
+            {% endif %}
+            {%- if section.settings.title != blank -%}
+              <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}</h2>
+            {%- endif -%}
           </div>
         {%- endif -%}
       </header>
