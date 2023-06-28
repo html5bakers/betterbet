@@ -2768,9 +2768,17 @@ form button,
   margin: 0;
   line-height: 1;
 }
-.founders .founder_img{ width: 80%; }
-.founders .title{ width: 20%; }
+.founders .founder_img,
+.founders .title{ width: 100%; }
 
+@media screen and (min-width: 640px){
+  .founders .sec_heading{ font-size: 4rem; }
+  .founders .founder_img{ width: 80%; }
+  .founders .title{ width: 20%; } 
+}
+@media screen and (min-width: 1200px){
+  .founders .sec_heading{ font-size: 4rem; }
+}
 /* Judgeme review badge */
 .ProductItem__Info .jdgm-widget.jdgm-widget {
   display: block;
