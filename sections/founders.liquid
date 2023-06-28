@@ -1,23 +1,36 @@
 <section class="Section Section--spacingNormal founders_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="founders">
-      {%- if section.settings.subheading != blank or section.settings.title != blank -%}
-        <header class="SectionHeader SectionHeader--center text_center animate show_up ad-1">
-          {%- if section.settings.subheading != blank -%}
-            <span class="sub_heading">{{ section.settings.subheading }}</span>
-          {% endif %}
-          {%- if section.settings.title != blank -%}
-            <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}
-            {% if section.settings.heading_image != blank %}
-              <figure class="heading_img animate"><img src="{{ section.settings.heading_image | img_url: 'master'  }}" alt="" /></figure>
+      <header class="SectionHeader SectionHeader--center text_center animate show_up ad-1">
+        {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+          <div>
+            {%- if section.settings.subheading != blank -%}
+              <span class="sub_heading">{{ section.settings.subheading }}</span>
             {% endif %}
-            </h2>
-          {%- endif -%}
-          {%- if section.settings.desc != blank -%}
-            <p>{{ section.settings.desc }}</p>
-          {%- endif -%}
-        </header>
-      {%- endif -%}
+            {%- if section.settings.title != blank -%}
+              <h2 class="SectionHeader__Heading Heading u-h1 sec_heading">{{ section.settings.title }}</h2>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        {%- if section.settings.desc != blank -%}
+          <div class="founder_img flex">
+            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
+            <figure>
+              {%- assign image_url = section.settings.image_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_1.alt | escape }}">
+            </figure>
+            <figure>
+              {%- assign image_url = section.settings.image_2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_2.alt | escape }}">
+            </figure>
+            <figure>
+              {%- assign image_url = section.settings.image_3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_3.alt | escape }}">
+            </figure>
+          </div>
+        {%- endif -%}
+      </header>
+      
       <div>
         
       </div>
