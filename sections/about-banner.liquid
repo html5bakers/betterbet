@@ -1,6 +1,6 @@
 {% style %}
   #section-{{ section.id }}{background:{{ section.settings.bg_color }};}
-  #section-{{ section.id }}{ badge_image_bg}
+  #section-{{ section.id }} .badge_text:before{  background: url('{{ section.settings.badge_image_bg | img_url: 'master' }}') no-repeat; }
   #section-{{ section.id }} h1{color:{{ section.settings.title_color }};}
   #section-{{ section.id }} p{color:{{ section.settings.desc_color }};}
 {% endstyle %}
