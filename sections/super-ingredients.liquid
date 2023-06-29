@@ -21,6 +21,25 @@
       <div class="Rte">{{ section.settings.html }}</div>
     </div>
   </div>
+  <div class="ingredients_wrapper">
+    <div class="Container">
+      <div class="flex ingredients">
+        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
+        {% for block in section.blocks %}
+          {%- assign image_url = block.settings.icon | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <div class="item">
+            <figure class="flex icon">
+                <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.icon.alt | escape }}">
+            </figure>
+            <div class="text">
+              <h3>{{ block.settings.title }}</h3>
+              <div>{{ block.settings.description }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </section>
 
 {% schema %}
@@ -62,6 +81,24 @@
       "id": "html",
       "label": "HTML content",
       "default": "<p>Write your own custom HTML content.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Ingredient",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Ingredient Image"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
     }
   ],
   "presets": [

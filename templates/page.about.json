@@ -32,10 +32,46 @@
     },
     "32ff7167-9938-4c89-93f1-d27bf73a8e46": {
       "type": "super-ingredients",
+      "blocks": {
+        "913c51e8-74c7-4125-9423-3dd2cc490096": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sprouted_finger_millet.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "441c6a70-94a7-44a4-a3a9-0e483d6d40e2": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/oats_84ace84d-1704-4426-85e6-5d2fd6a0ed80.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "b5dc7079-8ed7-4e44-bf1f-aa97f9bbc220": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sprouted_sorghum_c69b878b-e24b-418c-8878-88896493a35d.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "e71abd20-649e-4f31-8fec-adc733b609b3": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sprouted_amarnath.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "913c51e8-74c7-4125-9423-3dd2cc490096",
+        "441c6a70-94a7-44a4-a3a9-0e483d6d40e2",
+        "b5dc7079-8ed7-4e44-bf1f-aa97f9bbc220",
+        "e71abd20-649e-4f31-8fec-adc733b609b3"
+      ],
       "settings": {
-        "bg_color": "#FFF2CC",
-        "subheadin_color": "#496427",
-        "heading_color": "#A5C423",
+        "bg_color": "#fff2cc",
+        "subheading_color": "#496427",
+        "heading_color": "#a5c423",
         "subheading": "Meet Our",
         "title": "Superheros",
         "html": "<p>After conducting extensive research and development, they created the <strong>world's first<\/strong> plant-based milk made of sprouted millets and grains. Better Bet has since become a leader in the plant-based milk industry and continues to innovate and improve its products<\/p>"
