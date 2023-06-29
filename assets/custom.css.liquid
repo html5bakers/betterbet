@@ -2848,6 +2848,16 @@ form button,
   padding: 10px 10px 4px;
   width: max-content;
   margin-bottom: 15px;
+  position: relative;
+}
+.ingredients_wrapper .text h3:after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid green;
 }
 .ingredients_wrapper .item:nth-child(odd) .text h3{ margin-left: auto; }
 
