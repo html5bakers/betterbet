@@ -2881,10 +2881,10 @@ form button,
   content: '';
   position: absolute;
   top: 50%;
-  left: -12px;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-right: 12px solid var(--button-background);
+  left: -10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 10px solid var(--button-background);
   transform: translateY(-50%);
 }
 
@@ -2915,6 +2915,16 @@ form button,
   }
   .ingredients_wrapper .item .icon{ width: 130px; }
   .ingredients_wrapper .text{ width: calc(100% - 180px); }
+  .ingredients_wrapper .text h3:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid var(--button-background);
+    transform: translateY(-50%);
+  }
   .ingredients_wrapper .item:nth-child(odd) .text h3:after{
     right: -12px;
     border-top: 8px solid transparent;
