@@ -8,7 +8,7 @@
 <section class="Section Section--spacingNormal about_banner_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <header class="PageHeader">
-      <div class="SectionHeader SectionHeader--center">
+      <div class="SectionHeader SectionHeader--center animate">
         <div class="col-left">
         {% if section.settings.title != blank %}
         <h1 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title }}</h1>
@@ -24,7 +24,7 @@
       </div>
     </header>
     {% if section.settings.badge_image != blank %}
-      <div class="about_badge Container">
+      <div class="about_badge Container animate">
         <div class="badge_inner">
           <span class="badge_text">{{ section.settings.badge_image }}</span>
         </div>
