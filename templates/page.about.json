@@ -172,19 +172,21 @@
         "0c366bcd-40d9-438f-8aa7-9c75c8f1e6d5": {
           "type": "Logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/award-3.png",
             "link": ""
           }
         },
         "7c6682bd-5b64-4be1-8bef-4daef1e47477": {
           "type": "Logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/award-1.png",
             "link": ""
           }
         },
         "d2262b87-2ab6-41d7-8018-b538674d9b89": {
           "type": "Logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/award-1.png",
+            "logo": "shopify:\/\/shop_images\/award-2.png",
             "link": ""
           }
         }
