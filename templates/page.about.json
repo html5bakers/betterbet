@@ -37,6 +37,7 @@
           "type": "text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/finger-millets.png",
+            "title": "SPROUTED FINGER MILLET",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
         },
@@ -44,6 +45,7 @@
           "type": "text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/oats_84ace84d-1704-4426-85e6-5d2fd6a0ed80.png",
+            "title": "Oats",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
         },
@@ -51,6 +53,7 @@
           "type": "text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/sprouted_sorghum_c69b878b-e24b-418c-8878-88896493a35d.png",
+            "title": "SPROUTED SORGHUM",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
         },
@@ -58,6 +61,7 @@
           "type": "text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/sprouted_amarnath.png",
+            "title": "SPROUTED AMARNATH",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
         }
