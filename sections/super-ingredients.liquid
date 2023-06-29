@@ -24,11 +24,11 @@
   </div>
   <div class="ingredients_wrapper">
     <div class="Container">
-      <div class="flex_always ingredients">
+      <div class="flex ingredients">
         {% for block in section.blocks %}
           {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: block.settings.image -%}{%- endcapture -%}
           {%- assign image_url = block.settings.icon | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-          <div class="item flex">
+          <div class="item flex_always">
             <figure class="icon">
                 <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.icon.alt | escape }}">
             </figure>
