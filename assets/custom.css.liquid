@@ -2826,9 +2826,13 @@ form button,
 .super_ingredients .Rte{ width: 68%; }
 .ingredients_wrapper{
   padding: 50px 0;
-  justify-content: space-between;
 }
+.ingredients,
+.ingredients_wrapper .item{ justify-content: space-between; }
 .ingredients_wrapper .item{ width: 49%; }
+.ingredients_wrapper .item:nth-child(even){
+  flex-direction: row-reverse
+}
 .ingredients_wrapper .item .icon{ width: 130px; }
 .ingredients_wrapper .item .icon img{ width: 100%; }
 .ingredients_wrapper .text{ width: calc(100% - 150px); }
