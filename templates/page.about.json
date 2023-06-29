@@ -113,6 +113,17 @@
         "slidesToShow": "6",
         "autoplay": true
       }
+    },
+    "32ff7167-9938-4c89-93f1-d27bf73a8e46": {
+      "type": "super-ingredients",
+      "settings": {
+        "bg_color": "#FFF2CC",
+        "subheadin_color": "#496427",
+        "heading_color": "#A5C423",
+        "subheading": "Meet Our",
+        "title": "Superheros",
+        "html": "<p>After conducting extensive research and development, they created the <strong>world's first<\/strong> plant-based milk made of sprouted millets and grains. Better Bet has since become a leader in the plant-based milk industry and continues to innovate and improve its products<\/p>"
+      }
     }
   },
   "order": [
@@ -120,6 +131,7 @@
     "5572fa46-5214-4a4d-995d-b0a54c068d7e",
     "8b060cbf-ee08-4337-bef9-61abce86ce0a",
     "d6cea655-e51f-49a1-ba3d-b43b9271c587",
-    "f65ed4a2-8357-42c5-91bd-871eed353121"
+    "f65ed4a2-8357-42c5-91bd-871eed353121",
+    "32ff7167-9938-4c89-93f1-d27bf73a8e46"
   ]
 }
