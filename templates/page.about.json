@@ -90,6 +90,44 @@
         "html": "<p>At Better Bet, we believe in giving back to the community and protecting the environment. We are committed to using sustainable ingredients and manufacturing processes, reducing waste, and supporting local farmers. We also donate to organizations that promote animal welfare and environmental sustainability. We strive to be a responsible and ethical company that makes a positive impact on the world.<\/p>"
       }
     },
+    "bd9230e7-8c24-4763-a882-be4dc2d92245": {
+      "type": "awards",
+      "blocks": {
+        "0c366bcd-40d9-438f-8aa7-9c75c8f1e6d5": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/award-3.png",
+            "link": ""
+          }
+        },
+        "7c6682bd-5b64-4be1-8bef-4daef1e47477": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/award-1.png",
+            "link": ""
+          }
+        },
+        "d2262b87-2ab6-41d7-8018-b538674d9b89": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/award-2.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "0c366bcd-40d9-438f-8aa7-9c75c8f1e6d5",
+        "7c6682bd-5b64-4be1-8bef-4daef1e47477",
+        "d2262b87-2ab6-41d7-8018-b538674d9b89"
+      ],
+      "settings": {
+        "title": "Our Awards",
+        "slidesToShow": "3",
+        "autoplay": true,
+        "bg_color": "#FFF2CC",
+        "heading_color": "#496427"
+      }
+    },
     "f65ed4a2-8357-42c5-91bd-871eed353121": {
       "type": "featured-logos",
       "blocks": {
@@ -165,42 +203,6 @@
         "slidesToShow": "6",
         "autoplay": true
       }
-    },
-    "bd9230e7-8c24-4763-a882-be4dc2d92245": {
-      "type": "awards",
-      "blocks": {
-        "0c366bcd-40d9-438f-8aa7-9c75c8f1e6d5": {
-          "type": "Logo",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/award-3.png",
-            "link": ""
-          }
-        },
-        "7c6682bd-5b64-4be1-8bef-4daef1e47477": {
-          "type": "Logo",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/award-1.png",
-            "link": ""
-          }
-        },
-        "d2262b87-2ab6-41d7-8018-b538674d9b89": {
-          "type": "Logo",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/award-2.png",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "0c366bcd-40d9-438f-8aa7-9c75c8f1e6d5",
-        "7c6682bd-5b64-4be1-8bef-4daef1e47477",
-        "d2262b87-2ab6-41d7-8018-b538674d9b89"
-      ],
-      "settings": {
-        "title": "Our Awards",
-        "slidesToShow": "3",
-        "autoplay": true
-      }
     }
   },
   "order": [
@@ -209,7 +211,7 @@
     "8b060cbf-ee08-4337-bef9-61abce86ce0a",
     "32ff7167-9938-4c89-93f1-d27bf73a8e46",
     "d6cea655-e51f-49a1-ba3d-b43b9271c587",
-    "f65ed4a2-8357-42c5-91bd-871eed353121",
-    "bd9230e7-8c24-4763-a882-be4dc2d92245"
+    "bd9230e7-8c24-4763-a882-be4dc2d92245",
+    "f65ed4a2-8357-42c5-91bd-871eed353121"
   ]
 }
