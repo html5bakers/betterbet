@@ -29,11 +29,20 @@
         "content": "<p>Better Bet was founded in 2020 by Aman, Sweta and Pavitra who are all passionate vegans. The idea for the company was born out of their struggles to find a great-tasting milk alternative that could be used in a variety of ways. <\/p><p>Our team is made up of passionate individuals who share a commitment to promoting a healthy and sustainable lifestyle. We are driven by a desire to make a positive impact on the world and are dedicated to creating high-quality, delicious plant-based milk alternatives. Our team consists of experts in various fields, including food science, nutrition, and sustainability, and we work together to achieve our mission.<\/p>",
         "content_img": "<img src=\"\/\/cdn.shopify.com\/s\/files\/1\/0553\/4859\/2693\/files\/stick-figure.png?v=1682098946\" alt=\"\">"
       }
+    },
+    "d6cea655-e51f-49a1-ba3d-b43b9271c587": {
+      "type": "custom-text",
+      "settings": {
+        "subheading": "Sub-heading",
+        "title": "Your HTML",
+        "html": "<p>Write your own custom HTML content.<\/p>"
+      }
     }
   },
   "order": [
     "main",
     "5572fa46-5214-4a4d-995d-b0a54c068d7e",
-    "8b060cbf-ee08-4337-bef9-61abce86ce0a"
+    "8b060cbf-ee08-4337-bef9-61abce86ce0a",
+    "d6cea655-e51f-49a1-ba3d-b43b9271c587"
   ]
 }
