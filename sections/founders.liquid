@@ -4,7 +4,7 @@
       <header class="SectionHeader flex_always">
         {%- if section.settings.image_1 != blank -%}
           <div class="founder_img flex_always">
-            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
+            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100, 150, 200,400,600,700', image: section.settings.image -%}{%- endcapture -%}
               <figure>
                 {%- assign image_url = section.settings.image_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
                 <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_1.alt | escape }}">
