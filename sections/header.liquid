@@ -384,11 +384,11 @@ HEADER CONTENT
       </a>
     {%- endcapture -%}
 
-    <div class="Header__FlexItem Header__FlexItem--logo" style="width: {{ section.settings.logo.width }}px; max-width: 150px; ">
+    <div class="Header__FlexItem Header__FlexItem--logo" style="width: {{ section.settings.logo.width }}px; max-width: 150px; justify-content: center; ">
       {%- if template == 'index' -%}
         <h1 class="Header__Logo" style="width: {{ section.settings.logo.width }}px; max-width: 150px; ">{{ header_logo }}</h1>
       {%- else -%}
-        <div class="Header__Logo" style="width: {{ section.settings.logo.width }}px; max-width: 100px; ">{{ header_logo }}</div>
+        <div class="Header__Logo">{{ header_logo }}</div>
       {%- endif -%}
     </div>
 
