@@ -7,12 +7,12 @@
             {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100, 150, 200,400,600,700', image: section.settings.image -%}{%- endcapture -%}
               <figure>
                 {%- assign image_url = section.settings.image_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_1.alt | escape }}">
+                <img class="Image--lazyLoad" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_1.alt | escape }}">
               </figure>
             {%- if section.settings.image_2 != blank -%}
               <figure>
                 {%- assign image_url = section.settings.image_2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_2.alt | escape }}">
+                <img class="Image--lazyLoad" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_2.alt | escape }}">
               </figure>
             {% endif %}
             {%- if section.settings.image_3 != blank -%}
