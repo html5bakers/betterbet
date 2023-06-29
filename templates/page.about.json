@@ -122,7 +122,7 @@
       ],
       "settings": {
         "padding_top": 65,
-        "padding_bottom": 0,
+        "padding_bottom": 65,
         "title": "Our Awards",
         "slidesToShow": "3",
         "autoplay": true,
