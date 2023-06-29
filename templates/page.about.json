@@ -36,7 +36,7 @@
         "913c51e8-74c7-4125-9423-3dd2cc490096": {
           "type": "text",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/sprouted_finger_millet.png",
+            "icon": "shopify:\/\/shop_images\/founder-1.png",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
         },
@@ -70,6 +70,7 @@
       ],
       "settings": {
         "bg_color": "#fff2cc",
+        "ingredient_bg_color": "#152315",
         "subheading_color": "#496427",
         "heading_color": "#a5c423",
         "subheading": "Meet Our",
