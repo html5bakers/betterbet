@@ -25,7 +25,7 @@
   <div class="ingredients_wrapper">
     <div class="Container">
       <div class="flex ingredients">
-        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
+        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: block.settings.image -%}{%- endcapture -%}
         {% for block in section.blocks %}
           {%- assign image_url = block.settings.icon | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
           <div class="item flex">
