@@ -29,7 +29,7 @@
         {% for block in section.blocks %}
           {%- assign image_url = block.settings.icon | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
           <div class="item flex">
-            <figure class="flex icon">
+            <figure class="icon">
                 <img class="Image--lazyLoad" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.icon.alt | escape }}">
             </figure>
             <div class="text">
