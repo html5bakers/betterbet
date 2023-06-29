@@ -1,3 +1,8 @@
+<style>
+  #section-{{ section.id }}{ background: {{ sectiion.settings.bg_color }}; }
+  #section-{{ section.id }} .sub_heading{ color: {{ sectiion.settings.subheading_color }}; }
+  #section-{{ section.id }} .sec_heading{ color: {{ sectiion.settings.heading_color }}; }
+</style>
 <section class="Section Section--spacingNormal custom_text" id="section-{{ section.id }}">
   <div class="Container animate show_up">
     <div class="flex content">
@@ -23,6 +28,21 @@
   "name": "Super Ingredients",
   "class": "shopify-section--bordered",
   "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "subheadin_color",
+      "label": "Subheading color"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color"
+    },
     {
       "type": "text",
       "id": "subheading",
