@@ -37,12 +37,89 @@
         "title": "CREATE A POSITIVE IMPACT",
         "html": "<p>At Better Bet, we believe in giving back to the community and protecting the environment. We are committed to using sustainable ingredients and manufacturing processes, reducing waste, and supporting local farmers. We also donate to organizations that promote animal welfare and environmental sustainability. We strive to be a responsible and ethical company that makes a positive impact on the world.<\/p>"
       }
+    },
+    "f65ed4a2-8357-42c5-91bd-871eed353121": {
+      "type": "featured-logos",
+      "blocks": {
+        "62ac889a-8c45-422a-a79e-3a8116452980": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/reporter.png",
+            "link": ""
+          }
+        },
+        "673b4cf2-87b9-4759-af0b-ae5991c3f099": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/nuf-foods.png",
+            "link": ""
+          }
+        },
+        "5c51bf81-e480-443c-abe6-37d0a348c8fd": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/food-matters.png",
+            "link": ""
+          }
+        },
+        "23ce151a-29b4-4ad2-9fe4-467954287398": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/gq.png",
+            "link": ""
+          }
+        },
+        "28c81501-809f-462a-bede-b016ee4909ee": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/edible.png",
+            "link": ""
+          }
+        },
+        "a43312d6-f2dc-4e7e-8bca-41199d68e5e0": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/pbn.png",
+            "link": ""
+          }
+        },
+        "da19b9bb-7117-4467-85af-1bb14b54156c": {
+          "type": "Logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/proveg.png",
+            "link": ""
+          }
+        },
+        "e892502a-38e5-4e1a-8917-b79069c24c74": {
+          "type": "Logo",
+          "disabled": true,
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "62ac889a-8c45-422a-a79e-3a8116452980",
+        "673b4cf2-87b9-4759-af0b-ae5991c3f099",
+        "5c51bf81-e480-443c-abe6-37d0a348c8fd",
+        "23ce151a-29b4-4ad2-9fe4-467954287398",
+        "28c81501-809f-462a-bede-b016ee4909ee",
+        "a43312d6-f2dc-4e7e-8bca-41199d68e5e0",
+        "da19b9bb-7117-4467-85af-1bb14b54156c",
+        "e892502a-38e5-4e1a-8917-b79069c24c74"
+      ],
+      "settings": {
+        "title": "Featured on",
+        "slidesToShow": "6",
+        "autoplay": true
+      }
     }
   },
   "order": [
     "main",
     "5572fa46-5214-4a4d-995d-b0a54c068d7e",
     "8b060cbf-ee08-4337-bef9-61abce86ce0a",
-    "d6cea655-e51f-49a1-ba3d-b43b9271c587"
+    "d6cea655-e51f-49a1-ba3d-b43b9271c587",
+    "f65ed4a2-8357-42c5-91bd-871eed353121"
   ]
 }
