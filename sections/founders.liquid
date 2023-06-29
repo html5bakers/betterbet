@@ -1,9 +1,9 @@
 <section class="Section Section--spacingNormal animate" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="founders">
-      <header class="SectionHeader flex_always">
+      <header class="SectionHeader flex">
         {%- if section.settings.image_1 != blank -%}
-          <div class="founder_img flex">
+          <div class="founder_img flex_always">
             {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
               <figure>
                 {%- assign image_url = section.settings.image_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
