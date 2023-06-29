@@ -33,9 +33,9 @@
     "d6cea655-e51f-49a1-ba3d-b43b9271c587": {
       "type": "custom-text",
       "settings": {
-        "subheading": "Sub-heading",
-        "title": "Your HTML",
-        "html": "<p>Write your own custom HTML content.<\/p>"
+        "subheading": "",
+        "title": "CREATE A POSITIVE IMPACT",
+        "html": "<p>At Better Bet, we believe in giving back to the community and protecting the environment. We are committed to using sustainable ingredients and manufacturing processes, reducing waste, and supporting local farmers. We also donate to organizations that promote animal welfare and environmental sustainability. We strive to be a responsible and ethical company that makes a positive impact on the world.<\/p>"
       }
     }
   },
