@@ -1,7 +1,7 @@
 <section class="Section Section--spacingNormal founders_section" id="section-{{ section.id }}" data-section-id="{{ section.id }}">
   <div class="Container">
     <div class="founders">
-      <header class="SectionHeader animate show_up ad-1 flex">
+      <header class="SectionHeader animate flex">
         {%- if section.settings.image_1 != blank -%}
           <div class="founder_img flex">
             {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
