@@ -121,10 +121,12 @@
         "d2262b87-2ab6-41d7-8018-b538674d9b89"
       ],
       "settings": {
+        "padding_top": 65,
+        "padding_bottom": 0,
         "title": "Our Awards",
         "slidesToShow": "3",
         "autoplay": true,
-        "bg_color": "#FFF2CC",
+        "bg_color": "#fff2cc",
         "heading_color": "#496427"
       }
     },
