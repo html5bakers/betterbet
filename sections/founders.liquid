@@ -16,7 +16,7 @@
               </figure>
             {% endif %}
             {%- if section.settings.image_3 != blank -%}
-              <figure class="animate show_up ad-1.5">
+              <figure class="animate show_up ad-1-5">
                 {%- assign image_url = section.settings.image_3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
                 <img class="Image--lazyLoad" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image_3.alt | escape }}">
               </figure>
