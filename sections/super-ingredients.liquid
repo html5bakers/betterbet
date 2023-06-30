@@ -28,7 +28,7 @@
         {% for block in section.blocks %}
           {%- capture supported_sizes -%}{%- render 'image-size', sizes: '80,100,150,200,300,400,500', image: block.settings.image -%}{%- endcapture -%}
           {%- assign image_url = block.settings.icon | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-          <div class="item flex_always animate show_up ad-{% cycle '0', '1', '1-5', '2', '2-5' %}">
+          <div class="item flex_always animate show_up">
             <figure class="icon">
                 <img class="Image--lazyLoad" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.icon.alt | escape }}">
             </figure>
