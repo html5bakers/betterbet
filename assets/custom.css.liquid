@@ -2788,7 +2788,6 @@ form button,
 /* Founder */
 
 .founders header{ justify-content: space-between; }
-.founders .SectionHeader{ flex-direction: column-reverse; }
 .founders .sub_heading{ color: var(--button-background); }
 .founders .sec_heading{
   font-size: 4rem;
@@ -2824,7 +2823,9 @@ form button,
 @media screen and (min-width: 1200px){
   .founders .sec_heading{ font-size: 7rem; }
 }
-
+@media screen and (max-width: 640px){
+  .founders .SectionHeader{ flex-direction: column-reverse; }
+}
 /* Custom Text */
 .custom_text .sec_heading{
   color: var(--button-background);
