@@ -20,13 +20,13 @@
     {%- endif -%}
   </h1>
 
-{% comment %}
-  {%- if block.settings.show_product_rating -%}
-    <div class="ProductMeta__Rating Heading Text--subdued u-h7">
-      {%- render 'product-rating', product: product -%}
-    </div>
-  {%- endif -%}
-{% endcomment %}
+  {% comment %}
+    {%- if block.settings.show_product_rating -%}
+      <div class="ProductMeta__Rating Heading Text--subdued u-h7">
+        {%- render 'product-rating', product: product -%}
+      </div>
+    {%- endif -%}
+  {% endcomment %}
 
   <!-- Start of Judge.me code --> 
     <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
@@ -38,8 +38,29 @@
     <p class="ProductMeta__Sku Heading Text--subdued u-h6">{{ 'product.form.sku' | t }}: <span class="ProductMeta__SkuNumber">{{ product.selected_or_first_available_variant.sku }}</span></p>
   {%- endif -%}
 
+  
+                  {%- assign has_ouputted_variant_selector = true -%}
+                  {%- render 'product-form', block: block, product: product -%}
 
-  {% comment %}
+                
+                  <div class="ProductForm__QuantitySelector" {{ block.shopify_attributes }}>
+                    {%- if block.settings.show_label -%}
+                      <span class="ProductForm__Label">{{ 'product.form.quantity' | t }}:</span>
+                    {%- endif -%}
+
+                    <div class="QuantitySelector QuantitySelector--large">
+                      {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+
+                      <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="decrease-quantity">{% render 'icon' with 'minus' %}</button>
+                      <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="{{ 'product.form.quantity' | t }}">
+                      <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="increase-quantity">{% render 'icon' with 'plus' %}</button>
+                    </div>
+                  </div>
+
+
+
+
+  
   {%- if product.description != blank -%}
     <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
       <div class="Rte">
@@ -58,7 +79,7 @@
       </div>
     </div>
   {% endif %}
-  {% endcomment %}
+  
   {%- if product.template_suffix != 'coming-soon' -%}
     <div class="ProductMeta__PriceList Heading">
       {% assign save = product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | round %}
