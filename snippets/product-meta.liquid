@@ -38,6 +38,8 @@
     <p class="ProductMeta__Sku Heading Text--subdued u-h6">{{ 'product.form.sku' | t }}: <span class="ProductMeta__SkuNumber">{{ product.selected_or_first_available_variant.sku }}</span></p>
   {%- endif -%}
 
+
+  {% comment %}
   {%- if product.description != blank -%}
     <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
       <div class="Rte">
@@ -56,7 +58,7 @@
       </div>
     </div>
   {% endif %}
-  
+  {% endcomment %}
   {%- if product.template_suffix != 'coming-soon' -%}
     <div class="ProductMeta__PriceList Heading">
       {% assign save = product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | round %}
