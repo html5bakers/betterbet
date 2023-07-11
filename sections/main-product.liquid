@@ -402,6 +402,16 @@
                     {%- endif -%}
                   </div>
 
+
+                  {%- if product.description != blank -%}
+                    <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
+                      <div class="Rte">
+                        {{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}
+                      </div>
+                    </div>
+                  {%- endif -%}
+
+                
                 {%- when 'store_pickup' -%}
                   {%- comment -%}The availability container will be added automatically if there is store pickup available{%- endcomment -%}
                   <div class="ProductMeta__StoreAvailabilityContainer" {{ block.shopify_attributes }}></div>
