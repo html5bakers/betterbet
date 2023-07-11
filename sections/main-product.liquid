@@ -333,75 +333,77 @@
                 {%- when 'variant_selector' -%}
                   {%- assign has_ouputted_variant_selector = true -%}
                   {%- render 'product-form', block: block, product: product -%}
-<div>
-                {%- when 'quantity_selector' -%}
-                  <div class="ProductForm__QuantitySelector" {{ block.shopify_attributes }}>
-                    {%- if block.settings.show_label -%}
-                      <span class="ProductForm__Label">{{ 'product.form.quantity' | t }}:</span>
+                
+                <div class="clearfix">
+                  {%- when 'quantity_selector' -%}
+                    <div class="ProductForm__QuantitySelector" {{ block.shopify_attributes }}>
+                      {%- if block.settings.show_label -%}
+                        <span class="ProductForm__Label">{{ 'product.form.quantity' | t }}:</span>
+                      {%- endif -%}
+  
+                      <div class="QuantitySelector QuantitySelector--large">
+                        {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+  
+                        <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="decrease-quantity">{% render 'icon' with 'minus' %}</button>
+                        <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="{{ 'product.form.quantity' | t }}">
+                        <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="increase-quantity">{% render 'icon' with 'plus' %}</button>
+                      </div>
+                    </div>
+  
+                  {%- when 'inventory' -%}
+                    {%- assign hide_inventory_quantity_by_default = false -%}
+  
+                    {%- if product.selected_or_first_available_variant.inventory_management == blank or product.selected_or_first_available_variant.inventory_quantity <= 0 -%}
+                      {%- assign hide_inventory_quantity_by_default = true -%}
                     {%- endif -%}
-
-                    <div class="QuantitySelector QuantitySelector--large">
-                      {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
-
-                      <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="decrease-quantity">{% render 'icon' with 'minus' %}</button>
-                      <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="{{ 'product.form.quantity' | t }}">
-                      <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="increase-quantity">{% render 'icon' with 'plus' %}</button>
+  
+                    {%- if block.settings.inventory_quantity_threshold != 0 and product.selected_or_first_available_variant.inventory_quantity > block.settings.inventory_quantity_threshold -%}
+                      {%- assign hide_inventory_quantity_by_default = true -%}
+                    {%- endif -%}
+  
+                    <p class="ProductForm__Inventory Text--subdued" {% if hide_inventory_quantity_by_default %}style="display: none"{% endif %} {{ block.shopify_attributes }}>
+                      {%- if block.settings.inventory_quantity_threshold == 0 -%}
+                        {{- 'product.form.inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
+                      {%- else -%}
+                        {{- 'product.form.low_inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
+                      {%- endif -%}
+                    </p>
+  
+                  {%- when 'buy_buttons' -%}
+                    {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
+                      {%- assign use_primary_button = true -%}
+                    {%- else -%}
+                      {%- assign use_primary_button = false -%}
+                    {%- endif -%}
+  
+                    <div class="ProductForm__BuyButtons" {{ block.shopify_attributes }}>
+                      {%- if block.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
+                        <style>
+                          #shopify-section-{{ section.id }} .shopify-payment-button {
+                            display: none;
+                          }
+                        </style>
+                      {%- endif -%}
+  
+                      <button type="submit" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if product.selected_or_first_available_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
+                        {%- if product.selected_or_first_available_variant.available -%}
+                          <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
+  
+                          {%- if block.settings.show_price_in_button -%}
+                            <span class="Button__SeparatorDot"></span>
+                            <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                          {%- endif -%}
+                        {%- else -%}
+                          {{- 'product.form.sold_out' | t -}}
+                        {%- endif -%}
+                      </button>
+  
+                      {%- if block.settings.show_payment_button and product.template_suffix != 'pre-order' -%}
+                        {{ form | payment_button }}
+                      {%- endif -%}
                     </div>
                   </div>
-
-                {%- when 'inventory' -%}
-                  {%- assign hide_inventory_quantity_by_default = false -%}
-
-                  {%- if product.selected_or_first_available_variant.inventory_management == blank or product.selected_or_first_available_variant.inventory_quantity <= 0 -%}
-                    {%- assign hide_inventory_quantity_by_default = true -%}
-                  {%- endif -%}
-
-                  {%- if block.settings.inventory_quantity_threshold != 0 and product.selected_or_first_available_variant.inventory_quantity > block.settings.inventory_quantity_threshold -%}
-                    {%- assign hide_inventory_quantity_by_default = true -%}
-                  {%- endif -%}
-
-                  <p class="ProductForm__Inventory Text--subdued" {% if hide_inventory_quantity_by_default %}style="display: none"{% endif %} {{ block.shopify_attributes }}>
-                    {%- if block.settings.inventory_quantity_threshold == 0 -%}
-                      {{- 'product.form.inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
-                    {%- else -%}
-                      {{- 'product.form.low_inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
-                    {%- endif -%}
-                  </p>
-
-                {%- when 'buy_buttons' -%}
-                  {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
-                    {%- assign use_primary_button = true -%}
-                  {%- else -%}
-                    {%- assign use_primary_button = false -%}
-                  {%- endif -%}
-
-                  <div class="ProductForm__BuyButtons" {{ block.shopify_attributes }}>
-                    {%- if block.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
-                      <style>
-                        #shopify-section-{{ section.id }} .shopify-payment-button {
-                          display: none;
-                        }
-                      </style>
-                    {%- endif -%}
-
-                    <button type="submit" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if product.selected_or_first_available_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
-                      {%- if product.selected_or_first_available_variant.available -%}
-                        <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
-
-                        {%- if block.settings.show_price_in_button -%}
-                          <span class="Button__SeparatorDot"></span>
-                          <span>{{ product.selected_or_first_available_variant.price | money }}</span>
-                        {%- endif -%}
-                      {%- else -%}
-                        {{- 'product.form.sold_out' | t -}}
-                      {%- endif -%}
-                    </button>
-
-                    {%- if block.settings.show_payment_button and product.template_suffix != 'pre-order' -%}
-                      {{ form | payment_button }}
-                    {%- endif -%}
-                  </div>
-                  </div> ffff
+                
                   <div class="ProductMeta custom_meta" {{ block.shopify_attributes }}>
                     {%- if product.description != blank -%}
                       <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
