@@ -401,7 +401,26 @@
                       {{ form | payment_button }}
                     {%- endif -%}
                   </div>
+<div class="ProductMeta" {{ block.shopify_attributes }}>
+  {%- if product.description != blank -%}
+    <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
+      <div class="Rte">
+        {{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}
+      </div>
+    </div>
+  {%- endif -%}
 
+  {% comment %} Nutrition Information {% endcomment %}
+  {% if product.metafields.custom.nutrition_information_image != blank %}
+    <a href="#nutrition_information"class="nutrition_link" data-lity>Nutrition Information</a>
+    <div id="nutrition_information" class="lity-hide lity_popup_wrapper" style="background:#fff">
+      <button class="lity-close" type="button" aria-label="Close (Press escape to close)" data-lity-close="">×</button>
+      <div class="lity_popup">
+          <figure><img src="{{ product.metafields.custom.nutrition_information_image | img_url: 'master' }}" /></figure>
+      </div>
+    </div>
+  {% endif %}
+</div>
                 {%- when 'store_pickup' -%}
                   {%- comment -%}The availability container will be added automatically if there is store pickup available{%- endcomment -%}
                   <div class="ProductMeta__StoreAvailabilityContainer" {{ block.shopify_attributes }}></div>
