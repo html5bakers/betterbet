@@ -20,11 +20,13 @@
     {%- endif -%}
   </h1>
 
+{% comment %}
   {%- if block.settings.show_product_rating -%}
     <div class="ProductMeta__Rating Heading Text--subdued u-h7">
       {%- render 'product-rating', product: product -%}
     </div>
   {%- endif -%}
+{% endcomment %}
 
   <!-- Start of Judge.me code --> 
     <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
