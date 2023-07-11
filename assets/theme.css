@@ -8998,7 +8998,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 @media screen and (min-width: 1008px) {
   .Product__Wrapper {
-    max-width: calc(100% - 525px);
+    max-width: calc(100% - 520px);
     margin-left: 0;
   }
 }
