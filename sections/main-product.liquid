@@ -334,7 +334,6 @@
                   {%- assign has_ouputted_variant_selector = true -%}
                   {%- render 'product-form', block: block, product: product -%}
 
-<div>
                 {%- when 'quantity_selector' -%}
                   <div class="ProductForm__QuantitySelector" {{ block.shopify_attributes }}>
                     {%- if block.settings.show_label -%}
@@ -383,7 +382,7 @@
                       {{ form | payment_button }}
                     {%- endif -%}
                   </div>
-</div>
+
                 {%- when 'inventory' -%}
                   {%- assign hide_inventory_quantity_by_default = false -%}
 
