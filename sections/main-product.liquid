@@ -349,6 +349,25 @@
                     </div>
                   </div>
 
+                {%- when 'inventory' -%}
+                  {%- assign hide_inventory_quantity_by_default = false -%}
+
+                  {%- if product.selected_or_first_available_variant.inventory_management == blank or product.selected_or_first_available_variant.inventory_quantity <= 0 -%}
+                    {%- assign hide_inventory_quantity_by_default = true -%}
+                  {%- endif -%}
+
+                  {%- if block.settings.inventory_quantity_threshold != 0 and product.selected_or_first_available_variant.inventory_quantity > block.settings.inventory_quantity_threshold -%}
+                    {%- assign hide_inventory_quantity_by_default = true -%}
+                  {%- endif -%}
+
+                  <p class="ProductForm__Inventory Text--subdued" {% if hide_inventory_quantity_by_default %}style="display: none"{% endif %} {{ block.shopify_attributes }}>
+                    {%- if block.settings.inventory_quantity_threshold == 0 -%}
+                      {{- 'product.form.inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
+                    {%- else -%}
+                      {{- 'product.form.low_inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
+                    {%- endif -%}
+                  </p>
+
                 {%- when 'buy_buttons' -%}
                   {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
                     {%- assign use_primary_button = true -%}
@@ -383,26 +402,7 @@
                     {%- endif -%}
                   </div>
 
-                {%- when 'inventory' -%}
-                  {%- assign hide_inventory_quantity_by_default = false -%}
-
-                  {%- if product.selected_or_first_available_variant.inventory_management == blank or product.selected_or_first_available_variant.inventory_quantity <= 0 -%}
-                    {%- assign hide_inventory_quantity_by_default = true -%}
-                  {%- endif -%}
-
-                  {%- if block.settings.inventory_quantity_threshold != 0 and product.selected_or_first_available_variant.inventory_quantity > block.settings.inventory_quantity_threshold -%}
-                    {%- assign hide_inventory_quantity_by_default = true -%}
-                  {%- endif -%}
-
-                  <p class="ProductForm__Inventory Text--subdued" {% if hide_inventory_quantity_by_default %}style="display: none"{% endif %} {{ block.shopify_attributes }}>
-                    {%- if block.settings.inventory_quantity_threshold == 0 -%}
-                      {{- 'product.form.inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
-                    {%- else -%}
-                      {{- 'product.form.low_inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
-                    {%- endif -%}
-                  </p>
-
-                  {% comment %}Product description{% endcomment %}
+                  
                   {%- if product.description != blank -%}
                     <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
                       <div class="Rte">
