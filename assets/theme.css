@@ -9537,7 +9537,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 .ProductMeta {
   text-align: center;
   padding-bottom: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -9673,8 +9673,8 @@ shopify-payment-terms {
  */
 
 .ProductForm__Variants {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .ProductForm__Option {
