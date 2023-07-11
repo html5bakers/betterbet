@@ -20,13 +20,13 @@
     {%- endif -%}
   </h1>
 
-  {% comment %}
-    {%- if block.settings.show_product_rating -%}
-      <div class="ProductMeta__Rating Heading Text--subdued u-h7">
-        {%- render 'product-rating', product: product -%}
-      </div>
-    {%- endif -%}
-  {% endcomment %}
+{% comment %}
+  {%- if block.settings.show_product_rating -%}
+    <div class="ProductMeta__Rating Heading Text--subdued u-h7">
+      {%- render 'product-rating', product: product -%}
+    </div>
+  {%- endif -%}
+{% endcomment %}
 
   <!-- Start of Judge.me code --> 
     <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
@@ -38,60 +38,6 @@
     <p class="ProductMeta__Sku Heading Text--subdued u-h6">{{ 'product.form.sku' | t }}: <span class="ProductMeta__SkuNumber">{{ product.selected_or_first_available_variant.sku }}</span></p>
   {%- endif -%}
 
-  
-                  {%- assign has_ouputted_variant_selector = true -%}
-                  {%- render 'product-form', block: block, product: product -%}
-
-                
-                  <div class="ProductForm__QuantitySelector" {{ block.shopify_attributes }}>
-                    {%- if block.settings.show_label -%}
-                      <span class="ProductForm__Label">{{ 'product.form.quantity' | t }}:</span>
-                    {%- endif -%}
-
-                    <div class="QuantitySelector QuantitySelector--large">
-                      {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
-
-                      <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="decrease-quantity">{% render 'icon' with 'minus' %}</button>
-                      <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="{{ 'product.form.quantity' | t }}">
-                      <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="increase-quantity">{% render 'icon' with 'plus' %}</button>
-                    </div>
-                  </div>
-
- {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
-                    {%- assign use_primary_button = true -%}
-                  {%- else -%}
-                    {%- assign use_primary_button = false -%}
-                  {%- endif -%}
-
-                  <div class="ProductForm__BuyButtons" {{ block.shopify_attributes }}>
-                    {%- if block.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
-                      <style>
-                        #shopify-section-{{ section.id }} .shopify-payment-button {
-                          display: none;
-                        }
-                      </style>
-                    {%- endif -%}
-
-                    <button type="submit" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if product.selected_or_first_available_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
-                      {%- if product.selected_or_first_available_variant.available -%}
-                        <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
-
-                        {%- if block.settings.show_price_in_button -%}
-                          <span class="Button__SeparatorDot"></span>
-                          <span>{{ product.selected_or_first_available_variant.price | money }}</span>
-                        {%- endif -%}
-                      {%- else -%}
-                        {{- 'product.form.sold_out' | t -}}
-                      {%- endif -%}
-                    </button>
-
-                    {%- if block.settings.show_payment_button and product.template_suffix != 'pre-order' -%}
-                      {{ form | payment_button }}
-                    {%- endif -%}
-                  </div>
-
-
-  
   {%- if product.description != blank -%}
     <div class="ProductMeta__Description" {{ block.shopify_attributes }}>
       <div class="Rte">
