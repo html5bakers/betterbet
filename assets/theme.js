@@ -207,15 +207,15 @@
     throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
 
-  var Responsive = /*#__PURE__*/function () {
-    function Responsive() {
+  var ViewportManager = /*#__PURE__*/function () {
+    function ViewportManager() {
       var _this = this;
 
-      _classCallCheck(this, Responsive);
+      _classCallCheck(this, ViewportManager);
 
-      this.currentBreakpoint = Responsive.getCurrentBreakpoint();
+      this.currentBreakpoint = ViewportManager.getCurrentBreakpoint();
       window.addEventListener('resize', function () {
-        var newBreakpoint = Responsive.getCurrentBreakpoint();
+        var newBreakpoint = ViewportManager.getCurrentBreakpoint();
 
         if (_this.currentBreakpoint === newBreakpoint) {
           return;
@@ -231,7 +231,7 @@
       });
     }
 
-    _createClass(Responsive, null, [{
+    _createClass(ViewportManager, null, [{
       key: "matchesBreakpoint",
       value: function matchesBreakpoint(breakpoint) {
         switch (breakpoint) {
@@ -284,15 +284,15 @@
       }
     }]);
 
-    return Responsive;
+    return ViewportManager;
   }();
 
-  var Carousel = /*#__PURE__*/function () {
-    function Carousel(element) {
+  var Slider = /*#__PURE__*/function () {
+    function Slider(element) {
       var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var overrideSettings = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
-      _classCallCheck(this, Carousel);
+      _classCallCheck(this, Slider);
 
       this.element = element;
       this.initialConfig = Object.assign(JSON.parse(element.getAttribute('data-flickity-config')), overrideSettings);
@@ -303,7 +303,7 @@
       this._build();
     }
 
-    _createClass(Carousel, [{
+    _createClass(Slider, [{
       key: "destroy",
       value: function destroy() {
         this.flickityInstance.destroy();
@@ -450,7 +450,7 @@
 
         var breakpoints = this.initialConfig['breakpoints'];
         breakpoints.forEach(function (breakpoint) {
-          if (Responsive.matchesBreakpoint(breakpoint['matches'])) {
+          if (ViewportManager.matchesBreakpoint(breakpoint['matches'])) {
             config = Object.assign(config, breakpoint['settings']);
           }
         });
@@ -470,15 +470,15 @@
       }
     }]);
 
-    return Carousel;
+    return Slider;
   }();
 
-  var Animation = /*#__PURE__*/function () {
-    function Animation() {
-      _classCallCheck(this, Animation);
+  var MotionHelper = /*#__PURE__*/function () {
+    function MotionHelper() {
+      _classCallCheck(this, MotionHelper);
     }
 
-    _createClass(Animation, null, [{
+    _createClass(MotionHelper, null, [{
       key: "slideUp",
       value:
       /**
@@ -519,18 +519,18 @@
       }
     }]);
 
-    return Animation;
+    return MotionHelper;
   }();
 
   /**
    * Various DOM helper
    */
-  var Dom = /*#__PURE__*/function () {
-    function Dom() {
-      _classCallCheck(this, Dom);
+  var DomUtils = /*#__PURE__*/function () {
+    function DomUtils() {
+      _classCallCheck(this, DomUtils);
     }
 
-    _createClass(Dom, null, [{
+    _createClass(DomUtils, null, [{
       key: "getSiblings",
       value:
       /**
@@ -606,19 +606,19 @@
       }
     }]);
 
-    return Dom;
+    return DomUtils;
   }();
 
-  var Collapsible = /*#__PURE__*/function () {
-    function Collapsible() {
-      _classCallCheck(this, Collapsible);
+  var Accordion = /*#__PURE__*/function () {
+    function Accordion() {
+      _classCallCheck(this, Accordion);
 
       this.domDelegate = new domDelegate.Delegate(document.body);
 
       this._attachListeners();
     }
 
-    _createClass(Collapsible, [{
+    _createClass(Accordion, [{
       key: "_attachListeners",
       value: function _attachListeners() {
         this.domDelegate.on('click', '[data-action="toggle-collapsible"]', this._toggleCollapsible.bind(this));
@@ -633,9 +633,9 @@
         var _this = this;
 
         // If this is an auto-expand and that it reaches the needed breakpoint, we do nothing
-        var parentCollapsible = target.closest('.Collapsible');
+        var parentCollapsible = target.closest('.Accordion');
 
-        if (parentCollapsible.classList.contains('Collapsible--autoExpand') && Responsive.matchesBreakpoint('tablet-and-up')) {
+        if (parentCollapsible.classList.contains('Accordion--autoExpand') && ViewportManager.matchesBreakpoint('tablet-and-up')) {
           return;
         }
 
@@ -648,7 +648,7 @@
         } // We make sure to close any siblings collapsible as well
 
 
-        Dom.getSiblings(parentCollapsible).forEach(function (collapsibleToClose) {
+        DomUtils.getSiblings(parentCollapsible).forEach(function (collapsibleToClose) {
           return _this._close(collapsibleToClose);
         });
         event.preventDefault();
@@ -669,7 +669,7 @@
 
         toggleButton.setAttribute('aria-expanded', 'true');
         collapsibleInner.style.overflow = 'visible';
-        Animation.slideDown(collapsibleInner);
+        MotionHelper.slideDown(collapsibleInner);
         setTimeout(function () {
           collapsible.style.overflow = 'visible';
         }, 350);
@@ -691,19 +691,19 @@
         toggleButton.setAttribute('aria-expanded', 'false');
         collapsibleInner.style.overflow = 'hidden';
         collapsible.style.overflow = 'hidden';
-        Animation.slideUp(collapsibleInner);
+        MotionHelper.slideUp(collapsibleInner);
       }
     }]);
 
-    return Collapsible;
+    return Accordion;
   }();
 
-  var Accessibility = /*#__PURE__*/function () {
-    function Accessibility() {
-      _classCallCheck(this, Accessibility);
+  var A11yHelper = /*#__PURE__*/function () {
+    function A11yHelper() {
+      _classCallCheck(this, A11yHelper);
     }
 
-    _createClass(Accessibility, null, [{
+    _createClass(A11yHelper, null, [{
       key: "trapFocus",
       value:
       /**
@@ -756,14 +756,14 @@
       }
     }]);
 
-    return Accessibility;
+    return A11yHelper;
   }();
 
-  var Drawer = /*#__PURE__*/function () {
-    function Drawer(element) {
+  var SidePanel = /*#__PURE__*/function () {
+    function SidePanel(element) {
       var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-      _classCallCheck(this, Drawer);
+      _classCallCheck(this, SidePanel);
 
       this.element = element;
       this.delegateElement = new domDelegate.Delegate(this.element);
@@ -774,13 +774,13 @@
       this.onClose = options['onClose'] || function () {};
 
       this.isOpen = false;
-      this.direction = this.element.classList.contains('Drawer--fromLeft') ? 'fromLeft' : 'fromRight';
+      this.direction = this.element.classList.contains('SidePanel--fromLeft') ? 'fromLeft' : 'fromRight';
       this.pageOverlayElement = document.querySelector('.PageOverlay');
 
       this._attachListeners();
     }
 
-    _createClass(Drawer, [{
+    _createClass(SidePanel, [{
       key: "destroy",
       value: function destroy() {
         this.delegateBody.off('click', "[data-action=\"open-drawer\"][data-drawer-id=\"".concat(this.element.id, "\"]"));
@@ -816,7 +816,7 @@
         // other browsers, this is the only way to achieve that
         //disableBodyScroll(true, '[data-scrollable]');
 
-        Accessibility.trapFocus(this.element, 'drawer');
+        A11yHelper.trapFocus(this.element, 'drawer');
         document.querySelector('#shopify-section-header').style.zIndex = ''; // Ugly hack
         // We attach an event to the page overlay to close it
 
@@ -841,7 +841,7 @@
         this.element.setAttribute('aria-hidden', 'true');
         document.documentElement.classList.remove('no-scroll'); //disableBodyScroll(false, '[data-scrollable]');
 
-        Accessibility.removeTrapFocus(this.element, 'drawer');
+        A11yHelper.removeTrapFocus(this.element, 'drawer');
         this.pageOverlayElement.classList.remove('is-visible');
         this.pageOverlayElement.removeEventListener('click', this._closeListener);
         this.isOpen = false;
@@ -880,7 +880,7 @@
       }
     }]);
 
-    return Drawer;
+    return SidePanel;
   }();
 
   /**
@@ -888,17 +888,17 @@
    *
    * This plugin uses delegate events so it's independent of the sections.
    */
-  var LoadingBar = /*#__PURE__*/function () {
-    function LoadingBar() {
-      _classCallCheck(this, LoadingBar);
+  var ProgressBar = /*#__PURE__*/function () {
+    function ProgressBar() {
+      _classCallCheck(this, ProgressBar);
 
-      this.element = document.querySelector('.LoadingBar');
+      this.element = document.querySelector('.ProgressBar');
       document.addEventListener('theme:loading:start', this._onLoadingStart.bind(this));
       document.addEventListener('theme:loading:end', this._onLoadingEnd.bind(this));
       this.element.addEventListener('transitionend', this._onTransitionEnd.bind(this));
     }
 
-    _createClass(LoadingBar, [{
+    _createClass(ProgressBar, [{
       key: "_onLoadingStart",
       value: function _onLoadingStart() {
         this.element.classList.add('is-visible');
@@ -921,12 +921,12 @@
       }
     }]);
 
-    return LoadingBar;
+    return ProgressBar;
   }();
 
-  var Modal = /*#__PURE__*/function () {
-    function Modal() {
-      _classCallCheck(this, Modal);
+  var Dialog = /*#__PURE__*/function () {
+    function Dialog() {
+      _classCallCheck(this, Dialog);
 
       this.domDelegate = new domDelegate.Delegate(document.body);
       this.activeModal = null; // Keep track of the active modal
@@ -939,7 +939,7 @@
       this._checkOpenByHash();
     }
 
-    _createClass(Modal, [{
+    _createClass(Dialog, [{
       key: "_attachListeners",
       value: function _attachListeners() {
         this._closeListener = this._closeModal.bind(this);
@@ -972,7 +972,7 @@
         }
 
         fastdom.mutate(function () {
-          Accessibility.clearTrapFocus(); // Needed as the modal can be open on top of a popover
+          A11yHelper.clearTrapFocus(); // Needed as the modal can be open on top of a popover
 
           _this._onTransitionEndedListener = _this._onTransitionEnded.bind(_this);
 
@@ -982,7 +982,7 @@
 
           document.documentElement.classList.add('no-scroll'); // If the modal is not a fullscreen modal, then we also display the overlay
 
-          if (!_this.activeModal.classList.contains('Modal--fullScreen')) {
+          if (!_this.activeModal.classList.contains('Dialog--fullScreen')) {
             _this.pageOverlayElement.classList.add('is-visible');
 
             _this.pageOverlayElement.addEventListener('click', _this._closeListener);
@@ -1002,15 +1002,15 @@
         this.domDelegate.off('keyup');
         fastdom.mutate(function () {
           // If the modal is of video type, we need to remove the iframe to stop the video
-          if (_this2.activeModal.classList.contains('Modal--videoContent')) {
+          if (_this2.activeModal.classList.contains('Dialog--videoContent')) {
             _this2._resetVideoListener = _this2._resetVideo.bind(_this2);
 
             _this2.activeModal.addEventListener('transitionend', _this2._resetVideoListener);
           }
 
-          Accessibility.removeTrapFocus(_this2.activeModal, 'modal');
+          A11yHelper.removeTrapFocus(_this2.activeModal, 'modal');
 
-          if (!_this2.activeModal.classList.contains('Modal--fullScreen')) {
+          if (!_this2.activeModal.classList.contains('Dialog--fullScreen')) {
             _this2.pageOverlayElement.classList.remove('is-visible');
 
             _this2.pageOverlayElement.removeEventListener('click', _this2._closeListener);
@@ -1032,7 +1032,7 @@
           return;
         }
 
-        Accessibility.trapFocus(this.activeModal, 'modal'); // Trap the focus first (as this trigger reflows)
+        A11yHelper.trapFocus(this.activeModal, 'modal'); // Trap the focus first (as this trigger reflows)
 
         this.activeModal.removeEventListener('transitionend', this._onTransitionEndedListener);
       }
@@ -1044,7 +1044,7 @@
         }
 
         var iframe = event.target.querySelector('iframe');
-        iframe.parentNode.innerHTML = "<iframe class=\"Image--lazyLoad\" data-src=".concat(iframe.getAttribute('data-src'), " frameborder=\"0\" allowfullscreen>");
+        iframe.parentNode.innerHTML = "<iframe class=\"LazyImage--lazyLoad\" data-src=".concat(iframe.getAttribute('data-src'), " frameborder=\"0\" allowfullscreen>");
         event.target.removeEventListener('transitionend', this._resetVideoListener);
       }
       /**
@@ -1057,7 +1057,7 @@
         var hash = window.location.hash,
             modal = document.getElementById(hash.replace('#', ''));
 
-        if (modal && modal.classList.contains('Modal')) {
+        if (modal && modal.classList.contains('Dialog')) {
           this._openModal(modal);
         }
       }
@@ -1074,12 +1074,12 @@
       }
     }]);
 
-    return Modal;
+    return Dialog;
   }();
 
-  var Popover = /*#__PURE__*/function () {
-    function Popover(element, options) {
-      _classCallCheck(this, Popover);
+  var Tooltip = /*#__PURE__*/function () {
+    function Tooltip(element, options) {
+      _classCallCheck(this, Tooltip);
 
       this.element = element;
       this.delegateElement = new domDelegate.Delegate(this.element);
@@ -1101,7 +1101,7 @@
       this._attachListeners();
     }
 
-    _createClass(Popover, [{
+    _createClass(Tooltip, [{
       key: "destroy",
       value: function destroy() {
         this.element.removeEventListener('keyup', this._handleKeyboardListener);
@@ -1129,7 +1129,7 @@
         disableBodyScroll(true, '[data-scrollable]');
         document.documentElement.classList.add('no-scroll'); // Prevent scrolling when popover is open
 
-        if (Responsive.matchesBreakpoint('lap-and-up')) {
+        if (ViewportManager.matchesBreakpoint('lap-and-up')) {
           document.body.addEventListener('click', this._clickOutsideListener);
 
           this._position();
@@ -1165,7 +1165,7 @@
         disableBodyScroll(false, '[data-scrollable]');
         document.documentElement.classList.remove('no-scroll');
 
-        if (Responsive.matchesBreakpoint('lap-and-up')) {
+        if (ViewportManager.matchesBreakpoint('lap-and-up')) {
           document.body.removeEventListener('click', this._clickOutsideListener);
         } else if (this.showOverlay) {
           this.pageOverlayElement.classList.remove('is-visible');
@@ -1202,7 +1202,7 @@
     }, {
       key: "_valueChanged",
       value: function _valueChanged(event) {
-        Dom.getSiblings(event.target, '.is-selected').forEach(function (item) {
+        DomUtils.getSiblings(event.target, '.is-selected').forEach(function (item) {
           return item.classList.remove('is-selected');
         });
         event.target.classList.add('is-selected'); // If there is a callback in option we call it with the value
@@ -1224,7 +1224,7 @@
     }, {
       key: "_clickOutside",
       value: function _clickOutside(event) {
-        if (!event.target.closest('.Popover') && !event.target.closest('.Modal') && event.target !== this.activator && !this.activator.contains(event.target)) {
+        if (!event.target.closest('.Tooltip') && !event.target.closest('.Dialog') && event.target !== this.activator && !this.activator.contains(event.target)) {
           this.close();
         }
       }
@@ -1310,13 +1310,13 @@
           }
         });
         fastdom.mutate(function () {
-          ['Popover--positionBottom', 'Popover--positionTop', 'Popover--positionCenter', 'Popover--alignTop', 'Popover--alignCenter', 'Popover--alignBottom'].map(function (item) {
+          ['Tooltip--positionBottom', 'Tooltip--positionTop', 'Tooltip--positionCenter', 'Tooltip--alignTop', 'Tooltip--alignCenter', 'Tooltip--alignBottom'].map(function (item) {
             return _this2.element.classList.remove(item);
           });
 
-          _this2.element.classList.add("Popover--position".concat(position.charAt(0).toUpperCase() + position.slice(1)));
+          _this2.element.classList.add("Tooltip--position".concat(position.charAt(0).toUpperCase() + position.slice(1)));
 
-          _this2.element.classList.add("Popover--align".concat(alignment.charAt(0).toUpperCase() + alignment.slice(1)));
+          _this2.element.classList.add("Tooltip--align".concat(alignment.charAt(0).toUpperCase() + alignment.slice(1)));
 
           _this2.element.setAttribute('style', "top: ".concat(parseInt(topPosition), "px; right: ").concat(parseInt(rightPosition), "px;"));
         });
@@ -1334,23 +1334,23 @@
       }
     }]);
 
-    return Popover;
+    return Tooltip;
   }();
 
   /**
    * This class will coordinate all the transitions from the website
    */
-  var PageTransition = /*#__PURE__*/function () {
-    function PageTransition() {
-      _classCallCheck(this, PageTransition);
+  var PageFade = /*#__PURE__*/function () {
+    function PageFade() {
+      _classCallCheck(this, PageFade);
 
       this.domDelegate = new domDelegate.Delegate(document.body);
-      this.pageTransition = document.querySelector('.PageTransition');
+      this.pageTransition = document.querySelector('.PageFade');
 
       this._attachListeners();
     }
 
-    _createClass(PageTransition, [{
+    _createClass(PageFade, [{
       key: "_attachListeners",
       value: function _attachListeners() {
         this.domDelegate.on('click', 'a[href]:not([href^="#"]):not([href^="javascript:"]):not([href^="mailto:"]):not([href^="tel:"]):not([target="_blank"])', this._onPageUnload.bind(this));
@@ -1364,15 +1364,15 @@
       value: function _onPageUnload(event, target) {
         var _this = this;
 
-        if (event.defaultPrevented || event.ctrlKey || event.metaKey || !window.theme.showPageTransition || !this.pageTransition) {
+        if (event.defaultPrevented || event.ctrlKey || event.metaKey || !window.shopConfig.showPageTransition || !this.pageTransition) {
           return;
         }
 
         event.preventDefault(); // Prevent the click to happen
 
-        if (window.theme.showPageTransition && this.pageTransition) {
+        if (window.shopConfig.showPageTransition && this.pageTransition) {
           var doTransition = function doTransition(event) {
-            // Animation is finished, we can transition
+            // MotionHelper is finished, we can transition
             if (event.propertyName === 'opacity') {
               _this.pageTransition.removeEventListener('transitionend', doTransition);
 
@@ -1389,14 +1389,14 @@
       key: "getInstance",
       value: function getInstance() {
         if (!this.instance) {
-          this.instance = new PageTransition();
+          this.instance = new PageFade();
         }
 
         return this.instance;
       }
     }]);
 
-    return PageTransition;
+    return PageFade;
   }();
 
   /**
@@ -1424,13 +1424,13 @@
 
         if (target.hasAttribute('data-image-url') && target.getAttribute('data-image-id') !== originalImageElement.getAttribute('data-image-id')) {
           var newImageElement = document.createElement('img');
-          newImageElement.className = 'ProductItem__Image Image--fadeIn Image--lazyLoad';
+          newImageElement.className = 'ProductItem__Image LazyImage--fadeIn LazyImage--lazyLoad';
           newImageElement.setAttribute('data-image-id', target.getAttribute('data-image-id'));
           newImageElement.setAttribute('data-src', target.getAttribute('data-image-url'));
           newImageElement.setAttribute('data-widths', target.getAttribute('data-image-widths'));
           newImageElement.setAttribute('data-sizes', 'auto'); // Replace the original node
 
-          if (window.theme.productImageSize === 'natural') {
+          if (window.shopConfig.productImageSize === 'natural') {
             originalImageElement.parentNode.style.paddingBottom = "".concat(100.0 / target.getAttribute('data-image-aspect-ratio'), "%");
           }
 
@@ -1443,12 +1443,12 @@
     return ProductItemColorSwatch;
   }();
 
-  var Image = /*#__PURE__*/function () {
-    function Image() {
-      _classCallCheck(this, Image);
+  var LazyImage = /*#__PURE__*/function () {
+    function LazyImage() {
+      _classCallCheck(this, LazyImage);
     }
 
-    _createClass(Image, null, [{
+    _createClass(LazyImage, null, [{
       key: "getSizedImageUrl",
       value:
       /**
@@ -1491,7 +1491,7 @@
       }
     }]);
 
-    return Image;
+    return LazyImage;
   }();
 
   var ProductImageZoom = /*#__PURE__*/function () {
@@ -1543,11 +1543,11 @@
       key: "_initPhotoSwipeFromImageClick",
       value: function _initPhotoSwipeFromImageClick(event, target) {
         // Opening this way is only available on desktop
-        if (Responsive.matchesBreakpoint('pocket')) {
+        if (ViewportManager.matchesBreakpoint('pocket')) {
           return;
         }
 
-        var images = Dom.nodeListToArray(this.element.querySelectorAll('.Product__SlideItem--image img'));
+        var images = DomUtils.nodeListToArray(this.element.querySelectorAll('.Product__SlideItem--image img'));
 
         this._createPhotoSwipeInstance(this._createPhotoSwipeItemsFromImages(images), parseInt(target.getAttribute('data-image-media-position')));
       }
@@ -1561,7 +1561,7 @@
         return images.map(function (image) {
           var maxWidth = parseInt(image.getAttribute('data-max-width')),
               maxHeight = parseInt(image.getAttribute('data-max-height')),
-              maxDimension = Responsive.matchesBreakpoint('phone') ? 1200 : 1800,
+              maxDimension = ViewportManager.matchesBreakpoint('phone') ? 1200 : 1800,
               // 1200 is max size for mobile and 1800 for larger devices
           reduceFactor = 1.0;
 
@@ -1579,7 +1579,7 @@
             w: requestedWidth,
             h: requestedHeight,
             initialZoomLevel: 0.65,
-            src: Image.getSizedImageUrl(image.getAttribute('data-original-src'), requestedWidth + 'x' + requestedHeight)
+            src: LazyImage.getSizedImageUrl(image.getAttribute('data-original-src'), requestedWidth + 'x' + requestedHeight)
           };
         });
       }
@@ -1603,7 +1603,7 @@
           closeOnVerticalDrag: false,
           allowPanToNext: false,
           pinchToClose: false,
-          errorMsg: '<p class="pswp__error-msg">' + window.languages.productImageLoadingError + '</p>',
+          errorMsg: '<p class="pswp__error-msg">' + window.shopStrings.productImageLoadingError + '</p>',
           scaleMode: 'zoom',
           getDoubleTapZoom: function getDoubleTapZoom(isMouseClick, item) {
             if (isMouseClick) {
@@ -1771,7 +1771,7 @@
       key: "hasBeenSelected",
       value: function hasBeenSelected() {
         // As per guidelines, we only need to autoplay when it's not a touch device
-        if (Responsive.matchesBreakpoint('supports-hover')) {
+        if (ViewportManager.matchesBreakpoint('supports-hover')) {
           this.modelUi.play();
         }
       }
@@ -1855,12 +1855,12 @@
   /**
    * This implementation allows to serialize a form
    */
-  var Form = /*#__PURE__*/function () {
-    function Form() {
-      _classCallCheck(this, Form);
+  var FormHandler = /*#__PURE__*/function () {
+    function FormHandler() {
+      _classCallCheck(this, FormHandler);
     }
 
-    _createClass(Form, null, [{
+    _createClass(FormHandler, null, [{
       key: "serialize",
       value: function serialize(form) {
         function stringKey(key, value) {
@@ -1889,7 +1889,7 @@
 
           if (formElement.name && !formElement.disabled && (formElement.checked || /select|textarea/i.test(formElement.nodeName) || /hidden|text|search|tel|url|email|password|datetime|date|month|week|time|datetime-local|number|range|color/i.test(formElement.type))) {
             var stringKeys = stringKey(formElement.name, formElement.value);
-            hash = Form.extend(hash, stringKeys);
+            hash = FormHandler.extend(hash, stringKeys);
           }
         }
 
@@ -1906,7 +1906,7 @@
             if (obj.hasOwnProperty(prop)) {
               // If property is an object, merge properties
               if (Object.prototype.toString.call(obj[prop]) === '[object Object]') {
-                extended[prop] = Form.extend(extended[prop], obj[prop]);
+                extended[prop] = FormHandler.extend(extended[prop], obj[prop]);
               } else {
                 extended[prop] = obj[prop];
               }
@@ -1923,15 +1923,15 @@
       }
     }]);
 
-    return Form;
+    return FormHandler;
   }();
 
-  var Currency = /*#__PURE__*/function () {
-    function Currency() {
-      _classCallCheck(this, Currency);
+  var CurrencyConverter = /*#__PURE__*/function () {
+    function CurrencyConverter() {
+      _classCallCheck(this, CurrencyConverter);
     }
 
-    _createClass(Currency, null, [{
+    _createClass(CurrencyConverter, null, [{
       key: "formatMoney",
       value:
       /**
@@ -2005,14 +2005,14 @@
       }
     }]);
 
-    return Currency;
+    return CurrencyConverter;
   }();
 
-  var VariantSelector = /*#__PURE__*/function () {
-    function VariantSelector(element, parentProductVariants) {
+  var VariantPicker = /*#__PURE__*/function () {
+    function VariantPicker(element, parentProductVariants) {
       var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
-      _classCallCheck(this, VariantSelector);
+      _classCallCheck(this, VariantPicker);
 
       this.element = element;
       this.parentProductVariants = parentProductVariants;
@@ -2023,8 +2023,8 @@
 
       this.isOpen = false;
       this.pageOverlayElement = document.querySelector('.PageOverlay');
-      this.variantChoiceList = Dom.nodeListToArray(this.element.querySelectorAll('.VariantSelector__Choice'));
-      this.variantCarousel = new Carousel(this.element.querySelector('.VariantSelector__Carousel'), {
+      this.variantChoiceList = DomUtils.nodeListToArray(this.element.querySelectorAll('.VariantSelector__Choice'));
+      this.variantCarousel = new Slider(this.element.querySelector('.VariantSelector__Carousel'), {
         onSelect: this._variantChanged.bind(this),
         onClick: this._variantSelected.bind(this)
       });
@@ -2032,7 +2032,7 @@
       this._attachListeners();
     }
 
-    _createClass(VariantSelector, [{
+    _createClass(VariantPicker, [{
       key: "destroy",
       value: function destroy() {
         this.element.removeEventListener('keyup', this._handleKeyboardListener);
@@ -2054,7 +2054,7 @@
 
         this.element.setAttribute('aria-hidden', 'false');
         this.activator.setAttribute('aria-expanded', 'true');
-        Accessibility.trapFocus(this.element, 'variant-selector');
+        A11yHelper.trapFocus(this.element, 'variant-selector');
         document.documentElement.classList.add('no-scroll'); // Prevent scrolling when popover is open
 
         this.element.setAttribute('style', '');
@@ -2071,7 +2071,7 @@
 
         this.element.setAttribute('aria-hidden', 'true');
         this.activator.setAttribute('aria-expanded', 'false');
-        Accessibility.removeTrapFocus(this.element, 'variant-selector');
+        A11yHelper.removeTrapFocus(this.element, 'variant-selector');
         document.documentElement.classList.remove('no-scroll');
         this.pageOverlayElement.classList.remove('is-visible');
         this.pageOverlayElement.removeEventListener('click', this._closeListener);
@@ -2097,7 +2097,7 @@
       value: function _variantChanged(selectedIndex) {
         var activeChoice = this.variantChoiceList[selectedIndex];
         activeChoice.classList.add('is-selected');
-        Dom.getSiblings(activeChoice, '.is-selected').forEach(function (item) {
+        DomUtils.getSiblings(activeChoice, '.is-selected').forEach(function (item) {
           return item.classList.remove('is-selected');
         });
       }
@@ -2123,7 +2123,7 @@
         var selectedVariant = event.detail.variant,
             imageWrapperElements = this.element.querySelectorAll('.VariantSelector__ImageWrapper'),
             found = false;
-        Dom.nodeListToArray(imageWrapperElements).forEach(function (image) {
+        DomUtils.nodeListToArray(imageWrapperElements).forEach(function (image) {
           var colorPosition = parseInt(image.parentElement.getAttribute('data-option-position')) - 1,
               combinationExcludedColor = '';
           selectedVariant.options.forEach(function (optionValue, index) {
@@ -2145,7 +2145,7 @@
         }
 
         var foundColorIndex = 0;
-        Dom.nodeListToArray(this.element.querySelectorAll('.VariantSelector__ChoicePrice')).forEach(function (priceElement, index) {
+        DomUtils.nodeListToArray(this.element.querySelectorAll('.VariantSelector__ChoicePrice')).forEach(function (priceElement, index) {
           var colorPosition = parseInt(priceElement.getAttribute('data-color-position')) - 1;
 
           _this.parentProductVariants.productData['variants'].forEach(function (variant) {
@@ -2160,7 +2160,7 @@
 
             if (matchOptionsExcludedColor && variant['options'][colorPosition] === selectedVariant['options'][colorPosition]) {
               if (foundColorIndex++ === index) {
-                priceElement.innerHTML = "<span class=\"Heading Text--subdued\">".concat(Currency.formatMoney(variant['price'], window.theme.moneyFormat), "</span>");
+                priceElement.innerHTML = "<span class=\"Heading Text--subdued\">".concat(CurrencyConverter.formatMoney(variant['price'], window.shopConfig.moneyFormat), "</span>");
               }
             }
           });
@@ -2190,7 +2190,7 @@
       }
     }]);
 
-    return VariantSelector;
+    return VariantPicker;
   }();
 
   /**
@@ -2198,16 +2198,16 @@
    * "updateWithVariant" must be called whenever the variant is changed.
    */
 
-  var StoreAvailability = /*#__PURE__*/function () {
-    function StoreAvailability(element, productTitle) {
-      _classCallCheck(this, StoreAvailability);
+  var InventoryChecker = /*#__PURE__*/function () {
+    function InventoryChecker(element, productTitle) {
+      _classCallCheck(this, InventoryChecker);
 
       this.element = element;
       this.productTitle = productTitle;
       this.existingDrawers = {};
     }
 
-    _createClass(StoreAvailability, [{
+    _createClass(InventoryChecker, [{
       key: "updateWithVariant",
       value: function updateWithVariant(variant) {
         if (!this.element) {
@@ -2242,7 +2242,7 @@
           delete this.existingDrawers["StoreAvailabilityModal-".concat(id)];
         }
 
-        return fetch("".concat(window.routes.rootUrlWithoutSlash, "/variants/").concat(id, "?section_id=store-availability")).then(function (response) {
+        return fetch("".concat(window.shopRoutes.rootUrlWithoutSlash, "/variants/").concat(id, "?section_id=store-availability")).then(function (response) {
           return response.text().then(function (content) {
             _this.element.innerHTML = content;
             _this.element.innerHTML = _this.element.firstElementChild.innerHTML; // The product title is not rendered so we have to render it manually
@@ -2257,20 +2257,20 @@
             var availabilityModal = document.getElementById("StoreAvailabilityModal-".concat(id));
             document.body.appendChild(availabilityModal); // Create the drawer
 
-            _this.existingDrawers["StoreAvailabilityModal-".concat(id)] = new Drawer(availabilityModal);
+            _this.existingDrawers["StoreAvailabilityModal-".concat(id)] = new SidePanel(availabilityModal);
           });
         });
       }
     }]);
 
-    return StoreAvailability;
+    return InventoryChecker;
   }();
 
-  var ProductVariants = /*#__PURE__*/function () {
-    function ProductVariants(container, options) {
+  var ProductOptions = /*#__PURE__*/function () {
+    function ProductOptions(container, options) {
       var _this = this;
 
-      _classCallCheck(this, ProductVariants);
+      _classCallCheck(this, ProductOptions);
 
       this.element = container;
       this.delegateElement = new domDelegate.Delegate(this.element);
@@ -2288,7 +2288,7 @@
           _this.option3 = variant['option3'];
         }
       });
-      this.storeAvailability = new StoreAvailability(this.element.querySelector('.ProductMeta__StoreAvailabilityContainer'), this.productData['title']);
+      this.storeAvailability = new InventoryChecker(this.element.querySelector('.ProductMeta__StoreAvailabilityContainer'), this.productData['title']);
       this.storeAvailability.updateWithVariant(this.currentVariant);
 
       this._attachListeners();
@@ -2296,7 +2296,7 @@
       this._createSelectors();
     }
 
-    _createClass(ProductVariants, [{
+    _createClass(ProductOptions, [{
       key: "destroy",
       value: function destroy() {
         this.delegateElement.off('click');
@@ -2329,16 +2329,16 @@
         // Create the instances for each selector
         this.formPopovers = [];
         this.formVariantSelectors = [];
-        Dom.nodeListToArray(this.element.querySelectorAll('.OptionSelector')).forEach(function (item) {
-          var popover = new Popover(item, {
+        DomUtils.nodeListToArray(this.element.querySelectorAll('.OptionSelector')).forEach(function (item) {
+          var popover = new Tooltip(item, {
             preferredPosition: 'left',
             onValueChanged: _this2._onOptionChanged.bind(_this2)
           });
 
           _this2.formPopovers.push(popover);
         });
-        Dom.nodeListToArray(this.element.querySelectorAll('.VariantSelector')).forEach(function (item) {
-          var variantSelector = new VariantSelector(item, _this2, {
+        DomUtils.nodeListToArray(this.element.querySelectorAll('.VariantPicker')).forEach(function (item) {
+          var variantSelector = new VariantPicker(item, _this2, {
             onValueChanged: _this2._onOptionChanged.bind(_this2)
           });
 
@@ -2395,7 +2395,7 @@
       key: "_updateProductPrices",
       value: function _updateProductPrices(newVariant, previousVariant) {
         var productMetaPrices = this.element.querySelector('.ProductMeta__PriceList'),
-            currencyFormat = window.theme.currencyCodeEnabled ? window.theme.moneyWithCurrencyFormat : window.theme.moneyFormat;
+            currencyFormat = window.shopConfig.currencyCodeEnabled ? window.shopConfig.moneyWithCurrencyFormat : window.shopConfig.moneyFormat;
 
         if (!productMetaPrices) {
           return;
@@ -2412,10 +2412,10 @@
         
           var save_number = Math.trunc(((newVariant['compare_at_price'] / 100) - (newVariant['price'] / 100)) / (newVariant['compare_at_price'] / 100) * 100 );
           if (newVariant['compare_at_price'] > newVariant['price']) {
-            productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--highlight Text--subdued u-h4 fffdff\" data-money-convertible>".concat(Currency.formatMoney(newVariant['price'], currencyFormat), "</span>");
-            productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--compareAt Text--subdued u-h4\" data-money-convertible>".concat(Currency.formatMoney(newVariant['compare_at_price'], currencyFormat), "</span> <span class= \"discount-price\">Save " + save_number + "%</span");
+            productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--highlight Text--subdued u-h4 fffdff\" data-money-convertible>".concat(CurrencyConverter.formatMoney(newVariant['price'], currencyFormat), "</span>");
+            productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Price--compareAt Text--subdued u-h4\" data-money-convertible>".concat(CurrencyConverter.formatMoney(newVariant['compare_at_price'], currencyFormat), "</span> <span class= \"discount-price\">Save " + save_number + "%</span");
           } else {
-            productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Text--subdued u-h4\" data-money-convertible>".concat(Currency.formatMoney(newVariant['price'], currencyFormat), "</span>");
+            productMetaPrices.innerHTML += "<span class=\"ProductMeta__Price Price Text--subdued u-h4\" data-money-convertible>".concat(CurrencyConverter.formatMoney(newVariant['price'], currencyFormat), "</span>");
           }
 
           productMetaPrices.style.display = '';
@@ -2482,7 +2482,7 @@
         }
 
         unitPriceMeasurement.style.display = 'block';
-        unitPriceMeasurement.querySelector('.UnitPriceMeasurement__Price').innerHTML = Currency.formatMoney(newVariant['unit_price'], window.theme.moneyFormat);
+        unitPriceMeasurement.querySelector('.UnitPriceMeasurement__Price').innerHTML = CurrencyConverter.formatMoney(newVariant['unit_price'], window.shopConfig.moneyFormat);
         unitPriceMeasurement.querySelector('.UnitPriceMeasurement__ReferenceUnit').textContent = newVariant['unit_price_measurement']['reference_unit'];
         var unitPriceReferenceValue = unitPriceMeasurement.querySelector('.UnitPriceMeasurement__ReferenceValue');
         unitPriceReferenceValue.textContent = newVariant['unit_price_measurement']['reference_value'];
@@ -2506,7 +2506,7 @@
             addToCartButton.setAttribute('disabled', 'disabled');
             addToCartButton.removeAttribute('data-action');
             addToCartButton.classList.add('Button--secondary');
-            addToCartButton.innerHTML = window.languages.productFormUnavailable;
+            addToCartButton.innerHTML = window.shopStrings.productFormUnavailable;
           } else {
             if (newVariant['available']) {
               addToCartButton.removeAttribute('disabled');
@@ -2514,15 +2514,15 @@
               addToCartButton.setAttribute('data-action', 'add-to-cart');
 
               if (undefined === this.options['showPriceInButton'] || this.options['showPriceInButton']) {
-                addToCartButton.innerHTML = "\n            <span>".concat(window.languages.productFormAddToCart, "</span>\n            <span class=\"Button__SeparatorDot\"></span>\n            <span data-money-convertible>").concat(Currency.formatMoney(newVariant['price'], window.theme.moneyFormat), "</span>\n          ");
+                addToCartButton.innerHTML = "\n            <span>".concat(window.shopStrings.productFormAddToCart, "</span>\n            <span class=\"Button__SeparatorDot\"></span>\n            <span data-money-convertible>").concat(CurrencyConverter.formatMoney(newVariant['price'], window.shopConfig.moneyFormat), "</span>\n          ");
               } else {
-                addToCartButton.innerHTML = "<span>".concat(window.languages.productFormAddToCart, "</span>");
+                addToCartButton.innerHTML = "<span>".concat(window.shopStrings.productFormAddToCart, "</span>");
               }
             } else {
               addToCartButton.setAttribute('disabled', 'disabled');
               addToCartButton.classList.add('Button--secondary');
               addToCartButton.removeAttribute('data-action');
-              addToCartButton.innerHTML = window.languages.productFormSoldOut;
+              addToCartButton.innerHTML = window.shopStrings.productFormSoldOut;
             }
           }
         }
@@ -2636,8 +2636,8 @@
         document.dispatchEvent(new CustomEvent('theme:loading:start')); // Then we add the product in Ajax
 
         var formElement = this.element.querySelector('form[action*="/cart/add"]');
-        fetch("".concat(window.routes.cartAddUrl, ".js"), {
-          body: JSON.stringify(Form.serialize(formElement)),
+        fetch("".concat(window.shopRoutes.cartAddUrl, ".js"), {
+          body: JSON.stringify(FormHandler.serialize(formElement)),
           credentials: 'same-origin',
           method: 'POST',
           headers: {
@@ -2709,7 +2709,7 @@
       }
     }]);
 
-    return ProductVariants;
+    return ProductOptions;
   }();
 
   var ProductVideo = /*#__PURE__*/function () {
@@ -2753,7 +2753,7 @@
       key: "hasBeenSelected",
       value: function hasBeenSelected() {
         // As per guidelines, we only need to autoplay when it's not a touch device
-        if (Responsive.matchesBreakpoint('supports-hover')) {
+        if (ViewportManager.matchesBreakpoint('supports-hover')) {
           this.play();
         }
       }
@@ -2961,9 +2961,9 @@
     return ScrollSpy;
   }();
 
-  var SearchBar = /*#__PURE__*/function () {
-    function SearchBar() {
-      _classCallCheck(this, SearchBar);
+  var SearchWidget = /*#__PURE__*/function () {
+    function SearchWidget() {
+      _classCallCheck(this, SearchWidget);
 
       this.documentDelegate = new domDelegate.Delegate(document.body);
       this.searchElement = document.getElementById('Search');
@@ -2976,7 +2976,7 @@
       this._attachListeners();
     }
 
-    _createClass(SearchBar, [{
+    _createClass(SearchWidget, [{
       key: "destroy",
       value: function destroy() {
         this.searchInputElement.removeEventListener('keydown', this._preventSubmissionListener);
@@ -3021,7 +3021,7 @@
 
         this.searchElement.setAttribute('aria-hidden', 'false');
         document.documentElement.classList.add('no-scroll');
-        Accessibility.trapFocus(this.searchElement, 'search', this.searchElement.querySelector('[name="q"]'));
+        A11yHelper.trapFocus(this.searchElement, 'search', this.searchElement.querySelector('[name="q"]'));
 
         var onFocusListener = function onFocusListener() {
           _this.searchInputElement.focus();
@@ -3045,7 +3045,7 @@
 
         this.searchElement.setAttribute('aria-hidden', 'true');
         document.documentElement.classList.remove('no-scroll');
-        Accessibility.removeTrapFocus(this.searchElement, 'search');
+        A11yHelper.removeTrapFocus(this.searchElement, 'search');
         this.isOpen = false;
 
         var onTransitionEnd = function onTransitionEnd(event) {
@@ -3067,7 +3067,7 @@
     }, {
       key: "_preventSubmission",
       value: function _preventSubmission(event) {
-        if (event.keyCode === 13 && window.theme.searchMode !== 'product') {
+        if (event.keyCode === 13 && window.shopConfig.searchMode !== 'product') {
           event.preventDefault();
         }
       }
@@ -3098,10 +3098,10 @@
           method: 'GET',
           credentials: 'same-origin'
         };
-        var queries = [fetch("".concat(window.routes.searchUrl, "?section_id=predictive-search&q=").concat(encodeURIComponent(this.lastInputValue), "&options[prefix]=last&type=product"), queryOptions)];
+        var queries = [fetch("".concat(window.shopRoutes.searchUrl, "?section_id=predictive-search&q=").concat(encodeURIComponent(this.lastInputValue), "&options[prefix]=last&type=product"), queryOptions)];
 
-        if (window.theme.searchMode !== 'product') {
-          queries.push(fetch("".concat(window.routes.searchUrl, "?section_id=predictive-search&q=").concat(encodeURIComponent(this.lastInputValue), "&options[prefix]=last&type=").concat(window.theme.searchMode.replace('product,', '')), queryOptions));
+        if (window.shopConfig.searchMode !== 'product') {
+          queries.push(fetch("".concat(window.shopRoutes.searchUrl, "?section_id=predictive-search&q=").concat(encodeURIComponent(this.lastInputValue), "&options[prefix]=last&type=").concat(window.shopConfig.searchMode.replace('product,', '')), queryOptions));
         }
 
         this.queryMap[this.lastInputValue] = true;
@@ -3117,7 +3117,7 @@
             return response.text();
           })).then(function (contents) {
             // If we have only one content then we only have product, otherwise we have products and articles
-            if (window.theme.searchMode === 'product') {
+            if (window.shopConfig.searchMode === 'product') {
               _this3.searchResultsElement.innerHTML = contents[0];
             } else {
               _this3.searchResultsElement.innerHTML = "<div class=\"PageLayout PageLayout--breakLap\">\n              <div class=\"PageLayout__Section\">".concat(contents[0], "</div>\n              <div class=\"PageLayout__Section PageLayout__Section--secondary\">").concat(contents[1], "</div>\n            </div>");
@@ -3131,7 +3131,7 @@
     }, {
       key: "_resetSearch",
       value: function _resetSearch() {
-        if (window.theme.searchMode === 'product') {
+        if (window.shopConfig.searchMode === 'product') {
           this.searchResultsElement.innerHTML = '';
         } else {
           this.searchResultsElement.innerHTML = "<div class=\"PageLayout PageLayout--breakLap\">\n              <div class=\"PageLayout__Section\"></div>\n              <div class=\"PageLayout__Section PageLayout__Section--secondary\"></div>\n            </div>";
@@ -3163,12 +3163,12 @@
       }
     }]);
 
-    return SearchBar;
+    return SearchWidget;
   }();
 
-  var CountrySelector = /*#__PURE__*/function () {
-    function CountrySelector(countrySelect, provinceSelect) {
-      _classCallCheck(this, CountrySelector);
+  var RegionPicker = /*#__PURE__*/function () {
+    function RegionPicker(countrySelect, provinceSelect) {
+      _classCallCheck(this, RegionPicker);
 
       this.countrySelect = countrySelect;
       this.provinceSelect = provinceSelect;
@@ -3180,7 +3180,7 @@
       }
     }
 
-    _createClass(CountrySelector, [{
+    _createClass(RegionPicker, [{
       key: "destroy",
       value: function destroy() {
         if (this.countrySelect) {
@@ -3249,21 +3249,21 @@
       }
     }]);
 
-    return CountrySelector;
+    return RegionPicker;
   }();
 
-  var ShippingEstimator = /*#__PURE__*/function () {
-    function ShippingEstimator(element) {
-      _classCallCheck(this, ShippingEstimator);
+  var DeliveryCalculator = /*#__PURE__*/function () {
+    function DeliveryCalculator(element) {
+      _classCallCheck(this, DeliveryCalculator);
 
       this.element = element;
       this.delegateElement = new domDelegate.Delegate(this.element);
-      this.countrySelector = new CountrySelector(this.element.querySelector('[name="country"]'), this.element.querySelector('[name="province"]'));
+      this.countrySelector = new RegionPicker(this.element.querySelector('[name="country"]'), this.element.querySelector('[name="province"]'));
 
       this._attachListeners();
     }
 
-    _createClass(ShippingEstimator, [{
+    _createClass(DeliveryCalculator, [{
       key: "onUnload",
       value: function onUnload() {
         this.delegateElement.off('click');
@@ -3283,7 +3283,7 @@
             province = this.element.querySelector('[name="province"]').value,
             zip = this.element.querySelector('[name="zip"]').value;
         document.dispatchEvent(new CustomEvent('theme:loading:start'));
-        fetch("".concat(window.routes.cartUrl, "/shipping_rates.json?shipping_address[zip]=").concat(zip, "&shipping_address[country]=").concat(country, "&shipping_address[province]=").concat(province), {
+        fetch("".concat(window.shopRoutes.cartUrl, "/shipping_rates.json?shipping_address[zip]=").concat(zip, "&shipping_address[country]=").concat(country, "&shipping_address[province]=").concat(province), {
           credentials: 'same-origin',
           method: 'GET'
         }).then(function (response) {
@@ -3297,18 +3297,18 @@
               var shippingRates = result['shipping_rates'];
 
               if (shippingRates.length === 0) {
-                resultsContainer.innerHTML = "<p>".concat(window.languages.shippingEstimatorNoResults, "</p>");
+                resultsContainer.innerHTML = "<p>".concat(window.shopStrings.shippingEstimatorNoResults, "</p>");
               } else {
                 var html = '';
 
                 if (shippingRates.length === 1) {
-                  html += "<p>".concat(window.languages.shippingEstimatorOneResult, "</p><ul>");
+                  html += "<p>".concat(window.shopStrings.shippingEstimatorOneResult, "</p><ul>");
                 } else {
-                  html += "<p>".concat(window.languages.shippingEstimatorMoreResults.replace('{{count}}', shippingRates.length), "</p><ul>");
+                  html += "<p>".concat(window.shopStrings.shippingEstimatorMoreResults.replace('{{count}}', shippingRates.length), "</p><ul>");
                 }
 
                 shippingRates.forEach(function (item) {
-                  html += "<li>".concat(item['name'], ": ").concat(Currency.formatMoney(item['price'], window.theme.moneyFormat), "</li>");
+                  html += "<li>".concat(item['name'], ": ").concat(CurrencyConverter.formatMoney(item['price'], window.shopConfig.moneyFormat), "</li>");
                 });
                 html += '</ul>';
                 resultsContainer.firstElementChild.innerHTML = html;
@@ -3324,7 +3324,7 @@
               });
               errorContainer.style.display = 'none';
               resultsContainer.style.display = 'block';
-              Animation.slideDown(resultsContainer);
+              MotionHelper.slideDown(resultsContainer);
             } else {
               var errorHtml = '';
               Object.keys(result).forEach(function (key) {
@@ -3339,7 +3339,7 @@
       }
     }]);
 
-    return ShippingEstimator;
+    return DeliveryCalculator;
   }();
 
   var AddressesSection = function AddressesSection() {
@@ -3348,8 +3348,8 @@
     _classCallCheck(this, AddressesSection);
 
     this.countrySelectors = [];
-    Dom.nodeListToArray(document.querySelectorAll('.Modal--address')).forEach(function (modal) {
-      _this.countrySelectors.push(new CountrySelector(modal.querySelector('[name="address[country]"]'), modal.querySelector('[name="address[province]"]')));
+    DomUtils.nodeListToArray(document.querySelectorAll('.Dialog--address')).forEach(function (modal) {
+      _this.countrySelectors.push(new RegionPicker(modal.querySelector('[name="address[country]"]'), modal.querySelector('[name="address[province]"]')));
     });
   };
 
@@ -3361,12 +3361,12 @@
 
       this.element = container;
 
-      if (window.theme.showElementStaggering) {
+      if (window.shopConfig.showElementStaggering) {
         this.timeline = new TimelineLite({
-          delay: window.theme.showPageTransition ? 0.5 : 0
+          delay: window.shopConfig.showPageTransition ? 0.5 : 0
         });
         this.intersectionObserver = new IntersectionObserver(this._reveal.bind(this));
-        Dom.nodeListToArray(this.element.querySelectorAll('.ArticleItem')).forEach(function (item) {
+        DomUtils.nodeListToArray(this.element.querySelectorAll('.ArticleItem')).forEach(function (item) {
           _this.intersectionObserver.observe(item);
         });
       }
@@ -3375,7 +3375,7 @@
     _createClass(ArticleList, [{
       key: "onUnload",
       value: function onUnload() {
-        if (window.theme.showElementStaggering) {
+        if (window.shopConfig.showElementStaggering) {
           this.intersectionObserver.disconnect();
           this.timeline.kill();
         }
@@ -3431,12 +3431,12 @@
         });
       }
 
-      if (window.theme.showElementStaggering) {
+      if (window.shopConfig.showElementStaggering) {
         this.timeline = new TimelineLite({
-          delay: window.theme.showPageTransition ? 0.5 : 0
+          delay: window.shopConfig.showPageTransition ? 0.5 : 0
         });
         this.intersectionObserver = new IntersectionObserver(this._reveal.bind(this));
-        Dom.nodeListToArray(this.element.querySelectorAll('.ArticleItem')).forEach(function (item) {
+        DomUtils.nodeListToArray(this.element.querySelectorAll('.ArticleItem')).forEach(function (item) {
           _this.intersectionObserver.observe(item);
         });
       }
@@ -3451,7 +3451,7 @@
           this.parallaxInstance.destroy();
         }
 
-        if (window.theme.showElementStaggering) {
+        if (window.shopConfig.showElementStaggering) {
           this.intersectionObserver.disconnect();
           this.timeline.kill();
         }
@@ -3533,9 +3533,9 @@
     return ArticleSection;
   }();
 
-  var CartSection = /*#__PURE__*/function () {
-    function CartSection(container) {
-      _classCallCheck(this, CartSection);
+  var CartManager = /*#__PURE__*/function () {
+    function CartManager(container) {
+      _classCallCheck(this, CartManager);
 
       this.element = container;
       this.delegateElement = new domDelegate.Delegate(this.element);
@@ -3545,19 +3545,19 @@
       this.isCartNoteOpen = false;
 
       if (this.options['drawer']) {
-        this.sidebarDrawer = new Drawer(this.element, {
+        this.sidebarDrawer = new SidePanel(this.element, {
           onClose: this._onDrawerClosed.bind(this)
         });
       }
 
       if (this.options['hasShippingEstimator']) {
-        this.shippingEstimator = new ShippingEstimator(this.element.querySelector('.ShippingEstimator'));
+        this.shippingEstimator = new DeliveryCalculator(this.element.querySelector('.DeliveryCalculator'));
       }
 
       this._attachListeners();
     }
 
-    _createClass(CartSection, [{
+    _createClass(CartManager, [{
       key: "onUnload",
       value: function onUnload() {
         if (this.options['hasShippingEstimator']) {
@@ -3592,7 +3592,7 @@
     }, {
       key: "_updateCartNote",
       value: function _updateCartNote(event, target) {
-        fetch("".concat(window.routes.cartUrl, "/update.js"), {
+        fetch("".concat(window.shopRoutes.cartUrl, "/update.js"), {
           body: JSON.stringify({
             note: target.value
           }),
@@ -3613,7 +3613,7 @@
         var noteContainer = this.element.querySelector('.Cart__OffscreenNoteContainer'),
             cartNote = this.element.querySelector('#cart-note');
         this.element.classList.toggle('has-note-open');
-        this.element.querySelector('.Cart__NoteButton').innerHTML = cartNote.value !== '' ? window.languages.cartEditNote : window.languages.cartAddNote;
+        this.element.querySelector('.Cart__NoteButton').innerHTML = cartNote.value !== '' ? window.shopStrings.cartEditNote : window.shopStrings.cartAddNote;
         noteContainer.setAttribute('aria-hidden', noteContainer.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
         this.isCartNoteOpen = noteContainer.getAttribute('aria-hidden') === 'false';
 
@@ -3647,7 +3647,7 @@
           elementToAnimate = target.closest('.CartItemWrapper');
         }
 
-        fetch("".concat(window.routes.cartChangeUrl, ".js"), {
+        fetch("".concat(window.shopRoutes.cartChangeUrl, ".js"), {
           body: JSON.stringify({
             line: target.getAttribute('data-line'),
             quantity: quantity
@@ -3673,7 +3673,7 @@
     }, {
       key: "_reloadPageWithQuantity",
       value: function _reloadPageWithQuantity(event, target) {
-        window.location.href = "".concat(window.routes.cartChangeUrl, "?quantity=").concat(parseInt(target.value), "&line=").concat(target.getAttribute('data-line'));
+        window.location.href = "".concat(window.shopRoutes.cartChangeUrl, "?quantity=").concat(parseInt(target.value), "&line=").concat(target.getAttribute('data-line'));
       }
     }, {
       key: "_onProductAdded",
@@ -3706,7 +3706,7 @@
         var _this4 = this;
 
         // Note: appending a timestamp is necessary as the polyfill on IE11 and lower does not support the "cache" property
-        return fetch("".concat(window.routes.cartUrl, "?section_id=").concat(this.options['drawer'] && window.theme.pageType !== 'cart' ? 'mini-cart' : 'main-cart', "&timestamp=").concat(Date.now()), {
+        return fetch("".concat(window.shopRoutes.cartUrl, "?section_id=").concat(this.options['drawer'] && window.shopConfig.pageType !== 'cart' ? 'mini-cart' : 'main-cart', "&timestamp=").concat(Date.now()), {
           credentials: 'same-origin',
           method: 'GET'
         }).then(function (content) {
@@ -3748,7 +3748,7 @@
         tempElement.innerHTML = html;
         var cartNodeParent = this.element.querySelector('.Cart').parentNode;
 
-        if (this.options['drawer'] && window.theme.pageType !== 'cart') {
+        if (this.options['drawer'] && window.shopConfig.pageType !== 'cart') {
           var currentScrollPosition = this.element.querySelector('.Drawer__Main').scrollTop;
           cartNodeParent.replaceChild(tempElement.querySelector('.Cart'), this.element.querySelector('.Cart'));
           this.element.querySelector('.Drawer__Main').scrollTop = currentScrollPosition;
@@ -3764,8 +3764,8 @@
 
 
         var cartResult = JSON.parse(tempElement.querySelector('[data-section-type="cart"]').getAttribute('data-section-settings'));
-        var cartDot = Dom.nodeListToArray(document.querySelectorAll('.Header__CartDot')),
-            cartQuantity = Dom.nodeListToArray(document.querySelectorAll('.Header__CartCount'));
+        var cartDot = DomUtils.nodeListToArray(document.querySelectorAll('.Header__CartDot')),
+            cartQuantity = DomUtils.nodeListToArray(document.querySelectorAll('.Header__CartCount'));
         this.itemCount = cartResult['itemCount'];
         cartDot.forEach(function (item) {
           if (_this5.itemCount === 0) {
@@ -3780,7 +3780,7 @@
       }
     }]);
 
-    return CartSection;
+    return CartManager;
   }();
 
   var CollectionListSection = /*#__PURE__*/function () {
@@ -3791,7 +3791,7 @@
       var collectionListElement = this.element.querySelector('[data-flickity-config]');
 
       if (collectionListElement) {
-        this.carousel = new Carousel(collectionListElement);
+        this.carousel = new Slider(collectionListElement);
       }
     }
 
@@ -3892,7 +3892,7 @@
       var sortPopoverElement = document.getElementById('collection-sort-popover');
 
       if (sortPopoverElement) {
-        this.sortPopover = new Popover(sortPopoverElement, {
+        this.sortPopover = new Tooltip(sortPopoverElement, {
           onValueChanged: this._sortByChanged.bind(this)
         });
       } // Create the filter drawer if available
@@ -3901,7 +3901,7 @@
       var filterDrawerElement = document.getElementById('collection-filter-drawer');
 
       if (filterDrawerElement) {
-        this.filterDrawer = new Drawer(filterDrawerElement);
+        this.filterDrawer = new SidePanel(filterDrawerElement);
       } // Create scroller of sidebar
 
 
@@ -3924,7 +3924,7 @@
       new ProductItemColorSwatch(this.element.querySelector('.ProductList')); // Setup animation
 
       this.timeline = new TimelineLite({
-        delay: window.theme.showPageTransition ? 0.5 : 0
+        delay: window.shopConfig.showPageTransition ? 0.5 : 0
       });
 
       this._setupAnimation();
@@ -3953,7 +3953,7 @@
           this.parallaxInstance.destroy();
         }
 
-        if (window.theme.showElementStaggering) {
+        if (window.shopConfig.showElementStaggering) {
           this.intersectionObserver.disconnect();
           this.timeline.kill();
         }
@@ -3965,7 +3965,7 @@
 
         var forceLoadFromTop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
-        if (!window.theme.showElementStaggering) {
+        if (!window.shopConfig.showElementStaggering) {
           return;
         } // If there is already an observer set up, we remove it first
 
@@ -3987,7 +3987,7 @@
           this.intersectionObserver = new IntersectionObserver(this._reveal.bind(this), {
             threshold: 0.3
           });
-          Dom.nodeListToArray(this.element.querySelectorAll('.ProductList .ProductItem, .ArticleList .ArticleItem, .text_logo_section .SectionHeader')).forEach(function (item) {
+          DomUtils.nodeListToArray(this.element.querySelectorAll('.ProductList .ProductItem, .ArticleList .ArticleItem, .text_logo_section .SectionHeader')).forEach(function (item) {
             _this.intersectionObserver.observe(item);
           });
         }
@@ -4037,7 +4037,7 @@
           }
 
           productList.setAttribute("data-".concat(layoutType, "-count"), newCount);
-          Dom.nodeListToArray(productList.querySelectorAll('.Grid__Cell')).forEach(function (item) {
+          DomUtils.nodeListToArray(productList.querySelectorAll('.Grid__Cell')).forEach(function (item) {
             if (layoutType === 'mobile') {
               item.classList.remove("1/".concat(previousCount, "--phone")); // IE11 and lower does not support classList.replace
 
@@ -4058,7 +4058,7 @@
               item.classList.add("1/".concat(newTabletCount, "--tablet-and-up"));
             }
 
-            if (window.theme.showElementStaggering) {
+            if (window.shopConfig.showElementStaggering) {
               item.firstElementChild.style.visibility = 'hidden'; // Make it as hidden so we can re-trigger the animation
             }
           }); // Force lazy sizes to recalculate item sizes
@@ -4067,13 +4067,13 @@
         }
 
         target.classList.add('is-active');
-        Dom.getSiblings(target)[0].classList.remove('is-active');
+        DomUtils.getSiblings(target)[0].classList.remove('is-active');
 
         this._setupAnimation(); // In order to prevent reflow and provide better user experience, we save into cart attributes (those are removed before the checkout
         // is submitted) the user choices so they are preserved on page reload, without the need to use JavaScript
 
 
-        fetch("".concat(window.routes.cartUrl, "/update.js"), {
+        fetch("".concat(window.shopRoutes.cartUrl, "/update.js"), {
           body: JSON.stringify({
             attributes: _defineProperty({}, "collection_".concat(layoutType, "_items_per_row"), newCount)
           }),
@@ -4152,7 +4152,7 @@
 
               if (collectionFiltersDrawer) {
                 var newDrawerContent = tempElement.querySelector('#collection-filters-drawer-form');
-                Array.from(collectionFiltersDrawer.querySelectorAll('.Collapsible')).forEach(function (collapsible) {
+                Array.from(collectionFiltersDrawer.querySelectorAll('.Accordion')).forEach(function (collapsible) {
                   var newCollapsible = newDrawerContent.querySelector("[data-filter-index=\"".concat(collapsible.getAttribute('data-filter-index'), "\"]"));
 
                   if (collapsible.firstElementChild.getAttribute('aria-expanded') === 'true') {
@@ -4168,7 +4168,7 @@
 
               if (collectionFiltersSidebar) {
                 var newSidebarContent = tempElement.querySelector('#collection-filters-sidebar-form');
-                Array.from(collectionFiltersSidebar.querySelectorAll('.Collapsible')).forEach(function (collapsible) {
+                Array.from(collectionFiltersSidebar.querySelectorAll('.Accordion')).forEach(function (collapsible) {
                   var newCollapsible = newSidebarContent.querySelector("[data-filter-index=\"".concat(collapsible.getAttribute('data-filter-index'), "\"]"));
 
                   if (collapsible.firstElementChild.getAttribute('aria-expanded') === 'true') {
@@ -4188,7 +4188,7 @@
 
               var elementOffset = _this4.element.querySelector('.CollectionMain').getBoundingClientRect().top - parseInt(document.documentElement.style.getPropertyValue('--header-height'));
 
-              if (Responsive.matchesBreakpoint('lap-and-up') && _this4.toolbarElement && _this4.toolbarElement.clientHeight === 0) {
+              if (ViewportManager.matchesBreakpoint('lap-and-up') && _this4.toolbarElement && _this4.toolbarElement.clientHeight === 0) {
                 elementOffset -= 50;
               }
 
@@ -4255,7 +4255,7 @@
       key: "_switchToCategory",
       value: function _switchToCategory(event, target) {
         target.classList.add('is-active');
-        Dom.getSiblings(target, '.is-active').forEach(function (item) {
+        DomUtils.getSiblings(target, '.is-active').forEach(function (item) {
           item.classList.remove('is-active');
         });
       }
@@ -4276,12 +4276,12 @@
         var answerWrapper = item.querySelector('.Faq__AnswerWrapper');
         item.setAttribute('aria-expanded', 'true');
         answerWrapper.setAttribute('aria-hidden', 'false');
-        Animation.slideDown(answerWrapper, true);
-        Dom.getSiblings(item, '[aria-expanded="true"]').forEach(function (siblingItem) {
+        MotionHelper.slideDown(answerWrapper, true);
+        DomUtils.getSiblings(item, '[aria-expanded="true"]').forEach(function (siblingItem) {
           var siblingAnswerWrapper = siblingItem.querySelector('.Faq__AnswerWrapper');
           siblingItem.setAttribute('aria-expanded', 'false');
           siblingAnswerWrapper.setAttribute('aria-hidden', 'true');
-          Animation.slideUp(siblingAnswerWrapper);
+          MotionHelper.slideUp(siblingAnswerWrapper);
         });
       }
     }, {
@@ -4290,7 +4290,7 @@
         var answerWrapper = item.querySelector('.Faq__AnswerWrapper');
         item.setAttribute('aria-expanded', 'false');
         answerWrapper.setAttribute('aria-hidden', 'true');
-        Animation.slideUp(answerWrapper);
+        MotionHelper.slideUp(answerWrapper);
       }
     }]);
 
@@ -4307,8 +4307,8 @@
       this.delegateElement = new domDelegate.Delegate(this.element);
       this.options = JSON.parse(this.element.getAttribute('data-settings'));
       this.carousels = [];
-      Dom.nodeListToArray(this.element.querySelectorAll('[data-flickity-config]')).forEach(function (item) {
-        _this.carousels.push(new Carousel(item));
+      DomUtils.nodeListToArray(this.element.querySelectorAll('[data-flickity-config]')).forEach(function (item) {
+        _this.carousels.push(new Slider(item));
       }); // Setup product item color swatch
 
       new ProductItemColorSwatch(this.element);
@@ -4351,18 +4351,18 @@
 
 
         target.classList.add('is-active');
-        Dom.getSiblings(target, '.is-active').forEach(function (item) {
+        DomUtils.getSiblings(target, '.is-active').forEach(function (item) {
           item.classList.remove('is-active');
         }); // Then, display the panel
 
         var tabPanelToShow = this.element.querySelector("#".concat(target.getAttribute('aria-controls')));
         this.timeline.eventCallback('onReverseComplete', function () {
           tabPanelToShow.setAttribute('aria-hidden', 'false');
-          Dom.getSiblings(tabPanelToShow, '.TabPanel[aria-hidden="false"]').forEach(function (item) {
+          DomUtils.getSiblings(tabPanelToShow, '.TabPanel[aria-hidden="false"]').forEach(function (item) {
             item.setAttribute('aria-hidden', 'true');
           });
 
-          if (Responsive.matchesBreakpoint('lap-and-up')) {
+          if (ViewportManager.matchesBreakpoint('lap-and-up')) {
             _this2.carousels.forEach(function (carousel) {
               // There is a bug in Safari where it cannot detect the pseudo-element "::after" if the tab panel is hidden. As a consequence,
               // we manually activate it
@@ -4376,7 +4376,7 @@
           _this2._setupAnimation();
         });
 
-        if (this.options['layout'] === 'grid' && window.theme.showElementStaggering) {
+        if (this.options['layout'] === 'grid' && window.shopConfig.showElementStaggering) {
           this.timeline.reverse().timeScale(3);
         } else {
           this.timeline.reverse();
@@ -4395,9 +4395,9 @@
           delay: 0.5
         });
 
-        if (this.options['layout'] === 'grid' && window.theme.showElementStaggering) {
+        if (this.options['layout'] === 'grid' && window.shopConfig.showElementStaggering) {
           this.intersectionObserver = new IntersectionObserver(this._reveal.bind(this));
-          Dom.nodeListToArray(this.element.querySelectorAll('.TabPanel[aria-hidden="false"] .ProductList .ProductItem')).forEach(function (item) {
+          DomUtils.nodeListToArray(this.element.querySelectorAll('.TabPanel[aria-hidden="false"] .ProductList .ProductItem')).forEach(function (item) {
             _this3.intersectionObserver.observe(item);
           });
         } else {
@@ -4455,7 +4455,7 @@
       this.options = JSON.parse(this.element.getAttribute('data-section-settings'));
 
       if (!this.options['usePlaceholder']) {
-        this.productVariants = new ProductVariants(container, this.options);
+        this.productVariants = new ProductOptions(container, this.options);
       } // We have to re-order elements in the DOM
 
 
@@ -4501,9 +4501,9 @@
         var mainImageContainer = this.element.querySelector('.FeaturedProduct__Gallery .AspectRatio');
         mainImageContainer.style.cssText = "max-width: ".concat(newImage['width'], "px; --aspect-ratio: ").concat(newImage['width'] / newImage['height']);
         var newImageElement = document.createElement('img');
-        newImageElement.classList.add('Image--lazyLoad');
-        newImageElement.setAttribute('data-src', Image.getSizedImageUrl(newImage['src'], '1x1').replace('_1x1.', '_{width}x.'));
-        newImageElement.setAttribute('data-widths', "[".concat(Image.getSupportedSizes(newImage, [200, 400, 600, 700, 800, 900, 1000]).join(','), "]"));
+        newImageElement.classList.add('LazyImage--lazyLoad');
+        newImageElement.setAttribute('data-src', LazyImage.getSizedImageUrl(newImage['src'], '1x1').replace('_1x1.', '_{width}x.'));
+        newImageElement.setAttribute('data-widths', "[".concat(LazyImage.getSupportedSizes(newImage, [200, 400, 600, 700, 800, 900, 1000]).join(','), "]"));
         newImageElement.setAttribute('data-sizes', 'auto');
         mainImageContainer.replaceChild(newImageElement, mainImageContainer.querySelector('img'));
       }
@@ -4666,7 +4666,7 @@
       } // Set up the search bar
 
 
-      this.searchBar = new SearchBar();
+      this.searchBar = new SearchWidget();
 
       this._attachListeners();
 
@@ -4729,7 +4729,7 @@
 
           if (listItem) {
             listItem.classList.add('is-expanded');
-            Dom.getSiblings(listItem, '.is-expanded').forEach(function (item) {
+            DomUtils.getSiblings(listItem, '.is-expanded').forEach(function (item) {
               item.classList.remove('is-expanded');
             });
           }
@@ -4793,22 +4793,22 @@
         // have to de-duplicate the ID here. This is honestly not the cleanest code on earth, but I prefer handling this here
         // rather than duplicating too much Liquid
         this.localizationPopovers = [];
-        Dom.nodeListToArray(document.querySelectorAll('#header-locale-popover')).forEach(function (item, index) {
+        DomUtils.nodeListToArray(document.querySelectorAll('#header-locale-popover')).forEach(function (item, index) {
           item.id = "".concat(item.id, "-").concat(index);
         });
-        Dom.nodeListToArray(document.querySelectorAll('[aria-controls="header-locale-popover"]')).forEach(function (item, index) {
+        DomUtils.nodeListToArray(document.querySelectorAll('[aria-controls="header-locale-popover"]')).forEach(function (item, index) {
           item.setAttribute('aria-controls', "".concat(item.getAttribute('aria-controls'), "-").concat(index));
         });
-        Dom.nodeListToArray(document.querySelectorAll('#header-currency-popover')).forEach(function (item, index) {
+        DomUtils.nodeListToArray(document.querySelectorAll('#header-currency-popover')).forEach(function (item, index) {
           item.id = "".concat(item.id, "-").concat(index);
         });
-        Dom.nodeListToArray(document.querySelectorAll('[aria-controls="header-currency-popover"]')).forEach(function (item, index) {
+        DomUtils.nodeListToArray(document.querySelectorAll('[aria-controls="header-currency-popover"]')).forEach(function (item, index) {
           item.setAttribute('aria-controls', "".concat(item.getAttribute('aria-controls'), "-").concat(index));
         });
         var localePopoverElement1 = document.getElementById('header-locale-popover-0');
 
         if (localePopoverElement1) {
-          this.localizationPopovers.push(new Popover(localePopoverElement1, {
+          this.localizationPopovers.push(new Tooltip(localePopoverElement1, {
             preferredAlignment: 'center',
             preferredPosition: 'bottom',
             threshold: 12
@@ -4818,7 +4818,7 @@
         var localePopoverElement2 = document.getElementById('header-locale-popover-1');
 
         if (localePopoverElement2) {
-          this.localizationPopovers.push(new Popover(localePopoverElement2, {
+          this.localizationPopovers.push(new Tooltip(localePopoverElement2, {
             preferredAlignment: 'center',
             preferredPosition: 'bottom',
             threshold: 12
@@ -4828,7 +4828,7 @@
         var currencyPopoverElement1 = document.getElementById('header-currency-popover-0');
 
         if (currencyPopoverElement1) {
-          this.localizationPopovers.push(new Popover(currencyPopoverElement1, {
+          this.localizationPopovers.push(new Tooltip(currencyPopoverElement1, {
             preferredAlignment: 'center',
             preferredPosition: 'bottom',
             threshold: 12
@@ -4838,7 +4838,7 @@
         var currencyPopoverElement2 = document.getElementById('header-currency-popover-1');
 
         if (currencyPopoverElement2) {
-          this.localizationPopovers.push(new Popover(currencyPopoverElement2, {
+          this.localizationPopovers.push(new Tooltip(currencyPopoverElement2, {
             preferredAlignment: 'center',
             preferredPosition: 'bottom',
             threshold: 12
@@ -4851,7 +4851,7 @@
         var _this3 = this;
 
         fastdom.mutate(function () {
-          if (!_this3.isTouch || Responsive.matchesBreakpoint('desk')) {
+          if (!_this3.isTouch || ViewportManager.matchesBreakpoint('desk')) {
             _this3.element.classList.remove('Header--transparent');
           }
         });
@@ -4862,10 +4862,10 @@
         var _this4 = this;
 
         fastdom.mutate(function () {
-          Dom.nodeListToArray(_this4.element.querySelectorAll('.is-expanded')).forEach(function (item) {
+          DomUtils.nodeListToArray(_this4.element.querySelectorAll('.is-expanded')).forEach(function (item) {
             item.classList.remove('is-expanded');
           });
-          Dom.nodeListToArray(_this4.element.querySelectorAll('.Header__MainNav [aria-hidden="false"]')).forEach(function (item) {
+          DomUtils.nodeListToArray(_this4.element.querySelectorAll('.Header__MainNav [aria-hidden="false"]')).forEach(function (item) {
             item.setAttribute('aria-hidden', 'true');
           });
         });
@@ -4883,12 +4883,12 @@
 
         fastdom.mutate(function () {
           target.classList.add('is-expanded');
-          Dom.nodeListToArray(target.children, '.Header__MainNav [aria-hidden="true"]').forEach(function (item) {
+          DomUtils.nodeListToArray(target.children, '.Header__MainNav [aria-hidden="true"]').forEach(function (item) {
             item.setAttribute('aria-hidden', 'false');
           });
-          Dom.getSiblings(target, '.is-expanded').forEach(function (item) {
+          DomUtils.getSiblings(target, '.is-expanded').forEach(function (item) {
             item.classList.remove('is-expanded');
-            Dom.nodeListToArray(item.children, '.Header__MainNav [aria-hidden="false"]').forEach(function (item) {
+            DomUtils.nodeListToArray(item.children, '.Header__MainNav [aria-hidden="false"]').forEach(function (item) {
               item.setAttribute('aria-hidden', 'true');
             });
           });
@@ -4903,7 +4903,7 @@
 
         fastdom.mutate(function () {
           target.classList.remove('is-expanded');
-          Dom.nodeListToArray(target.children, '.Header__MainNav [aria-hidden="false"]').forEach(function (item) {
+          DomUtils.nodeListToArray(target.children, '.Header__MainNav [aria-hidden="false"]').forEach(function (item) {
             item.setAttribute('aria-hidden', 'true');
           });
         });
@@ -4911,7 +4911,7 @@
     }, {
       key: "_adjustDropdownPosition",
       value: function _adjustDropdownPosition(event, target) {
-        var nestedMenus = Dom.nodeListToArray(target.querySelectorAll('.DropdownMenu')),
+        var nestedMenus = DomUtils.nodeListToArray(target.querySelectorAll('.DropdownMenu')),
             shouldOpenLeft = false;
         fastdom.measure(function () {
           var windowWidth = window.innerWidth,
@@ -4958,7 +4958,7 @@
           // To detect if the navigation is overlapping, we take the height of a single item and check if its height is taller than the parent
           if (mainTopMenu) {
             // Get the first element
-            var firstNavElementHeight = Dom.outerHeightWithMargin(mainTopMenu.querySelector('.HorizontalList__Item')),
+            var firstNavElementHeight = DomUtils.outerHeightWithMargin(mainTopMenu.querySelector('.HorizontalList__Item')),
                 mainNavHeight = mainTopMenu.scrollHeight;
 
             if (mainNavHeight > firstNavElementHeight) {
@@ -5042,7 +5042,7 @@
       var localePopoverElement = document.getElementById('footer-locale-popover');
 
       if (localePopoverElement) {
-        this.localePopover = new Popover(localePopoverElement, {
+        this.localePopover = new Tooltip(localePopoverElement, {
           preferredAlignment: 'center',
           preferredPosition: 'top',
           threshold: 12
@@ -5052,7 +5052,7 @@
       var currencyPopoverElement = document.getElementById('footer-currency-popover');
 
       if (currencyPopoverElement) {
-        this.currencyPopover = new Popover(currencyPopoverElement, {
+        this.currencyPopover = new Tooltip(currencyPopoverElement, {
           preferredAlignment: 'center',
           preferredPosition: 'top',
           threshold: 12
@@ -5240,7 +5240,7 @@
       this.options = JSON.parse(element.getAttribute('data-section-settings')); // If the popup has been already displayed, we do not display it
 
       try {
-        if (window.location.hash === '#newsletter-popup' && window.theme.pageType !== null) {
+        if (window.location.hash === '#newsletter-popup' && window.shopConfig.pageType !== null) {
           this._openPopup();
         } else if (!this.options['showOnlyOnce'] || this.options['showOnlyOnce'] && localStorage.getItem('themePopup') === null) {
           setTimeout(this._openPopup.bind(this), this.options['apparitionDelay'] * 1000);
@@ -5307,7 +5307,7 @@
       value: function _loadRecommendations() {
         var _this = this;
 
-        var url = "".concat(window.routes.productRecommendationsUrl, "?section_id=").concat(this.element.getAttribute('data-section-id'), "&product_id=").concat(this.options['productId'], "&limit=").concat(this.options['recommendationsCount'], "&intent=related");
+        var url = "".concat(window.shopRoutes.productRecommendationsUrl, "?section_id=").concat(this.element.getAttribute('data-section-id'), "&product_id=").concat(this.options['productId'], "&limit=").concat(this.options['recommendationsCount'], "&intent=related");
         return fetch(url).then(function (response) {
           return response.text().then(function (content) {
             var container = document.createElement('div');
@@ -5325,7 +5325,7 @@
           return;
         }
 
-        this.carousel = new Carousel(flickityElement); // Setup product item color swatch
+        this.carousel = new Slider(flickityElement); // Setup product item color swatch
 
         new ProductItemColorSwatch(this.element);
       }
@@ -5334,26 +5334,26 @@
     return ProductRecommendationsSection;
   }();
 
-  var ProductSection = /*#__PURE__*/function () {
-    function ProductSection(container) {
+  var ProductPage = /*#__PURE__*/function () {
+    function ProductPage(container) {
       var _this = this;
 
-      _classCallCheck(this, ProductSection);
+      _classCallCheck(this, ProductPage);
 
       this.element = container;
       this.delegateElement = new domDelegate.Delegate(this.element);
       this.options = JSON.parse(this.element.getAttribute('data-section-settings'));
       this.viewInSpaceElement = this.element.querySelector('[data-shopify-xr]');
-      this.productVariants = new ProductVariants(container, this.options);
+      this.productVariants = new ProductOptions(container, this.options);
       this.productReviews = new ProductReviews(container);
       var productSlideshowElement = this.element.querySelector('.Product__Slideshow'); // If there is no image at all, there is nothing to init
 
       if (productSlideshowElement) {
-        this.productSlideshow = new Carousel(productSlideshowElement, {
+        this.productSlideshow = new Slider(productSlideshowElement, {
           onSelect: this._onImageChanged.bind(this),
           onSettle: this._onImageSettled.bind(this)
         }, {
-          draggable: !Responsive.matchesBreakpoint('supports-hover')
+          draggable: !ViewportManager.matchesBreakpoint('supports-hover')
         });
         this.mediaList = {}; // We keep track of a list of media element
 
@@ -5369,15 +5369,15 @@
 
         if (this.options['stackProductImages']) {
           this.slideshowNavDots = this.element.querySelector('.Product__SlideshowNav--dots');
-          this.slideshowNavDotsItems = this.slideshowNavDots ? Dom.nodeListToArray(this.slideshowNavDots.querySelectorAll('a')) : [];
+          this.slideshowNavDotsItems = this.slideshowNavDots ? DomUtils.nodeListToArray(this.slideshowNavDots.querySelectorAll('a')) : [];
         }
 
         if (this.options['showThumbnails']) {
           this.slideshowNavThumbnails = this.element.querySelector('.Product__SlideshowNav--thumbnails');
-          this.slideshowNavThumbnailsItems = this.slideshowNavThumbnails ? Dom.nodeListToArray(this.slideshowNavThumbnails.querySelectorAll('.Product__SlideshowNavImage')) : [];
+          this.slideshowNavThumbnailsItems = this.slideshowNavThumbnails ? DomUtils.nodeListToArray(this.slideshowNavThumbnails.querySelectorAll('.Product__SlideshowNavImage')) : [];
         }
 
-        this.slideshowImages = Dom.nodeListToArray(productSlideshowElement.querySelectorAll('.Carousel__Cell')); // Setup the mobile nav
+        this.slideshowImages = DomUtils.nodeListToArray(productSlideshowElement.querySelectorAll('.Carousel__Cell')); // Setup the mobile nav
 
         this._setupSlideshowMobileNav();
       }
@@ -5405,7 +5405,7 @@
       this._attachListeners();
     }
 
-    _createClass(ProductSection, [{
+    _createClass(ProductPage, [{
       key: "onUnload",
       value: function onUnload() {
         this.delegateElement.off('click');
@@ -5512,7 +5512,7 @@
 
         this._slideWillChange();
 
-        if (Responsive.matchesBreakpoint('pocket') || !this.options['stackProductImages']) {
+        if (ViewportManager.matchesBreakpoint('pocket') || !this.options['stackProductImages']) {
           for (var i = 0; i !== this.productSlideshow.flickityInstance.cells.length; ++i) {
             var cellElement = this.productSlideshow.flickityInstance.cells[i].element,
                 mediaId = parseInt(cellElement.getAttribute('data-media-id'));
@@ -5554,7 +5554,7 @@
       key: "_onMediaPaused",
       value: function _onMediaPaused() {
         // Enable draggability
-        this.productSlideshow.getFlickityInstance().options.draggable = !Responsive.matchesBreakpoint('supports-hover');
+        this.productSlideshow.getFlickityInstance().options.draggable = !ViewportManager.matchesBreakpoint('supports-hover');
         this.productSlideshow.getFlickityInstance().bindDrag();
       }
       /**
@@ -5672,7 +5672,7 @@
       key: "_onImageChanged",
       value: function _onImageChanged(event, cell) {
         // If cell is video or model, we hide the action list
-        if (Responsive.matchesBreakpoint('pocket')) {
+        if (ViewportManager.matchesBreakpoint('pocket')) {
           var productGalleryActionListElement = this.element.querySelector('.Product__Gallery .Product__ActionList');
 
           if (productGalleryActionListElement) {
@@ -5700,7 +5700,7 @@
         if (this.slideshowMobileNav) {
           var selectedIndex = parseInt(cell.getAttribute('data-media-position')) - 1; // The -1 is to make it 0 indexed
 
-          Dom.nodeListToArray(this.slideshowMobileNav.querySelectorAll('.dot')).forEach(function (item, index) {
+          DomUtils.nodeListToArray(this.slideshowMobileNav.querySelectorAll('.dot')).forEach(function (item, index) {
             if (index === selectedIndex) {
               item.classList.add('is-selected');
             } else {
@@ -5714,7 +5714,7 @@
       value: function _onImageSettled(index, cell) {
         this._handleMedia(cell);
 
-        if (Responsive.matchesBreakpoint('lap-and-up')) {
+        if (ViewportManager.matchesBreakpoint('lap-and-up')) {
           var slides = this.element.querySelectorAll('.Product__SlideItem:not(.is-selected)');
           slides.forEach(function (slide) {
             slide.classList.add('Product__SlideItem--hidden');
@@ -5724,7 +5724,7 @@
     }, {
       key: "_slideWillChange",
       value: function _slideWillChange() {
-        if (Responsive.matchesBreakpoint('lap-and-up')) {
+        if (ViewportManager.matchesBreakpoint('lap-and-up')) {
           var slides = this.element.querySelectorAll('.Product__SlideItem');
           slides.forEach(function (slide) {
             slide.classList.remove('Product__SlideItem--hidden');
@@ -5740,7 +5740,7 @@
       value: function _setupDeviceFeatures(event) {
         var _this4 = this;
 
-        var currentBreakpoint = event ? event.detail.currentBreakpoint : Responsive.getCurrentBreakpoint(),
+        var currentBreakpoint = event ? event.detail.currentBreakpoint : ViewportManager.getCurrentBreakpoint(),
             previousBreakpoint = event ? event.detail.previousBreakpoint : null;
 
         if (currentBreakpoint === previousBreakpoint) {
@@ -5776,7 +5776,7 @@
               offsetTop = this.slideshowNavDots.firstElementChild.offsetTop;
             }
 
-            if (this.options['showThumbnails'] && Responsive.matchesBreakpoint('desk')) {
+            if (this.options['showThumbnails'] && ViewportManager.matchesBreakpoint('desk')) {
               offsetTop = 250;
             }
 
@@ -5819,7 +5819,7 @@
       }
     }]);
 
-    return ProductSection;
+    return ProductPage;
   }();
 
   var RecentlyViewedProductsSection = /*#__PURE__*/function () {
@@ -5857,7 +5857,7 @@
         } // If we have a non empty query string we do a search query
 
 
-        fetch("".concat(window.routes.searchUrl, "?section_id=").concat(this.element.getAttribute('data-section-id'), "&type=product&q=").concat(queryString), {
+        fetch("".concat(window.shopRoutes.searchUrl, "?section_id=").concat(this.element.getAttribute('data-section-id'), "&type=product&q=").concat(queryString), {
           credentials: 'same-origin',
           method: 'GET'
         }).then(function (response) {
@@ -5869,7 +5869,7 @@
 
             _this.element.parentNode.style.display = 'block'; // And finally let's create the carousel !
 
-            _this.carousel = new Carousel(_this.element.querySelector('[data-flickity-config]'));
+            _this.carousel = new Slider(_this.element.querySelector('[data-flickity-config]'));
           });
         });
       }
@@ -5922,7 +5922,7 @@
         var _this = this;
 
         this.constructors[type] = constructor;
-        Dom.nodeListToArray(document.querySelectorAll("[data-section-type=".concat(type, "]"))).forEach(function (container) {
+        DomUtils.nodeListToArray(document.querySelectorAll("[data-section-type=".concat(type, "]"))).forEach(function (container) {
           _this._createInstance(container, constructor);
         });
       }
@@ -6054,7 +6054,7 @@
       _classCallCheck(this, ShopNowSection);
 
       this.element = container;
-      this.carousel = new Carousel(this.element.querySelector('[data-flickity-config]')); // Setup product item color swatch
+      this.carousel = new Slider(this.element.querySelector('[data-flickity-config]')); // Setup product item color swatch
 
       new ProductItemColorSwatch(this.element);
     }
@@ -6075,7 +6075,7 @@
 
       this.element = container;
       this.delegateElement = new domDelegate.Delegate(this.element);
-      this.usePocketMode = Responsive.matchesBreakpoint('pocket');
+      this.usePocketMode = ViewportManager.matchesBreakpoint('pocket');
       this.pocketActivatorButton = this.element.querySelector('[data-action="open-look"]');
 
       this._createOuterCarousel();
@@ -6123,8 +6123,8 @@
         var _this = this;
 
         this.popovers = [];
-        Dom.nodeListToArray(this.element.querySelectorAll('.Popover')).forEach(function (popover) {
-          _this.popovers.push(new Popover(popover, {
+        DomUtils.nodeListToArray(this.element.querySelectorAll('.Tooltip')).forEach(function (popover) {
+          _this.popovers.push(new Tooltip(popover, {
             activator: _this.pocketActivatorButton,
             showOverlay: false,
             onOpen: _this._openPocketZoom.bind(_this),
@@ -6142,7 +6142,7 @@
       value: function _createOuterCarousel() {
         var _this2 = this;
 
-        this.outerCarousel = new Carousel(this.element.querySelector('.ShopTheLook'), {
+        this.outerCarousel = new Slider(this.element.querySelector('.ShopTheLook'), {
           onSelect: this._onLookChanged.bind(this)
         });
         this.innerCarousels = new Array(this.outerCarousel.flickityInstance.cells.length);
@@ -6153,10 +6153,10 @@
         // we have no other choices if we want to have proper animations everywhere.
 
 
-        Dom.nodeListToArray(this.element.querySelectorAll('.ShopTheLook__ProductList')).forEach(function (item) {
+        DomUtils.nodeListToArray(this.element.querySelectorAll('.ShopTheLook__ProductList')).forEach(function (item) {
           var lookIndex = parseInt(item.getAttribute('data-look-index'));
 
-          _this2.innerCarousels[lookIndex].push(new Carousel(item, {
+          _this2.innerCarousels[lookIndex].push(new Slider(item, {
             onSelect: _this2._onProductChanged.bind(_this2)
           })); // By default, Flickity will append the carousel, hence making the "ViewButton" before the carousel. We need to manipulate it to move it after
 
@@ -6184,7 +6184,7 @@
       value: function _onProductChanged(selectedIndex, selectedCell) {
         var lookItem = this.outerCarousel.getSelectedCell(),
             activeDot = null;
-        Dom.nodeListToArray(lookItem.querySelectorAll('.ShopTheLook__Dot')).forEach(function (dot, index) {
+        DomUtils.nodeListToArray(lookItem.querySelectorAll('.ShopTheLook__Dot')).forEach(function (dot, index) {
           dot.classList.remove('is-active'); // IE11 and lower does not support "toggle" with second parameter :(
 
           if (index === selectedIndex) {
@@ -6324,7 +6324,7 @@
       _classCallCheck(this, SidebarMenuSection);
 
       this.element = container;
-      this.sidebarDrawer = new Drawer(container);
+      this.sidebarDrawer = new SidePanel(container);
     }
 
     _createClass(SidebarMenuSection, [{
@@ -6353,13 +6353,13 @@
 
       this.element = container;
       this.delegateElement = new domDelegate.Delegate(this.element);
-      this.slideshow = new Carousel(this.element.querySelector('[data-flickity-config]'), {
+      this.slideshow = new Slider(this.element.querySelector('[data-flickity-config]'), {
         onSelect: this._onSlideChanged.bind(this)
       });
       this.selectedSlide = null;
       this.shouldAnimate = true;
       this.timeline = new TimelineLite({
-        delay: window.theme.showPageTransition ? 0.5 : 0
+        delay: window.shopConfig.showPageTransition ? 0.5 : 0
       });
 
       if (this.slideshow.flickityInstance.cells.length > 0) {
@@ -6450,8 +6450,8 @@
           this.slideshow.flickityInstance.pausePlayer();
         }
 
-        Dom.nodeListToArray(slide.querySelectorAll('.Slideshow__Image')).forEach(function (image) {
-          if (image.classList.contains('Image--lazyLoading') || image.classList.contains('Image--lazyLoad')) {
+        DomUtils.nodeListToArray(slide.querySelectorAll('.Slideshow__Image')).forEach(function (image) {
+          if (image.classList.contains('LazyImage--lazyLoading') || image.classList.contains('LazyImage--lazyLoad')) {
             image.addEventListener('lazyloaded', _this._slideEnter.bind(_this, slide));
           } else {
             _this._slideEnter(slide);
@@ -6506,7 +6506,7 @@
         }
 
         if (window.CSS && window.CSS.supports('(object-fit: cover) or (-o-object-fit: cover)')) {
-          if (window.theme.showImageZooming) {
+          if (window.shopConfig.showImageZooming) {
             this.timeline.fromTo(images, this.shouldAnimate ? 1.2 : 0, {
               opacity: 0,
               scale: 1.2
@@ -6553,11 +6553,11 @@
       key: "_lazyLoadNextImage",
       value: function _lazyLoadNextImage() {
         var currentIndex = this.slideshow.flickityInstance.selectedIndex,
-            breakpoint = Responsive.getCurrentBreakpoint();
+            breakpoint = ViewportManager.getCurrentBreakpoint();
 
         if (this.slideshow.flickityInstance.cells.length - 1 > currentIndex) {
           var nextCellElement = this.slideshow.flickityInstance.cells[currentIndex + 1].element,
-              imageContainers = Dom.nodeListToArray(nextCellElement.querySelectorAll('.Slideshow__ImageContainer')),
+              imageContainers = DomUtils.nodeListToArray(nextCellElement.querySelectorAll('.Slideshow__ImageContainer')),
               imageToReveal = null;
 
           if (breakpoint === 'phone') {
@@ -6566,7 +6566,7 @@
             imageToReveal = imageContainers[1];
           }
 
-          if (window.lazySizes && imageToReveal && imageToReveal.classList.contains('Image--lazyLoad')) {
+          if (window.lazySizes && imageToReveal && imageToReveal.classList.contains('LazyImage--lazyLoad')) {
             lazySizes.loader.unveil(imageToReveal.firstElementChild);
           }
         }
@@ -6591,8 +6591,8 @@
 
       this.element = container;
       this.delegateElement = new domDelegate.Delegate(this.element);
-      this.navItems = Dom.nodeListToArray(this.element.querySelectorAll('.TestimonialNav__Item'));
-      this.carousel = new Carousel(this.element.querySelector('.TestimonialList'), {
+      this.navItems = DomUtils.nodeListToArray(this.element.querySelectorAll('.TestimonialNav__Item'));
+      this.carousel = new Slider(this.element.querySelector('.TestimonialList'), {
         onSelect: this._testimonialChanged.bind(this)
       });
 
@@ -6649,8 +6649,8 @@
 
       this.element = container;
       this.delegateElement = new domDelegate.Delegate(this.element);
-      this.items = Dom.nodeListToArray(this.element.querySelectorAll('.Timeline__Item'));
-      this.navItems = Dom.nodeListToArray(this.element.querySelectorAll('.Timeline__NavItem'));
+      this.items = DomUtils.nodeListToArray(this.element.querySelectorAll('.Timeline__Item'));
+      this.navItems = DomUtils.nodeListToArray(this.element.querySelectorAll('.Timeline__NavItem'));
 
       this._attachListeners();
     }
@@ -6723,12 +6723,12 @@
 
 
           target.classList.add('is-selected');
-          Dom.getSiblings(target, '.is-selected').forEach(function (item) {
+          DomUtils.getSiblings(target, '.is-selected').forEach(function (item) {
             item.classList.remove('is-selected');
           }); // Then we slide to the appropriate element
 
           newItem.classList.add('is-selected');
-          Dom.getSiblings(newItem, '.is-selected').forEach(function (item) {
+          DomUtils.getSiblings(newItem, '.is-selected').forEach(function (item) {
             item.classList.remove('is-selected');
           });
         });
@@ -6873,19 +6873,19 @@
 
   (function () {
     // First, we register all plugins that are used for all pages
-    new Collapsible();
-    new Modal();
-    new Responsive();
+    new Accordion();
+    new Dialog();
+    new ViewportManager();
 
-    if (window.theme.pageType !== 'password' && window.theme.pageType !== 'gift_card') {
-      new LoadingBar();
+    if (window.shopConfig.pageType !== 'password' && window.shopConfig.pageType !== 'gift_card') {
+      new ProgressBar();
     }
 
     var sections = new SectionContainer();
     sections.register('header', HeaderSection);
     sections.register('footer', FooterSection);
     sections.register('sidebar-menu', SidebarMenuSection);
-    sections.register('cart', CartSection);
+    sections.register('cart', CartManager);
     sections.register('newsletter-popup', NewsletterPopupSection); // Sections used on index
 
     sections.register('slideshow', SlideshowSection);
@@ -6900,7 +6900,7 @@
     sections.register('testimonials', TestimonialsSection);
     sections.register('background-video', BackgroundVideoSection); // Sections used on product page
 
-    sections.register('product', ProductSection);
+    sections.register('product', ProductPage);
     sections.register('product-recommendations', ProductRecommendationsSection); // Sections used on collection page
 
     sections.register('collection', CollectionSection); // Sections used on blog page
@@ -7003,10 +7003,10 @@
 
     (function () {
       // We wrap each RTE table by a specific class to allow wrapping
-      Dom.nodeListToArray(document.querySelectorAll('.Rte table')).forEach(function (table) {
+      DomUtils.nodeListToArray(document.querySelectorAll('.Rte table')).forEach(function (table) {
         table.outerHTML = '<div class="TableWrapper">' + table.outerHTML + '</div>';
       });
-      Dom.nodeListToArray(document.querySelectorAll('.Rte iframe')).forEach(function (iframe) {
+      DomUtils.nodeListToArray(document.querySelectorAll('.Rte iframe')).forEach(function (iframe) {
         // We scope the wrapping only for YouTube and Vimeo
         if (iframe.src.indexOf('youtube') !== -1 || iframe.src.indexOf('youtu.be') !== -1 || iframe.src.indexOf('vimeo') !== -1) {
           iframe.outerHTML = '<div class="VideoWrapper">' + iframe.outerHTML + '</div>'; // Re-set the src attribute on each iframe after page load for Chrome's "incorrect iFrame content on 'back'" bug.
@@ -7103,8 +7103,8 @@
      */
 
 
-    if (window.theme.showPageTransition) {
-      PageTransition.getInstance();
+    if (window.shopConfig.showPageTransition) {
+      PageFade.getInstance();
     }
   })();
 

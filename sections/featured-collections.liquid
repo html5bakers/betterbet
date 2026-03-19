@@ -78,7 +78,7 @@
               {%- endfor -%}
             </div>
           {%- else -%}
-            <div class="ProductList ProductList--carousel Carousel" data-flickity-config='{{ flickity_options }}'>
+            <div class="ProductList ProductList--carousel Slider" data-flickity-config='{{ flickity_options }}'>
               {%- for product in collection.products limit: block.settings.grid_items_count -%}
                 <div class="Carousel__Cell animate show_up ad-{% cycle ' ', '1', '1-5', '2', '2-5' %}">
                   {%- render 'product-item', product: product, show_product_info: section.settings.show_product_info, show_vendor: section.settings.show_vendor, show_color_swatch: section.settings.show_color_swatch, show_labels: true -%}
@@ -103,7 +103,7 @@
               {{ products_placeholder }}
             </div>
           {%- else -%}
-            <div class="ProductList ProductList--carousel Carousel" data-flickity-config='{{ flickity_options }}'>
+            <div class="ProductList ProductList--carousel Slider" data-flickity-config='{{ flickity_options }}'>
               {{ products_placeholder }}
             </div>
           {%- endif -%}
@@ -149,7 +149,7 @@
         },
         {
           "value": "carousel",
-          "label": "Carousel"
+          "label": "Slider"
         }
       ],
       "default": "grid"

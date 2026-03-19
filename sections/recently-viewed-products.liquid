@@ -29,7 +29,7 @@
 
   {%- if template.name == 'search' -%}
     <div class="ProductListWrapper">
-      <div class="ProductList ProductList--carousel Carousel" data-flickity-config='{{ flickity_options }}'>
+      <div class="ProductList ProductList--carousel Slider" data-flickity-config='{{ flickity_options }}'>
         {%- assign parsed_terms = search.terms | split: ' OR ' -%}
 
         {%- for parsed_term in parsed_terms -%}

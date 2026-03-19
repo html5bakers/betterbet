@@ -11,7 +11,7 @@
         {%- endif -%}
 
         {%- if title != blank and content != blank -%}
-          <div class="Collapsible Collapsible--large" {{ block.shopify_attributes }}>
+          <div class="Accordion Accordion--large" {{ block.shopify_attributes }}>
             <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
               {{- title -}} <span class="Collapsible__Plus"></span>
             </button>
@@ -27,7 +27,7 @@
         {%- endif -%}
 
       {%- when 'reviews' -%}
-        <div class="Collapsible Collapsible--large" {{ block.shopify_attributes }}>
+        <div class="Accordion Accordion--large" {{ block.shopify_attributes }}>
           <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
             <span>{{ 'product.tabs.reviews' | t }} <span class="text--light">({{ product.metafields.reviews.rating_count.value | default: 0 }})</span></span>
             <span class="Collapsible__Plus"></span>

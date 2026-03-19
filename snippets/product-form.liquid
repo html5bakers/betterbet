@@ -93,7 +93,7 @@ for size, we use it to display a size chart (if applicable)
               }
               {%- endcapture -%}
 
-              <div id="{{ popover_id }}" class="VariantSelector" aria-hidden="true">
+              <div id="{{ popover_id }}" class="VariantPicker" aria-hidden="true">
                 {%- capture option_index -%}option{{ option.position }}{%- endcapture -%}
 
                 {%- assign option_indexes_excluded_color = '' -%}
@@ -113,7 +113,7 @@ for size, we use it to display a size chart (if applicable)
 
                 {%- assign option_indexes_excluded_color = option_indexes_excluded_color | split: ',' | compact -%}
 
-                <div class="VariantSelector__Carousel Carousel" data-flickity-config='{{ flickity_options }}'>
+                <div class="VariantSelector__Carousel Slider" data-flickity-config='{{ flickity_options }}'>
                   {%- for value in option.values -%}
                     <div class="VariantSelector__Item Carousel__Cell {% if value == option.selected_value %}is-selected{% endif %}"
                          data-background-color="{{ value | split: ' ' | last | handle }}"
@@ -181,7 +181,7 @@ for size, we use it to display a size chart (if applicable)
                 </div>
               </div>
             {%- else -%}
-              <div id="{{ popover_id }}" class="OptionSelector Popover Popover--withMinWidth" aria-hidden="true">
+              <div id="{{ popover_id }}" class="OptionSelector Tooltip Tooltip--withMinWidth" aria-hidden="true">
                 <header class="Popover__Header">
                   <button type="button" class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover">{% render 'icon' with 'close' %}</button>
                   <span class="Popover__Title Heading u-h4">{{ option.name | escape }}</span>
@@ -236,7 +236,7 @@ for size, we use it to display a size chart (if applicable)
   {%- comment -%}If we have a size chart we capture the modal content (it must be displayed outside the form for proper positioning){%- endcomment -%}
 
   {%- capture product_modals -%}
-    <div id="modal-{{ size_chart_page.handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+    <div id="modal-{{ size_chart_page.handle }}" class="Dialog Dialog--dark Dialog--fullScreen Dialog--pageContent" aria-hidden="true" role="dialog" data-scrollable>
       <header class="Modal__Header">
         <h2 class="Modal__Title Heading u-h1">{{ size_chart_page.title }}</h2>
       </header>

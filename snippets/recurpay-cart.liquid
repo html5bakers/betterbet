@@ -55,14 +55,14 @@
                         moneyFormat = window.money_format;
                     } else if (typeof window.Theme !== "undefined" && typeof window.Theme.moneyFormat !== "undefined") {
                         moneyFormat = window.Theme.moneyFormat;
-                    } else if (typeof window.theme !== "undefined" && typeof window.theme.moneyFormat !== "undefined") {
-                        moneyFormat = window.theme.moneyFormat;
-                    } else if (typeof window.theme !== "undefined" && typeof window.theme.money_format === "string") {
-                        moneyFormat = window.theme.money_format;
-                    } else if (typeof window.theme !== "undefined" && typeof window.theme.settings !== "undefined" && typeof window.theme.settings.moneyFormat !== "undefined") {
+                    } else if (typeof window.shopConfig !== "undefined" && typeof window.shopConfig.moneyFormat !== "undefined") {
+                        moneyFormat = window.shopConfig.moneyFormat;
+                    } else if (typeof window.shopConfig !== "undefined" && typeof window.shopConfig.money_format === "string") {
+                        moneyFormat = window.shopConfig.money_format;
+                    } else if (typeof window.shopConfig !== "undefined" && typeof window.shopConfig.settings !== "undefined" && typeof window.shopConfig.settings.moneyFormat !== "undefined") {
                         moneyFormat = theme.settings.moneyFormat;
-                    } else if (typeof window.theme !== "undefined" && typeof window.theme.strings !== "undefined" && typeof window.theme.strings.moneyFormat === "string") {
-                        moneyFormat = window.theme.strings.moneyFormat;
+                    } else if (typeof window.shopConfig !== "undefined" && typeof window.shopConfig.strings !== "undefined" && typeof window.shopConfig.strings.moneyFormat === "string") {
+                        moneyFormat = window.shopConfig.strings.moneyFormat;
                     } else if (typeof window.Currency !== "undefined" && typeof window.Currency.money_format !== "undefined" && typeof window.Currency.money_format[currency] === "string") {
                         moneyFormat = window.Currency.money_format[currency];
                     } else if (typeof window.Currency !== "undefined" && typeof window.Currency.money_format === "string") {
@@ -294,8 +294,8 @@
             var linkSelectors = $(cartSelector).find('a[href*="/products/"]');
             var overrideAlignment = false;
             if($(qtySelectors).length <= 0 && $(linkSelectors).length <=0 && $(cartSelector).length >0){
-              if($(cartSelector).parents("#Cart-Drawer").length >0){
-                cartSelector = $(getSelector).eq(i).parents("#Cart-Drawer");
+              if($(cartSelector).parents("#Cart-SidePanel").length >0){
+                cartSelector = $(getSelector).eq(i).parents("#Cart-SidePanel");
                 qtySelectors = $(cartSelector).find('[name="updates[]"], .quantity-selector input');
                 linkSelectors = $(cartSelector).find('a[href*="/products/"]');
               }

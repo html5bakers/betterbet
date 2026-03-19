@@ -34,7 +34,7 @@
 
     <script>
       // This allows to expose several variables to the global scope, to be used in scripts
-      window.theme = {
+      window.shopConfig = {
         template: {{ template.name | json }}
       };
 
@@ -78,7 +78,7 @@
 
   <body class="Betterbet Store--v4 {{ classes }} template-gift-card">
     <div class="PageOverlay"></div>
-    <span class="LoadingBar"></span>
+    <span class="ProgressBar"></span>
 
     <div class="PageContainer">
       <main id="main" role="main">

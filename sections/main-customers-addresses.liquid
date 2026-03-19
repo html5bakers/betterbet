@@ -48,7 +48,7 @@
 
 {% comment %}FORM FOR NEW ADDRESS{% endcomment %}
 
-<div id="modal-address-new" class="Modal Modal--address" aria-hidden="true" role="dialog" data-scrollable>
+<div id="modal-address-new" class="Dialog Dialog--address" aria-hidden="true" role="dialog" data-scrollable>
   <button class="Modal__Close Modal__Close--outside" data-action="close-modal">{%- render 'icon' with 'close' -%}</button>
 
   <header class="Modal__Header">
@@ -142,7 +142,7 @@
 
 {%- paginate customer.addresses by 9 -%}
   {%- for address in customer.addresses -%}
-    <div id="modal-{{ address.id }}" class="Modal Modal--address" aria-hidden="true" role="dialog" data-scrollable>
+    <div id="modal-{{ address.id }}" class="Dialog Dialog--address" aria-hidden="true" role="dialog" data-scrollable>
       <button class="Modal__Close Modal__Close--outside" data-action="close-modal">{%- render 'icon' with 'close' -%}</button>
 
       <header class="Modal__Header">

@@ -50,7 +50,7 @@
       {%- endif -%}
 
       // This allows to expose several variables to the global scope, to be used in scripts
-      window.theme = {
+      window.shopConfig = {
         pageType: {{ request.page_type | json }},
         moneyFormat: {{ shop.money_format | json }},
         moneyWithCurrencyFormat: {{ shop.money_with_currency_format | json }},
@@ -62,7 +62,7 @@
         showImageZooming: {{ settings.show_image_zooming | json }}
       };
 
-      window.routes = {
+      window.shopRoutes = {
         rootUrl: {{ routes.root_url | json }},
         rootUrlWithoutSlash: {% if routes.root_url == '/' %}''{% else %}{{ routes.root_url | json }}{% endif %},
         cartUrl: {{ routes.cart_url | json }},
@@ -72,7 +72,7 @@
         productRecommendationsUrl: {{ routes.product_recommendations_url | json }}
       };
 
-      window.languages = {
+      window.shopStrings = {
         cartAddNote: {{ 'cart.general.add_note' | t | json }},
         cartEditNote: {{ 'cart.general.edit_note' | t | json }},
         productImageLoadingError: {{ 'product.slideshow.image_loading_error' | t | json }},
@@ -124,8 +124,8 @@
     <script>
       (function () {
         window.onpageshow = function() {
-          if (window.theme.showPageTransition) {
-            var pageTransition = document.querySelector('.PageTransition');
+          if (window.shopConfig.showPageTransition) {
+            var pageTransition = document.querySelector('.PageFade');
 
             if (pageTransition) {
               pageTransition.style.visibility = 'visible';
@@ -180,11 +180,11 @@
     </svg>
 
     <a class="PageSkipLink u-visually-hidden" href="#main">{{ 'header.navigation.skip_to_content' | t }}</a>
-    <span class="LoadingBar"></span>
+    <span class="ProgressBar"></span>
     <div class="PageOverlay"></div>
 
     {%- if settings.show_page_transition -%}
-      <div class="PageTransition"></div>
+      <div class="PageFade"></div>
     {%- endif -%}
 
     {% section 'popup' %}

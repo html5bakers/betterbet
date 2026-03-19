@@ -1425,7 +1425,7 @@ body {
   }
 }
 
-.js .features--show-page-transition .PageTransition {
+.js .features--show-page-transition .PageFade {
   position: fixed;
   top: 0;
   left: 0;
@@ -2065,18 +2065,18 @@ body:not(.is-tabbing) .flickity-enabled:focus {
  * ----------------------------------------------------------------------------------------------
  */
 
-.Carousel {
+.Slider {
   position: relative;
 }
 
-.Carousel--fixed,
-.Carousel--fixed .flickity-viewport,
-.Carousel--fixed .Carousel__Cell {
+.Slider--fixed,
+.Slider--fixed .flickity-viewport,
+.Slider--fixed .Carousel__Cell {
   height: 100%;
 }
 
 /* This allows to hide cells that are not first one until slider is loaded */
-.Carousel:not(.flickity-enabled) .Carousel__Cell:not(.is-selected) {
+.Slider:not(.flickity-enabled) .Carousel__Cell:not(.is-selected) {
   display: none;
 }
 
@@ -2085,24 +2085,24 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   width: 100%;
 }
 
-.js .Carousel--fadeIn .flickity-slider {
+.js .Slider--fadeIn .flickity-slider {
   transform: none !important;
 }
 
-.js .Carousel--fadeIn .Carousel__Cell {
+.js .Slider--fadeIn .Carousel__Cell {
   left: 0 !important;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.js .Carousel--fadeIn .Carousel__Cell.is-selected {
+.js .Slider--fadeIn .Carousel__Cell.is-selected {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
 }
 
-.Carousel--insideDots .flickity-page-dots {
+.Slider--insideDots .flickity-page-dots {
   position: absolute;
   width: auto;
   margin: 0;
@@ -2110,30 +2110,30 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   left: 20px;
 }
 
-.Carousel--insideDots .flickity-page-dots .dot {
+.Slider--insideDots .flickity-page-dots .dot {
   border-color: currentColor;
 }
 
-.Carousel--insideDots .flickity-page-dots .dot.is-selected {
+.Slider--insideDots .flickity-page-dots .dot.is-selected {
   background: currentColor;
 }
 
-.Carousel--insideDots .flickity-prev-next-button {
+.Slider--insideDots .flickity-prev-next-button {
   bottom: -25px;
   z-index: 1;
 }
 
-.Carousel--insideDots .flickity-prev-next-button.next {
+.Slider--insideDots .flickity-prev-next-button.next {
   right: 25px;
 }
 
-.Carousel--insideDots .flickity-prev-next-button.previous {
+.Slider--insideDots .flickity-prev-next-button.previous {
   right: 75px;
   margin-right: 15px;
 }
 
 @media screen and (min-width: 1008px) {
-  .Carousel--insideDots .flickity-page-dots {
+  .Slider--insideDots .flickity-page-dots {
     bottom: 28px;
     right: 24px;
     left: auto;
@@ -2141,20 +2141,20 @@ body:not(.is-tabbing) .flickity-enabled:focus {
 }
 /**
  * ----------------------------------------------------------------------------
- * Collapsible
+ * Accordion
  * ----------------------------------------------------------------------------
  */
-.Collapsible {
+.Accordion {
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   overflow: hidden;
 }
 
-.Collapsible + .Collapsible {
+.Accordion + .Accordion {
   border-top: none;
 }
 
-.Collapsible--padded {
+.Accordion--padded {
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -2207,12 +2207,12 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   opacity: 0;
 }
 
-.Collapsible .Collapsible {
+.Accordion .Accordion {
   margin-left: 16px;
   border: none;
 }
 
-.Collapsible .Collapsible .Collapsible__Button {
+.Accordion .Accordion .Collapsible__Button {
   padding: 13px 0;
 }
 
@@ -2233,11 +2233,11 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   padding-bottom: 18px;
 }
 
-.Collapsible .Linklist {
+.Accordion .Linklist {
   margin-bottom: 4px;
 }
 
-.Collapsible .Linklist--bordered {
+.Accordion .Linklist--bordered {
   margin-top: 16px;
   margin-bottom: 4px;
 }
@@ -2245,52 +2245,52 @@ body:not(.is-tabbing) .flickity-enabled:focus {
 @media screen and (min-width: 641px) {
   /* When this class is applied to a collapsible, it will display as a collapsible on mobile but not on larger screen, where it will
      automatically appear is auto-expanded */
-  .Collapsible--autoExpand {
+  .Accordion--autoExpand {
     border: none;
     overflow: visible;
   }
 
-  .Collapsible--autoExpand .Collapsible__Button {
+  .Accordion--autoExpand .Collapsible__Button {
     cursor: default;
     padding-top: 0;
     padding-bottom: 0;
     margin-bottom: 16px;
   }
 
-  .Collapsible--autoExpand .Collapsible__Plus {
+  .Accordion--autoExpand .Collapsible__Plus {
     display: none;
   }
 
-  .Collapsible--autoExpand .Collapsible__Inner {
+  .Accordion--autoExpand .Collapsible__Inner {
     height: auto;
     visibility: visible;
     overflow: visible;
   }
 
-  .Collapsible--autoExpand .Collapsible__Content {
+  .Accordion--autoExpand .Collapsible__Content {
     padding-bottom: 0;
   }
 
-  .Collapsible--autoExpand .Linklist {
+  .Accordion--autoExpand .Linklist {
     margin-bottom: 0;
   }
 
-  .Collapsible--autoExpand {
+  .Accordion--autoExpand {
     margin-bottom: 32px;
   }
 }
 
 @media screen and (min-width: 1008px) {
-  .Collapsible--padded {
+  .Accordion--padded {
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  .Collapsible--large .Collapsible__Button {
+  .Accordion--large .Collapsible__Button {
     padding: 34px 0;
   }
 
-  .Collapsible--large .Collapsible__Content {
+  .Accordion--large .Collapsible__Content {
     padding-bottom: 45px;
   }
 }
@@ -2299,7 +2299,7 @@ body:not(.is-tabbing) .flickity-enabled:focus {
  * Base drawer
  * ----------------------------------------------------------------------------
  */
-.Drawer {
+.SidePanel {
   position: fixed;
   top: 0;
   left: 0;
@@ -2314,11 +2314,11 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   touch-action: manipulation; /* Animating box-shadow is slow, even on modern browsers, so we instead move it in a pseudo-element and animate opacity */
 }
 
-.Drawer:focus {
+.SidePanel:focus {
   outline: none;
 }
 
-.Drawer::before {
+.SidePanel::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -2328,26 +2328,26 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   transition: opacity 0.5s var(--drawer-transition-timing);
 }
 
-.Drawer--secondary {
+.SidePanel--secondary {
   background: var(--light-background);
 }
 
-.Drawer--fromLeft {
+.SidePanel--fromLeft {
   transform: translateX(calc(-100vw + 65px));
 }
 
-.Drawer--fromRight {
+.SidePanel--fromRight {
   right: 0;
   left: auto;
   transform: translateX(calc(100vw - 65px));
 }
 
-.Drawer[aria-hidden=false] {
+.SidePanel[aria-hidden=false] {
   visibility: visible;
   transform: translateX(0);
 }
 
-.Drawer[aria-hidden=false]::before {
+.SidePanel[aria-hidden=false]::before {
   opacity: 1;
 }
 
@@ -2355,12 +2355,12 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   width: 100%;
 }
 
-.Drawer--fromLeft .Drawer__Container {
+.SidePanel--fromLeft .Drawer__Container {
   padding-left: 18px;
   padding-right: 24px;
 }
 
-.Drawer--fromRight .Drawer__Container {
+.SidePanel--fromRight .Drawer__Container {
   padding-left: 24px;
   padding-right: 18px;
 }
@@ -2412,7 +2412,7 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   stroke-width: 1.25px;
 }
 
-.Drawer--fromRight .Drawer__Close {
+.SidePanel--fromRight .Drawer__Close {
   right: 18px;
   left: auto;
 }
@@ -2421,11 +2421,11 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   box-shadow: 0 -1px var(--border-color) inset;
 }
 
-.Drawer--secondary .Drawer__Header--bordered {
+.SidePanel--secondary .Drawer__Header--bordered {
   box-shadow: 0 -1px rgba(var(--border-color-rgb), 0.6) inset;
 }
 
-.Drawer--secondary .Collapsible {
+.SidePanel--secondary .Accordion {
   border-bottom-color: rgba(var(--border-color-rgb), 0.6);
 }
 
@@ -2461,7 +2461,7 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   box-shadow: 0 -1px var(--border-color);
 }
 
-.Drawer--secondary .Drawer__Footer {
+.SidePanel--secondary .Drawer__Footer {
   box-shadow: 0 -1px rgba(var(--border-color-rgb), 0.6);
 }
 
@@ -2476,16 +2476,16 @@ body:not(.is-tabbing) .flickity-enabled:focus {
 }
 
 @media screen and (min-width: 641px) {
-  .Drawer {
+  .SidePanel {
     width: 400px;
     transform: translateX(-100%);
   }
 
-  .Drawer--small {
+  .SidePanel--small {
     width: 340px;
   }
 
-  .Drawer--fromRight {
+  .SidePanel--fromRight {
     transform: translateX(100%);
   }
 
@@ -2502,8 +2502,8 @@ body:not(.is-tabbing) .flickity-enabled:focus {
     }
   }
 
-  .Drawer--fromLeft .Drawer__Container,
-  .Drawer--fromRight .Drawer__Container {
+  .SidePanel--fromLeft .Drawer__Container,
+  .SidePanel--fromRight .Drawer__Container {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -2512,7 +2512,7 @@ body:not(.is-tabbing) .flickity-enabled:focus {
     left: 30px;
   }
 
-  .Drawer--fromRight .Drawer__Close {
+  .SidePanel--fromRight .Drawer__Close {
     right: 30px;
     left: auto;
   }
@@ -2538,8 +2538,8 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   transition: opacity 0.5s ease 0.25s, transform 0.5s ease 0.25s;
 }
 
-.Drawer[aria-hidden=false] [data-drawer-animated-left],
-.Drawer[aria-hidden=false] [data-drawer-animated-right] {
+.SidePanel[aria-hidden=false] [data-drawer-animated-left],
+.SidePanel[aria-hidden=false] [data-drawer-animated-right] {
   opacity: 1;
   transform: translateX(0);
 }
@@ -2558,7 +2558,7 @@ body:not(.is-tabbing) .flickity-enabled:focus {
   transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.Drawer[aria-hidden=false] [data-drawer-animated-bottom] {
+.SidePanel[aria-hidden=false] [data-drawer-animated-bottom] {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.45s, transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.45s;
@@ -3854,7 +3854,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
  * ----------------------------------------------------------------------------
  */
 
-.LoadingBar {
+.ProgressBar {
   position: fixed;
   top: 0;
   left: 0;
@@ -3867,12 +3867,12 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   pointer-events: none;
 }
 
-.LoadingBar.is-visible {
+.ProgressBar.is-visible {
   opacity: 1;
 }
 
 @media screen and (min-width: 641px) {
-  .LoadingBar {
+  .ProgressBar {
     height: 3px;
   }
 }
@@ -4067,12 +4067,12 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   position: relative;
 }
 
-.Collapsible .ColorSwatchList {
+.Accordion .ColorSwatchList {
   padding-top: 4px;
   padding-bottom: 10px;
 }
 
-.Collapsible--autoExpand .ColorSwatchList {
+.Accordion--autoExpand .ColorSwatchList {
   padding-top: 8px;
   padding-bottom: 12px;
 }
@@ -4632,7 +4632,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
           margin-inline-start: 8px;
 }
 
-.Modal {
+.Dialog {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -4653,31 +4653,31 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 @supports (--css: variables) {
-  .Modal {
+  .Dialog {
     max-height: calc(var(--window-height) - 40px);
   }
 }
 
-.Modal[aria-hidden=false] {
+.Dialog[aria-hidden=false] {
   visibility: visible;
   opacity: 1;
 }
 
-.Modal--dark {
+.Dialog--dark {
   background: var(--secondary-elements-background);
   color: var(--secondary-elements-text-color);
 }
 
-.Modal--dark .Rte h1,
-.Modal--dark .Rte h2,
-.Modal--dark .Rte h3,
-.Modal--dark .Rte h4,
-.Modal--dark .Rte h5,
-.Modal--dark .Rte h6 {
+.Dialog--dark .Rte h1,
+.Dialog--dark .Rte h2,
+.Dialog--dark .Rte h3,
+.Dialog--dark .Rte h4,
+.Dialog--dark .Rte h5,
+.Dialog--dark .Rte h6 {
   color: var(--secondary-elements-text-color);
 }
 
-.Modal--fullScreen {
+.Dialog--fullScreen {
   max-width: none;
   max-height: none;
   width: 100%;
@@ -4689,17 +4689,17 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   transform: none;
 }
 
-.Modal--pageContent {
+.Dialog--pageContent {
   padding: 60px 0 50px 0;
 }
 
-.Modal--videoContent {
+.Dialog--videoContent {
   justify-content: center;
   background: #000000; /* Full theatre experience ! */
   color: #ffffff;
 }
 
-.Modal .Heading:not(.Link) {
+.Dialog .Heading:not(.Link) {
   color: inherit;
 }
 
@@ -4734,7 +4734,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   stroke-width: 1.25px;
 }
 
-.Modal--fullScreen .Modal__Close--outside {
+.Dialog--fullScreen .Modal__Close--outside {
   right: 40px;
   top: 40px;
 }
@@ -4743,7 +4743,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   display: none;
 }
 
-.Modal[aria-hidden=false] .Modal__Content iframe {
+.Dialog[aria-hidden=false] .Modal__Content iframe {
   display: block;
 }
 
@@ -4757,24 +4757,24 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 .Modal__Content tbody th {
   background: var(--secondary-elements-background) !important;
 }
-.Modal:not(.Modal--pageContent){ border-radius: 5px; }
+.Dialog:not(.Dialog--pageContent){ border-radius: 5px; }
 @media screen and (min-width: 641px) {
-  .Modal:not(.Modal--pageContent) {
+  .Dialog:not(.Dialog--pageContent) {
     padding: 35px 40px 40px 40px;
     border-radius: 10px;
   }
 }
 
 @media screen and (min-width: 1008px) {
-  .Modal {
+  .Dialog {
     flex-direction: column;
   }
 
-  .Modal--pageContent {
+  .Dialog--pageContent {
     padding: 100px 0 80px 0;
   }
 
-  .Modal--pageContent .Modal__Content {
+  .Dialog--pageContent .Modal__Content {
     flex: 1 0 0;
   }
 
@@ -5272,7 +5272,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
     margin-right: 0;
   }
 }
-.Popover {
+.Tooltip {
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -5286,11 +5286,11 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.Popover--secondary {
+.Tooltip--secondary {
   background: var(--background);
 }
 
-.Popover[aria-hidden=false] {
+.Tooltip[aria-hidden=false] {
   transform: translateY(0);
   visibility: visible;
 }
@@ -5358,7 +5358,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 @media screen and (min-width: 1008px) {
-  .Popover {
+  .Tooltip {
     transform: none;
     width: auto;
     bottom: auto;
@@ -5366,7 +5366,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
     opacity: 0;
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
   }
-  .Popover::before {
+  .Tooltip::before {
     content: "";
     position: absolute;
     right: 40px;
@@ -5375,53 +5375,53 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
     border-style: solid;
   }
 
-  .Popover--noWrap {
+  .Tooltip--noWrap {
     white-space: nowrap;
   }
 
-  .Popover--withMinWidth {
+  .Tooltip--withMinWidth {
     min-width: 375px;
   }
 
-  .Popover--positionBottom::before {
+  .Tooltip--positionBottom::before {
     bottom: 100%;
     border-width: 0 10px 10px 10px;
     border-color: transparent transparent var(--light-background) transparent;
     filter: drop-shadow(0 -2px 2px rgba(54, 54, 54, 0.2));
   }
 
-  .Popover--positionTop::before {
+  .Tooltip--positionTop::before {
     top: 100%;
     border-width: 10px 10px 0 10px;
     border-color: var(--light-background) transparent transparent transparent;
     filter: drop-shadow(0 2px 2px rgba(54, 54, 54, 0.2));
   }
 
-  .Popover--positionLeft::before {
+  .Tooltip--positionLeft::before {
     left: 100%;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--light-background);
     filter: drop-shadow(2px 0 2px rgba(54, 54, 54, 0.2));
   }
 
-  .Popover--positionTop.Popover--alignCenter::before,
-  .Popover--positionBottom.Popover--alignCenter::before {
+  .Tooltip--positionTop.Tooltip--alignCenter::before,
+  .Tooltip--positionBottom.Tooltip--alignCenter::before {
     left: calc(50% - 10px);
   }
 
-  .Popover--positionLeft.Popover--alignCenter::before {
+  .Tooltip--positionLeft.Tooltip--alignCenter::before {
     top: calc(50% - 10px);
   }
 
-  .Popover--positionLeft.Popover--alignBottom::before {
+  .Tooltip--positionLeft.Tooltip--alignBottom::before {
     top: 15px;
   }
 
-  .Popover--positionLeft.Popover--alignTop::before {
+  .Tooltip--positionLeft.Tooltip--alignTop::before {
     bottom: 10px;
   }
 
-  .Popover[aria-hidden=false] {
+  .Tooltip[aria-hidden=false] {
     opacity: 1;
     transform: none;
   }
@@ -5436,27 +5436,27 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
     text-align: right;
   }
 
-  .Popover--withMinWidth .Popover__Value,
+  .Tooltip--withMinWidth .Popover__Value,
   .Popover__ValueList--center .Popover__Value {
     text-align: center;
   }
 
-  .Popover--small.Popover--positionTop::before {
+  .Tooltip--small.Tooltip--positionTop::before {
     border-width: 8px 8px 0 8px;
   }
-  .Popover--small.Popover--positionBottom::before {
+  .Tooltip--small.Tooltip--positionBottom::before {
     border-width: 0 8px 8px 8px;
   }
-  .Popover--small .Popover__Value {
+  .Tooltip--small .Popover__Value {
     padding: 5px 32px;
   }
-  .features--heading-small .Popover--small .Popover__Value {
+  .features--heading-small .Tooltip--small .Popover__Value {
     font-size: 10px;
   }
-  .features--heading-normal .Popover--small .Popover__Value {
+  .features--heading-normal .Tooltip--small .Popover__Value {
     font-size: 12px;
   }
-  .features--heading-large .Popover--small .Popover__Value {
+  .features--heading-large .Tooltip--small .Popover__Value {
     font-size: 13px;
   }
 }
@@ -5892,14 +5892,14 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 @media screen and (max-width: 640px) {
-  .Modal--address {
+  .Dialog--address {
     height: 100%;
     width: 100%;
     max-width: none;
     max-height: none;
   }
 
-  .Modal--address .Modal__Header {
+  .Dialog--address .Modal__Header {
     margin-top: 35px;
   }
 }
@@ -7100,7 +7100,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
  * ----------------------------------------------------------------------------
  */
 
-.CollectionFilters .Collapsible:first-child {
+.CollectionFilters .Accordion:first-child {
   border-top: none;
 }
 
@@ -7376,7 +7376,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
     flex: 1 0 0;
   }
 
-  .CollectionInner__Sidebar .Collapsible {
+  .CollectionInner__Sidebar .Accordion {
     padding: 0;
   }
 }
@@ -8970,7 +8970,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 /**
  * ----------------------------------------------------------------------------
- * Modal
+ * Dialog
  * ----------------------------------------------------------------------------
  */
 .Password__Modal {
@@ -9809,7 +9809,7 @@ shopify-payment-terms {
   }
 }
 @media screen and (max-width: 1007px) {
-  .Product__Tabs .Collapsible {
+  .Product__Tabs .Accordion {
     padding: 0 24px;
   }
 }
@@ -9904,7 +9904,7 @@ shopify-payment-terms {
     opacity: 0;
   }
 }
-.VariantSelector {
+.VariantPicker {
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -9918,7 +9918,7 @@ shopify-payment-terms {
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), visibility 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.VariantSelector[aria-hidden=false] {
+.VariantPicker[aria-hidden=false] {
   transform: translateY(0);
   visibility: visible;
 }
@@ -9990,14 +9990,14 @@ shopify-payment-terms {
 }
 
 @media screen and (max-width: 640px) {
-  .VariantSelector .flickity-prev-next-button {
+  .VariantPicker .flickity-prev-next-button {
     display: none;
   }
 }
 
 @media screen and (min-width: 641px) {
   /* Starting from tablet, the look and feel of this selector is completely different and look like a modal */
-  .VariantSelector {
+  .VariantPicker {
     top: 50%;
     bottom: auto;
     left: 50%;
@@ -10011,7 +10011,7 @@ shopify-payment-terms {
     overflow: auto;
   }
 
-  .VariantSelector[aria-hidden=false] {
+  .VariantPicker[aria-hidden=false] {
     transform: translate(-50%, -50%);
     opacity: 1;
   }
@@ -10021,12 +10021,12 @@ shopify-payment-terms {
     width: 46%;
   }
 
-  .VariantSelector .flickity-prev-next-button.next {
+  .VariantPicker .flickity-prev-next-button.next {
     top: calc(50% - 45px);
     right: 20px;
   }
 
-  .VariantSelector .flickity-prev-next-button.previous {
+  .VariantPicker .flickity-prev-next-button.previous {
     top: calc(50% - 45px);
     left: 20px;
   }
@@ -10713,12 +10713,12 @@ shopify-payment-terms {
   color: var(--navigation-text-color-light);
 }*/
 
-.SidebarMenu .Collapsible,
+.SidebarMenu .Accordion,
 .SidebarMenu .Linklist {
   border-color: var(--navigation-border-color);
 }
 
-.SidebarMenu__Nav .Collapsible:first-child {
+.SidebarMenu__Nav .Accordion:first-child {
   border-top: none;
 }
 
@@ -11005,7 +11005,7 @@ shopify-payment-terms {
   margin-bottom: 0; /* Remove the margin of the formatted address by Shopify */
 }
 
-/* Modal */
+/* Dialog */
 
 .store-availabilities-modal__product-information {
   text-align: left;

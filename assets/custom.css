@@ -461,7 +461,7 @@ form button,
 .SidebarMenu .Drawer__Footer{ box-shadow: 0 1px var(--secondary-color) inset}
 /*.SidebarMenu  .Collapsible__Plus:before,
 .SidebarMenu  .Collapsible__Plus:after{ background: var(--secondary-color); }*/
-.SidebarMenu  .Collapsible{
+.SidebarMenu  .Accordion{
   border-color: var(--secondary-color);
   position: relative;
 }
@@ -2376,7 +2376,7 @@ form button,
 }
 .shopify-policy__container .PageHeader{ background: #FFF2CC; }
 
-/*---------- Cart Drawer -------------*/
+/*---------- Cart SidePanel -------------*/
 .CartItem__Title{ font-family: 'paralucentw00-mediumregular'; }
 .QuantitySelector{ border-radius: 10px; }
 

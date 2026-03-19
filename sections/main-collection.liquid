@@ -186,7 +186,7 @@
 
       {%- capture filters_content -%}
         {%- if quick_links != empty -%}
-          <div class="Collapsible Collapsible--padded {% if section.settings.expand_filters %}Collapsible--autoExpand{% endif %}" data-filter-index="{% increment filter_index %}">
+          <div class="Accordion Accordion--padded {% if section.settings.expand_filters %}Accordion--autoExpand{% endif %}" data-filter-index="{% increment filter_index %}">
             <button type="button" class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
               {{- quick_links.title | escape -}} <span class="Collapsible__Plus"></span>
             </button>
@@ -211,7 +211,7 @@
           {%- for filter in collection.filters -%}
             {%- assign downcase_filter_label = filter.label | downcase -%}
 
-            <div class="Collapsible Collapsible--padded {% if section.settings.expand_filters %}Collapsible--autoExpand{% endif %}" data-filter-index="{% increment filter_index %}">
+            <div class="Accordion Accordion--padded {% if section.settings.expand_filters %}Accordion--autoExpand{% endif %}" data-filter-index="{% increment filter_index %}">
               {%- if filter.type == 'boolean' -%}
                 <div class="Collapsible__Button BooleanFilter">
                   <label for="{{ filter.param_name }}" class="Heading u-h6">{{- filter.label -}}</label>
@@ -295,7 +295,7 @@
         {%- endif -%}
       {%- endcapture -%}
 
-      <div id="collection-filter-drawer" class="CollectionFilters Drawer Drawer--secondary Drawer--fromRight" aria-hidden="true">
+      <div id="collection-filter-drawer" class="CollectionFilters SidePanel SidePanel--secondary SidePanel--fromRight" aria-hidden="true">
         <header class="Drawer__Header Drawer__Header--bordered Drawer__Header--center Drawer__Container">
           <span class="Drawer__Title Heading u-h4">{{ 'collection.filter.all' | t }}</span>
 
@@ -321,7 +321,7 @@
     {%- endif -%}
 
     {%- if section.settings.show_sort_by -%}
-      <div id="collection-sort-popover" class="Popover" aria-hidden="true">
+      <div id="collection-sort-popover" class="Tooltip" aria-hidden="true">
         <header class="Popover__Header">
           <button class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover" aria-label="{{ 'general.popup.close' | t }}">{% render 'icon' with 'close' %}</button>
           <span class="Popover__Title Heading u-h4">{{ 'collection.sorting.title' | t }}</span>
@@ -524,7 +524,7 @@
         },
         {
           "value": "drawer",
-          "label": "Drawer"
+          "label": "SidePanel"
         }
       ],
       "default": "sidebar"

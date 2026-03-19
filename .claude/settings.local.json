@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rho '\\\\{% \\\\\\(for\\\\|assign\\\\|if\\\\\\) [a-z_][a-z_0-9]*' /c/Users/visha/Downloads/betterbet/sections/*.liquid)",
+      "Bash(ls /c/Users/visha/Downloads/betterbet/sections/*.liquid)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i -e 's/window\\\\.theme\\\\b/window.shopConfig/g' -e 's/window\\\\.routes\\\\b/window.shopRoutes/g' -e 's/window\\\\.languages\\\\b/window.shopStrings/g' \"$f\")",
+      "Bash(done)",
+      "Bash(xargs grep:*)",
+      "Bash(xargs sed:*)",
+      "Bash(/dev/null echo:*)"
+    ]
+  }
+}
