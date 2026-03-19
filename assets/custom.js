@@ -55,7 +55,13 @@ function isScrolledIntoView(elem){
   var elemBottom = elemTop + $(elem).height();
   return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
 }
-  
+function isScrolledIntoViewbox(elem){
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+  var elemTop = $(elem).offset().top  + 300;
+  var elemBottom = elemTop + $(elem).height();
+  return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)); 
+}  
 function isScrolledOutOfView(elem){
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
@@ -65,11 +71,38 @@ function isScrolledOutOfView(elem){
   return ((elemTop <= docViewBottom) && (elemBottom <= docViewTop)); 
 }
 
+/* Social Proof */
+
+  /* Customer Activity */
+  if(getCookie('socialproofclose') != 'true'){
+    $('#socialproof').fadeIn();
+  }
+ $('#socialproof .close').click(function(){
+   setCookie('socialproofclose', 'true', 2);
+   $('#socialproof').remove();
+ });
+
 
 $('.prod-grid-swatch li').click(function(e){
   e.preventDefault();
   $(this).parents('.prod-grid-swatch').find('li').removeClass('active');
   $(this).addClass('active');
+  var m_price = $(this).attr('data-price');
+  var c_price = $(this).attr('data-compare-price');
+  var data_s = $(this).attr('data-save');
+  //console.log(m_price,c_price,data_s)
+  
+  $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Text--subdued').text(m_price);
+  $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Price--highlight.Text--subdued').text(m_price);
+  if(c_price != ''){
+    $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Price--compareAt.Text--subdued').text(c_price);
+    $(this).parents('.ProductItem').find('.discount-price').text(data_s);
+    $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Price--compareAt.Text--subdued').show();
+    $(this).parents('.ProductItem').find('.discount-price').show();
+  }else{
+    $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Price--compareAt.Text--subdued').hide();
+    $(this).parents('.ProductItem').find('.discount-price').hide();
+  }
 });
 
 $('.product_grid_form_wrapper .productform_add_to_cart').click(function(e){
@@ -92,6 +125,17 @@ $('.product_grid_form_wrapper .productform_add_to_cart').click(function(e){
   });
 });
 
+$('.password_reveal').click(function(){
+  if($(this).hasClass('revealed')){
+    $(this).removeClass('revealed');
+    $('.password_wrap input').attr('type', 'password');
+  }else{
+    $(this).addClass('revealed');
+    $('.password_wrap input').attr('type', 'text');
+  }
+});
+
+
 // Slider
 $('.slick').slick({
   prevArrow: [
@@ -109,10 +153,23 @@ $('.slick').slick({
 });
 
 // Animation
- $('.animate').each(function(){
+$('.animate').each(function(){
+  if(isScrolledIntoView(this)){
+      $(this).addClass('animated');
+  }
+});
+$(window).scroll(function(){
+  $('.animate').each(function(){
     if(isScrolledIntoView(this)){
         $(this).addClass('animated');
     }
+  });
+  $('.animate').each(function(){
+    if(isScrolledIntoViewbox(this)){
+      
+        $(this).addClass('animated');
+    }
+  });
 });
 
 $('.animateR').each(function(){
@@ -122,8 +179,17 @@ $('.animateR').each(function(){
 });
 
 // Delivery Check
-var pincodes = '';
+// var pincodes = [400001, 400002, 400004, 400005];
+var pincodes = [400072,400059,400084,400069,400099,400070,400053,400086,400029,400096,400098,400087,400057,400077,400093,400056,400051,400089,400047,400076,400024,400055,400058,400079,400054,400071,400049,400075,400022,400042,400019,400052,400083,400043,400037,400014,400031,400085,400078,400088,400017,400050,400016,400012,400074,400081,400015,400094,400082,400028,400033,400080,400027,400025,400030,400008,400018,400013,400023,400011,400010,400034,400026,400036,400007,400009,400003,400039,400006,400035,400020,400032,400021,400001,400002,400004,400005,400615,400601,400606,400607,400608,400064,400067,400095,400104,400097,400062,400101,400063,400091,400102,400103,400066,400060,400065,400061,400092,401105,401101,400068,401107,122022,122001,122017,122002,122008,122010,122016,122009,122003,122015,122011,122018,121012,122005,122021,122007,110002,110055,110005,110001,110008,110003,110011,110006,110012,110060,110004,110069,110092,110051,110032,110053,110091,110094,110095,110031,110096,110093,110020,110007,110054,110033,110034,110052,110086,110009,110035,110088,110083,110085,110089,110056,110025,110062,110019,110024,110049,110044,110017,110013,110065,110048,110014,110076,110010,110075,110021,110029,110047,110028,110077,110074,110030,110016,110037,110068,110045,110067,110078,110023,110070,110064,110046,110022,110066,110057,110058,110018,110026,110015,110059,110027,110063,110087,201012,201304,201309,201010,201307,201310,201306,201009,201305,201004,201011,201005,201301,201303,201103,201017,201016,201007,201006,201313,121101,121003,121004,121002,121007,121001,121006,121005,121010,121008,121009,121013,110079,110080,110090,110097,110099,411001,411002,411003,411004,411005,411006,411007,411008,411009,411010,411011,411012,411013,411014,411015,411016,411017,411018,411019,411020,411021,411022,411024,411026,411027,411028,411029,411030,411031,411032,411033,411034,411035,411036,411037,411038,411039,411040,411041,411042,411043,411044,411045,411046,411047,411048,411049,411051,411052,411053,411054,411055,411056,411057,411058,411060,411061,411099,411100,411111,411201,411406,411412,412042,412110,412114,412201,412219,412302,412307,412308,412309,411067,411068,411107,411000,411062,412105,412207,412101,412216,560017,560034,560035,560037,560068,560076,560087,560095,560099,560100,560102,560029,560041,560056,560059,560060,560061,560062,560070,560078,560085,560098,560108,560109,560002,560004,560007,560011,560018,560019,560025,560026,560027,560028,560030,560031,560039,560040,560044,560047,560050,560066,560069,560071,560072,560083,560103,560111,560180,560104,560052,560081,560008,560016,560036,560038,560043,560045,560048,560049,560067,560075,560077,560084,560093,560012,560013,560014,560022,560024,560032,560046,560054,560055,560064,560065,560063,560080,560092,560097,560091,560001,560009,560053,560023,560058,560010,560051,560003,560005,560006,560020,560015,560021,560033,560042,560057,560073,560079,560086,560090,560094,560096,560107,560101];
+
+var nondeliverablepincodes = [143002];
+
+var hours_threshold = "15";
+var min_threshold = "";
 //alert(pincodes);
+var hello = "[400072,400059,400084,400069,400099,400070,400053,400086,400029,400096,400098,400087,400057,400077,400093,400056,400051,400089,400047,400076,400024,400055,400058,400079,400054,400071,400049,400075,400022,400042,400019,400052,400083,400043,400037,400014,400031,400085,400078,400088,400017,400050,400016,400012,400074,400081,400015,400094,400082,400028,400033,400080,400027,400025,400030,400008,400018,400013,400023,400011,400010,400034,400026,400036,400007,400009,400003,400039,400006,400035,400020,400032,400021,400001,400002,400004,400005,400615,400601,400606,400607,400608,400064,400067,400095,400104,400097,400062,400101,400063,400091,400102,400103,400066,400060,400065,400061,400092,401105,401101,400068,401107,122022,122001,122017,122002,122008,122010,122016,122009,122003,122015,122011,122018,121012,122005,122021,122007,110002,110055,110005,110001,110008,110003,110011,110006,110012,110060,110004,110069,110092,110051,110032,110053,110091,110094,110095,110031,110096,110093,110020,110007,110054,110033,110034,110052,110086,110009,110035,110088,110083,110085,110089,110056,110025,110062,110019,110024,110049,110044,110017,110013,110065,110048,110014,110076,110010,110075,110021,110029,110047,110028,110077,110074,110030,110016,110037,110068,110045,110067,110078,110023,110070,110064,110046,110022,110066,110057,110058,110018,110026,110015,110059,110027,110063,110087,201012,201304,201309,201010,201307,201310,201306,201009,201305,201004,201011,201005,201301,201303,201103,201017,201016,201007,201006,201313,121101,121003,121004,121002,121007,121001,121006,121005,121010,121008,121009,121013,110079,110080,110090,110097,110099,411001,411002,411003,411004,411005,411006,411007,411008,411009,411010,411011,411012,411013,411014,411015,411016,411017,411018,411019,411020,411021,411022,411024,411026,411027,411028,411029,411030,411031,411032,411033,411034,411035,411036,411037,411038,411039,411040,411041,411042,411043,411044,411045,411046,411047,411048,411049,411051,411052,411053,411054,411055,411056,411057,411058,411060,411061,411099,411100,411111,411201,411406,411412,412042,412110,412114,412201,412219,412302,412307,412308,412309,411067,411068,411107,411000,411062,412105,412207,412101,412216,560017,560034,560035,560037,560068,560076,560087,560095,560099,560100,560102,560029,560041,560056,560059,560060,560061,560062,560070,560078,560085,560098,560108,560109,560002,560004,560007,560011,560018,560019,560025,560026,560027,560028,560030,560031,560039,560040,560044,560047,560050,560066,560069,560071,560072,560083,560103,560111,560180,560104,560052,560081,560008,560016,560036,560038,560043,560045,560048,560049,560067,560075,560077,560084,560093,560012,560013,560014,560022,560024,560032,560046,560054,560055,560064,560065,560063,560080,560092,560097,560091,560001,560009,560053,560023,560058,560010,560051,560003,560005,560006,560020,560015,560021,560033,560042,560057,560073,560079,560086,560090,560094,560096,560107,560101]  [143002]";
+//console.log('hi'+ hello);
+
 //Pincode Validation
 $('input[name=pincode]').keyup(function(){
   var entered_value = $(this).val();
@@ -136,14 +202,34 @@ $('input[name=pincode]').keyup(function(){
   }
 });
 
+
+var current_date = new Date();
+var current_hours = current_date.getHours();
+var current_minutes = current_date.getMinutes();
+//console.log(current_date);
+//console.log(current_hours);
+//console.log(current_minutes);
+
 if(getCookie('pincode_entered')){
   $('.pincode_availability_msg').removeClass('hide');
-  //$('.pincode_checker_form_wrapper').addClass('hide');
   $('.pincode').val(getCookie('pincode_entered'));
   //console.log('inupt value: '+ $('.pincode').val());
   if(getCookie('serviceable') == 1){
-    $('.serviceable_msg').removeClass('hide');
     $('.pincode_availability_msg').addClass('serviceable');
+    if(current_hours >= hours_threshold && current_minutes > min_threshold){
+       $('.serviceable_msg, .unserviceable_msg').addClass('hide');
+       $('.serviceable_msg.serviceable_msg_tom').removeClass('hide');
+    }else if(current_hours < hours_threshold){
+      $('.serviceable_msg').addClass('hide');
+      $('.serviceable_msg.serviceable_msg_today').removeClass('hide');
+    }else if(current_hours == hours_threshold && current_minutes < min_threshold || current_hours == hours_threshold && current_minutes == min_threshold){
+      $('.serviceable_msg, .unserviceable_msg').addClass('hide');
+      $('.serviceable_msg.serviceable_msg_today').removeClass('hide');
+    }
+  }else if(getCookie('serviceable') == 2){
+    $('.pincode_availability_msg').addClass('serviceable');
+    $('.serviceable_msg, .unserviceable_msg').addClass('hide');
+    $('.serviceable_msg.serviceable_msg_later').removeClass('hide');
   }else if(getCookie('serviceable') == 0){
     $('.pincode_availability_msg').addClass('unserviceable');
     $('.unserviceable_msg').removeClass('hide');
@@ -154,8 +240,7 @@ if(getCookie('pincode_entered')){
 
 $('.pincode_button').click(function(){
   var entered_value = parseInt($(this).parents('.pincode_checker_form').find('input[name=pincode]').val());
-  //$(this).parents('.pincode_checker_form_wrapper').addClass('hide');
-  console.log(entered_value);
+  //console.log(entered_value);
   if(isNaN(entered_value)){
     //alert('NAN');
     $('.nan_value_msg').show();
@@ -169,23 +254,50 @@ $('.pincode_button').click(function(){
       //alert('1');
       //setCookie('serviceable_category', 'A', 30);
       setCookie('serviceable', '1', 30);
-      $('.serviceable_msg').removeClass('hide');
-      $('.unserviceable_msg').addClass('hide');
-      $('.pincode_availability_msg').addClass('serviceable');
-    }else{
-      //alert('3');
-      deleteCookie('serviceable_category');
+      if(current_hours >= hours_threshold && current_minutes > min_threshold){
+       // alert(min_threshold);
+        $('.serviceable_msg, .unserviceable_msg').addClass('hide');
+        $('.serviceable_msg.serviceable_msg_tom').removeClass('hide');
+        $('.pincode_availability_msg').addClass('serviceable');
+      }else if(current_hours < hours_threshold){
+        //alert('below thrshold');
+         $('.serviceable_msg, .unserviceable_msg').addClass('hide');
+         $('.serviceable_msg.serviceable_msg_today').toggleClass('hide');
+         $('.pincode_availability_msg').addClass('serviceable');
+      }else if(current_hours == hours_threshold && current_minutes < min_threshold || current_hours == hours_threshold && current_minutes == min_threshold){
+        $('.serviceable_msg, .unserviceable_msg').addClass('hide');
+        $('.serviceable_msg.serviceable_msg_today').removeClass('hide');
+      }
+    }else if(jQuery.inArray(entered_value, nondeliverablepincodes) > -1){
+      //alert('No delivery');
+      //setCookie('serviceable_category', 'B', 30);
       setCookie('serviceable', '0', 30);
       $('.pincode_availability_msg').addClass('unserviceable');
       $('.unserviceable_msg').removeClass('hide');
       $('.serviceable_msg').addClass('hide');
+    }else{
+      //alert('deliver later');
+      //deleteCookie('serviceable_category');
+      setCookie('serviceable', '2', 30);
+      $('.serviceable_msg').addClass('hide');
+      $('.serviceable_msg.serviceable_msg_later').removeClass('hide');
+      $('.unserviceable_msg').addClass('hide');
+      $('.pincode_availability_msg').addClass('serviceable');
     } 
   }
 });
 
+/*Newsletter Pop up*/
+
+$('.NewsletterPopup__Close').click(function(){
+  $('#shopify-section-popup').after().hide();
+});
+
+/* Recurpay */
 $(document).on('click', '.recurpay__label', function(e){
   e.preventDefault();
   $('.recurpay__content').toggleClass('active');
-  $('.recurpay__plans').slideToggle();
-})
+  $('.recurpay__plans').slideToggle('slow');
+});
+
         

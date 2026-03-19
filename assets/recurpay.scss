@@ -149,7 +149,7 @@ $button--background: #000000;
       }
     }
     .recurpay__plans {
-      display: none;
+      /*display: none;*/
       border-top: 1px solid $color--border;
       .recurpay-tabs {
         @include flexbox();

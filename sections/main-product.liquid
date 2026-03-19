@@ -333,9 +333,12 @@
                 {%- when 'variant_selector' -%}
                   {%- assign has_ouputted_variant_selector = true -%}
                   {%- render 'product-form', block: block, product: product -%}
+
                 
                 <div class="clearfix">
                   {%- when 'quantity_selector' -%}
+
+                  {% unless product.tags contains 'subscription' %}
                     <div class="ProductForm__QuantitySelector" {{ block.shopify_attributes }}>
                       {%- if block.settings.show_label -%}
                         <span class="ProductForm__Label">{{ 'product.form.quantity' | t }}:</span>
@@ -349,7 +352,8 @@
                         <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="increase-quantity">{% render 'icon' with 'plus' %}</button>
                       </div>
                     </div>
-  
+                {% endunless %}
+                
                   {%- when 'inventory' -%}
                     {%- assign hide_inventory_quantity_by_default = false -%}
   
@@ -368,15 +372,17 @@
                         {{- 'product.form.low_inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
                       {%- endif -%}
                     </p>
-  
+
+               
                   {%- when 'buy_buttons' -%}
                     {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
                       {%- assign use_primary_button = true -%}
                     {%- else -%}
                       {%- assign use_primary_button = false -%}
                     {%- endif -%}
-  
-                    <div class="ProductForm__BuyButtons" {{ block.shopify_attributes }}>
+                
+                   
+                    <div class="ProductForm__BuyButtons" {{ block.shopify_attributes }} {% if product.tags contains 'subscription' %}style="width: 100%; max-width: 100%;"{% endif %}>
                       {%- if block.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
                         <style>
                           #shopify-section-{{ section.id }} .shopify-payment-button {
@@ -385,7 +391,7 @@
                         </style>
                       {%- endif -%}
   
-                      <button type="submit" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if product.selected_or_first_available_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
+                      <button type="submit" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button  {% if product.tags contains 'subscription' %}subscription{% endif %} {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if product.selected_or_first_available_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
                         {%- if product.selected_or_first_available_variant.available -%}
                           <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
   
@@ -402,6 +408,7 @@
                         {{ form | payment_button }}
                       {%- endif -%}
                     </div>
+                    
                   </div>
                 
                   <div class="ProductMeta custom_meta" {{ block.shopify_attributes }}>
@@ -469,14 +476,18 @@
           
           {% comment %} Free Shipping {% endcomment %}
           <div class="free_shipping_section">
+            
             <div class="free_shipping_list flex_always">
-              {%- if section.settings.shipping_price -%}
-              <div class="col-left"><h3>Free shipping</h3><p>at or above INR {{ settings.cart_free_shipping_threshold }} per order</p></div>
-              {%- endif -%}
+              {% unless product.tags contains 'subscription' %}
+                {%- if section.settings.shipping_price -%}
+                  <div class="col-left"><h3>Free shipping</h3><p>at or above INR {{ settings.cart_free_shipping_threshold }} per order</p></div>
+                {%- endif -%}
+              {% endunless %}
               {% if section.settings.show_delivery %}
-                <div class="col-right"><a href="#delivery_check" data-lity>Check same day delivery</a></div>
+                <div class="col-right"{% if product.tags contains 'subscription' %} style="text-align: left;"{% endif %}><a href="#delivery_check" data-lity>Check same day delivery</a></div>
               {% endif %}
             </div>
+            
             <div id="delivery_check" class="lity-hide lity_popup_wrapper" style="background:#fff">
               <div class="lity_popup">
                 <button class="lity-close" type="button" aria-label="Close (Press escape to close)" data-lity-close="">×</button>
@@ -639,7 +650,7 @@ This is the root container for the zoom functionality. Must not be removed, as o
           "id": "show_color_swatch",
           "label": "Show color swatch",
           "default": false,
-          "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch)."
+          "info": "Some colors appear white? [Learn more](https://convert10x.com/)."
         },
         {
           "type": "checkbox",

@@ -90,7 +90,7 @@ $('.prod-grid-swatch li').click(function(e){
   var m_price = $(this).attr('data-price');
   var c_price = $(this).attr('data-compare-price');
   var data_s = $(this).attr('data-save');
-  console.log(m_price,c_price,data_s)
+  //console.log(m_price,c_price,data_s)
   
   $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Text--subdued').text(m_price);
   $(this).parents('.ProductItem').find('.ProductItem__Price.Price.Price--highlight.Text--subdued').text(m_price);
@@ -125,6 +125,17 @@ $('.product_grid_form_wrapper .productform_add_to_cart').click(function(e){
   });
 });
 
+$('.password_reveal').click(function(){
+  if($(this).hasClass('revealed')){
+    $(this).removeClass('revealed');
+    $('.password_wrap input').attr('type', 'password');
+  }else{
+    $(this).addClass('revealed');
+    $('.password_wrap input').attr('type', 'text');
+  }
+});
+
+
 // Slider
 $('.slick').slick({
   prevArrow: [
@@ -155,7 +166,7 @@ $(window).scroll(function(){
   });
   $('.animate').each(function(){
     if(isScrolledIntoViewbox(this)){
-      console.log('sdcd');
+      
         $(this).addClass('animated');
     }
   });
@@ -177,7 +188,7 @@ var hours_threshold = "{{ settings.hours_threshold }}";
 var min_threshold = "{{ settings.min_threshold }}";
 //alert(pincodes);
 var hello = "{{ settings.pincodes_list }}  {{ settings.excluded_pincodes_list }}";
-console.log('hi'+ hello);
+//console.log('hi'+ hello);
 
 //Pincode Validation
 $('input[name=pincode]').keyup(function(){
@@ -195,9 +206,9 @@ $('input[name=pincode]').keyup(function(){
 var current_date = new Date();
 var current_hours = current_date.getHours();
 var current_minutes = current_date.getMinutes();
-console.log(current_date);
-console.log(current_hours);
-console.log(current_minutes);
+//console.log(current_date);
+//console.log(current_hours);
+//console.log(current_minutes);
 
 if(getCookie('pincode_entered')){
   $('.pincode_availability_msg').removeClass('hide');
@@ -229,7 +240,7 @@ if(getCookie('pincode_entered')){
 
 $('.pincode_button').click(function(){
   var entered_value = parseInt($(this).parents('.pincode_checker_form').find('input[name=pincode]').val());
-  console.log(entered_value);
+  //console.log(entered_value);
   if(isNaN(entered_value)){
     //alert('NAN');
     $('.nan_value_msg').show();

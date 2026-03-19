@@ -39,6 +39,7 @@
                     <input type="hidden" name="contact[tags]" value="newsletter">
       
                     <input type="email" name="contact[email]" class="Form__Input" required="required" aria-label="{{ 'general.popup.email_placeholder' | t }}" placeholder="{{ 'general.popup.email_placeholder' | t }}">
+                    <input type="number" name="contact[phone]" class="Form__Input mobile_number" required="required" aria-label="Phone" placeholder="Phone Number">
                     <button class="Form__Submit Button Button--primary Button--full" type="submit">{{ 'general.popup.submit' | t }}</button>
                   {%- endif -%}
                 {%- endform -%}

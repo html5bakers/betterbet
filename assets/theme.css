@@ -1412,7 +1412,8 @@ body {
 
   .features--heading-large .u-h6,
   .features--heading-large .Rte h6 {
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 18px;
   }
 
   .features--heading-large .u-h7 {
@@ -3175,8 +3176,8 @@ select::-ms-expand {
   }
 
   .HorizontalList--spacingExtraLoose .HorizontalList__Item {
-    margin-right: 21px;
-    margin-left: 21px;
+    margin-right: 24px;
+    margin-left: 24px;
   }
 }
 /**
@@ -7606,7 +7607,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 .Faq__Item[aria-expanded=true] .Faq__Icon {
-  transform: rotateZ(90deg);
+  transform: rotateZ(270deg);
   color: var(--heading-color);
 }
 

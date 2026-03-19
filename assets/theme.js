@@ -4787,7 +4787,7 @@
     }, {
       key: "_setupLocalizationPopovers",
       value: function _setupLocalizationPopovers() {
-        // Prestige is an extremely complex theme, especially in the header due to the various layouts that power different
+        // Betterbet Store is an extremely complex theme, especially in the header due to the various layouts that power different
         // features. One issue that arises with this is that we output the localization elements twice in the DOM (with the
         // same ID as we're doing a capture in Liquid), and then depending on the screen size one layout is choosen. We therefore
         // have to de-duplicate the ID here. This is honestly not the cleanest code on earth, but I prefer handling this here

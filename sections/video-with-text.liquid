@@ -4,7 +4,8 @@
       <div class="col_left">
           {%- if section.settings.video_link != blank or section.settings.image != blank -%}
             {% if section.settings.video_link != blank %}
-              <iframe class="Image--lazyLoad" width="885" height="498" src="{{ section.settings.video_link }}" title="{{ section.settings.video_title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <!-- <iframe class="Image--lazyLoad" width="885" height="407" src="{{ section.settings.video_link }}" title="{{ section.settings.video_title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              <video controls="" autoplay="" muted width="100%" name="media"><source src="{{ section.settings.video_link }}" type="video/mp4" style="max-width: 100%;"></video>
             {%- else -%}
                 {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.image -%}{%- endcapture -%}
                 {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
